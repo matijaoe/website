@@ -10,7 +10,7 @@ defineProps<{
 </script>
 
 <template>
-  <BaseRow label="Aug 2021 - Present">
+  <BaseRow label="Aug 2021 - Present" responsive>
     <template #label>
       <p class="text-sm text-default-600 leading-[1.75rem] dark:text-default-500">
         {{ startDate }} &mdash; {{ endDate }}
@@ -18,21 +18,22 @@ defineProps<{
     </template>
     <template #value>
       <div>
-        <div class="mb-1">
+        <div class="mb-2">
           <p class="text-lg">
             {{ position }}
           </p>
         </div>
 
         <NuxtLink :to="companyUrl" external target="_blank" class="group">
-          <div class="flex items-center gap-3">
+          <div class="flex items-start gap-3 sm:items-center">
             <slot name="logo" />
 
-            <div class="flex items-center gap-2 text-sm">
+            <div class="flex flex-row items-center gap-2 text-sm lt-sm:-mt-0.4">
               <p class="text-sm group-hover:underline">
                 {{ company }}
               </p>
               <span class="text-default-600 dark:text-default-400">&bull;</span>
+
               <p class="text-default-600 dark:text-default-400">
                 {{ companyLocation }}
               </p>
