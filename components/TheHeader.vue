@@ -20,7 +20,9 @@ const isLogoLinkElHovered = useElementHover(logoLinkEl)
     <menu class="row flex items-center justify-between px-4 py-6">
       <NuxtLink ref="logoLinkEl" to="/">
         <Icon v-show="!isLogoLinkElHovered" name="ph:cursor-click" class="text-2xl" />
-        <Icon v-show="isLogoLinkElHovered" name="ph:cursor-click-fill" class="text-2xl" />
+        <ClientOnly>
+          <Icon v-show="isLogoLinkElHovered" name="ph:cursor-click-fill" class="text-2xl" />
+        </ClientOnly>
       </NuxtLink>
 
       <div class="flex items-center gap-2">
