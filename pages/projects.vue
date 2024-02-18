@@ -3,7 +3,7 @@
 </script>
 
 <template>
-  <div class="text-3xl">
-    projects
+  <div class="text-3xl font-semibold">
+    Projects
   </div>
 </template>

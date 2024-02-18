@@ -3,7 +3,7 @@
 </script>
 
 <template>
-  <div class="text-3xl">
-    bookmarks
+  <div class="text-3xl font-semibold">
+    Bookmarks
   </div>
 </template>

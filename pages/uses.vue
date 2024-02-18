@@ -3,7 +3,7 @@
 </script>
 
 <template>
-  <div class="text-3xl">
-    uses
+  <div class="text-3xl font-semibold">
+    Uses
   </div>
 </template>
