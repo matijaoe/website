@@ -1,22 +1,27 @@
+import { theme } from '@unocss/preset-mini'
 import {
   defineConfig,
+  presetTypography,
   presetUno,
   presetWebFonts,
   transformerDirectives,
   transformerVariantGroup
 } from 'unocss'
-import { theme } from '@unocss/preset-mini'
 
 export default defineConfig({
   presets: [
     presetUno(),
     // presetAttributify(),
-    // presetTypography(),
+    presetTypography(),
     presetWebFonts({
       fonts: {
         sans: {
           provider: 'fontshare',
           name: 'Satoshi'
+        },
+        display: {
+          provider: 'fontshare',
+          name: 'Sharpie'
         },
         mono: 'JetBrains Mono',
       },
@@ -51,6 +56,6 @@ export default defineConfig({
   },
 
   shortcuts: {
-    row: 'max-w-3xl w-full mx-auto'
+    row: 'max-w-2xl w-full mx-auto'
   },
 })

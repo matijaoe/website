@@ -6,9 +6,10 @@ const links: { to: RouteLocationRaw, label: string }[] = [
   { to: '/about', label: 'About' },
   { to: '/projects', label: 'Projects' },
   { to: '/uses', label: 'Uses' },
+  { to: '/bookmarks', label: 'Bookmarks' },
 ]
 
-const { toggleDark, isDark } = useTheme()
+const { toggleDark } = useTheme()
 
 const logoLinkEl = ref<HTMLElement>()
 const isLogoLinkElHovered = useElementHover(logoLinkEl)
@@ -16,7 +17,7 @@ const isLogoLinkElHovered = useElementHover(logoLinkEl)
 
 <template>
   <header>
-    <menu class="row flex items-center justify-between p-4">
+    <menu class="row flex items-start justify-between p-4">
       <NuxtLink ref="logoLinkEl" to="/">
         <Icon v-show="!isLogoLinkElHovered" name="ph:cursor-click" class="text-2xl" />
         <Icon v-show="isLogoLinkElHovered" name="ph:cursor-click-fill" class="text-2xl" />
@@ -39,10 +40,7 @@ const isLogoLinkElHovered = useElementHover(logoLinkEl)
         >
           <Icon
             name="ph:circle-half-fill"
-            class="text-2xl transition-transform duration-300"
-            :class="{
-              'rotate-180': !isDark,
-            }"
+            class="rotate-45 text-2xl transition-transform duration-300 ease-in-out hover:rotate-135"
           />
         </button>
       </div>
