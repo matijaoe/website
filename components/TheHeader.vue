@@ -1,0 +1,51 @@
+<script lang="ts" setup>
+import type { RouteLocationRaw } from '#vue-router'
+
+const links: { to: RouteLocationRaw, label: string }[] = [
+  { to: '/', label: 'Home' },
+  { to: '/about', label: 'About' },
+  { to: '/projects', label: 'Projects' },
+  { to: '/uses', label: 'Uses' },
+]
+
+const { toggleDark, isDark } = useTheme()
+
+const logoLinkEl = ref<HTMLElement>()
+const isLogoLinkElHovered = useElementHover(logoLinkEl)
+</script>
+
+<template>
+  <header>
+    <menu class="row flex items-center justify-between p-4">
+      <NuxtLink ref="logoLinkEl" to="/">
+        <Icon v-show="!isLogoLinkElHovered" name="ph:cursor-click" class="text-2xl" />
+        <Icon v-show="isLogoLinkElHovered" name="ph:cursor-click-fill" class="text-2xl" />
+      </NuxtLink>
+
+      <div class="flex items-center gap-4">
+        <nav class="flex items-center gap-2">
+          <NavLink
+            v-for="link in links"
+            :key="link.to.toString()"
+            :to="link.to"
+          >
+            {{ link.label }}
+          </NavLink>
+        </nav>
+        <button
+          type="button"
+          class="px-1 py-2 text-sm text-default-800 font-500 transition dark:text-default-50"
+          @click="toggleDark"
+        >
+          <Icon
+            name="ph:circle-half-fill"
+            class="text-2xl transition-transform duration-300"
+            :class="{
+              'rotate-180': !isDark,
+            }"
+          />
+        </button>
+      </div>
+    </menu>
+  </header>
+</template>
