@@ -66,16 +66,17 @@ const projects = [
   <div class="flex flex-col gap-12">
     <section>
       <h1 class="text-balance text-3xl/[1.2] font-semibold tracking-tighter capitalize capitalize lg:text-5xl/[1.3]">
-        Software Developer Crafting Sleek Web Experiences
+        Software Developer Crafting Sleek Web Experiences.
       </h1>
 
       <div class="mt-5 prose prose-neutral dark:prose-invert">
         <p>
-          I'm Matija, a Croatia-based software engineer with a knack for simplifying the complex web.
-          My focus is on building interactive web applications using TypeScript, Vue & Nuxt. I'm deeply passionate about open-source, UI/UX design, developer experience, clean code practices, and performance optimization.
+          I'm <strong>Matija</strong>, a Croatia-based software engineer with a talent for simplifying the complex web. My focus lies in building interactive web applications using TypeScript, Vue, and Nuxt. I'm deeply passionate about open-source development, UI/UX design, developer experience, performance optimization, and clean code.
         </p>
 
-        <p>Beyond the digital realm, my interests are rooted in advancing self-sovereignty, making sense of macroeconomics, and actively participating in the Bitcoin community, witnessing firsthand its transformative impact on the global economy.</p>
+        <p>
+          Beyond code, my interests extend to preserving individual privacy, fostering self-sovereignty, cultivating a low time preference mindset, prioritizing quality, and studying Austrian economics. These values naturally led me to embrace Bitcoin, to which I wish to dedicate my efforts and contribute towards its advancement.
+        </p>
       </div>
     </section>
 
