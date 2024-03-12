@@ -7,7 +7,9 @@
       My Uses
     </h1>
 
-    <div class="mt-8 prose prose-neutral dark:prose-invert">
+    <div class="mt-4 prose prose-neutral dark:prose-invert">
+      <p>Software I use, gadgets I love, and other things I recommend. </p>
+
       <ContentDoc path="/uses" />
     </div>
   </div>

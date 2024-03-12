@@ -27,6 +27,11 @@ const contacts: ContactItem = [
     linkText: 'hello@matijao.com',
     link: 'mailto:hello@matijao.com'
   },
+  {
+    label: 'Bitcoin (lightning)',
+    linkText: 'matijao@getalby.com',
+    link: 'lightning:matijao@getalby.com'
+  },
 ]
 
 const projects = [
@@ -71,7 +76,7 @@ const projects = [
 
       <div class="mt-5 prose prose-neutral dark:prose-invert">
         <p>
-          I'm <strong>Matija</strong>, a Croatia-based software engineer with a talent for simplifying the complex web. My focus lies in building interactive web applications using TypeScript, Vue, and Nuxt. I'm deeply passionate about open-source development, UI/UX design, developer experience, performance optimization, and clean code.
+          I'm <strong>Matija</strong>, a Croatia-based software engineer with a talent for simplifying the complex web. My focus lies in building interactive web applications using TypeScript, Vue, and Nuxt. I'm deeply passionate about open-source development, UI/UX design, developer experience and clean code.
         </p>
 
         <p>
