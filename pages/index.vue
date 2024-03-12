@@ -27,6 +27,11 @@ const contacts: ContactItem = [
     linkText: 'hello@matijao.com',
     link: 'mailto:hello@matijao.com'
   },
+  {
+    label: 'Bitcoin (lightning)',
+    linkText: 'matijao@getalby.com',
+    link: 'lightning:matijao@getalby.com'
+  },
 ]
 
 const projects = [
@@ -66,16 +71,17 @@ const projects = [
   <div class="flex flex-col gap-12">
     <section>
       <h1 class="text-balance text-3xl/[1.2] font-semibold tracking-tighter capitalize capitalize lg:text-5xl/[1.3]">
-        Software Developer Crafting Sleek Web Experiences
+        Software Developer Crafting Sleek Web Experiences.
       </h1>
 
-      <div class="prose prose-neutral dark:prose-invert mt-5">
+      <div class="mt-5 prose prose-neutral dark:prose-invert">
         <p>
-          I'm Matija, a Croatia-based software engineer with a knack for simplifying the complex web.
-          My focus is on building interactive web applications using TypeScript, Vue & Nuxt. I'm deeply passionate about open-source, UI/UX design, developer experience, clean code practices, and performance optimization.
+          I'm <strong>Matija</strong>, a Croatia-based software engineer with a talent for simplifying the complex web. My focus lies in building interactive web applications using TypeScript, Vue, and Nuxt. I'm deeply passionate about open-source development, UI/UX design, developer experience and clean code.
         </p>
 
-        <p>Beyond the digital realm, my interests are rooted in advancing self-sovereignty, making sense of macroeconomics, and actively participating in the Bitcoin community, witnessing firsthand its transformative impact on the global economy.</p>
+        <p>
+          Beyond code, my interests extend to preserving individual privacy, fostering self-sovereignty, cultivating a low time preference mindset, prioritizing quality, and studying Austrian economics. These values naturally led me to embrace Bitcoin, to which I wish to dedicate my efforts and contribute towards its advancement.
+        </p>
       </div>
     </section>
 
@@ -97,16 +103,17 @@ const projects = [
         Featured Projects
       </h2>
 
-      <div class="grid grid-cols-2 gap-8">
+      <div class="grid gap-6 sm:grid-cols-2 sm:gap-8">
         <div
           v-for="project in projects"
           :key="project.name"
           class="flex items-baseline justify-between"
         >
           <div>
-            <NuxtLink class="group flex items-center font-medium group-hover:underline" :href="project.repo">
+            <NuxtLink class="group flex items-center font-medium hover:underline" :href="project.repo" external target="_blank">
               <p>{{ project.name }}</p>
             </NuxtLink>
+
             <p class="text-xs text-default-500 dark:text-default-300">
               {{ project.year }}
             </p>
@@ -125,7 +132,7 @@ const projects = [
         <WorkExperienceEntry
           company="Four of them LLC"
           company-url="https://www.4ofthem.eu/"
-          company-location="Zapresic, Croatia | Remote"
+          company-location="Zapresic, Croatia"
           position="Frontend Developer"
           start-date="Aug 2022"
           end-date="Present"
@@ -135,16 +142,22 @@ const projects = [
           </template>
 
           <template #default>
-            Rebuilding from scratch biggest online pharmacy store in Germany <br> <NuxtLink to="https://ihreapotheken.de" external target="_blank" class="underline">
-              ihreapotheken.de
-            </NuxtLink>
+            Rebuilding
+            <NuxtLink
+              to="https://ihreapotheken.de"
+              external
+              target="_blank"
+              class="underline"
+            >
+              IhreApotheken.de{{ }}
+            </NuxtLink>, the biggest e-commerce platform for pharmacies in Germany. Shipped our core platform as interactive web components used in hundreds of pharmacy websites across Germany.
           </template>
         </WorkExperienceEntry>
 
         <WorkExperienceEntry
           company="Cura4You GmbH"
           company-url="https://cura4you.de/"
-          company-location="Cologne, Germany | Remote"
+          company-location="Cologne, Germany"
           position="Frontend Developer"
           start-date="Jun 2023"
           end-date="Oct 2023"
@@ -154,14 +167,14 @@ const projects = [
           </template>
 
           <template #default>
-            Developed an application for medical care of severely handicapped patients.
+            Worked on Anna App, an application with a goal of making everyday life easier for people in need of extensive medical care. Implemented front-end redesign and new features, improved the performance implementing TanStack Query site-wide, organized the codebase.
           </template>
         </WorkExperienceEntry>
 
         <WorkExperienceEntry
           company="Three of them Ltd."
           company-url="https://www.3ofthem.eu/"
-          company-location="Zapresic, Croatia | Remote"
+          company-location="Zapresic, Croatia"
           position="Junior Frontend Developer"
           start-date="Aug 2021"
           end-date="Sep 2022"
@@ -171,16 +184,18 @@ const projects = [
           </template>
 
           <template #default>
-            Improved the performance of the flagship IhreApotheken.de platform. <br>
-            Built and maintained the user-facing side of the COVID-19 Vaccine Booking System. <br>
-            Led the development of the custom component library.
+            <p>
+              Optimized the performance of the flagship IhreApotheken.de platform.
+              Led the development of the custom component library and internal libraries, used as a base for core platform rebuild.
+              Built and shipped inventory tracking application for pharmacy suppliers. Developed and maintained COVID-19 Vaccine Booking System.
+            </p>
           </template>
         </WorkExperienceEntry>
 
         <WorkExperienceEntry
           company="Infokarta d.o.o"
           company-url="https://gis.infokarta.hr/"
-          company-location="Split, Croatia | Remote"
+          company-location="Split, Croatia"
           position="Full-Stack Developer"
           start-date="May 2021"
           end-date="Jul 2021"
