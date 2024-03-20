@@ -3,7 +3,7 @@
 
 <template>
   <div>
-    <h1 class="text-3xl font-bold">
+    <h1 class="text-4xl font-medium font-display">
       My Uses
     </h1>
 

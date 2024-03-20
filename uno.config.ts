@@ -5,7 +5,7 @@ import {
   presetUno,
   presetWebFonts,
   transformerDirectives,
-  transformerVariantGroup
+  transformerVariantGroup,
 } from 'unocss'
 
 const config = defineConfig({
@@ -29,19 +29,20 @@ const config = defineConfig({
         'a': {
           'text-decoration-color': theme.colors.neutral['600'],
           'text-decoration-thickness': '2px',
-          'text-underline-offset': '.15em'
+          'text-underline-offset': '.15em',
         },
       },
     }),
+
     presetWebFonts({
       fonts: {
         sans: {
           provider: 'fontshare',
-          name: 'Satoshi'
+          name: 'Satoshi',
         },
         display: {
           provider: 'fontshare',
-          name: 'Sharpie'
+          name: 'Clash Display',
         },
         mono: 'JetBrains Mono',
       },
@@ -76,7 +77,8 @@ const config = defineConfig({
   },
 
   shortcuts: {
-    row: 'max-w-2xl w-full mx-auto'
+    'text-dim': 'text-default-500 dark:text-default-400',
+    'row': 'max-w-2xl w-full mx-auto',
   },
 })
 

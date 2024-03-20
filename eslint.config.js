@@ -140,7 +140,7 @@ export default antfu({
           message: 'Use <NuxtLink> over <a>',
         },
       ],
-      'vue/no-root-v-if': 'error',
+      // 'vue/no-root-v-if': 'error',
       'vue/no-setup-props-reactivity-loss': 'error', // set to 'off' when using experimental propsDestructure
       'vue/no-static-inline-styles': 'warn',
       'vue/no-useless-mustaches': 'error',

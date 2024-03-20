@@ -5,32 +5,32 @@ const contacts: ContactItem = [
   {
     label: 'GitHub',
     linkText: 'matijaoe',
-    link: 'https://github.com/matijaoe'
+    link: 'https://github.com/matijaoe',
   },
   {
     label: 'LinkedIn',
     linkText: 'matijao',
-    link: 'https://www.linkedin.com/in/matijao'
+    link: 'https://www.linkedin.com/in/matijao',
   },
   {
     label: 'Twitter',
     linkText: 'matijaoe',
-    link: 'https://twitter.com/matijaoe'
+    link: 'https://twitter.com/matijaoe',
   },
   {
     label: 'Goodreads',
     linkText: 'matijao',
-    link: 'https://www.goodreads.com/matijao'
+    link: 'https://www.goodreads.com/matijao',
   },
   {
     label: 'Email',
     linkText: 'hello@matijao.com',
-    link: 'mailto:hello@matijao.com'
+    link: 'mailto:hello@matijao.com',
   },
   {
     label: 'Bitcoin (lightning)',
     linkText: 'matijao@getalby.com',
-    link: 'lightning:matijao@getalby.com'
+    link: 'lightning:matijao@getalby.com',
   },
 ]
 
@@ -68,9 +68,9 @@ const projects = [
 </script>
 
 <template>
-  <div class="flex flex-col gap-12">
+  <div class="flex flex-col gap-12 py-4">
     <section>
-      <h1 class="text-balance text-3xl/[1.2] font-semibold tracking-tighter capitalize capitalize lg:text-5xl/[1.3]">
+      <h1 class="text-balance text-3xl/[1.2] font-medium tracking-tighter font-display capitalize capitalize lg:text-5xl/[1.3]">
         Software Developer Crafting Sleek Web Experiences.
       </h1>
 
@@ -99,7 +99,7 @@ const projects = [
     </section>
 
     <section>
-      <h2 class="mb-4 text-3xl font-bold">
+      <h2 class="mb-4 text-3xl font-medium font-display">
         Featured Projects
       </h2>
 
@@ -125,7 +125,7 @@ const projects = [
     </section>
 
     <section>
-      <h2 class="mb-4 text-3xl font-bold">
+      <h2 class="mb-4 text-3xl font-medium font-display">
         Work Experience
       </h2>
       <div class="flex flex-col gap-4">
