@@ -23,10 +23,10 @@
     "vue-router": "^4.3.0"
   },
   "devDependencies": {
-    "@antfu/eslint-config": "^2.8.1",
+    "@antfu/eslint-config": "^2.8.3",
     "@nuxt/image": "^1.4.0",
     "@nuxtjs/color-mode": "^3.3.2",
-    "@unocss/eslint-plugin": "^0.58.5",
+    "@unocss/eslint-plugin": "^0.58.6",
     "@unocss/nuxt": "^0.58.5",
     "@vueuse/nuxt": "^10.9.0",
     "eslint-plugin-format": "^0.1.0",
