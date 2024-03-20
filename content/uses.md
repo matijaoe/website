@@ -18,7 +18,7 @@
 - [GitHub Copilot](https://github.com/features/copilot) . ai coding assistant
 - [GitHub CLI](https://cli.github.com/) . github command-line
 - [Oh My Zsh](https://ohmyz.sh/) . zsh plugin framework
-- [httpie](https://httpie.io/) . command-line http client
+- [httpie](https://httpie.io/) . http client
 - [Vercel](https://vercel.com) . site deploy
 - [Figma](https://www.figma.com/) . designs
 
