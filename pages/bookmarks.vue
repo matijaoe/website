@@ -3,7 +3,9 @@
 </script>
 
 <template>
-  <div class="text-3xl font-semibold">
-    Bookmarks
+  <div>
+    <PageHeading>
+      Bookmarks
+    </PageHeading>
   </div>
 </template>

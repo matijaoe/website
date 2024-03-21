@@ -3,7 +3,9 @@
 </script>
 
 <template>
-  <div class="text-3xl font-semibold">
-    About
+  <div>
+    <PageHeading>
+      About
+    </PageHeading>
   </div>
 </template>

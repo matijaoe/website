@@ -13,7 +13,7 @@ defineProps<{
     </template>
 
     <template #value>
-      <NuxtLink :href="link" external class="hover:underline" target="_blank">
+      <NuxtLink :href="link" external class="text-rich hover:underline" target="_blank">
         {{ linkText }}
       </NuxtLink>
       <Icon name="ph:arrow-up-right" class="text-sm" />

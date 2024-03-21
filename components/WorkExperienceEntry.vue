@@ -12,14 +12,14 @@ defineProps<{
 <template>
   <BaseRow label="Aug 2021 - Present" responsive>
     <template #label>
-      <p class="text-sm text-default-600 leading-[1.75rem] dark:text-default-500">
+      <p class="text-sm leading-[1.75rem] text-dim">
         {{ startDate }} &mdash; {{ endDate }}
       </p>
     </template>
     <template #value>
       <div>
         <div class="mb-2">
-          <p class="text-lg">
+          <p class="text-lg text-rich">
             {{ position }}
           </p>
         </div>
@@ -32,16 +32,16 @@ defineProps<{
               <p class="text-sm group-hover:underline">
                 {{ company }}
               </p>
-              <span class="text-default-600 dark:text-default-400">&bull;</span>
+              <span class="text-dim">&bull;</span>
 
-              <p class="text-default-600 dark:text-default-400">
+              <p class="text-dim-2">
                 {{ companyLocation }}
               </p>
             </div>
           </div>
         </NuxtLink>
 
-        <div v-if="$slots.default" class="mt-2 text-sm text-default-600 dark:text-default-400">
+        <div v-if="$slots.default" class="mt-2 text-sm text-dim-2">
           <slot />
         </div>
       </div>
