@@ -9,7 +9,14 @@ export type Project = {
   wip?: boolean
   thumbnail?: string
   images?: string[]
-  categories: Category[]
+  categories: CategorySlug[]
 }
 
-export type Category = 'projects' | 'play' | 'extensions' | 'starters'
+export const Category = {
+  projects: 'projects',
+  play: 'playground',
+  extensions: 'extensions',
+  templates: 'starts',
+} as const
+
+export type CategorySlug = typeof Category[keyof typeof Category]

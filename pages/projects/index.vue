@@ -4,15 +4,15 @@ const { uniqueCategories, getProjectsByCategory } = useProjects()
 
 <template>
   <div>
-    <h1 class="text-4xl font-medium font-display">
+    <PageHeading>
       Projects
-    </h1>
+    </PageHeading>
 
     <div class="mt-6 flex flex-col gap-8">
       <div v-for="cat in uniqueCategories" :key="cat.value">
         <div v-if="cat.value !== 'projects'" class="mb-6 flex items-center gap-4">
           <hr class="w-full grow border-color-default-200 dark:border-color-default-800/70">
-          <h2 class="w-fit text-sm font-display text-dim">
+          <h2 class="text-md w-fit shrink-0 font-display lowercase text-dim">
             {{ cat.label }}
           </h2>
           <hr class="w-full grow border-color-default-200 dark:border-color-default-800/70">
@@ -25,7 +25,7 @@ const { uniqueCategories, getProjectsByCategory } = useProjects()
           >
             <NuxtLink
               :to="{ name: 'projects-slug', params: { slug: project.slug } }"
-              class="rounded-lg p-4 transition hover:bg-default-100/65 dark:hover:bg-default-800/15"
+              class="rounded-lg p-4 transition hover:bg-default-100/60 dark:hover:bg-default-900/40"
             >
               <div>
                 <div class="w-full flex items-center justify-between">
@@ -35,7 +35,7 @@ const { uniqueCategories, getProjectsByCategory } = useProjects()
                   <span class="text-xs text-dim">{{ project.year }}</span>
                 </div>
                 <div class="mt-1">
-                  <p class="text-sm text-dim">
+                  <p class="text-dim-2 text-sm">
                     {{ project.description }}
                   </p>
                 </div>

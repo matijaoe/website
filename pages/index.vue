@@ -70,7 +70,7 @@ const projects = [
 <template>
   <div class="flex flex-col gap-12 py-4">
     <section>
-      <h1 class="text-balance text-3xl/[1.2] font-medium tracking-tighter font-display capitalize capitalize lg:text-5xl/[1.3]">
+      <h1 class="text-balance text-3xl/[1.2] text-neutral-900 font-medium tracking-tighter font-display capitalize capitalize lg:text-5xl/[1.3] dark:text-neutral-50">
         Software Developer Crafting Sleek Web Experiences.
       </h1>
 
@@ -114,7 +114,7 @@ const projects = [
               <p>{{ project.name }}</p>
             </NuxtLink>
 
-            <p class="text-xs text-default-500 dark:text-default-300">
+            <p class="text-xs text-dim">
               {{ project.year }}
             </p>
           </div>
@@ -147,7 +147,7 @@ const projects = [
               to="https://ihreapotheken.de"
               external
               target="_blank"
-              class="underline"
+              class="hyperlink"
             >
               IhreApotheken.de{{ }}
             </NuxtLink>, the biggest e-commerce platform for pharmacies in Germany. Shipped our core platform as interactive web components used in hundreds of pharmacy websites across Germany.

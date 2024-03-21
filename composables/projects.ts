@@ -1,5 +1,11 @@
-import { titleCase } from 'scule'
-import type { Category, Project } from '~/models'
+import { Category, type CategorySlug, type Project } from '~/models'
+
+const categories: Record<CategorySlug, string> = {
+  [Category.projects]: 'Projects',
+  [Category.play]: 'Play',
+  [Category.extensions]: 'Plugins & Extensions',
+  [Category.templates]: 'Templates',
+}
 
 const projects: Project[] = [
   {
@@ -10,7 +16,7 @@ const projects: Project[] = [
     year: 2022,
     repo: 'https://github.com/matijaoe/fare',
     thumbnail: '/projects/fare.webp',
-    categories: ['projects'],
+    categories: [Category.projects],
   },
   {
     slug: 'qwiz',
@@ -21,7 +27,7 @@ const projects: Project[] = [
     repo: 'https://github.com/qwiz-app/qwiz',
     url: 'https://app.qwiz.party',
     thumbnail: '/projects/qwiz.webp',
-    categories: ['projects'],
+    categories: [Category.projects],
   },
   {
     slug: 'aimo',
@@ -32,7 +38,7 @@ const projects: Project[] = [
     repo: 'https://github.com/matijaoe/aimo',
     url: 'https://aimo.vercel.app',
     thumbnail: '/projects/aimo.webp',
-    categories: ['projects'],
+    categories: [Category.projects],
   },
   {
     wip: true,
@@ -42,7 +48,7 @@ const projects: Project[] = [
     tags: ['TypeScript', 'Nitro'],
     year: 2021,
     repo: 'https://github.com/matijaoe/brutoneto',
-    categories: ['projects'],
+    categories: [Category.projects],
   },
   {
     wip: true,
@@ -52,7 +58,7 @@ const projects: Project[] = [
     tags: ['TypeScript', 'Bun'],
     year: 2021,
     repo: 'https://github.com/matijaoe/utilipea',
-    categories: ['projects'],
+    categories: [Category.projects],
   },
   {
     wip: true,
@@ -62,7 +68,7 @@ const projects: Project[] = [
     tags: ['Nuxt', 'Tailwind', 'Drizzle'],
     year: 2021,
     repo: 'https://github.com/matijaoe/polenta',
-    categories: ['projects'],
+    categories: [Category.projects],
   },
   {
     name: 'matijao.com',
@@ -73,7 +79,7 @@ const projects: Project[] = [
     repo: 'https://github.com/matijaoe/matijao.com',
     url: 'https://matijao.com',
     thumbnail: '/projects/matijao.webp',
-    categories: ['play'],
+    categories: [Category.play],
   },
   {
     slug: 'bip39-words',
@@ -84,7 +90,7 @@ const projects: Project[] = [
     repo: 'https://github.com/matijaoe/bip39-words',
     url: 'https://bip39-rosy.vercel.app',
     thumbnail: '/projects/btc-tools.webp',
-    categories: ['play'],
+    categories: [Category.play],
   },
   {
     slug: 'favicones',
@@ -95,7 +101,7 @@ const projects: Project[] = [
     repo: 'https://github.com/matijaoe/favicones',
     url: 'https://favicones.vercel.app/',
     thumbnail: '/projects/favicones.webp',
-    categories: ['play'],
+    categories: [Category.play],
   },
   {
     slug: 'meet-mia',
@@ -109,7 +115,7 @@ const projects: Project[] = [
     images: [
       '/projects/meetmia/01.webp',
     ],
-    categories: ['play'],
+    categories: [Category.play],
   },
   {
     slug: 'comet',
@@ -120,7 +126,7 @@ const projects: Project[] = [
     repo: 'https://github.com/matijaoe/comet',
     url: 'https://comet-blush.vercel.app',
     thumbnail: '/projects/comet.webp',
-    categories: ['play'],
+    categories: [Category.play],
   },
   {
     slug: 'vue-ecosystem-snippets',
@@ -130,7 +136,7 @@ const projects: Project[] = [
     url: 'https://marketplace.visualstudio.com/items?itemName=matijao.vue-nuxt-snippets',
     repo: 'https://github.com/mat2ja/vue-ecosystem-snippets',
     tags: ['Deno', 'TypeScript', 'VSCode'],
-    categories: ['extensions'],
+    categories: [Category.extensions],
   },
   {
     slug: 'modern-javascript-snippets',
@@ -140,7 +146,7 @@ const projects: Project[] = [
     url: 'https://marketplace.visualstudio.com/items?itemName=matijao.modern-js-snippets',
     repo: 'https://github.com/mat2ja/modern-javascript-snippets',
     tags: ['Deno', 'TypeScript', 'VSCode'],
-    categories: ['extensions'],
+    categories: [Category.extensions],
   },
   {
     slug: 'url-query-editor',
@@ -150,7 +156,7 @@ const projects: Project[] = [
     repo: 'https://github.com/matijaoe/url-query-editor',
     thumbnail: '/projects/url-query-editor.webp',
     tags: ['Svelte', 'Tailwind', 'Chrome'],
-    categories: ['extensions'],
+    categories: [Category.extensions],
   },
   {
     slug: 'pnpm-plugin-zsh',
@@ -159,7 +165,7 @@ const projects: Project[] = [
     year: 2023,
     repo: 'https://github.com/matijaoe/pnpm.plugin.zsh',
     tags: ['Zsh', 'pnpm'],
-    categories: ['extensions'],
+    categories: [Category.extensions],
   },
   {
     slug: 'nuxt-starter',
@@ -169,7 +175,7 @@ const projects: Project[] = [
     repo: 'https://github.com/matijaoe/nuxt-starter',
     url: 'https://the-nuxt-starter.vercel.app/',
     tags: ['Nuxt', 'UnoCSS', 'TypeScript'],
-    categories: ['starters'],
+    categories: [Category.templates],
   },
   {
     slug: 'vue-starter',
@@ -179,7 +185,7 @@ const projects: Project[] = [
     repo: 'https://github.com/matijaoe/vue-starter',
     url: 'https://vue-uno-starter.vercel.app/',
     tags: ['Vue', 'UnoCSS'],
-    categories: ['starters'],
+    categories: [Category.templates],
   },
   {
     slug: 'advent-of-code-template',
@@ -188,7 +194,7 @@ const projects: Project[] = [
     year: 2023,
     repo: 'https://github.com/matijaoe/advent-of-code',
     tags: ['Bun', 'TypeScript'],
-    categories: ['starters'],
+    categories: [Category.templates],
   },
   {
     slug: 'vue-anu-starter',
@@ -198,24 +204,24 @@ const projects: Project[] = [
     repo: 'https://github.com/matijaoe/vue-anu-starter',
     url: 'https://vue-anu-starter.vercel.app/',
     tags: ['Vue', 'UnoCSS'],
-    categories: ['starters'],
+    categories: [Category.templates],
   },
 
 ]
 
 export const useProjects = () => {
   const uniqueCategories = computed(() => {
-    const categories = new Set<string>()
+    const categorySet = new Set<CategorySlug>()
     projects.forEach((project) => {
       project.categories.forEach((category) => {
-        categories.add(category)
+        categorySet.add(category)
       })
     })
 
-    return Array.from(categories).map((category) => {
+    return Array.from(categorySet).map((category) => {
       return {
-        label: titleCase(category),
-        value: category as Category,
+        label: categories[category],
+        value: category,
       }
     })
   })
@@ -224,7 +230,7 @@ export const useProjects = () => {
     return projects.find((project) => project.slug === slug)
   }
 
-  const getProjectsByCategory = (category: Category): Project[] => {
+  const getProjectsByCategory = (category: CategorySlug): Project[] => {
     return projects.filter((project) => project.categories.includes(category))
   }
 
