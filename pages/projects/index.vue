@@ -25,17 +25,17 @@ const { uniqueCategories, getProjectsByCategory } = useProjects()
           >
             <NuxtLink
               :to="{ name: 'projects-slug', params: { slug: project.slug } }"
-              class="rounded-lg p-4 transition hover:bg-default-100/60 dark:hover:bg-default-900/40"
+              class="rounded-lg p-4 transition hover:bg-default-100/60 dark:hover:bg-default-900/70"
             >
               <div>
                 <div class="w-full flex items-center justify-between">
                   <p class="font-semibold">
                     {{ project.name }}
                   </p>
-                  <span class="text-xs text-dim">{{ project.year }}</span>
+                  <span class="text-xs text-dim-2">{{ project.year }}</span>
                 </div>
                 <div class="mt-1">
-                  <p class="text-dim-2 text-sm">
+                  <p class="text-sm text-dim-2">
                     {{ project.description }}
                   </p>
                 </div>

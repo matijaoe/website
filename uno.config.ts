@@ -10,7 +10,7 @@ import {
 
 const colors = {
   ...theme.colors,
-  default: theme.colors.zinc,
+  default: theme.colors.neutral,
   primary: {
     50: '#fdffe4',
     100: '#f8ffc4',
@@ -41,24 +41,24 @@ const config = defineConfig({
         },
         'li': {
           'line-height': '2.25',
-          'color': colors.neutral['600'],
+          'color': colors.default['600'],
         },
         'li::marker': {
-          color: colors.neutral['300'],
+          color: colors.default['300'],
         },
         '.dark li': {
-          color: colors.neutral['400'],
+          color: colors.default['400'],
         },
         '.dark li::marker': {
-          color: colors.neutral['600'],
+          color: colors.default['600'],
         },
         'a': {
-          'text-decoration-color': colors.neutral['300'],
+          'text-decoration-color': colors.default['300'],
           'text-decoration-thickness': '0.1em',
           'text-underline-offset': '.15em',
         },
         '.dark a': {
-          'text-decoration-color': colors.neutral['600'],
+          'text-decoration-color': colors.default['600'],
         },
         'a:hover': {
           'text-decoration-color': colors.primary['500'],
@@ -95,7 +95,7 @@ const config = defineConfig({
     'text-rich': 'text-default-900 dark:text-default-50',
     'text-dim': 'text-default-600 dark:text-default-500',
     'text-dim-2': 'text-default-600 dark:text-default-400',
-    'hyperlink': 'underline decoration-neutral-300 dark:decoration-neutral-600 decoration-0.1em decoration-offset-0.15em',
+    'hyperlink': 'underline decoration-default-300 dark:decoration-default-600 decoration-0.1em decoration-offset-0.15em',
     'row': 'max-w-2xl w-full mx-auto',
   },
 })

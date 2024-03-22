@@ -31,6 +31,7 @@ const isLogoLinkElHovered = useElementHover(logoLinkEl)
             v-for="link in links"
             :key="link.to.toString()"
             :to="link.to"
+            class="lowercase"
           >
             {{ link.label }}
           </NavLink>

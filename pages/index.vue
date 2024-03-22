@@ -33,50 +33,18 @@ const contacts: ContactItem = [
     link: 'lightning:matijao@getalby.com',
   },
 ]
-
-const projects = [
-  {
-    name: 'Fare',
-    description: 'Application for tracking personal finances and attaining financial independence.',
-    tags: ['Nuxt', 'TypeScript', 'UnoCSS', 'Prisma'],
-    year: 2022,
-    repo: 'https://github.com/matijaoe/fare',
-    thumbnail: '/projects/fare.webp',
-    categories: ['projects'],
-  },
-  {
-    name: 'Qwiz',
-    description: 'Platform for creation, organization & discovery of pub quizzes.',
-    tags: ['Next', 'TypeScript', 'Nest', 'Prisma'],
-    year: 2022,
-    repo: 'https://github.com/qwiz-app/qwiz',
-    url: 'https://app.qwiz.party',
-    thumbnail: '/projects/qwiz.webp',
-    categories: ['projects'],
-  },
-  {
-    name: 'Aimo',
-    description: 'Social media platform connecting motivated individuals with accountability partners.',
-    tags: ['Nuxt', 'Tailwind', 'Firebase'],
-    year: 2021,
-    repo: 'https://github.com/matijaoe/aimo',
-    url: 'https://aimo.vercel.app',
-    thumbnail: '/projects/aimo.webp',
-    categories: ['projects'],
-  },
-]
 </script>
 
 <template>
   <div class="flex flex-col gap-12 py-4">
     <section>
-      <h1 class="text-balance text-3xl/[1.2] text-neutral-900 font-medium tracking-tighter font-display capitalize capitalize lg:text-5xl/[1.3] dark:text-neutral-50">
+      <h1 class="text-balance text-3xl/[1.2] text-default-900 font-medium tracking-tighter font-display capitalize capitalize lg:text-5xl/[1.3] dark:text-default-50">
         Software Developer Crafting Sleek Web Experiences.
       </h1>
 
-      <div class="mt-5 prose prose-neutral dark:prose-invert">
+      <div class="mt-5 prose prose-default dark:prose-invert">
         <p>
-          I'm <strong>Matija</strong>, a Croatia-based software engineer with a talent for simplifying the complex web. My focus lies in building interactive web applications using TypeScript, Vue, and Nuxt. I'm deeply passionate about open-source development, UI/UX design, developer experience and clean code.
+          I'm <span class="font-medium font-display text-rich">Matija</span>, a Croatia-based software engineer with a talent for simplifying the complex web. My focus lies in building interactive web applications using TypeScript, Vue, and Nuxt. I'm deeply passionate about open-source development, UI/UX design, developer experience and clean code.
         </p>
 
         <p>
@@ -86,7 +54,7 @@ const projects = [
     </section>
 
     <section class="mt--4">
-      <h2 class="mb-4 text-3xl font-bold">
+      <h2 class="mb-4 text-3xl font-bold text-rich">
         @
       </h2>
       <div>
@@ -99,33 +67,7 @@ const projects = [
     </section>
 
     <section>
-      <h2 class="mb-4 text-3xl font-medium font-display">
-        Featured Projects
-      </h2>
-
-      <div class="grid gap-6 sm:grid-cols-2 sm:gap-8">
-        <div
-          v-for="project in projects"
-          :key="project.name"
-          class="flex items-baseline justify-between"
-        >
-          <div>
-            <NuxtLink class="group flex items-center font-medium hover:underline" :href="project.repo" external target="_blank">
-              <p>{{ project.name }}</p>
-            </NuxtLink>
-
-            <p class="text-xs text-dim">
-              {{ project.year }}
-            </p>
-          </div>
-
-          <!-- <BaseTag>wip</BaseTag> -->
-        </div>
-      </div>
-    </section>
-
-    <section>
-      <h2 class="mb-4 text-3xl font-medium font-display">
+      <h2 class="mb-4 text-3xl font-medium font-display text-rich">
         Work Experience
       </h2>
       <div class="flex flex-col gap-4">

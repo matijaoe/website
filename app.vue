@@ -1,6 +1,6 @@
 <template>
   <Html lang="en">
-    <Body class="bg-default-50 bg-white text-default-800 font-sans dark:bg-[#111010] dark:text-default-300">
+    <Body class="bg-default-50 bg-white text-default-900 font-sans dark:bg-[#111010] dark:text-default-200">
       <NuxtLayout class="min-h-screen">
         <NuxtPage />
       </NuxtLayout>

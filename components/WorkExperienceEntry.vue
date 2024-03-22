@@ -24,26 +24,26 @@ defineProps<{
           </p>
         </div>
 
-        <NuxtLink :to="companyUrl" external target="_blank" class="group">
-          <div class="flex items-start gap-3 sm:items-center">
-            <slot name="logo" />
+        <div class="flex items-start gap-3 sm:items-center">
+          <slot name="logo" />
 
-            <div class="flex flex-row items-center gap-2 text-sm lt-sm:-mt-0.4">
+          <div class="flex flex-row items-center gap-2 text-sm lt-sm:-mt-0.4">
+            <NuxtLink :to="companyUrl" external target="_blank" class="group">
               <p class="text-sm group-hover:underline">
                 {{ company }}
               </p>
-              <span class="text-dim">&bull;</span>
-
-              <p class="text-dim-2">
-                {{ companyLocation }}
-              </p>
-            </div>
+            </NuxtLink>
           </div>
-        </NuxtLink>
+          <span class="text-dim">&bull;</span>
 
-        <div v-if="$slots.default" class="mt-2 text-sm text-dim-2">
-          <slot />
+          <p class="text-dim-2">
+            {{ companyLocation }}
+          </p>
         </div>
+      </div>
+
+      <div v-if="$slots.default" class="mt-2 text-sm text-dim-2">
+        <slot />
       </div>
     </template>
   </BaseRow>
