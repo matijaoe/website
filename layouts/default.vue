@@ -1,3 +1,8 @@
+<script lang="ts" setup>
+const { x, y } = useWindowScroll()
+const route = useRoute()
+</script>
+
 <template>
   <div>
     <!-- <div class="w-row">
@@ -13,7 +18,11 @@
         <slot />
       </div>
 
-      <div />
+      <div>
+        <NuxtLink v-show="y > 100" :to="{ name: route.name }" class="fixed bottom-14 right-14 aspect-square flex items-center justify-center rounded-full bg-default-800 p-3">
+          <Icon name="ph:caret-up-bold" class="text-xl text-default-50" />
+        </NuxtLink>
+      </div>
     </div>
   </div>
 </template>
