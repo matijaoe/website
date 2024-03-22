@@ -61,7 +61,10 @@ const config = defineConfig({
           'text-decoration-color': colors.default['600'],
         },
         'a:hover': {
-          'text-decoration-color': colors.primary['500'],
+          'text-decoration-color': colors.default['900'],
+        },
+        '.dark a:hover': {
+          'text-decoration-color': colors.default['200'],
         },
       },
     }),
@@ -76,7 +79,7 @@ const config = defineConfig({
           provider: 'fontshare',
           name: 'Clash Display',
         },
-        mono: 'JetBrains Mono',
+        mono: 'Kode Mono',
       },
     }),
   ],
@@ -96,7 +99,7 @@ const config = defineConfig({
     'text-dim': 'text-default-600 dark:text-default-500',
     'text-dim-2': 'text-default-600 dark:text-default-400',
     'hyperlink': 'underline decoration-default-300 dark:decoration-default-600 decoration-0.1em decoration-offset-0.15em',
-    'row': 'max-w-2xl w-full mx-auto',
+    'w-row': 'max-w-2xl w-full mx-auto',
   },
 })
 

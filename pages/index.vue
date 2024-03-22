@@ -36,10 +36,10 @@ const contacts: ContactItem = [
 </script>
 
 <template>
-  <div class="flex flex-col gap-12 py-4">
+  <div class="flex flex-col gap-12">
     <section>
       <h1 class="text-balance text-3xl/[1.2] text-default-900 font-medium tracking-tighter font-display capitalize capitalize lg:text-5xl/[1.3] dark:text-default-50">
-        Software Developer Crafting Sleek Web Experiences.
+        Software Developer Crafting Sleek Web Experiences
       </h1>
 
       <div class="mt-5 prose prose-default dark:prose-invert">

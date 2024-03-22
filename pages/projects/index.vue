@@ -8,36 +8,43 @@ const { uniqueCategories, getProjectsByCategory } = useProjects()
       Projects
     </PageHeading>
 
-    <div class="mt-6 flex flex-col gap-8">
+    <div class="mt-6 flex flex-col">
       <div v-for="cat in uniqueCategories" :key="cat.value">
-        <div v-if="cat.value !== 'projects'" class="mb-6 flex items-center gap-4">
+        <div v-if="cat.value !== 'projects'" :id="cat.value" class="flex items-center gap-4 py-6">
           <hr class="w-full grow border-color-default-200 dark:border-color-default-800/70">
-          <h2 class="text-md w-fit shrink-0 font-display lowercase text-dim">
+          <NuxtLink :to="`#${cat.value}`" class="text-md w-fit shrink-0 font-display lowercase hover:text-dim-2 text-dim">
             {{ cat.label }}
-          </h2>
+          </NuxtLink>
           <hr class="w-full grow border-color-default-200 dark:border-color-default-800/70">
         </div>
 
-        <div class="grid grid-cols-2 gap-x-4 gap-y-2 -mx-4">
+        <div class="grid grid-cols-2 gap-x-4 gap-y-2 -mx-5">
           <template
             v-for="project in getProjectsByCategory(cat.value)"
             :key="project.slug"
           >
             <NuxtLink
               :to="{ name: 'projects-slug', params: { slug: project.slug } }"
-              class="rounded-lg p-4 transition hover:bg-default-100/60 dark:hover:bg-default-900/70"
+              class="block flex flex-col rounded-xl px-5 py-4 transition hover:bg-default-100/60 dark:hover:bg-default-900/70"
             >
               <div>
                 <div class="w-full flex items-center justify-between">
                   <p class="font-semibold">
                     {{ project.name }}
                   </p>
-                  <span class="text-xs text-dim-2">{{ project.year }}</span>
+                  <span class="text-xs font-mono text-dim">{{ project.year }}</span>
                 </div>
-                <div class="mt-1">
+                <div class="mt-1.5">
                   <p class="text-sm text-dim-2">
                     {{ project.description }}
                   </p>
+                </div>
+              </div>
+
+              <div v-if="project.tags.length" class="mt-auto flex pt-2">
+                <div v-for="(tag, idx) in project.tags" :key="tag" class="flex items-center justify-center text-dim">
+                  <span class="text-11px leading-none font-mono lowercase">{{ tag }}</span>
+                  <span v-if="idx < project.tags.length - 1 " class="mx-1 font-light">/</span>
                 </div>
               </div>
             </NuxtLink>

@@ -115,7 +115,6 @@ export default antfu({
       'vue/component-name-in-template-casing': ['error', 'PascalCase'],
       'vue/define-emits-declaration': ['warn', 'type-literal'],
       'vue/define-props-declaration': ['error', 'type-based'],
-      'vue/html-button-has-type': 'error',
       'vue/html-self-closing': 'error',
       'vue/max-attributes-per-line': ['error', {
         multiline: { max: 1 },
