@@ -10,10 +10,10 @@ const route = useRoute()
     </div> -->
 
     <div
-      class="grid grid-cols-[1fr_3fr_1fr] px-8 py-14"
+      class="grid grid-cols-[2fr_5fr_2fr] mt-14vh gap-0 px-8 py-10"
     >
-      <div class="">
-        <TheSidebar class="sticky top-14 ml-6 grow" />
+      <div class="mr-4">
+        <TheSidebar class="sticky top-10 ml-6 grow" />
       </div>
 
       <div class="w-row grow px-4">
@@ -22,7 +22,7 @@ const route = useRoute()
 
       <div>
         <NuxtLink v-show="y > 100" :to="{ name: route.name }" class="fixed bottom-14 right-14 aspect-square flex items-center justify-center rounded-full bg-default-800 p-3">
-          <Icon name="ph:caret-up-bold" class="text-xl text-default-50" />
+          <Icon name="lucide:chevron-up" class="text-xl text-default-50" />
         </NuxtLink>
       </div>
     </div>

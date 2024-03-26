@@ -143,7 +143,7 @@ const contacts: ContactItem = [
           end-date="Jul 2021"
         >
           <template #logo>
-            <Icon name="ph:map-trifold-duotone" class="aspect-square h-5 w-5 rounded-sm -ml-0.5" alt="company logo" />
+            <Icon name="lucide:map" class="aspect-square h-5 w-5 rounded-sm -ml-0.5" alt="company logo" />
           </template>
 
           <template #default>
