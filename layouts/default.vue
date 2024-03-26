@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-const { x, y } = useWindowScroll()
+const { y } = useWindowScroll()
 const route = useRoute()
 </script>
 
@@ -9,9 +9,11 @@ const route = useRoute()
       <TheHeader class="mb-7" />
     </div> -->
 
-    <div class="grid grid-cols-[1fr_3fr_1fr] px-14 py-14">
+    <div
+      class="grid grid-cols-[1fr_3fr_1fr] px-8 py-14"
+    >
       <div class="">
-        <TheSidebar class="sticky top-14 grow" />
+        <TheSidebar class="sticky top-14 ml-6 grow" />
       </div>
 
       <div class="w-row grow px-4">
