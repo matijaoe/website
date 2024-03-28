@@ -3,13 +3,14 @@ export type Project = {
   name: string
   description: string
   tags: string[]
-  year: number
+  year: string
   repo?: string
   url?: string
   wip?: boolean
   thumbnail?: string
   images?: string[]
   categories: CategorySlug[]
+  color?: string
 }
 
 export const Category = {

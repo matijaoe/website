@@ -10,10 +10,10 @@ const route = useRoute()
     </div> -->
 
     <div
-      class="grid grid-cols-[2fr_5fr_2fr] mt-14vh gap-0 px-8 py-10"
+      class="grid grid-cols-[1fr_48rem_1fr] mt-14vh gap-8 px-8 py-10"
     >
       <div class="mr-4">
-        <TheSidebar class="sticky top-10 ml-6 grow" />
+        <TheSidebar class="sticky top-10 w-row ml-6 grow" />
       </div>
 
       <div class="w-row grow px-4">

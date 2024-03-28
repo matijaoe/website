@@ -79,7 +79,7 @@ const config = defineConfig({
           provider: 'fontshare',
           name: 'Clash Display',
         },
-        mono: 'Kode Mono',
+        mono: 'JetBrains Mono',
       },
     }),
   ],

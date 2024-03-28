@@ -24,7 +24,7 @@ const { uniqueCategories, getProjectsByCategory } = useProjects()
             :key="project.slug"
           >
             <NuxtLink
-              :to="{ name: 'projects-projectSlug', params: { projectSlug: project.slug } }"
+              :to="{ name: 'projects-slug', params: { slug: project.slug } }"
               class="block flex flex-col rounded-xl px-5 py-4 transition hover:bg-default-100/60 dark:hover:bg-default-900/70"
             >
               <div>

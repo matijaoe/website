@@ -7,6 +7,7 @@ export default defineNuxtConfig({
     '@nuxtjs/color-mode',
     'nuxt-icon',
     '@nuxt/content',
+    "@nuxt/fonts"
   ],
 
   devtools: { enabled: true },
