@@ -16,7 +16,7 @@ const activeLinkClass = '!text-default-900 !dark:text-default-50'
 
 <template>
   <aside>
-    <menu class="flex flex-col items-end text-right">
+    <menu class="flex flex-col">
       <NuxtLink class="group mb-4 text-rich" to="/">
         <span class="text-3xl font-medium font-display">
           <span class="text-dim">@</span>matijao

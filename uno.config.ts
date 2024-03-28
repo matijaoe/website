@@ -99,7 +99,8 @@ const config = defineConfig({
     'text-dim': 'text-default-600 dark:text-default-500',
     'text-dim-2': 'text-default-600 dark:text-default-400',
     'hyperlink': 'underline decoration-default-300 dark:decoration-default-600 decoration-0.1em decoration-offset-0.15em',
-    'w-row': 'max-w-2xl w-full mx-auto',
+    'w-row': 'max-w-2xl w-full',
+    'w-sidebar': 'w-[18rem]',
   },
 })
 

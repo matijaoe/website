@@ -161,6 +161,7 @@ const projects: Project[] = [
     url: 'https://comet-blush.vercel.app',
     thumbnail: '/projects/comet.webp',
     categories: [Category.play],
+    color: '#EA2026',
   },
   {
     slug: 'vue-ecosystem-snippets',
@@ -169,9 +170,10 @@ const projects: Project[] = [
     year: '2023',
     url: 'https://marketplace.visualstudio.com/items?itemName=matijao.vue-nuxt-snippets',
     repo: 'https://github.com/mat2ja/vue-ecosystem-snippets',
+    thumbnail: '/projects/vue-ecosystem-snippets.png',
     tags: ['Deno', 'TypeScript', 'VSCode'],
     categories: [Category.extensions],
-    color: '#EA2026',
+    color: '#1FBE4B',
   },
   {
     slug: 'modern-javascript-snippets',
@@ -180,8 +182,10 @@ const projects: Project[] = [
     year: '2023',
     url: 'https://marketplace.visualstudio.com/items?itemName=matijao.modern-js-snippets',
     repo: 'https://github.com/mat2ja/modern-javascript-snippets',
+    thumbnail: '/projects/modern-javascript-snippets.png',
     tags: ['Deno', 'TypeScript', 'VSCode'],
     categories: [Category.extensions],
+    color: '#E8D44D',
   },
   {
     slug: 'url-query-editor',
@@ -210,8 +214,10 @@ const projects: Project[] = [
     year: '2023',
     repo: 'https://github.com/matijaoe/nuxt-starter',
     url: 'https://the-nuxt-starter.vercel.app/',
+    thumbnail: '/projects/nuxt-starter.png',
     tags: ['Nuxt', 'UnoCSS', 'TypeScript'],
     categories: [Category.templates],
+    color: '#01DC82',
   },
   {
     slug: 'vue-starter',

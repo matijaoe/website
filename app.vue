@@ -9,6 +9,9 @@
 </template>
 
 <style>
+:root {
+  --sidebar: 18rem;
+}
 html.dark {
   color-scheme: dark;
 }
