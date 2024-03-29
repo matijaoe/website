@@ -3,7 +3,7 @@
 </script>
 
 <template>
-  <div class="mx w-row flex flex-col gap-12">
+  <div class="flex flex-col gap-12">
     <section>
       <h1 class="text-pretty text-3xl/[1.2] text-default-900 font-medium tracking-tighter font-display capitalize capitalize lg:text-5xl/[1.3] dark:text-default-50">
         Software Developer Crafting Sleek Web Experiences

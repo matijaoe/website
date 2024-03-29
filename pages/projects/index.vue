@@ -3,7 +3,7 @@ const { uniqueCategories, getProjectsByCategory } = useProjects()
 </script>
 
 <template>
-  <div class="max-w-3xl">
+  <div>
     <div>
       <PageHeading>
         Projects
@@ -32,3 +32,10 @@ const { uniqueCategories, getProjectsByCategory } = useProjects()
     </div>
   </div>
 </template>
+
+<style>
+img.active {
+  view-transition-name: selected-film;
+  contain: layout;
+}
+</style>

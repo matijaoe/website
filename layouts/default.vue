@@ -6,13 +6,13 @@ const route = useRoute()
 <template>
   <div>
     <div
-      class="grid grid-cols-[var(--sidebar)_1fr] mt-8vh gap-8 px-8 py-14"
+      class="grid grid-cols-[var(--sidebar)_1fr_var(--sidebar)] mt-8vh gap-8 px-8 py-14"
     >
       <div>
-        <TheSidebar class="sticky top-10 w-row grow pl-4" />
+        <TheSidebar class="sticky top-10 grow pl-4" />
       </div>
 
-      <div class="grow px-4">
+      <div class="mx-auto w-row grow px-4">
         <slot />
       </div>
 

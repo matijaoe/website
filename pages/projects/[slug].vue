@@ -68,7 +68,7 @@ const imageBgColor = computed(() => {
                 :width="1440"
                 format="webp"
                 :src="image"
-                alt="Project thumbnail"
+                alt="Thumbnail"
               />
             </NuxtLink>
           </div>
@@ -81,5 +81,15 @@ const imageBgColor = computed(() => {
 <style lang="postcss" scoped>
 .thumbnail-wrapper {
   background-color: v-bind(imageBgColor);
+}
+
+img {
+  view-transition-name: project-thumbnail;
+}
+</style>
+
+<style>
+::view-transition-image-pair(project-thumbnail) {
+  isolation: none;
 }
 </style>

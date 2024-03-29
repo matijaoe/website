@@ -4,6 +4,8 @@ import type { Project } from '~/models'
 defineProps<{
   project: Project
 }>()
+
+const active = useState()
 </script>
 
 <template>
@@ -30,6 +32,7 @@ defineProps<{
           class="overflow-hidden rounded-md"
         >
           <NuxtImg
+            :class="{ active: active === project.slug }"
             :width="1440"
             format="webp"
             :src="project.thumbnail"
@@ -53,3 +56,10 @@ defineProps<{
     </div>
   </NuxtLink>
 </template>
+
+<style lang="postcss" scoped>
+img.active {
+  view-transition-name: project-thumbnail;
+  contain: layout;
+}
+</style>
