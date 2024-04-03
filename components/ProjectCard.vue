@@ -15,7 +15,7 @@ const active = useState()
   >
     <div>
       <div class="w-full flex items-center justify-between">
-        <p class="text-xl font-medium">
+        <p class="text-lg font-medium">
           {{ project.name }}
         </p>
         <span class="text-sm font-mono text-dim">{{ project.year }}</span>

@@ -49,5 +49,6 @@
 
 - [Kobo Libra H20](https://gl.kobobooks.com/products/kobo-libra-h2o) . e-book reader
 - [YubiKey](https://www.yubico.com/products/) . security keys
+- [Raspberry Pi 4](https://www.raspberrypi.com/products/raspberry-pi-4-model-b/) . home server and bitcoin node
 - [COLDCARD](https://coldcard.com/) . bitcoin security
-- [Trek X-Caliber 8 2021](https://www.trekbikes.com/us/en_US/bikes/mountain-bikes/cross-country-mountain-bikes/x-caliber/x-caliber-8/p/33193/) . bike
+- [Trek X-Caliber 8 2021](https://www.trekbikes.com/us/en_US/bikes/mountain-bikes/cross-country-mountain-bikes/x-caliber/x-caliber-8/p/33193/) . cool red bike

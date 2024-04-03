@@ -72,7 +72,7 @@ const projects: Project[] = [
     name: 'Utilipea',
     description: 'Yet another utility library',
     tags: ['TypeScript', 'Bun'],
-    year: '2023',
+    year: '2023/24',
     repo: 'https://github.com/matijaoe/utilipea',
     categories: [Category.projects],
     color: '#A8B1FF',

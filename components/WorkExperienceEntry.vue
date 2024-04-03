@@ -24,7 +24,7 @@ defineProps<{
           </p>
         </div>
 
-        <div class="flex items-start gap-3 sm:items-center">
+        <div class="flex items-start gap-2 sm:items-center">
           <slot name="logo" />
 
           <div class="flex flex-row items-center gap-2 text-sm lt-sm:-mt-0.4">
@@ -36,7 +36,7 @@ defineProps<{
           </div>
           <span class="text-dim">&bull;</span>
 
-          <p class="text-dim-2">
+          <p class="text-sm text-dim-2">
             {{ companyLocation }}
           </p>
         </div>
