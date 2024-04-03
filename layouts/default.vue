@@ -12,7 +12,7 @@ const route = useRoute()
         <TheSidebar class="sticky top-10 grow pl-4" />
       </div>
 
-      <div class="mx-auto w-row grow px-4">
+      <div class="mx-auto w-row grow">
         <slot />
       </div>
 

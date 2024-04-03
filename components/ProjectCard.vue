@@ -11,7 +11,7 @@ const active = useState()
 <template>
   <NuxtLink
     :to="{ name: 'projects-slug', params: { slug: project.slug } }"
-    class="block flex flex-col rounded-xl px-5 py-4 transition hover:bg-default-100/60 dark:hover:bg-default-800/50"
+    class="block flex flex-col rounded-xl px-5 py-4 transition hover:bg-default-200/25 dark:hover:bg-default-800/20"
   >
     <div>
       <div class="w-full flex items-center justify-between">
@@ -21,7 +21,7 @@ const active = useState()
         <span class="text-sm font-mono text-dim">{{ project.year }}</span>
       </div>
 
-      <div
+      <!-- <div
         class="thumbnail-wrapper my-4 aspect-ratio-[720/450] w-[720px] w-full rounded-lg p-4 shadow-neutral-200"
         :style="{
           backgroundColor: project.color
@@ -39,7 +39,7 @@ const active = useState()
             alt="Project thumbnail"
           />
         </div>
-      </div>
+      </div> -->
 
       <div class="mt-1.5">
         <p class="text-sm text-dim-2">
