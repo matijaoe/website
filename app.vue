@@ -1,10 +1,11 @@
 <template>
   <Html lang="en">
-    <Body class="bg-[#F1F0E9] bg-default-50 text-default-900 font-sans dark:bg-[#111010] dark:text-default-200">
-      <!-- <div class="fixed left-0 right-0 top-0 h-20 w-screen from-[#F1F0E9] to-transparent bg-gradient-to-b opacity-0 dark:from-[#111010]" /> -->
+    <Body class="overflow-x-hidden bg-[#F1F0E9] bg-default-50 text-default-900 font-sans dark:bg-[#111010] dark:text-default-200">
+      <div class="fixed left-0 right-0 top-0 h-15 w-screen from-[#F1F0E9] to-transparent bg-gradient-to-b dark:from-[#111010]" />
       <NuxtLayout class="min-h-screen">
         <NuxtPage />
       </NuxtLayout>
+      <div class="fixed bottom-0 left-0 right-0 h-15 w-screen from-[#F1F0E9] to-transparent bg-gradient-to-t dark:from-[#111010]" />
     </Body>
   </Html>
 </template>

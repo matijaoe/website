@@ -232,7 +232,7 @@ const projects: Project[] = [
   {
     slug: 'advent-of-code-template',
     name: 'Advent of Code Template',
-    description: 'Automatic Advent of Code Template',
+    description: 'Automated Advent of Code Template',
     year: '2023',
     repo: 'https://github.com/matijaoe/advent-of-code',
     tags: ['Bun', 'TypeScript'],
