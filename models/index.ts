@@ -11,11 +11,13 @@ export type Project = {
   images?: string[]
   categories: CategorySlug[]
   color?: string
+  featured?: boolean
 }
 
 export const Category = {
   projects: 'projects',
-  play: 'playground',
+  hobby: 'hobby',
+  modules: 'modules',
   extensions: 'extensions',
   templates: 'starts',
 } as const
