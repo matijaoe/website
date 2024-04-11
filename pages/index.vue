@@ -15,7 +15,7 @@ definePageMeta({
         <div class="max-w-xl">
           <div class="mt-5 prose prose-default dark:prose-invert">
             <p>
-              Hey, I'm <span class="font-medium font-display text-rich">Matija</span>, an ambitious Software Engineer from Croatia with a strong sense of good UX and design, great attention to detail and a relentless focus on quality. Proficient in Vue, Nuxt, and full-stack TypeScript, I thrive on transforming ideas into polished products built from scratch. Fueled by deep curiosity and passion for UX/UI design, developer experience, clean code and open-source.
+              I'm <span class="font-medium font-display text-rich">Matija</span>, an ambitious Software Engineer from Croatia with a strong sense of good UX and design, great attention to detail and a relentless focus on quality. Proficient in Vue, Nuxt, and full-stack TypeScript, I thrive on transforming ideas into polished products built from scratch. My work is fueled by deep curiosity and passion for UX/UI design, developer experience, clean code and open-source.
             </p>
 
             <p>Beyond code, I'm deeply passionate about Bitcoin, dedicating my time to advocating for preserving our privacy, fostering self-sovereignty, enhancing financial literacy, and cultivating a low time preference mindset.</p>
