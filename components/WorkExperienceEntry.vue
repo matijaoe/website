@@ -3,6 +3,7 @@ defineProps<{
   company: string
   companyUrl?: string
   companyLocation: string
+  locationIcon: string
   position: string
   startDate: string
   endDate: string
@@ -36,8 +37,8 @@ defineProps<{
           </div>
           <span class="text-dim">&bull;</span>
 
-          <p class="text-sm text-dim-2">
-            {{ companyLocation }}
+          <p class="flex items-center gap-2 text-sm text-dim-2">
+            <Icon :name="locationIcon" /> <!-- {{ companyLocation }} ~ --> <span>remote</span>
           </p>
         </div>
       </div>
