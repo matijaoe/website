@@ -4,6 +4,7 @@
 - [14" MacBook Pro, M2 Pro 16/512GB](https://support.apple.com/kb/SP889) . personal laptop
 - [iPhone 15 Pro 256GB](https://www.apple.com/shop/buy-iphone/iphone-15-pro) . phone
 - [Vortex Race 3 (MX Clear)](https://vortexgear.store/products/race-3-micro-usb) . mechanical keyboard
+- [Logitech MX Keys Mini for Mac](https://www.logitech.com/en-eu/products/keyboards/mx-keys-mini-for-mac.html) . regular keyboard
 - [Logitech MX Master 3](https://www.logitech.com/en-eu/products/mice/mx-master-3.html) . mouse
 - [AirPods Pro 2](https://www.apple.com/airpods-pro/) . earphones
 - [Sony WH-1000XM5](https://electronics.sony.com/audio/headphones/headband/p/wh1000xm5-b) . headphones
