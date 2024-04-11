@@ -8,6 +8,16 @@
       About
     </PageHeading>
 
-    <div class="mt-8 flex flex-col gap-12" />
+    <div class="flex flex-col gap-12">
+      <div class="max-w-xl">
+        <div class="mt-5 prose prose-default dark:prose-invert">
+          <p>
+            I'm a determined Software Engineer from Croatia with a strong sense of good UX and design, great attention to detail and a relentless focus on quality. Proficient in Vue, Nuxt, and full-stack TypeScript, I thrive on transforming ideas into polished products built from scratch. My deep curiosity and passion for UX/UI design, developer experience, clean code and open-source fuel my work.
+          </p>
+
+          <p>Beyond code, I'm deeply passionate about Bitcoin, dedicating my time to advocating for preserving privacy, fostering self-sovereignty, enhancing financial literacy, and cultivating a low time preference mindset.</p>
+        </div>
+      </div>
+    </div>
   </div>
 </template>

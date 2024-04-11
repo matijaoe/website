@@ -13,12 +13,33 @@ definePageMeta({
         </h1>
 
         <div class="max-w-xl">
-          <div class="mt-5 prose prose-default dark:prose-invert">
+          <div class="prose prose-default dark:prose-invert">
             <p>
-              I'm <span class="font-medium font-display text-rich">Matija</span>, an ambitious Software Engineer from Croatia with a strong sense of good UX and design, great attention to detail and a relentless focus on quality. Fueled by deep curiosity and passion for UX/UI design, developer experience, clean code and open-source.
+              Hi, I'm <span class="font-medium text-rich">Matija</span>, a software engineer from Croatia.
+              <br>
+              I build well-crafted software, focusing on good UX and great attention to detail.
+              <br>
+              I like clean code, open-source, side-projects, dark mode, minimalism and Bitcoin.
+              <br>
             </p>
+          </div>
 
-            <p>Beyond code, I'm deeply passionate about Bitcoin, dedicating my time to advocating for preserving privacy, fostering self-sovereignty, enhancing financial literacy, and cultivating a low time preference mindset.</p>
+          <div class="flex items-center gap-3">
+            <NuxtLink to="/projects">
+              <div
+                class="ring-offset-background focus-visible:ring-ring h-9 inline-flex items-center justify-center rounded-md bg-default-50 px-4 py-2 text-sm text-default-900 font-medium transition-colors disabled:pointer-events-none hover:bg-default-50/90 disabled:opacity-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2"
+              >
+                Explore projects
+              </div>
+            </NuxtLink>
+
+            <NuxtLink to="/about">
+              <div
+                class="ring-offset-background focus-visible:ring-ring h-10 inline-flex items-center justify-center rounded-md bg-default-800/80 px-4 py-2 text-sm text-default-50 font-medium transition-colors disabled:pointer-events-none hover:bg-default-800/60 disabled:opacity-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2"
+              >
+                Find out more
+              </div>
+            </NuxtLink>
           </div>
         </div>
       </section>

@@ -10,7 +10,7 @@ import {
 
 const colors = {
   ...theme.colors,
-  default: theme.colors.neutral,
+  default: theme.colors.zinc,
   primary: {
     50: '#fdffe4',
     100: '#f8ffc4',
@@ -98,7 +98,7 @@ const config = defineConfig({
     'text-rich': 'text-default-900 dark:text-default-50',
     'text-dim': 'text-default-600 dark:text-default-500',
     'text-dim-2': 'text-default-600 dark:text-default-400',
-    'hyperlink': 'underline decoration-default-300 dark:decoration-default-600 decoration-0.1em decoration-offset-0.15em',
+    'hyperlink': 'underline decoration-default-300 dark:decoration-default-600 hover:decoration-current decoration-0.1em decoration-offset-0.15em',
     'w-row': 'px-4 max-w-2xl w-full',
     'w-sidebar': 'w-[18rem]',
   },

@@ -7,7 +7,7 @@
     <h2 class="mb-4 text-3xl font-medium font-display text-rich">
       Experience
     </h2>
-    <div class="flex flex-col gap-4">
+    <div class="flex flex-col gap-1">
       <WorkExperienceEntry
         company="Four of them LLC"
         company-url="https://www.4ofthem.eu/"
@@ -16,6 +16,7 @@
         position="Frontend Developer"
         start-date="Aug 2022"
         end-date="Present"
+        slug="4ot"
       >
         <template #logo>
           <img src="/4ot-logo.png" class="aspect-square h-4 w-4 rounded-sm" alt="company logo">
@@ -27,10 +28,10 @@
             to="https://ihreapotheken.de"
             external
             target="_blank"
-            class="hyperlink"
+            class="decoration-dotted hyperlink"
           >
             IhreApotheken.de{{ }}
-          </NuxtLink>, the biggest e-commerce platform for pharmacies in Germany. Shipped our core platform as interactive web components used in hundreds of pharmacy websites across Germany.
+          </NuxtLink>, the biggest e-commerce platform for pharmacies in Germany.
         </template>
       </WorkExperienceEntry>
 
@@ -42,13 +43,14 @@
         position="Frontend Developer"
         start-date="Jun 2023"
         end-date="Oct 2023"
+        slug="cura"
       >
         <template #logo>
           <img src="/cura-logo.jpeg" class="aspect-square h-4 w-4 rounded-sm" alt="company logo">
         </template>
 
         <template #default>
-          Worked on Anna App, an application with a goal of making everyday life easier for people in need of extensive medical care. Implemented front-end redesign and new features, improved the performance implementing TanStack Query site-wide, organized the codebase.
+          Worked on Anna App, an application with a goal of making everyday life easier for people with severe disabilities, in need of extensive medical care.
         </template>
       </WorkExperienceEntry>
 
@@ -60,6 +62,7 @@
         position="Junior Frontend Developer"
         start-date="Aug 2021"
         end-date="Sep 2022"
+        slug="3ot"
       >
         <template #logo>
           <img src="/3ot-logo.jpeg" class="aspect-square h-4 w-4 rounded-sm" alt="company logo">
@@ -67,9 +70,7 @@
 
         <template #default>
           <p>
-            Optimized the performance of the flagship IhreApotheken.de platform.
-            Led the development of the custom component library and internal libraries, used as a base for core platform rebuild.
-            Built and shipped inventory tracking application for pharmacy suppliers. Developed and maintained COVID-19 Vaccine Booking System.
+            Maintained the flagship IhreApotheken.de platform. Developed and maintained COVID-19 Vaccine Booking System.
           </p>
         </template>
       </WorkExperienceEntry>
@@ -82,13 +83,14 @@
         position="Full-Stack Developer"
         start-date="May 2021"
         end-date="Jul 2021"
+        slug="infokarta"
       >
         <template #logo>
           <Icon name="lucide:map" class="aspect-square h-5 w-5 rounded-sm -ml-0.5" alt="company logo" />
         </template>
 
         <template #default>
-          Collaborated with a small team to develop a geographic information system (GIS) based web application for several local governments in the Dalmatian Region.
+          Built web based GIS application for local governments in the Dalmatian Region.
         </template>
       </WorkExperienceEntry>
     </div>
