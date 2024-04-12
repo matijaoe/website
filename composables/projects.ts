@@ -111,7 +111,7 @@ const projects: Project[] = [
     name: 'Bitcoin Seed Finisher',
     description: 'Simple tool to generate a valid 24th word for a BIP39 seed phrase.',
     tags: ['Vue', 'Pico CSS'],
-    year: '2022',
+    year: '2024',
     repo: 'https://github.com/matijaoe/seed-finisher',
     url: 'https://seed-finisher.vercel.app/',
     categories: [Category.hobby],

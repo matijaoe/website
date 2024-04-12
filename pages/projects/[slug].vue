@@ -28,10 +28,10 @@ const imageBgColor = computed(() => {
           <Icon name="lucide:arrow-left" class="text-[1.2em]" /> Back
         </Button>
         <div class="flex ites-center gap-2">
-          <Button v-if="project.url" :to="project.url" external target="_blank" variant="outline" class="flex items-center gap-2">
+          <Button v-if="project.repo" :to="project.repo" external target="_blank" variant="outline" class="flex items-center gap-2">
             Code <Icon name="lucide:code" class="text-[1.2em]" />
           </Button>
-          <Button v-if="project.repo" :to="project.repo" external target="_blank" variant="default" class="flex items-center gap-2">
+          <Button v-if="project.url" :to="project.url" external target="_blank" variant="default" class="flex items-center gap-2">
             Live <Icon name="lucide:arrow-up-right" class="text-[1.2em]" />
           </Button>
         </div>
@@ -43,7 +43,15 @@ const imageBgColor = computed(() => {
         </h1>
       </div>
 
-      <div class="font-monospace mt-5 flex flex-wrap items-center gap-1 text-[11px]">
+      <div class="mt-5 flex flex-wrap items-center gap-1 text-[11px]">
+        <Badge
+          v-if="project.wip"
+          class="font-mono lowercase font-bold"
+          variant="primary"
+          size="sm"
+        >
+          wip
+        </Badge>
         <template
           v-for="tag in project.tags"
           :key="tag"
@@ -58,18 +66,19 @@ const imageBgColor = computed(() => {
         </template>
       </div>
 
-      <div class="mt-4">
+      <div class="mt-5 font-sans">
         <p>
           {{ project.description }}
         </p>
       </div>
 
-      <div v-if="images?.length" class="mt-10">
+      <Card v-if="images?.length" class="mt-10 border-none">
         <div
           v-for="image in images"
           :key="image"
-          class="thumbnail-wrapper aspect-ratio-[720/450] w-full rounded-xl p-8 shadow-neutral-200"
+          class="thumbnail-wrapper h-full w-full rounded-xl p-8"
         >
+          <!-- TODO: shift on image appear -->
           <div class="overflow-hidden rounded-xl">
             <NuxtLink
               :to="image"
@@ -85,7 +94,7 @@ const imageBgColor = computed(() => {
             </NuxtLink>
           </div>
         </div>
-      </div>
+      </Card>
     </div>
   </div>
 </template>
@@ -93,5 +102,6 @@ const imageBgColor = computed(() => {
 <style lang="postcss" scoped>
 .thumbnail-wrapper {
   background-color: v-bind(imageBgColor);
+  aspect-ratio: 720 / 450;
 }
 </style>

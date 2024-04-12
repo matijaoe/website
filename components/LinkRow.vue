@@ -12,7 +12,7 @@ defineProps<{
       <slot name="label" />
     </template>
 
-    <template #value>
+    <template #default>
       <NuxtLink :href="link" external class="decoration-0.1em decoration-offset-0.15em hover:underline" target="_blank">
         {{ linkText }}
       </NuxtLink>

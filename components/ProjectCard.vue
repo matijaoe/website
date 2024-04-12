@@ -14,7 +14,7 @@ const props = defineProps<{
     >
       <CardHeader class="p-0">
         <div class="w-full flex items-center justify-between">
-          <p class="line-clamp-1 font-medium font-sans group-hover:underline">
+          <p class="line-clamp-1 font-medium font-sans group-hover:underline decoration-primary">
             {{ project.name }}
           </p>
           <span class="text-muted-foreground text-xs font-mono">{{ project.year }}</span>

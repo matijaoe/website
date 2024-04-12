@@ -7,7 +7,7 @@ defineProps<{
 
 <template>
   <div
-    class="grid py-1"
+    class="grid items-center py-1"
     :class="{
       'grid-cols-3 gap-4': !responsive,
       'grid-cols-1 md:grid-cols-3 gap-1 md:gap-4': responsive,
@@ -24,10 +24,10 @@ defineProps<{
     <div
       :class="{
         'col-span-2': !responsive,
-        'col-span-1 md:col-span-2': responsive
+        'col-span-1 md:col-span-2': responsive,
       }"
     >
-      <slot name="value" />
+      <slot />
     </div>
   </div>
 </template>

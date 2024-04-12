@@ -12,13 +12,13 @@ defineProps<{
 </script>
 
 <template>
-  <BaseRow label="Aug 2021 - Present" responsive class="group hover:bg-default-200/25 dark:hover:bg-default-800/20 mx--4 rounded-md !p-4">
+  <BaseRow label="Aug 2021 - Present" responsive class="-ml-4 group hover:bg-default-200/25 dark:hover:bg-default-800/20 mx--4 rounded-md !p-4">
     <template #label>
       <p class="text-muted-foreground text-sm leading-[1.75rem]">
         {{ startDate }} &mdash; {{ endDate }}
       </p>
     </template>
-    <template #value>
+    <template #default>
       <div>
         <div class="mb-1 flex items-center justify-between gap-6">
           <p class="text-lg font-medium">

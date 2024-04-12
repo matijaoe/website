@@ -14,10 +14,11 @@ export const badgeVariants = cva(
         destructive:
           'border-transparent bg-destructive text-destructive-foreground shadow hover:bg-destructive/80',
         outline: 'text-foreground',
+        primary: 'border-transparent bg-primary text-primary-foreground shadow hover:bg-primary/90',
       },
       size: {
         default: 'px-2.5 py-0.5 text-xs',
-        sm: 'px-[5px] py-[1px] text-[11px]',
+        sm: 'px-[6px] py-[1px] text-[11px]',
       },
     },
     defaultVariants: {
