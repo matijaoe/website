@@ -2,31 +2,16 @@ import { theme } from '@unocss/preset-mini'
 import {
   defineConfig,
   presetTypography,
-  presetUno,
-  presetWebFonts,
 } from 'unocss'
 
 const colors = {
   ...theme.colors,
   default: theme.colors.zinc,
-  primary: {
-    50: '#fdffe4',
-    100: '#f8ffc4',
-    200: '#f0ff90',
-    300: '#e2ff50',
-    400: '#ccff05',
-    500: '#b1e600',
-    600: '#89b800',
-    700: '#678b00',
-    800: '#526d07',
-    900: '#455c0b',
-    950: '#233400',
-  },
 }
 
 const config = defineConfig({
   presets: [
-    presetUno(),
+    // presetUno(),
     // TODO: replace with tailwind
     presetTypography({
       cssExtend: {
@@ -66,21 +51,11 @@ const config = defineConfig({
         },
       },
     }),
-
-    presetWebFonts({
-      fonts: {
-        sans: {
-          provider: 'fontshare',
-          name: 'Satoshi',
-        },
-        display: {
-          provider: 'fontshare',
-          name: 'Clash Display',
-        },
-        mono: 'JetBrains Mono',
-      },
-    }),
   ],
+
+  theme: {
+    colors,
+  },
 
   shortcuts: {
     hyperlink: 'underline decoration-default-300 dark:decoration-default-600 hover:decoration-current decoration-0.1em decoration-offset-0.15em',

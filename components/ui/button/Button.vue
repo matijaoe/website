@@ -3,26 +3,27 @@ import type { HTMLAttributes } from 'vue'
 import { Primitive, type PrimitiveProps } from 'radix-vue'
 import { type ButtonVariants, buttonVariants } from '.'
 import { cn } from '@/utils/lib'
-import type { RouteLocationRaw } from '#vue-router'
+import type { NuxtLinkProps } from '#app'
 
 interface Props extends PrimitiveProps {
   variant?: ButtonVariants['variant']
   size?: ButtonVariants['size']
   class?: HTMLAttributes['class']
-  to?: RouteLocationRaw
+  to?: NuxtLinkProps['to']
 }
 
-const props = withDefaults(defineProps<Props>(), {
+type PropsWithLink = Props & { to: NuxtLinkProps['to'] }
+
+// TODO: only extend NuxtLinkProps when to is defined
+const props = withDefaults(defineProps<PropsWithLink>(), {
   as: 'button',
 })
 </script>
 
 <template>
   <NuxtLink
-    v-if="props.to"
+    v-if="to"
     :to="to"
-    :as="as"
-    :as-child="asChild"
     :class="cn(buttonVariants({ variant, size }), props.class)"
   >
     <slot />

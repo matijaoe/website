@@ -5,7 +5,7 @@ export default antfu({
     tsconfigPath: 'tsconfig.json',
   },
 
-  unocss: true,
+  unocss: false,
 
   formatters: {
     css: false,

@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import type { RouteLocationRaw } from '#vue-router';
+import type { RouteLocationRaw } from '#vue-router'
 
 const links: { to: RouteLocationRaw, label: string }[] = [
   { to: { name: 'index' }, label: 'Home' },
@@ -27,7 +27,7 @@ const activeLinkClass = '!text-foreground hover:text-foreground'
         v-for="link in links"
         :key="link.to.toString()"
         :to="link.to"
-        class="text-muted-foreground hover:text-foreground/85 w-fit py-0.75 align-middle font-medium lowercase transition-all"
+        class="text-muted-foreground hover:text-foreground/85 w-fit py-[0.2rem] align-middle font-medium lowercase transition-all"
         :active-class="activeLinkClass"
         :class="{ [activeLinkClass]: $route.name.startsWith(link.to.name) }"
       >

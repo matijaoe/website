@@ -9,14 +9,16 @@ const scrollToTop = () => {
 <template>
   <div>
     <div
-      class="grid gap-8 px-4 py-4 lg:grid-cols-[var(--sidebar)_1fr_var(--sidebar)] lg:mt-8vh lg:px-8 lg:py-14"
+      class="grid gap-8 px-4 py-4 lg:grid-cols-[var(--sidebar)_1fr_var(--sidebar)] lg:mt-[8vh] lg:px-8 lg:py-14"
     >
       <div>
         <TheSidebar class="sticky top-10 grow pl-4" />
       </div>
 
-      <div class="mx-auto max-w-2xl w-full grow px-4">
-        <slot />
+      <div class="px-4">
+        <div class="max-w-2xl w-full grow">
+          <slot />
+        </div>
       </div>
 
       <div class="">

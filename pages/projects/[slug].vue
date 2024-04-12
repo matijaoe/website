@@ -23,28 +23,42 @@ const imageBgColor = computed(() => {
 <template>
   <div v-if="project" class="max-w-3xl w-full">
     <div>
-      <div class="flex items-center justify-between">
+      <div class="flex items-center justify-between gap-2 pt-2 -mt-[calc(44px+20px)]">
+        <Button to="/projects" variant="ghost" class="flex items-center gap-2 -ml-4">
+          <Icon name="lucide:arrow-left" class="text-[1.2em]" /> Back
+        </Button>
+        <div class="flex ites-center gap-2">
+          <Button v-if="project.url" :to="project.url" external target="_blank" variant="outline" class="flex items-center gap-2">
+            Code <Icon name="lucide:code" class="text-[1.2em]" />
+          </Button>
+          <Button v-if="project.repo" :to="project.repo" external target="_blank" variant="default" class="flex items-center gap-2">
+            Live <Icon name="lucide:arrow-up-right" class="text-[1.2em]" />
+          </Button>
+        </div>
+      </div>
+
+      <div class="mt-5">
         <h1 class="text-6xl font-medium font-display">
           {{ project.name }}
         </h1>
-
-        <div class="flex items-center gap-2">
-          <Button v-if="project.repo" :to="project.repo" external target="_blank" variant="outline" class="flex items-center gap-2">
-            Live <Icon name="lucide:link" />
-          </Button>
-          <Button v-if="project.url" :to="project.url" external target="_blank" variant="default" class="flex items-center gap-2">
-            Code <Icon name="solar:code-2-bold" class="text-[1.2em]" />
-          </Button>
-        </div>
       </div>
 
-      <div class="mt-5 flex flex-wrap items-center gap-1 text-[11px] font-mono">
-        <div v-for="tag in project.tags" :key="tag" class="text-muted-foreground border-default-700 border rounded-full px-2 py-0.5 lowercase">
-          {{ tag }}
-        </div>
+      <div class="font-monospace mt-5 flex flex-wrap items-center gap-1 text-[11px]">
+        <template
+          v-for="tag in project.tags"
+          :key="tag"
+        >
+          <Badge
+            class="font-light font-mono lowercase"
+            variant="outline"
+            size="sm"
+          >
+            {{ tag }}
+          </badge>
+        </template>
       </div>
 
-      <div class="prose-default mt-4 prose dark:prose-invert">
+      <div class="mt-4">
         <p>
           {{ project.description }}
         </p>
@@ -56,9 +70,7 @@ const imageBgColor = computed(() => {
           :key="image"
           class="thumbnail-wrapper aspect-ratio-[720/450] w-full rounded-xl p-8 shadow-neutral-200"
         >
-          <div
-            class="overflow-hidden rounded-xl"
-          >
+          <div class="overflow-hidden rounded-xl">
             <NuxtLink
               :to="image"
               target="_blank"
@@ -81,15 +93,5 @@ const imageBgColor = computed(() => {
 <style lang="postcss" scoped>
 .thumbnail-wrapper {
   background-color: v-bind(imageBgColor);
-}
-
-img {
-  view-transition-name: project-thumbnail;
-}
-</style>
-
-<style>
-::view-transition-image-pair(project-thumbnail) {
-  isolation: none;
 }
 </style>

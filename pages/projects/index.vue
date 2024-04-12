@@ -1,5 +1,9 @@
 <script lang="ts" setup>
 const { uniqueCategories, getProjectsByCategory } = useProjects()
+
+definePageMeta({
+  layout: 'thirds',
+})
 </script>
 
 <template>
@@ -9,17 +13,17 @@ const { uniqueCategories, getProjectsByCategory } = useProjects()
         Projects
       </PageHeading>
 
-      <div class="mt-6 flex flex-col">
+      <div class="mt-6 flex flex-col max-w-8xl">
         <div v-for="cat in uniqueCategories" :key="cat.value">
-          <div v-if="cat.value !== 'projects'" :id="cat.value" class="flex items-center gap-4 py-6">
-            <hr class="w-full grow border-color-default-200 dark:border-color-default-800/70">
-            <NuxtLink :to="`#${cat.value}`" class="text-md hover:text-muted-foreground text-muted-foreground w-fit shrink-0 font-display lowercase">
+          <div v-if="cat.value !== 'projects'" :id="cat.value" class="flex items-center gap-4 py-6 mt-5">
+            <hr class="border-color-default-200 dark:border-color-default-800/70 w-14">
+            <NuxtLink :to="`#${cat.value}`" class="font-mono text-sm hover:text-muted-foreground text-muted-foreground w-fit shrink-0 lowercase">
               {{ cat.label }}
             </NuxtLink>
-            <hr class="w-full grow border-color-default-200 dark:border-color-default-800/70">
+            <hr class="border-color-default-200 dark:border-color-default-800/70 w-full grow">
           </div>
 
-          <div class="grid grid-cols-2 gap-x-4 gap-y-2 -mx-5">
+          <div class="content-stretch projects-grid items-stretch justify-stretch gap-2">
             <template
               v-for="project in getProjectsByCategory(cat.value)"
               :key="project.slug"
@@ -37,5 +41,11 @@ const { uniqueCategories, getProjectsByCategory } = useProjects()
 img.active {
   view-transition-name: selected-film;
   contain: layout;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat( auto-fill, minmax(250px, 1fr) );
+  gap: 1rem;
 }
 </style>

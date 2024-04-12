@@ -5,12 +5,15 @@ settings:
   excludeLinksFromLockfile: false
 
 dependencies:
+  '@fontsource-variable/jetbrains-mono':
+    specifier: ^5.0.20
+    version: 5.0.20
   '@nuxt/content':
     specifier: ^2.12.1
     version: 2.12.1(nuxt@3.11.2)(vue@3.4.21)
   '@nuxt/fonts':
-    specifier: ^0.5.1
-    version: 0.5.1(nuxt@3.11.2)(vite@5.2.8)
+    specifier: ^0.6.1
+    version: 0.6.1(nuxt@3.11.2)(vite@5.2.8)
   '@radix-icons/vue':
     specifier: ^1.0.0
     version: 1.0.0(vue@3.4.21)
@@ -902,6 +905,10 @@ packages:
       - vue
     dev: false
 
+  /@fontsource-variable/jetbrains-mono@5.0.20:
+    resolution: {integrity: sha512-IWJnmY9vT5Olcac1vzA7FMdnojCrZWMq+g7SqC2jsFpY0LQTjIgp9gBjjw9kUOkNbLw37/evZO4w6rdPeMA68A==}
+    dev: false
+
   /@humanwhocodes/config-array@0.11.14:
     resolution: {integrity: sha512-3T8LkOmg45BV5FICb15QQMsyUSWrQ8AygVfC7ZG32zOalnqrilm018ZVCw0eapXux8FtA33q8PSRSstjee3jSg==}
     engines: {node: '>=10.10.0'}
@@ -1315,8 +1322,8 @@ packages:
       - utf-8-validate
       - vue
 
-  /@nuxt/fonts@0.5.1(nuxt@3.11.2)(vite@5.2.8):
-    resolution: {integrity: sha512-6+IdrdjQdSre/XPPKGNau2EUoJIfB36FCkVhLM8iUap8rcxaH6iEniKS781hioXM025jUOCjTQjE6OD/FovCcA==}
+  /@nuxt/fonts@0.6.1(nuxt@3.11.2)(vite@5.2.8):
+    resolution: {integrity: sha512-YeoXSHgRGoKYGLYu/gw7XDQ9mqyO+ihrCCwjxtH6Ke/2r5A9xI3frPzC5RVCgzZjxbd7W3EDAlyVwwEjCb9x+g==}
     dependencies:
       '@nuxt/devtools-kit': 1.1.5(nuxt@3.11.2)(vite@5.2.8)
       '@nuxt/kit': 3.11.2

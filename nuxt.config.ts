@@ -41,6 +41,14 @@ export default defineNuxtConfig({
     componentDir: './components/ui',
   },
 
+  fonts: {
+    families: [
+      { name: 'Satoshi', provider: 'fontshare', weights: [400, 500, 600, 700] },
+      { name: 'Clash Display', provider: 'fontshare', weights: [400, 500, 600, 700] },
+      { name: 'JetBrains Mono', provider: 'google', weights: [300, 400] },
+    ],
+  },
+
   app: {
     head: {
       title: 'Matija Osrečki',
