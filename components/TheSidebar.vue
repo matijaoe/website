@@ -11,7 +11,7 @@ const links: { to: RouteLocationRaw, label: string }[] = [
 
 const { toggleDark } = useTheme()
 
-const activeLinkClass = 'text-foreground'
+const activeLinkClass = '!text-foreground hover:text-foreground'
 </script>
 
 <template>
