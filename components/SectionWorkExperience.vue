@@ -4,7 +4,7 @@
 
 <template>
   <section>
-    <h2 class="mb-4 text-3xl font-medium font-display text-rich">
+    <h2 class="mb-4 text-3xl font-medium font-display">
       Experience
     </h2>
     <div class="flex flex-col gap-1">

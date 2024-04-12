@@ -11,15 +11,15 @@ const links: { to: RouteLocationRaw, label: string }[] = [
 
 const { toggleDark } = useTheme()
 
-const activeLinkClass = '!text-default-900 !dark:text-default-50'
+const activeLinkClass = 'text-foreground'
 </script>
 
 <template>
   <aside>
     <menu class="flex flex-col">
-      <NuxtLink class="group mb-4 text-rich" to="/">
+      <NuxtLink class="group mb-4" to="/">
         <span class="text-3xl font-medium font-display">
-          <span class="text-dim">@</span>matijao
+          <span class="text-muted-foreground">@</span>matijao
         </span>
       </NuxtLink>
 
@@ -27,7 +27,7 @@ const activeLinkClass = '!text-default-900 !dark:text-default-50'
         v-for="link in links"
         :key="link.to.toString()"
         :to="link.to"
-        class="w-fit py-0.75 align-middle text-default-900/60 font-medium lowercase transition-all dark:text-default-50/50 hover:text-default-900/90 hover:dark:text-default-50/75"
+        class="text-muted-foreground hover:text-foreground/85 w-fit py-0.75 align-middle font-medium lowercase transition-all"
         :active-class="activeLinkClass"
         :class="{ [activeLinkClass]: $route.name.startsWith(link.to.name) }"
       >
@@ -39,7 +39,7 @@ const activeLinkClass = '!text-default-900 !dark:text-default-50'
       <div class="mt-4 flex items-center gap-3">
         <button
           type="button"
-          class="text-default-800 font-500 transition dark:text-default-50"
+          class="text-default-800 dark:text-default-50 font-500 transition"
           @click="toggleDark"
         >
           <Icon
@@ -49,7 +49,7 @@ const activeLinkClass = '!text-default-900 !dark:text-default-50'
         </button>
         <button
           type="button"
-          class="text-sm text-default-800 font-500 transition dark:text-default-50"
+          class="text-default-800 dark:text-default-50 text-sm font-500 transition"
         >
           <Icon
             name="lucide:search"

@@ -2,11 +2,13 @@
 definePageMeta({
   layout: false,
 })
+
+const { setMode } = useTheme()
 </script>
 
 <template>
   <NuxtLayout name="default">
-    <div class="flex flex-col gap-12">
+    <div class="flex flex-col gap-16">
       <section>
         <h1 class="text-pretty text-3xl/[1.2] text-default-900 font-medium tracking-tighter font-display capitalize capitalize lg:text-5xl/[1.3] dark:text-default-50">
           Software Developer Crafting Sleek Web Experiences
@@ -15,30 +17,24 @@ definePageMeta({
         <div class="max-w-xl">
           <div class="prose prose-default dark:prose-invert">
             <p>
-              Hi, I'm <span class="font-medium text-rich">Matija</span>, a software engineer from Croatia.
+              Hi, I'm <span class="font-medium">Matija</span>, a software engineer from Croatia.
               <br>
               I build well-crafted software, focusing on good UX and great attention to detail.
               <br>
-              I like clean code, open-source, side-projects, dark mode, minimalism and Bitcoin.
+              I like clean code, open-source, side-projects, <button @click="setMode('dark')">
+                dark mode
+              </button>, minimalism and Bitcoin.
               <br>
             </p>
           </div>
 
-          <div class="flex items-center gap-3">
+          <div class="flex items-center gap-2">
             <NuxtLink to="/projects">
-              <div
-                class="ring-offset-background focus-visible:ring-ring h-9 inline-flex items-center justify-center rounded-md bg-default-50 px-4 py-2 text-sm text-default-900 font-medium transition-colors disabled:pointer-events-none hover:bg-default-50/90 disabled:opacity-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2"
-              >
-                Explore projects
-              </div>
+              Explore projects
             </NuxtLink>
 
             <NuxtLink to="/about">
-              <div
-                class="ring-offset-background focus-visible:ring-ring h-10 inline-flex items-center justify-center rounded-md bg-default-800/80 px-4 py-2 text-sm text-default-50 font-medium transition-colors disabled:pointer-events-none hover:bg-default-800/60 disabled:opacity-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2"
-              >
-                Find out more
-              </div>
+              Find out more
             </NuxtLink>
           </div>
         </div>

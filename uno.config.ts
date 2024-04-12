@@ -4,8 +4,6 @@ import {
   presetTypography,
   presetUno,
   presetWebFonts,
-  transformerDirectives,
-  transformerVariantGroup,
 } from 'unocss'
 
 const colors = {
@@ -31,7 +29,6 @@ const config = defineConfig({
     presetUno(),
     presetTypography({
       cssExtend: {
-        // TODO: text-rich on headings
         'h1, h2, h3, h4, h5, h6': {
           'font-family': 'Clash Display',
         },
@@ -83,24 +80,9 @@ const config = defineConfig({
       },
     }),
   ],
-  transformers: [
-    transformerDirectives(),
-    transformerVariantGroup({
-      separators: [':'],
-    }),
-  ],
-
-  theme: {
-    colors,
-  },
 
   shortcuts: {
-    'text-rich': 'text-default-900 dark:text-default-50',
-    'text-dim': 'text-default-600 dark:text-default-500',
-    'text-dim-2': 'text-default-600 dark:text-default-400',
-    'hyperlink': 'underline decoration-default-300 dark:decoration-default-600 hover:decoration-current decoration-0.1em decoration-offset-0.15em',
-    'w-row': 'px-4 max-w-2xl w-full',
-    'w-sidebar': 'w-[18rem]',
+    hyperlink: 'underline decoration-default-300 dark:decoration-default-600 hover:decoration-current decoration-0.1em decoration-offset-0.15em',
   },
 })
 

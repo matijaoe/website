@@ -1,6 +1,9 @@
 <script lang="ts" setup>
 const { y } = useWindowScroll()
-const route = useRoute()
+
+const scrollToTop = () => {
+  window.scrollTo({ top: 0, behavior: 'smooth' })
+}
 </script>
 
 <template>
@@ -12,16 +15,21 @@ const route = useRoute()
         <TheSidebar class="sticky top-10 grow pl-4" />
       </div>
 
-      <div class="mx-auto w-row grow">
+      <div class="mx-auto max-w-2xl w-full grow px-4">
         <slot />
       </div>
 
       <div class="">
         <slot name="right" />
 
-        <NuxtLink v-show="y > 100" :to="{ name: route.name }" class="fixed bottom-14 right-14 aspect-square flex items-center justify-center rounded-full bg-default-800 p-3">
-          <Icon name="lucide:chevron-up" class="text-xl text-default-50" />
-        </NuxtLink>
+        <Button
+          variant="secondary"
+          size="icon-lg"
+          class="fixed bottom-14 right-14 rounded-full active:scale-90"
+          @click="scrollToTop"
+        >
+          <Icon name="lucide:chevron-up" class="text-default-50 text-xl" />
+        </Button>
       </div>
     </div>
   </div>

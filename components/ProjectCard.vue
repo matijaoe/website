@@ -19,10 +19,10 @@ const thumbnailColor = computed(() => {
   >
     <div>
       <div class="w-full flex items-center justify-between">
-        <p class="text-lg font-semibold text-rich">
+        <p class="text-lg font-semibold">
           {{ project.name }}
         </p>
-        <span class="text-xs font-mono text-dim">{{ project.year }}</span>
+        <span class="text-muted-foreground text-xs font-mono">{{ project.year }}</span>
       </div>
 
       <div
@@ -42,14 +42,14 @@ const thumbnailColor = computed(() => {
       </div>
 
       <div class="mt-1.5">
-        <p class="text-sm text-dim-2">
+        <p class="text-muted-foreground text-sm">
           {{ project.description }}
         </p>
       </div>
     </div>
 
     <div v-if="project.tags.length" class="mt-auto flex pt-2">
-      <div v-for="(tag, idx) in project.tags" :key="tag" class="flex items-center justify-center text-dim">
+      <div v-for="(tag, idx) in project.tags" :key="tag" class="text-muted-foreground flex items-center justify-center">
         <span class="text-11px leading-none font-mono lowercase">{{ tag }}</span>
         <span v-if="idx < project.tags.length - 1 " class="mx-1 font-light">/</span>
       </div>

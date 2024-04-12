@@ -15,7 +15,7 @@ defineProps<{
   >
     <div class="col-span-1">
       <slot name="label">
-        <p class="text-sm text-dim">
+        <p class="text-muted-foreground text-sm">
           {{ label }}
         </p>
       </slot>

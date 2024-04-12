@@ -39,7 +39,7 @@ const imageBgColor = computed(() => {
       </div>
 
       <div class="mt-5 flex flex-wrap items-center gap-1 text-[11px] font-mono">
-        <div v-for="tag in project.tags" :key="tag" class="border border-default-700 rounded-full px-2 py-0.5 text-dim-2">
+        <div v-for="tag in project.tags" :key="tag" class="text-muted-foreground border border-default-700 rounded-full px-2 py-0.5 lowercase">
           {{ tag }}
         </div>
       </div>

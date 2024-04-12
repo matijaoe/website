@@ -7,8 +7,13 @@ export const useTheme = () => {
     colorMode.preference = isDark.value ? 'light' : 'dark'
   }
 
+  const setMode = (mode: 'dark' | 'light') => {
+    colorMode.preference = mode
+  }
+
   return {
     isDark,
     toggleDark,
+    setMode,
   }
 }
