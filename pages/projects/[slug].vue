@@ -28,23 +28,23 @@ const imageBgColor = computed(() => {
           {{ project.name }}
         </h1>
 
-        <div class="flex items-center gap-4">
-          <NuxtLink v-if="project.repo" :to="project.repo" external target="_blank">
-            <Icon name="lucide:link" class="text-xl" />
-          </NuxtLink>
-          <NuxtLink v-if="project.url" :to="project.url" external target="_blank">
-            <Icon name="lucide:globe" class="text-xl" />
-          </NuxtLink>
+        <div class="flex items-center gap-2">
+          <Button v-if="project.repo" :to="project.repo" external target="_blank" variant="outline" class="flex items-center gap-2">
+            Live <Icon name="lucide:link" />
+          </Button>
+          <Button v-if="project.url" :to="project.url" external target="_blank" variant="default" class="flex items-center gap-2">
+            Code <Icon name="solar:code-2-bold" class="text-[1.2em]" />
+          </Button>
         </div>
       </div>
 
       <div class="mt-5 flex flex-wrap items-center gap-1 text-[11px] font-mono">
-        <div v-for="tag in project.tags" :key="tag" class="text-muted-foreground border border-default-700 rounded-full px-2 py-0.5 lowercase">
+        <div v-for="tag in project.tags" :key="tag" class="text-muted-foreground border-default-700 border rounded-full px-2 py-0.5 lowercase">
           {{ tag }}
         </div>
       </div>
 
-      <div class="mt-4 prose prose-default dark:prose-invert">
+      <div class="prose-default mt-4 prose dark:prose-invert">
         <p>
           {{ project.description }}
         </p>

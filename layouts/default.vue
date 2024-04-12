@@ -23,6 +23,7 @@ const scrollToTop = () => {
         <slot name="right" />
 
         <Button
+          v-show="y > 120"
           variant="secondary"
           size="icon-lg"
           class="fixed bottom-14 right-14 rounded-full active:scale-90"

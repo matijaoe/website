@@ -13,9 +13,10 @@ const thumbnailColor = computed(() => {
 </script>
 
 <template>
+  <!-- hover:bg-default-200/25 dark:hover:bg-default-800/20 -->
   <NuxtLink
     :to="{ name: 'projects-slug', params: { slug: project.slug } }"
-    class="group block flex flex-col rounded-xl px-5 py-4 transition hover:bg-default-200/25 dark:hover:bg-default-800/20"
+    class="group hover:bg-secondary/60 dark:hover:bg-secondary/20 flex flex-col rounded-xl px-5 py-4 transition"
   >
     <div>
       <div class="w-full flex items-center justify-between">

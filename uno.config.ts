@@ -27,6 +27,7 @@ const colors = {
 const config = defineConfig({
   presets: [
     presetUno(),
+    // TODO: replace with tailwind
     presetTypography({
       cssExtend: {
         'h1, h2, h3, h4, h5, h6': {

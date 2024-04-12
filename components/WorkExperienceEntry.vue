@@ -12,7 +12,7 @@ defineProps<{
 </script>
 
 <template>
-  <BaseRow label="Aug 2021 - Present" responsive class="group mx--4 rounded-md hover:bg-default-200/25 !p-4 dark:hover:bg-default-800/20">
+  <BaseRow label="Aug 2021 - Present" responsive class="group hover:bg-default-200/25 dark:hover:bg-default-800/20 mx--4 rounded-md !p-4">
     <template #label>
       <p class="text-muted-foreground text-sm leading-[1.75rem]">
         {{ startDate }} &mdash; {{ endDate }}
@@ -40,7 +40,7 @@ defineProps<{
               </p>
             </NuxtLink>
           </div>
-          <span class="text-muted-foreground">&bull;</span>
+          <span class="text-muted-foreground translate-y-[-0.08rem]">&bull;</span>
 
           <p class="text-muted-foreground flex items-center gap-1 text-sm">
             <span>{{ companyLocation }}</span>

@@ -7,7 +7,7 @@
       My Uses
     </PageHeading>
 
-    <div class="mt-4 prose prose-default dark:prose-invert">
+    <div class="text-default-foreground mt-4 prose">
       <p>Software I use, gadgets I love, and other things I recommend. </p>
 
       <ContentDoc path="/uses" />

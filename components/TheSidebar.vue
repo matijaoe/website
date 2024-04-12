@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import type { RouteLocationRaw } from '#vue-router'
+import type { RouteLocationRaw } from '#vue-router';
 
 const links: { to: RouteLocationRaw, label: string }[] = [
   { to: { name: 'index' }, label: 'Home' },

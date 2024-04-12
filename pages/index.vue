@@ -10,12 +10,12 @@ const { setMode } = useTheme()
   <NuxtLayout name="default">
     <div class="flex flex-col gap-16">
       <section>
-        <h1 class="text-pretty text-3xl/[1.2] text-default-900 font-medium tracking-tighter font-display capitalize capitalize lg:text-5xl/[1.3] dark:text-default-50">
+        <h1 class="text-default-900 dark:text-default-50 text-pretty text-3xl/[1.2] font-medium tracking-tighter font-display capitalize lg:text-5xl/[1.3]">
           Software Developer Crafting Sleek Web Experiences
         </h1>
 
-        <div class="max-w-xl">
-          <div class="prose prose-default dark:prose-invert">
+        <div class="text-default-foreground mt-4 max-w-xl leading-7">
+          <div>
             <p>
               Hi, I'm <span class="font-medium">Matija</span>, a software engineer from Croatia.
               <br>
@@ -28,7 +28,7 @@ const { setMode } = useTheme()
             </p>
           </div>
 
-          <div class="flex items-center gap-2">
+          <div class="mt-3 flex items-center gap-3 prose">
             <NuxtLink to="/projects">
               Explore projects
             </NuxtLink>
@@ -57,9 +57,9 @@ const { setMode } = useTheme()
     </div>
 
     <template #right>
-      <span class="absolute z-100 flex rotate-24 items-center justify-center -bottom-42 -right-24 lt-lg:hidden">
+      <!-- <span class="absolute z-100 flex rotate-24 items-center justify-center -bottom-42 -right-24 lt-lg:hidden">
         <img src="/assets/images/04-clay.png" class="w-100" alt="">
-      </span>
+      </span> -->
     </template>
   </NuxtLayout>
 </template>
