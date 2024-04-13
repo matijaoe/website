@@ -20,14 +20,11 @@ defineProps<{
     </template>
     <template #default>
       <div>
-        <div class="mb-1 flex items-center justify-between gap-6">
-          <p class="text-lg font-medium">
+        <div class="mb-1 flex items-center gap-2">
+          <NuxtLink :to="`/work/${slug}`" class="text-lg font-medium group-hover:underline">
             {{ position }}
-          </p>
-
-          <NuxtLink v-if="slug" :to="`/work/${slug}`" class="group invisible inline flex items-center gap-1 text-sm group-hover:visible">
-            <span class="hover:underline">See more</span> <Icon name="lucide:arrow-up-right" class="text-md" />
           </NuxtLink>
+          <Icon name="lucide:arrow-right" class="text-base invisible transition -translate-x-8 opacity-0 group-hover:visible group-hover:opacity-100 group-hover:translate-x-0" />
         </div>
 
         <div class="flex items-start gap-2 sm:items-center">
@@ -35,7 +32,7 @@ defineProps<{
 
           <div class="flex flex-row items-center gap-2 text-sm -mt-0.4">
             <NuxtLink :to="companyUrl" external target="_blank" class="group">
-              <p class="text-sm decoration-dotted hyperlink hover:decoration-current">
+              <p class="text-sm">
                 {{ company }}
               </p>
             </NuxtLink>

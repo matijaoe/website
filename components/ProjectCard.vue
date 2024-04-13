@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 import type { Project } from '~/models'
 
-const props = defineProps<{
+defineProps<{
   project: Project
 }>()
 </script>
@@ -17,14 +17,14 @@ const props = defineProps<{
           <p class="line-clamp-1 font-medium font-sans group-hover:underline decoration-primary">
             {{ project.name }}
           </p>
-          <span class="text-muted-foreground text-xs font-mono">{{ project.year }}</span>
+          <span class="text-muted-foreground text-xs font-mono">{{ project.timeframe }}</span>
         </div>
       </CardHeader>
 
       <CardContent class="grow p-0">
         <div class="mt-1.5">
           <p class="text-muted-foreground text-sm line-clamp-3">
-            {{ project.description }}
+            {{ project.descriptionShort ?? project.description }}
           </p>
         </div>
       </CardContent>

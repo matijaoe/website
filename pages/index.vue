@@ -4,17 +4,38 @@ definePageMeta({
 })
 
 const { setMode } = useTheme()
+
+const backgrounds = [
+  {
+    src: '/gradients/hero-gradient.svg',
+    class: 'right-0 hidden lg:block',
+    width: 1269,
+    height: 724,
+  },
+  {
+    src: '/gradients/hero-gradient-tablet.svg',
+    class: 'right-0 w-full hidden sm:block lg:hidden',
+    width: 924,
+    height: 653,
+  },
+  {
+    src: '/gradients/hero-gradient-mobile.svg',
+    class: 'inset-x-0 w-full object-cover sm:hidden',
+    width: 375,
+    height: 494,
+  },
+]
 </script>
 
 <template>
   <NuxtLayout name="default">
     <div class="flex flex-col gap-16">
       <section>
-        <h1 class="text-default-900 dark:text-default-50 text-pretty text-3xl/[1.2] font-medium tracking-tighter font-display capitalize lg:text-5xl/[1.3]">
-          Software Developer Crafting Sleek Web Experiences
+        <h1 class="text-default-900 dark:text-default-50 text-balance text-3xl/[1.15] font-medium font-display lg:text-7xl/[1]">
+          Out here, crafting sleek <span class="underline">web</span> experiences
         </h1>
 
-        <div class="text-default-foreground mt-4 max-w-xl leading-7">
+        <div class="text-default-foreground mt-5 max-w-xl leading-7">
           <div>
             <p>
               Hi, I'm <span class="font-medium">Matija</span>, a software engineer from Croatia.
@@ -28,14 +49,14 @@ const { setMode } = useTheme()
             </p>
           </div>
 
-          <div class="mt-3 flex items-center gap-3 prose">
-            <NuxtLink to="/projects">
+          <div class="mt-6 flex items-center gap-3">
+            <Button to="/projects" variant="default">
               Explore projects
-            </NuxtLink>
+            </Button>
 
-            <NuxtLink to="/about">
-              Find out more
-            </NuxtLink>
+            <Button to="/about" variant="outline">
+              About me
+            </Button>
           </div>
         </div>
       </section>
@@ -61,6 +82,15 @@ const { setMode } = useTheme()
         <img src="/assets/images/04-clay.png" class="w-100" alt="">
       </span> -->
     </template>
+
+    <NuxtImg
+      v-for="(item, i) in backgrounds"
+      :key="i"
+      v-bind="item"
+      role="presentation"
+      class="pointer-events-none absolute top-0 select-none"
+      :style="{ zIndex: '-1' }"
+    />
   </NuxtLayout>
 </template>
 
