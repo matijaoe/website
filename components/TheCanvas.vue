@@ -1220,7 +1220,7 @@ onMounted(() => {
   document.addEventListener('mousemove', (e) => {
     const [pointer] = pointers
 
-    // TODO: sepearate this from main config
+    // TODO: separate this from main config
     if (config.PAUSED) {
       return
     }
@@ -1243,27 +1243,6 @@ onMounted(() => {
       const posX = scaleByPixelRatio(touches[i].pageX)
       const posY = scaleByPixelRatio(touches[i].pageY)
       updatePointerDownData(pointers[i + 1], touches[i].identifier, posX, posY)
-    }
-  })
-
-  canvas.addEventListener('touchmove', (e) => {
-    e.preventDefault()
-    const touches = e.targetTouches
-    for (let i = 0; i < touches.length; i++) {
-      const pointer = pointers[i + 1]
-      if (!pointer.down) { continue }
-      const posX = scaleByPixelRatio(touches[i].pageX)
-      const posY = scaleByPixelRatio(touches[i].pageY)
-      updatePointerMoveData(pointer, posX, posY)
-    }
-  }, false)
-
-  window.addEventListener('touchend', (e) => {
-    const touches = e.changedTouches
-    for (let i = 0; i < touches.length; i++) {
-      const pointer = pointers.find((p) => p.id == touches[i].identifier)
-      if (pointer == null) { continue }
-      updatePointerUpData(pointer)
     }
   })
 
@@ -1293,10 +1272,6 @@ onMounted(() => {
     pointer.deltaX = correctDeltaX(pointer.texcoordX - pointer.prevTexcoordX)
     pointer.deltaY = correctDeltaY(pointer.texcoordY - pointer.prevTexcoordY)
     pointer.moved = Math.abs(pointer.deltaX) > 0 || Math.abs(pointer.deltaY) > 0
-  }
-
-  function updatePointerUpData(pointer) {
-    pointer.down = false
   }
 
   function correctDeltaX(delta) {

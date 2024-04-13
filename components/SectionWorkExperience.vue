@@ -50,7 +50,7 @@
         </template>
 
         <template #default>
-          Worked on Anna App, an application with a goal of making everyday life easier for people with severe disabilities, in need of extensive medical care.
+          Contributed to the development of the Anna App, a web-based platform tailored for nurses and caregivers to effectively support patients with disabilities, ensuring seamless management of their complex medical needs.
         </template>
       </WorkExperienceEntry>
 
