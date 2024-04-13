@@ -15,7 +15,7 @@ defineProps<{
   >
     <div class="col-span-1">
       <slot name="label">
-        <p class="text-dim text-sm">
+        <p class="text-muted-foreground text-sm">
           {{ label }}
         </p>
       </slot>
@@ -24,10 +24,10 @@ defineProps<{
     <div
       :class="{
         'col-span-2': !responsive,
-        'col-span-1 md:col-span-2': responsive
+        'col-span-1 md:col-span-2': responsive,
       }"
     >
-      <slot name="value" />
+      <slot />
     </div>
   </div>
 </template>

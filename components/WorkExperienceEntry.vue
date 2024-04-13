@@ -3,47 +3,50 @@ defineProps<{
   company: string
   companyUrl?: string
   companyLocation: string
+  locationIcon: string
   position: string
   startDate: string
   endDate: string
+  slug?: '4ot' | 'cura' | '3ot' | 'infokarta'
 }>()
 </script>
 
 <template>
-  <BaseRow label="Aug 2021 - Present" responsive>
+  <BaseRow label="Aug 2021 - Present" responsive class="-ml-4 group hover:bg-default-200/25 dark:hover:bg-default-800/20 mx--4 rounded-md !p-4">
     <template #label>
-      <p class="text-sm leading-[1.75rem] text-dim">
+      <p class="text-muted-foreground text-sm leading-[1.75rem]">
         {{ startDate }} &mdash; {{ endDate }}
       </p>
     </template>
-    <template #value>
+    <template #default>
       <div>
-        <div class="mb-2">
-          <p class="text-lg text-rich">
+        <div class="mb-1 flex items-center gap-2">
+          <NuxtLink :to="`/work/${slug}`" class="text-lg font-medium group-hover:underline">
             {{ position }}
-          </p>
+          </NuxtLink>
+          <Icon name="lucide:arrow-right" class="text-base invisible transition -translate-x-8 opacity-0 group-hover:visible group-hover:opacity-100 group-hover:translate-x-0" />
         </div>
 
-        <NuxtLink :to="companyUrl" external target="_blank" class="group">
-          <div class="flex items-start gap-3 sm:items-center">
-            <slot name="logo" />
+        <div class="flex items-start gap-2 sm:items-center">
+          <slot name="logo" />
 
-            <div class="flex flex-row items-center gap-2 text-sm lt-sm:-mt-0.4">
-              <p class="text-sm group-hover:underline">
+          <div class="flex flex-row items-center gap-2 text-sm -mt-0.4">
+            <NuxtLink :to="companyUrl" external target="_blank" class="group">
+              <p class="text-sm">
                 {{ company }}
               </p>
-              <span class="text-dim">&bull;</span>
-
-              <p class="text-dim-2">
-                {{ companyLocation }}
-              </p>
-            </div>
+            </NuxtLink>
           </div>
-        </NuxtLink>
+          <span class="text-muted-foreground translate-y-[-0.08rem]">&bull;</span>
 
-        <div v-if="$slots.default" class="mt-2 text-sm text-dim-2">
-          <slot />
+          <p class="text-muted-foreground flex items-center gap-1 text-sm">
+            <span>{{ companyLocation }}</span>
+          </p>
         </div>
+      </div>
+
+      <div v-if="$slots.default" class="text-muted-foreground mt-1 text-sm">
+        <slot />
       </div>
     </template>
   </BaseRow>

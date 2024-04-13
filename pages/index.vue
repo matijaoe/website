@@ -1,214 +1,104 @@
 <script lang="ts" setup>
-type ContactItem = { label: string, linkText: string, link: string }[]
+definePageMeta({
+  layout: false,
+})
 
-const contacts: ContactItem = [
-  {
-    label: 'GitHub',
-    linkText: 'matijaoe',
-    link: 'https://github.com/matijaoe',
-  },
-  {
-    label: 'LinkedIn',
-    linkText: 'matijao',
-    link: 'https://www.linkedin.com/in/matijao',
-  },
-  {
-    label: 'Twitter',
-    linkText: 'matijaoe',
-    link: 'https://twitter.com/matijaoe',
-  },
-  {
-    label: 'Goodreads',
-    linkText: 'matijao',
-    link: 'https://www.goodreads.com/matijao',
-  },
-  {
-    label: 'Email',
-    linkText: 'hello@matijao.com',
-    link: 'mailto:hello@matijao.com',
-  },
-  {
-    label: 'Bitcoin (lightning)',
-    linkText: 'matijao@getalby.com',
-    link: 'lightning:matijao@getalby.com',
-  },
-]
+const { setMode } = useTheme()
 
-const projects = [
+const backgrounds = [
   {
-    name: 'Fare',
-    description: 'Application for tracking personal finances and attaining financial independence.',
-    tags: ['Nuxt', 'TypeScript', 'UnoCSS', 'Prisma'],
-    year: 2022,
-    repo: 'https://github.com/matijaoe/fare',
-    thumbnail: '/projects/fare.webp',
-    categories: ['projects'],
+    src: '/gradients/hero-gradient.svg',
+    class: 'right-0 hidden lg:block',
+    width: 1269,
+    height: 724,
   },
   {
-    name: 'Qwiz',
-    description: 'Platform for creation, organization & discovery of pub quizzes.',
-    tags: ['Next', 'TypeScript', 'Nest', 'Prisma'],
-    year: 2022,
-    repo: 'https://github.com/qwiz-app/qwiz',
-    url: 'https://app.qwiz.party',
-    thumbnail: '/projects/qwiz.webp',
-    categories: ['projects'],
+    src: '/gradients/hero-gradient-tablet.svg',
+    class: 'right-0 w-full hidden sm:block lg:hidden',
+    width: 924,
+    height: 653,
   },
   {
-    name: 'Aimo',
-    description: 'Social media platform connecting motivated individuals with accountability partners.',
-    tags: ['Nuxt', 'Tailwind', 'Firebase'],
-    year: 2021,
-    repo: 'https://github.com/matijaoe/aimo',
-    url: 'https://aimo.vercel.app',
-    thumbnail: '/projects/aimo.webp',
-    categories: ['projects'],
+    src: '/gradients/hero-gradient-mobile.svg',
+    class: 'inset-x-0 w-full object-cover sm:hidden',
+    width: 375,
+    height: 494,
   },
 ]
 </script>
 
 <template>
-  <div class="flex flex-col gap-12 py-4">
-    <section>
-      <h1 class="text-balance text-3xl/[1.2] text-neutral-900 font-medium tracking-tighter font-display capitalize capitalize lg:text-5xl/[1.3] dark:text-neutral-50">
-        Software Developer Crafting Sleek Web Experiences.
-      </h1>
+  <NuxtLayout name="default">
+    <div class="flex flex-col gap-16">
+      <section>
+        <h1 class="text-default-900 dark:text-default-50 text-balance text-3xl/[1.15] font-medium font-display lg:text-7xl/[1]">
+          Out here, crafting sleek <span class="underline">web</span> experiences
+        </h1>
 
-      <div class="mt-5 prose prose-neutral dark:prose-invert">
-        <p>
-          I'm <strong>Matija</strong>, a Croatia-based software engineer with a talent for simplifying the complex web. My focus lies in building interactive web applications using TypeScript, Vue, and Nuxt. I'm deeply passionate about open-source development, UI/UX design, developer experience and clean code.
-        </p>
-
-        <p>
-          Beyond code, my interests extend to preserving individual privacy, fostering self-sovereignty, cultivating a low time preference mindset, prioritizing quality, and studying Austrian economics. These values naturally led me to embrace Bitcoin, to which I wish to dedicate my efforts and contribute towards its advancement.
-        </p>
-      </div>
-    </section>
-
-    <section class="mt--4">
-      <h2 class="mb-4 text-3xl font-bold">
-        @
-      </h2>
-      <div>
-        <LinkRow
-          v-for="contact in contacts"
-          :key="contact.link"
-          v-bind="contact"
-        />
-      </div>
-    </section>
-
-    <section>
-      <h2 class="mb-4 text-3xl font-medium font-display">
-        Featured Projects
-      </h2>
-
-      <div class="grid gap-6 sm:grid-cols-2 sm:gap-8">
-        <div
-          v-for="project in projects"
-          :key="project.name"
-          class="flex items-baseline justify-between"
-        >
+        <div class="text-default-foreground mt-7 max-w-xl leading-7">
           <div>
-            <NuxtLink class="group flex items-center font-medium hover:underline" :href="project.repo" external target="_blank">
-              <p>{{ project.name }}</p>
-            </NuxtLink>
-
-            <p class="text-xs text-dim">
-              {{ project.year }}
+            <p>
+              Hi, I'm <span class="font-medium">Matija</span>, a software engineer from Croatia.
+              <br>
+              I build well-crafted software, focusing on good UX and great attention to detail.
+              <br>
+              I like clean code, open-source, side-projects, <button @click="setMode('dark')">
+                dark mode
+              </button>, minimalism and Bitcoin.
+              <br>
             </p>
           </div>
 
-          <!-- <BaseTag>wip</BaseTag> -->
+          <div class="mt-6 flex items-center gap-3">
+            <Button to="/projects" variant="default">
+              Explore projects
+            </Button>
+
+            <Button to="/about" variant="outline">
+              About me
+            </Button>
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <section>
-      <h2 class="mb-4 text-3xl font-medium font-display">
-        Work Experience
-      </h2>
-      <div class="flex flex-col gap-4">
-        <WorkExperienceEntry
-          company="Four of them LLC"
-          company-url="https://www.4ofthem.eu/"
-          company-location="Zapresic, Croatia"
-          position="Frontend Developer"
-          start-date="Aug 2022"
-          end-date="Present"
-        >
-          <template #logo>
-            <img src="/4ot-logo.png" class="aspect-square h-4 w-4 rounded-sm" alt="company logo">
-          </template>
+      <SectionLinks />
 
-          <template #default>
-            Rebuilding
-            <NuxtLink
-              to="https://ihreapotheken.de"
-              external
-              target="_blank"
-              class="hyperlink"
-            >
-              IhreApotheken.de{{ }}
-            </NuxtLink>, the biggest e-commerce platform for pharmacies in Germany. Shipped our core platform as interactive web components used in hundreds of pharmacy websites across Germany.
-          </template>
-        </WorkExperienceEntry>
+      <SectionWorkExperience />
 
-        <WorkExperienceEntry
-          company="Cura4You GmbH"
-          company-url="https://cura4you.de/"
-          company-location="Cologne, Germany"
-          position="Frontend Developer"
-          start-date="Jun 2023"
-          end-date="Oct 2023"
-        >
-          <template #logo>
-            <img src="/cura-logo.jpeg" class="aspect-square h-4 w-4 rounded-sm" alt="company logo">
-          </template>
+      <!-- <div class="animate-marquee whitespace-nowrap py-12">
+        <span class="mx-4 text-4xl">Vue</span>
+        <span class="mx-4 text-4xl">Nuxt</span>
+        <span class="mx-4 text-4xl">TypeScript</span>
+        <span class="mx-4 text-4xl">Tailwind</span>
+        <span class="mx-4 text-4xl">Uno CSS</span>
+        <span class="mx-4 text-4xl">Node</span>
+        <span class="mx-4 text-4xl">Bun</span>
+        <span class="mx-4 text-4xl">Bitcoin</span>
+      </div> -->
+    </div>
 
-          <template #default>
-            Worked on Anna App, an application with a goal of making everyday life easier for people in need of extensive medical care. Implemented front-end redesign and new features, improved the performance implementing TanStack Query site-wide, organized the codebase.
-          </template>
-        </WorkExperienceEntry>
-
-        <WorkExperienceEntry
-          company="Three of them Ltd."
-          company-url="https://www.3ofthem.eu/"
-          company-location="Zapresic, Croatia"
-          position="Junior Frontend Developer"
-          start-date="Aug 2021"
-          end-date="Sep 2022"
-        >
-          <template #logo>
-            <img src="/3ot-logo.jpeg" class="aspect-square h-4 w-4 rounded-sm" alt="company logo">
-          </template>
-
-          <template #default>
-            <p>
-              Optimized the performance of the flagship IhreApotheken.de platform.
-              Led the development of the custom component library and internal libraries, used as a base for core platform rebuild.
-              Built and shipped inventory tracking application for pharmacy suppliers. Developed and maintained COVID-19 Vaccine Booking System.
-            </p>
-          </template>
-        </WorkExperienceEntry>
-
-        <WorkExperienceEntry
-          company="Infokarta d.o.o"
-          company-url="https://gis.infokarta.hr/"
-          company-location="Split, Croatia"
-          position="Full-Stack Developer"
-          start-date="May 2021"
-          end-date="Jul 2021"
-        >
-          <template #logo>
-            <Icon name="ph:map-trifold-duotone" class="aspect-square h-5 w-5 rounded-sm -ml-0.5" alt="company logo" />
-          </template>
-
-          <template #default>
-            Collaborated with a small team to develop a geographic information system (GIS) based web application for several local governments in the Dalmatian Region.
-          </template>
-        </WorkExperienceEntry>
-      </div>
-    </section>
-  </div>
+    <!-- <NuxtImg
+      v-for="(item, i) in backgrounds"
+      :key="i"
+      v-bind="item"
+      role="presentation"
+      class="pointer-events-none absolute top-0 select-none"
+      :style="{ zIndex: '-1' }"
+    /> -->
+  </NuxtLayout>
 </template>
+
+<style lang="postcss" scoped>
+.animate-marquee {
+  animation: marquee 10s linear infinite;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+</style>

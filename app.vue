@@ -1,7 +1,8 @@
 <template>
   <Html lang="en">
-    <Body class="bg-default-50 bg-white text-default-800 font-sans dark:bg-[#111010] dark:text-default-300">
-      <NuxtLayout class="min-h-screen">
+    <Body>
+      <TheCanvas />
+      <NuxtLayout class="overflow-y-auto">
         <NuxtPage />
       </NuxtLayout>
     </Body>
@@ -9,12 +10,12 @@
 </template>
 
 <style>
-html.dark {
-  color-scheme: dark;
+:root {
+  --sidebar: 18rem;
 }
 
-::selection {
-  --uno: bg-default-300/30 dark:(bg-default-300/4);
+html.dark {
+  color-scheme: dark;
 }
 
 .hide-scrollbar::-webkit-scrollbar {

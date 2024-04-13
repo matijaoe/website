@@ -5,7 +5,7 @@ export default antfu({
     tsconfigPath: 'tsconfig.json',
   },
 
-  unocss: true,
+  unocss: false,
 
   formatters: {
     css: false,
@@ -71,7 +71,7 @@ export default antfu({
 
     overrides: {
       'ts/ban-ts-comment': 'off',
-      'ts/consistent-type-definitions': ['error', 'type'],
+      'ts/consistent-type-definitions': ['off', 'type'],
       'ts/naming-convention': ['error', {
         format: [
           'PascalCase',
@@ -108,14 +108,8 @@ export default antfu({
   vue: {
     overrides: {
       'vue/block-lang': ['warn', { script: { lang: 'ts' } }],
-      'vue/block-order': ['error', { order: ['script', 'template', 'style'] }],
       'vue/brace-style': ['error', '1tbs', { allowSingleLine: true }],
       'vue/comma-dangle': ['error', 'only-multiline'],
-      'vue/component-api-style': ['error', ['script-setup']],
-      'vue/component-name-in-template-casing': ['error', 'PascalCase'],
-      'vue/define-emits-declaration': ['warn', 'type-literal'],
-      'vue/define-props-declaration': ['error', 'type-based'],
-      'vue/html-button-has-type': 'error',
       'vue/html-self-closing': 'error',
       'vue/max-attributes-per-line': ['error', {
         multiline: { max: 1 },
@@ -140,12 +134,8 @@ export default antfu({
           message: 'Use <NuxtLink> over <a>',
         },
       ],
-      // 'vue/no-root-v-if': 'error',
-      'vue/no-setup-props-reactivity-loss': 'error', // set to 'off' when using experimental propsDestructure
-      'vue/no-static-inline-styles': 'warn',
       'vue/no-useless-mustaches': 'error',
       'vue/no-useless-template-attributes': 'error',
-      'vue/no-v-text': 'error',
       'vue/object-curly-newline': ['error', { consistent: true, multiline: true }],
       'vue/prefer-define-options': 'error',
       'vue/prefer-template': 'error',

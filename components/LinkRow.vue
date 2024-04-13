@@ -7,16 +7,16 @@ defineProps<{
 </script>
 
 <template>
-  <BaseRow :label="label">
+  <BaseRow :label="label" class="items-center">
     <template #label>
       <slot name="label" />
     </template>
 
-    <template #value>
-      <NuxtLink :href="link" external class="text-rich hover:underline" target="_blank">
+    <template #default>
+      <NuxtLink :href="link" external class="decoration-0.1em decoration-offset-0.15em hover:underline" target="_blank">
         {{ linkText }}
       </NuxtLink>
-      <Icon name="ph:arrow-up-right" class="text-sm" />
+      <Icon name="lucide:arrow-up-right" class="ml-0.5 text-sm" />
     </template>
   </BaseRow>
 </template>
