@@ -48,7 +48,6 @@ const imageBgColor = computed(() => {
           v-if="project.wip"
           class="font-mono lowercase font-bold"
           variant="primary"
-          size="sm"
         >
           wip
         </Badge>
@@ -59,7 +58,6 @@ const imageBgColor = computed(() => {
           <Badge
             class="font-light font-mono lowercase"
             variant="outline"
-            size="sm"
           >
             {{ tag }}
           </badge>

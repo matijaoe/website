@@ -7,7 +7,7 @@ defineProps<{
 </script>
 
 <template>
-  <BaseRow :label="label">
+  <BaseRow :label="label" class="items-center">
     <template #label>
       <slot name="label" />
     </template>
