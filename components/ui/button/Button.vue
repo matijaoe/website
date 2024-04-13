@@ -12,10 +12,8 @@ interface Props extends PrimitiveProps {
   to?: NuxtLinkProps['to']
 }
 
-type PropsWithLink = Props & { to: NuxtLinkProps['to'] }
-
 // TODO: only extend NuxtLinkProps when to is defined
-const props = withDefaults(defineProps<PropsWithLink>(), {
+const props = withDefaults(defineProps<Props>(), {
   as: 'button',
 })
 </script>

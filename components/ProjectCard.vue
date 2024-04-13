@@ -13,11 +13,11 @@ defineProps<{
       class="flex grow flex-col"
     >
       <CardHeader class="p-0">
-        <div class="w-full flex items-center justify-between">
+        <div class="w-full flex items-center justify-between gap-2">
           <p class="line-clamp-1 font-medium font-sans group-hover:underline decoration-primary">
             {{ project.name }}
           </p>
-          <span class="text-muted-foreground text-xs font-mono">{{ project.timeframe }}</span>
+          <span class="text-muted-foreground text-xs font-mono translate-y-[1px]">{{ project.timeframe }}</span>
         </div>
       </CardHeader>
 

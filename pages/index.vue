@@ -35,7 +35,7 @@ const backgrounds = [
           Out here, crafting sleek <span class="underline">web</span> experiences
         </h1>
 
-        <div class="text-default-foreground mt-5 max-w-xl leading-7">
+        <div class="text-default-foreground mt-7 max-w-xl leading-7">
           <div>
             <p>
               Hi, I'm <span class="font-medium">Matija</span>, a software engineer from Croatia.
@@ -77,20 +77,14 @@ const backgrounds = [
       </div> -->
     </div>
 
-    <template #right>
-      <!-- <span class="absolute z-100 flex rotate-24 items-center justify-center -bottom-42 -right-24 lt-lg:hidden">
-        <img src="/assets/images/04-clay.png" class="w-100" alt="">
-      </span> -->
-    </template>
-
-    <NuxtImg
+    <!-- <NuxtImg
       v-for="(item, i) in backgrounds"
       :key="i"
       v-bind="item"
       role="presentation"
       class="pointer-events-none absolute top-0 select-none"
       :style="{ zIndex: '-1' }"
-    />
+    /> -->
   </NuxtLayout>
 </template>
 
