@@ -10,7 +10,7 @@ defineProps<{
     class="grid py-1"
     :class="{
       'grid-cols-3 gap-4': !responsive,
-      'grid-cols-1 md:grid-cols-3 gap-1 md:gap-4': responsive,
+      'grid-cols-1 md:grid-cols-3 gap-1 md:gap-3': responsive,
     }"
   >
     <div class="col-span-1">

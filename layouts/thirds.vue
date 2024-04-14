@@ -12,15 +12,13 @@ const scrollToTop = () => {
       class="grid gap-8 px-4 py-4 lg:grid-cols-[var(--sidebar)_1fr] lg:mt-[8vh] lg:px-8 lg:py-14"
     >
       <!-- TODO: not sticky -->
-      <div>
-        <TheSidebar class="sticky top-10 grow pl-4" />
+      <div class="relative">
+        <TheSidebar class="sticky top-10 grow" />
       </div>
 
-      <div class="px-4">
-        <div class="w-full grow">
-          <slot />
-        </div>
-      </div>
+      <main class="w-full grow">
+        <slot />
+      </main>
 
       <Button
         v-show="y > 120"

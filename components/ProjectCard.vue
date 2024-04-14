@@ -7,14 +7,14 @@ defineProps<{
 </script>
 
 <template>
-  <Card class="group flex flex-col p-3 shadow-sm dark:shadow-none">
+  <Card class="group flex flex-col bg-transparent hover:bg-white/[2%] hover:backdrop-blur-2xl p-3 shadow-sm transition-all duration-300">
     <NuxtLink
       :to="{ name: 'projects-slug', params: { slug: project.slug } }"
       class="flex grow flex-col"
     >
       <CardHeader class="p-0">
         <div class="w-full flex items-center justify-between gap-2">
-          <p class="line-clamp-1 font-medium font-sans">
+          <p class="line-clamp-1 font-medium font-sans transition">
             {{ project.name }}
           </p>
           <span class="text-muted-foreground text-xs font-mono translate-y-[1px]">{{ project.timeframe }}</span>

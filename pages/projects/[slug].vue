@@ -4,8 +4,6 @@ const route = useRoute('projects-slug')
 const { getProduct } = useProjects()
 const project = computed(() => getProduct(route.params.slug))
 
-// TODO: issue with either back or on page refresh
-
 const images = computed(() => {
   const { images, thumbnail } = project.value ?? {}
   if (images?.length) {
@@ -57,7 +55,7 @@ const imageBgColor = computed(() => {
         >
           <Badge
             class="font-light font-mono lowercase"
-            variant="outline"
+            variant="secondary"
           >
             {{ tag }}
           </badge>
