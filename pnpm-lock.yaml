@@ -52,6 +52,9 @@ devDependencies:
   '@nuxtjs/color-mode':
     specifier: ^3.3.3
     version: 3.4.0
+  '@nuxtjs/device':
+    specifier: ^3.1.1
+    version: 3.1.1
   '@nuxtjs/tailwindcss':
     specifier: ^6.11.4
     version: 6.11.4
@@ -1542,6 +1545,16 @@ packages:
       pathe: 1.1.2
       pkg-types: 1.0.3
       semver: 7.6.0
+    transitivePeerDependencies:
+      - rollup
+      - supports-color
+    dev: true
+
+  /@nuxtjs/device@3.1.1:
+    resolution: {integrity: sha512-wHTziEevt1hdgePQwPhEedWW3COalhP0YGVB+sGLqSrKujX8vdz7lcBFB01KIftpaP8kY5H8pssibNaJbxGcYw==}
+    dependencies:
+      '@nuxt/kit': 3.11.2
+      defu: 6.1.4
     transitivePeerDependencies:
       - rollup
       - supports-color

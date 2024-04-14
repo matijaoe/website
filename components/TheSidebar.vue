@@ -10,6 +10,7 @@ const links: { to: RouteLocationRaw, label: string }[] = [
 ]
 
 const { toggleDark } = useTheme()
+const { toggle } = useCmd()
 
 const activeLinkClass = '!text-foreground hover:text-foreground'
 </script>
@@ -50,6 +51,7 @@ const activeLinkClass = '!text-foreground hover:text-foreground'
         <button
           type="button"
           class="text-default-800 dark:text-default-50 text-sm font-500 transition"
+          @click="toggle()"
         >
           <Icon
             name="lucide:search"
