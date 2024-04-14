@@ -5,8 +5,8 @@ const { isDark } = useTheme()
 <template>
   <Html lang="en">
     <Body>
-      <TheBackgroundBlobs v-if="isDark" />
-      <!-- <TheCanvas /> -->
+      <!-- <TheBackgroundBlobs v-if="isDark" /> -->
+      <TheCanvas />
 
       <NuxtLayout class="overflow-y-auto">
         <NuxtPage />
