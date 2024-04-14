@@ -1,7 +1,13 @@
+<script lang="ts" setup>
+const { isDark } = useTheme()
+</script>
+
 <template>
   <Html lang="en">
     <Body>
+      <!-- <TheBackgroundBlobs v-if="isDark" /> -->
       <TheCanvas />
+
       <NuxtLayout class="overflow-y-auto">
         <NuxtPage />
       </NuxtLayout>

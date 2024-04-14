@@ -14,13 +14,13 @@ const config = {
   SIM_RESOLUTION: 128,
   DYE_RESOLUTION: 1024,
   CAPTURE_RESOLUTION: 512,
-  DENSITY_DISSIPATION: 4,
+  DENSITY_DISSIPATION: 3,
   VELOCITY_DISSIPATION: 4,
   PRESSURE: 1,
   PRESSURE_ITERATIONS: 20,
-  VORTICITY: 1, // default 30
+  VORTICITY: 0, // default 30
   SPLAT_RADIUS: 0.16,
-  SPLAT_FORCE: 6000,
+  SPLAT_FORCE: 5000,
   SHADING: true,
   COLORFUL: true,
   COLOR_UPDATE_SPEED: 10,
@@ -44,7 +44,6 @@ onMounted(() => {
   // Simulation section
 
   const canvas = document.getElementsByTagName('canvas')[0]
-  console.log('canvas :', canvas)
   resizeCanvas()
 
   function PointerPrototype() {
