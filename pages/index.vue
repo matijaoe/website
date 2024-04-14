@@ -54,7 +54,7 @@ const backgrounds = [
               Explore projects
             </Button>
 
-            <Button to="/about" variant="outline">
+            <Button to="/about" variant="frosted-ghost">
               About me
             </Button>
           </div>

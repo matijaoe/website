@@ -1,6 +1,7 @@
 <script lang="ts" setup>
 const interBubble = ref<HTMLDivElement | null>(null)
 
+// TODO: not really working when scrolling page, should prbbly use clientX and clientY
 const { x, y } = useMouse()
 const easingFactor = 20
 const coords = reactive({

@@ -14,7 +14,7 @@ defineProps<{
     >
       <CardHeader class="p-0">
         <div class="w-full flex items-center justify-between gap-2">
-          <p class="line-clamp-1 font-medium font-sans group-hover:underline decoration-primary">
+          <p class="line-clamp-1 font-medium font-sans">
             {{ project.name }}
           </p>
           <span class="text-muted-foreground text-xs font-mono translate-y-[1px]">{{ project.timeframe }}</span>
