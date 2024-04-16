@@ -4,13 +4,13 @@ const { isDark } = useTheme()
 
 <template>
   <Html lang="en">
-    <Body>
+    <Body class="font-sans">
       <!-- <TheBackgroundBlobs v-if="isDark" /> -->
       <ClientOnly>
-        <LazyTheCanvas />
+        <TheCanvas />
       </ClientOnly>
 
-      <NuxtLayout class="overflow-y-auto">
+      <NuxtLayout>
         <NuxtPage />
       </NuxtLayout>
 
@@ -25,7 +25,7 @@ const { isDark } = useTheme()
 
 <style>
 :root {
-  --sidebar: 18rem;
+  --sidebar: 14rem;
 }
 
 html.dark {

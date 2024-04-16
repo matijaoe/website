@@ -4,34 +4,45 @@ const { y } = useWindowScroll()
 const scrollToTop = () => {
   window.scrollTo({ top: 0, behavior: 'smooth' })
 }
+
+const { breadcrumbs, isHome } = useBreadcrumbs()
 </script>
 
 <template>
-  <div class="lg:pt-[8vh]">
-    <div
-      class="grid gap-8 px-4 py-4 lg:grid-cols-[var(--sidebar)_1fr] lg:px-8 lg:py-14 "
-    >
-      <div>
-        <TheSidebar class="sticky top-10 grow" />
-      </div>
+  <div
+    class="max-w-8xl grid gap-8 p-4 lg:grid-cols-[1fr_var(--sidebar)] md:px-12 md:pb-16 md:pt-10"
+  >
+    <div>
+      <Breadcrumb v-show="!isHome" class="mb-6">
+        <BreadcrumbList>
+          <template v-for="(part, idx) in breadcrumbs" :key="part.path">
+            <BreadcrumbItem class="lowercase">
+              <BreadcrumbLink :href="part.path">
+                {{ part.name }}
+              </BreadcrumbLink>
+            </BreadcrumbItem>
+            <BreadcrumbSeparator v-if="idx < breadcrumbs.length - 1" />
+          </template>
+        </BreadcrumbList>
+      </Breadcrumb>
 
-      <main class="max-w-2xl w-full grow">
+      <main class="max-w-3xl w-full grow">
         <slot />
       </main>
-
-      <div>
-        <slot name="right" />
-
-        <Button
-          v-show="y > 120"
-          variant="secondary"
-          size="icon-lg"
-          class="fixed bottom-14 right-14 rounded-full active:scale-90"
-          @click="scrollToTop"
-        >
-          <Icon name="lucide:chevron-up" class="text-default-50 text-xl" />
-        </Button>
-      </div>
     </div>
+
+    <div>
+      <TheSidebar class="md:ml-3 sticky top-10 grow" />
+    </div>
+
+    <Button
+      v-show="y > 120"
+      variant="secondary"
+      size="icon-lg"
+      class="fixed bottom-14 right-14 rounded-full active:scale-90"
+      @click="scrollToTop"
+    >
+      <Icon name="lucide:chevron-up" class="text-default-50 text-xl" />
+    </Button>
   </div>
 </template>

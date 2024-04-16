@@ -31,18 +31,22 @@ const backgrounds = [
   <NuxtLayout name="default">
     <div class="flex flex-col gap-16">
       <section>
+        <div class="mb-6 font-mono text-base text-muted-foreground h-5">
+          @matijao
+        </div>
+
         <h1 class="text-default-900 dark:text-default-50 text-balance text-4xl/[1.1] sm:text-5xl/[1.1] font-medium font-display lg:text-7xl/[1] mb-4 md:mb-6">
-          Out here, crafting sleek <span class="underline">web</span> experiences
+          Hi, I'm Matija, <br> crafting sleek <br> <span class="underline">web</span> experiences
         </h1>
 
-        <div class="text-default-foreground max-w-xl leading-7">
+        <div class="text-default-foreground text-lg leading-7">
           <div>
             <p>
-              Hi, I'm <span class="font-medium">Matija</span>, a software engineer from Croatia.
+              I'm a frontend-oriented software engineer based in Croatia.
               <br>
-              I build well-crafted software, focusing on good UX and great attention to detail.
+              I build well-crafted software, focusing on good UX and meticulous attention to detail.
               <br>
-              I like clean code, open-source, side-projects, <button @click="setMode('dark')">
+              I love clean code, open-source, side-projects, <button @click="setMode('dark')">
                 dark mode
               </button>, minimalism and Bitcoin.
               <br>
@@ -80,15 +84,6 @@ const backgrounds = [
         <span class="mx-4 text-4xl">Bitcoin</span>
       </div> -->
     </div>
-
-    <!-- <NuxtImg
-      v-for="(item, i) in backgrounds"
-      :key="i"
-      v-bind="item"
-      role="presentation"
-      class="pointer-events-none absolute top-0 select-none"
-      :style="{ zIndex: '-1' }"
-    /> -->
   </NuxtLayout>
 </template>
 

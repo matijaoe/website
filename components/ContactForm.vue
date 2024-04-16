@@ -1,14 +1,12 @@
 <script lang="ts" setup>
 import { z } from 'zod'
 
-const config = useRuntimeConfig()
-
 const email = ref('')
 const content = ref('')
 
 const schema = z.object({
   email: z.string().email(),
-  content: z.string().min(10),
+  content: z.string().min(3),
 })
 
 const isValid = computed(() => {
@@ -35,14 +33,28 @@ const sendEmail = async () => {
 </script>
 
 <template>
-  <div class="py-10 flex flex-col gap-4">
-    <Input v-model="email" type="email" class="bg-input" placeholder="Email" />
-    <Input v-model="content" type="text" class="bg-input" placeholder="Who hurt you?" />
+  <div class="py-10">
+    <PageHeading>Contact</PageHeading>
 
-    <div>
-      <Button :disabled="!isValid" @click="sendEmail">
-        send
-      </Button>
+    <div class="flex flex-col gap-4 mt-8 max-w-sm">
+      <Input
+        v-model="email"
+        type="email"
+        class="hover:bg-white/5 focus:bg-white/5 active:bg-white/5 hover:backdrop-blur-md focus:hover:backdrop-blur-md active:hover:backdrop-blur-md"
+        placeholder="Email"
+      />
+      <Textarea
+        v-model="content"
+        type="text"
+        class="hover:bg-white/5 focus:bg-white/5 active:bg-white/5 hover:backdrop-blur-md focus:hover:backdrop-blur-md active:hover:backdrop-blur-md"
+        placeholder="Who hurt you?"
+      />
+
+      <div class="flex justify-end">
+        <Button :disabled="!isValid" @click="sendEmail">
+          Send
+        </Button>
+      </div>
     </div>
   </div>
 </template>

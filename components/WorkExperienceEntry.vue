@@ -21,7 +21,7 @@ defineProps<{
     <template #default>
       <div>
         <div class="mb-1 flex items-center gap-2">
-          <NuxtLink :to="`/work/${slug}`" class="text-lg font-medium group-hover:underline">
+          <NuxtLink :to="`/work/${slug}`" class="text-xl font-medium group-hover:underline">
             {{ position }}
           </NuxtLink>
           <Icon name="lucide:arrow-right" class="text-base invisible transition -translate-x-8 opacity-0 group-hover:visible group-hover:opacity-100 group-hover:translate-x-0" />
@@ -32,20 +32,20 @@ defineProps<{
 
           <div class="flex flex-row items-center gap-2 text-sm -mt-0.4">
             <NuxtLink :to="companyUrl" external target="_blank" class="group">
-              <p class="text-sm">
+              <p class="text-base">
                 {{ company }}
               </p>
             </NuxtLink>
           </div>
           <span class="text-muted-foreground translate-y-[-0.08rem]">&bull;</span>
 
-          <p class="text-muted-foreground flex items-center gap-1 text-sm">
+          <p class="text-muted-foreground flex items-center gap-1 text-base">
             <span>{{ companyLocation }}</span>
           </p>
         </div>
       </div>
 
-      <div v-if="$slots.default" class="text-muted-foreground mt-1 text-sm">
+      <div v-if="$slots.default" class="text-muted-foreground mt-1 text-base">
         <slot />
       </div>
     </template>

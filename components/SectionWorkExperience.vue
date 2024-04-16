@@ -23,15 +23,7 @@
         </template>
 
         <template #default>
-          Rebuilding
-          <NuxtLink
-            to="https://ihreapotheken.de"
-            external
-            target="_blank"
-            class="decoration-dotted hyperlink"
-          >
-            IhreApotheken.de{{ }}
-          </NuxtLink>, the biggest e-commerce platform for pharmacies in Germany.
+          Developing innovative e-commerce solutions tailored to the German pharmaceutical sector, impacting millions of users.
         </template>
       </WorkExperienceEntry>
 
@@ -50,7 +42,7 @@
         </template>
 
         <template #default>
-          Contributed to the development of the Anna App, a web-based platform tailored for nurses and caregivers to effectively support patients with disabilities, ensuring seamless management of their complex medical needs.
+          Contributed to the development of a web platform for nurses and caregivers to effectively support patients with severe disabilities, ensuring seamless management of their complex medical needs.
         </template>
       </WorkExperienceEntry>
 
@@ -90,7 +82,7 @@
         </template>
 
         <template #default>
-          Built web based GIS application for local governments in the Dalmatian Region.
+          Build a highly dynamic web-based GIS application tailored for local governments.
         </template>
       </WorkExperienceEntry>
     </div>

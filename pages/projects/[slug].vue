@@ -21,11 +21,12 @@ const imageBgColor = computed(() => {
 <template>
   <div v-if="project" class="max-w-3xl w-full">
     <div>
-      <div class="flex items-center justify-between gap-2 pt-2 -mt-[calc(44px+20px)]">
-        <Button to="/projects" variant="frosted-ghost" class="flex items-center gap-2 -ml-4">
-          <Icon name="lucide:arrow-left" class="text-[1.2em]" /> Back
-        </Button>
-        <div class="flex ites-center gap-2">
+      <div class="mt-5 flex items-start justify-between">
+        <h1 class="text-6xl font-medium font-display">
+          {{ project.name }}
+        </h1>
+
+        <div class="flex items-center gap-2">
           <Button v-if="project.repo" :to="project.repo" external target="_blank" variant="frosted-outline" class="flex items-center gap-2">
             Code <Icon name="lucide:code" class="text-[1.2em]" />
           </Button>
@@ -33,12 +34,6 @@ const imageBgColor = computed(() => {
             Live <Icon name="lucide:arrow-up-right" class="text-[1.2em]" />
           </Button>
         </div>
-      </div>
-
-      <div class="mt-5">
-        <h1 class="text-6xl font-medium font-display">
-          {{ project.name }}
-        </h1>
       </div>
 
       <div class="mt-5 flex flex-wrap items-center gap-1 text-[11px]">

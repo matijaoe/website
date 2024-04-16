@@ -28,7 +28,12 @@ const links: LinkItem = [
     link: 'mailto:hello@matijao.com',
   },
   {
-    label: 'BTC Lightning',
+    label: 'CV',
+    linkText: 'cv.pdf',
+    link: '/cv.pdf',
+  },
+  {
+    label: 'Bitcoin (lightning)',
     linkText: 'matijao@getalby.com',
     link: 'lightning:matijao@getalby.com',
   },
