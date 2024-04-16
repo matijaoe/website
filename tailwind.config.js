@@ -20,6 +20,9 @@ module.exports = {
         display: ['Clash Display'],
         mono: ['JetBrains Mono', 'ui-monospace', 'monospace'],
       },
+      typography: (theme) => {
+        DEFAULT: 
+      },
       colors: {
         border: 'hsl(var(--border))',
         input: 'hsl(var(--input))',
@@ -93,5 +96,8 @@ module.exports = {
       },
     },
   },
-  plugins: [animate],
+  plugins: [
+    animate,
+    require('@tailwindcss/typography'),
+  ],
 }

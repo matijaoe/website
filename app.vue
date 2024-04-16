@@ -1,5 +1,22 @@
 <script lang="ts" setup>
-const { isDark } = useTheme()
+const { isDark, toggleDark } = useTheme()
+
+const { Meta_J, Ctrl_J } = useMagicKeys({
+  passive: false,
+  onEventFired(e) {
+    if (e.key === 'k' && (e.metaKey || e.ctrlKey)) {
+      e.preventDefault()
+    }
+  },
+})
+
+const { isApple } = useDevice()
+
+if (isApple) {
+  whenever(Meta_J, () => toggleDark())
+} else {
+  whenever(Ctrl_J, () => toggleDark())
+}
 </script>
 
 <template>

@@ -11,7 +11,7 @@ export const useBreadcrumbs = () => {
         name: part === '/' ? 'Home' : part,
         path: resolvedRoute.path,
       }
-    })
+    }).filter(Boolean)
     res.unshift({
       name: 'home',
       path: '/',

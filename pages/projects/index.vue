@@ -8,11 +8,11 @@ definePageMeta({
 
 <template>
   <div>
-    <PageHeading>
+    <PageHeading class="mb-6">
       Projects
     </PageHeading>
 
-    <div class="mt-6 flex flex-col max-w-8xl">
+    <div class="flex flex-col max-w-8xl">
       <div v-for="cat in uniqueCategories" :key="cat.value">
         <div v-if="cat.value !== 'projects'" :id="cat.value" class="flex items-center gap-2 py-4 mt-5">
           <!-- <hr class="border-color-default-200 dark:border-color-default-800/70 w-14"> -->

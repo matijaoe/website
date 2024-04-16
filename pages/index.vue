@@ -25,6 +25,14 @@ const backgrounds = [
     height: 494,
   },
 ]
+
+const now = useNow()
+const nowFormatted = computed(() => {
+  return new Intl.DateTimeFormat('hr-HR', {
+    timeStyle: 'medium',
+    timeZone: 'Europe/Zagreb',
+  }).format(now.value)
+})
 </script>
 
 <template>
@@ -32,17 +40,17 @@ const backgrounds = [
     <div class="flex flex-col gap-16">
       <section>
         <div class="mb-6 font-mono text-base text-muted-foreground h-5">
-          @matijao
+          @matijao &bull; {{ nowFormatted }}
         </div>
 
         <h1 class="text-default-900 dark:text-default-50 text-balance text-4xl/[1.1] sm:text-5xl/[1.1] font-medium font-display lg:text-7xl/[1] mb-4 md:mb-6">
-          Hi, I'm Matija, <br> crafting sleek <br> <span class="underline">web</span> experiences
+          Hi, I'm Matija, <br> crafting sleek <br> <span class="">web</span> experiences
         </h1>
 
         <div class="text-default-foreground text-lg leading-7">
           <div>
             <p>
-              I'm a frontend-oriented software engineer based in Croatia.
+              Frontend-oriented software engineer based in Croatia.
               <br>
               I build well-crafted software, focusing on good UX and meticulous attention to detail.
               <br>
@@ -54,11 +62,11 @@ const backgrounds = [
           </div>
 
           <div class="mt-6 flex items-center gap-3">
-            <Button to="/projects" variant="default">
+            <Button to="/projects" variant="default" size="lg">
               Explore projects
             </Button>
 
-            <Button to="/about" variant="frosted-ghost">
+            <Button to="/about" variant="frosted-ghost" size="lg">
               About me
             </Button>
           </div>

@@ -21,7 +21,7 @@ defineProps<{
     <template #default>
       <div>
         <div class="mb-1 flex items-center gap-2">
-          <NuxtLink :to="`/work/${slug}`" class="text-xl font-medium group-hover:underline">
+          <NuxtLink :to="`/work/${slug}`" class="text-xl font-medium hover:underline">
             {{ position }}
           </NuxtLink>
           <Icon name="lucide:arrow-right" class="text-base invisible transition -translate-x-8 opacity-0 group-hover:visible group-hover:opacity-100 group-hover:translate-x-0" />

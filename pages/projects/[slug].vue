@@ -26,7 +26,7 @@ const imageBgColor = computed(() => {
           {{ project.name }}
         </h1>
 
-        <div class="flex items-center gap-2">
+        <div class="flex items-center gap-3 mt-2">
           <Button v-if="project.repo" :to="project.repo" external target="_blank" variant="frosted-outline" class="flex items-center gap-2">
             Code <Icon name="lucide:code" class="text-[1.2em]" />
           </Button>
@@ -63,14 +63,13 @@ const imageBgColor = computed(() => {
         </p>
       </div>
 
+      <!-- TODO: implement image distortion effects -->
       <Card v-if="images?.length" class="mt-10 border-none">
         <div
           v-for="image in images"
           :key="image"
-          class="thumbnail-wrapper h-full w-full rounded-xl p-8"
         >
-          <!-- TODO: shift on image appear -->
-          <div class="overflow-hidden rounded-xl">
+          <div class="overflow-hidden ring ring-1 ring-foreground">
             <NuxtLink
               :to="image"
               target="_blank"
@@ -89,10 +88,3 @@ const imageBgColor = computed(() => {
     </div>
   </div>
 </template>
-
-<style lang="postcss" scoped>
-.thumbnail-wrapper {
-  background-color: v-bind(imageBgColor);
-  aspect-ratio: 720 / 450;
-}
-</style>

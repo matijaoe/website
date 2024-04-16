@@ -1,3 +1,5 @@
+// TODO: not used anymore but left if for style reference
+
 import { theme } from '@unocss/preset-mini'
 import {
   defineConfig,

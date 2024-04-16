@@ -1,7 +1,3 @@
-/* eslint-disable ts/no-unsafe-return */
-/* eslint-disable ts/no-unsafe-member-access */
-/* eslint-disable ts/no-unsafe-call */
-/* eslint-disable ts/no-unsafe-assignment */
 import { Resend } from 'resend'
 import { z } from 'zod'
 
@@ -20,7 +16,7 @@ export default defineEventHandler(async (event) => {
     to: 'github@matijao.com',
     reply_to: email,
     subject: subject || 'New Contact Form Submission',
-    html: '<p>Congrats on sending your <strong>first email</strong>!</p>',
+    html: `<p>${content}</p>`,
   })
 
   return res
