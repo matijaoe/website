@@ -50,6 +50,10 @@ export default defineNuxtConfig({
     ],
   },
 
+  runtimeConfig: {
+    resendApiKey: '',
+  },
+
   app: {
     head: {
       title: 'Matija Osrečki',

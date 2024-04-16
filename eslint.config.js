@@ -100,8 +100,10 @@ export default antfu({
       'ts/prefer-as-const': 'error',
       'ts/prefer-destructuring': 'error',
       'ts/prefer-for-of': 'error',
-      'ts/prefer-nullish-coalescing': 'error',
       'ts/prefer-ts-expect-error': 'off',
+
+      // override
+      'ts/unbound-method': 'off',
     },
   },
 

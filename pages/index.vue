@@ -65,6 +65,10 @@ const backgrounds = [
 
       <SectionWorkExperience />
 
+      <section>
+        <ContactForm />
+      </section>
+
       <!-- <div class="animate-marquee whitespace-nowrap py-12">
         <span class="mx-4 text-4xl">Vue</span>
         <span class="mx-4 text-4xl">Nuxt</span>
