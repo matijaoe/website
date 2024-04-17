@@ -1,8 +1,4 @@
 <script lang="ts" setup>
-definePageMeta({
-  layout: false,
-})
-
 const { setMode } = useTheme()
 
 const now = useNow()
@@ -15,52 +11,47 @@ const nowFormatted = computed(() => {
 </script>
 
 <template>
-  <NuxtLayout name="default">
-    <div class="flex flex-col gap-16 mt-[43vh]">
-      <section>
-        <!-- <div class="mb-6 font-mono text-base text-muted-foreground h-5">
-          @matijao &bull; {{ nowFormatted }}
-        </div> -->
+  <div class="flex flex-col gap-16 max-w-3xl">
+    <section>
+      <h1 class="text-default-900 dark:text-default-50 text-balance text-4xl/[1.1] sm:text-5xl/[1.1] font-medium font-display lg:text-7xl/[1] mb-4 md:mb-6">
+        Hi, I'm Matija, <br> crafting sleek <br> <span class="">web</span> experiences
+      </h1>
 
-        <h1 class="text-default-900 dark:text-default-50 text-balance text-4xl/[1.1] sm:text-5xl/[1.1] font-medium font-display lg:text-7xl/[1] mb-4 md:mb-6">
-          Hi, I'm Matija, <br> crafting sleek <br> <span class="">web</span> experiences
-        </h1>
-
-        <div class="text-default-foreground text-lg leading-7">
-          <div>
-            <p>
-              Frontend-oriented software engineer based in Croatia.
-              <br>
-              I build well-crafted software, focusing on good UX and meticulous attention to detail.
-              <br>
-              I love clean code, open-source, side-projects, <button @click="setMode('dark')">
-                dark mode
-              </button>, minimalism and Bitcoin.
-              <br>
-            </p>
-          </div>
-
-          <div class="mt-6 flex items-center gap-3">
-            <Button to="/projects" variant="default" size="lg">
-              Explore projects
-            </Button>
-
-            <Button to="/about" variant="frosted-ghost" size="lg">
-              About me
-            </Button>
-          </div>
+      <div class="text-default-foreground text-lg leading-7">
+        <div>
+          <p>
+            Frontend-oriented software engineer based in Croatia.
+            <br>
+            I build well-crafted software, focusing on good UX and meticulous attention to detail.
+            <br>
+            I love clean code, open-source, side-projects, <button @click="setMode('dark')">
+              dark mode
+            </button>, minimalism and Bitcoin.
+            <br>
+          </p>
         </div>
-      </section>
 
-      <SectionLinks />
+        <div class="mt-6 flex items-center gap-3">
+          <Button to="/projects" variant="default" size="lg">
+            Explore projects
+          </Button>
 
-      <SectionWorkExperience />
+          <Button to="/about" variant="frosted-ghost" size="lg">
+            About me
+          </Button>
+        </div>
+      </div>
+    </section>
 
-      <section>
-        <ContactForm />
-      </section>
+    <SectionLinks />
 
-      <!-- <div class="animate-marquee whitespace-nowrap py-12">
+    <SectionWorkExperience />
+
+    <section>
+      <ContactForm />
+    </section>
+
+    <!-- <div class="animate-marquee whitespace-nowrap py-12">
         <span class="mx-4 text-4xl">Vue</span>
         <span class="mx-4 text-4xl">Nuxt</span>
         <span class="mx-4 text-4xl">TypeScript</span>
@@ -70,8 +61,7 @@ const nowFormatted = computed(() => {
         <span class="mx-4 text-4xl">Bun</span>
         <span class="mx-4 text-4xl">Bitcoin</span>
       </div> -->
-    </div>
-  </NuxtLayout>
+  </div>
 </template>
 
 <style lang="postcss" scoped>

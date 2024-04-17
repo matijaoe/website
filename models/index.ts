@@ -4,6 +4,7 @@ export type Project = {
   description: string
   descriptionShort?: string
   tags: string[]
+  techPreview?: string[]
   timeframe: string
   repo?: string
   url?: string

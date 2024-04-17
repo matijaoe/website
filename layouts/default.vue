@@ -12,10 +12,10 @@ const year = computed(() => now.value.getFullYear())
 </script>
 
 <template>
-  <div class="p-4 md:px-12 md:pt-10 flex flex-col min-h-screen">
-    <div
-      class="max-w-8xl grid gap-8 lg:grid-cols-[1fr_var(--sidebar)] pb-8 grow"
-    >
+  <div class="p-4 md:px-24 md:pt-16 flex flex-col min-h-screen max-w-[2000px]">
+    <TheHeader />
+
+    <div class="pb-8 grow pt-32">
       <div>
         <Breadcrumb v-show="!isHome" class="mb-6">
           <BreadcrumbList>
@@ -30,13 +30,9 @@ const year = computed(() => now.value.getFullYear())
           </BreadcrumbList>
         </Breadcrumb>
 
-        <main class="max-w-3xl w-full grow">
+        <main class="w-full grow">
           <slot />
         </main>
-      </div>
-
-      <div>
-        <TheSidebar class="md:ml-3 sticky top-10 grow" />
       </div>
 
       <Button

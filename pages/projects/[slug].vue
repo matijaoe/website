@@ -19,10 +19,10 @@ const imageBgColor = computed(() => {
 </script>
 
 <template>
-  <div v-if="project" class="max-w-3xl w-full">
+  <div v-if="project" class="w-full">
     <div>
       <div class="mt-5 flex items-start justify-between">
-        <h1 class="text-6xl font-medium font-display">
+        <h1 class="text-7xl font-medium font-display">
           {{ project.name }}
         </h1>
 
@@ -57,14 +57,14 @@ const imageBgColor = computed(() => {
         </template>
       </div>
 
-      <div class="mt-5 font-sans">
+      <div class="mt-5 font-sans text-lg max-w-3xl">
         <p>
           {{ project.description }}
         </p>
       </div>
 
       <!-- TODO: implement image distortion effects -->
-      <Card v-if="images?.length" class="mt-10 border-none">
+      <Card v-if="images?.length" class="mt-10 border-none max-w-3xl">
         <div
           v-for="image in images"
           :key="image"

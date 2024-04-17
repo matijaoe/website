@@ -2,7 +2,7 @@
 const { uniqueCategories, getProjectsByCategory } = useProjects()
 
 definePageMeta({
-  layout: 'thirds',
+  layout: 'default',
 })
 </script>
 
@@ -13,10 +13,10 @@ definePageMeta({
     </PageHeading>
 
     <div class="flex flex-col max-w-8xl">
-      <div v-for="cat in uniqueCategories" :key="cat.value">
-        <div v-if="cat.value !== 'projects'" :id="cat.value" class="flex items-center gap-2 py-3 mt-5">
-          <!-- <hr class="border-color-default-200 dark:border-color-default-800/70 w-14"> -->
-          <NuxtLink :to="`#${cat.value}`" class="font-display text-xl w-fit shrink-0 lowercase">
+      <div v-for="cat in uniqueCategories" :key="cat.value" class="group">
+        <div v-if="cat.value !== 'projects'" :id="cat.value" class="flex items-center gap-2 pt-12 pb-8">
+          <!-- <hr class="border-color-default-200 dark:border-color-default-800/70 w-20"> -->
+          <NuxtLink :to="`#${cat.value}`" class="font-display font-light text-7xl text-secondary group-hover:text-foreground transition duration-500 w-fit shrink-0 lowercase">
             {{ cat.label }}
           </NuxtLink>
           <!-- <hr class="border-color-default-200 dark:border-color-default-800/70 w-full grow"> -->
@@ -27,7 +27,7 @@ definePageMeta({
             v-for="project in getProjectsByCategory(cat.value)"
             :key="project.slug"
           >
-            <ProjectCard :project />
+            <ProjectCard :project class="aspect-square" />
           </template>
         </div>
       </div>
@@ -43,7 +43,7 @@ img.active {
 
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat( auto-fill, minmax(250px, 1fr) );
+  grid-template-columns: repeat( auto-fill, minmax(260px, 1fr) );
   gap: 1rem;
 }
 </style>
