@@ -14,7 +14,7 @@ definePageMeta({
 
     <div class="flex flex-col max-w-8xl">
       <div v-for="cat in uniqueCategories" :key="cat.value">
-        <div v-if="cat.value !== 'projects'" :id="cat.value" class="flex items-center gap-2 py-4 mt-5">
+        <div v-if="cat.value !== 'projects'" :id="cat.value" class="flex items-center gap-2 py-3 mt-5">
           <!-- <hr class="border-color-default-200 dark:border-color-default-800/70 w-14"> -->
           <NuxtLink :to="`#${cat.value}`" class="font-display text-xl w-fit shrink-0 lowercase">
             {{ cat.label }}

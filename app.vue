@@ -22,7 +22,7 @@ if (isApple) {
 <template>
   <Html lang="en">
     <Body class="font-sans">
-      <!-- <TheBackgroundBlobs v-if="isDark" /> -->
+      <!-- <TheBackgroundBlobs /> -->
       <ClientOnly>
         <TheCanvas />
       </ClientOnly>

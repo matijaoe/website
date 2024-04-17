@@ -5,27 +5,6 @@ definePageMeta({
 
 const { setMode } = useTheme()
 
-const backgrounds = [
-  {
-    src: '/gradients/hero-gradient.svg',
-    class: 'right-0 hidden lg:block',
-    width: 1269,
-    height: 724,
-  },
-  {
-    src: '/gradients/hero-gradient-tablet.svg',
-    class: 'right-0 w-full hidden sm:block lg:hidden',
-    width: 924,
-    height: 653,
-  },
-  {
-    src: '/gradients/hero-gradient-mobile.svg',
-    class: 'inset-x-0 w-full object-cover sm:hidden',
-    width: 375,
-    height: 494,
-  },
-]
-
 const now = useNow()
 const nowFormatted = computed(() => {
   return new Intl.DateTimeFormat('hr-HR', {
@@ -37,11 +16,11 @@ const nowFormatted = computed(() => {
 
 <template>
   <NuxtLayout name="default">
-    <div class="flex flex-col gap-16">
+    <div class="flex flex-col gap-16 mt-[43vh]">
       <section>
-        <div class="mb-6 font-mono text-base text-muted-foreground h-5">
+        <!-- <div class="mb-6 font-mono text-base text-muted-foreground h-5">
           @matijao &bull; {{ nowFormatted }}
-        </div>
+        </div> -->
 
         <h1 class="text-default-900 dark:text-default-50 text-balance text-4xl/[1.1] sm:text-5xl/[1.1] font-medium font-display lg:text-7xl/[1] mb-4 md:mb-6">
           Hi, I'm Matija, <br> crafting sleek <br> <span class="">web</span> experiences

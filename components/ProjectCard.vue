@@ -7,7 +7,7 @@ defineProps<{
 </script>
 
 <template>
-  <Card class="group flex flex-col hover:bg-white/[2%] hover:backdrop-blur-3xl p-3 shadow-sm transition-all duration-500">
+  <Card class="group flex flex-col hover:bg-white/[2%] hover:backdrop-blur-3xl p-3 shadow-sm transition-all duration-700">
     <NuxtLink
       :to="{ name: 'projects-slug', params: { slug: project.slug } }"
       class="flex grow flex-col"
@@ -36,7 +36,7 @@ defineProps<{
             :key="tag"
           >
             <Badge
-              class="font-light font-mono lowercase"
+              class="font-mono lowercase"
               variant="secondary"
               size="sm"
             >
