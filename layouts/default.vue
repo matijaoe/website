@@ -37,7 +37,7 @@ const year = computed(() => now.value.getFullYear())
 
       <Button
         v-show="y > 120"
-        variant="secondary"
+        variant="frosted"
         size="icon-lg"
         class="fixed bottom-14 right-14 rounded-full active:scale-90"
         @click="scrollToTop"

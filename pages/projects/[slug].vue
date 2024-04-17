@@ -36,21 +36,23 @@ const imageBgColor = computed(() => {
         </div>
       </div>
 
-      <div class="mt-5 flex flex-wrap items-center gap-1 text-[11px]">
+      <div class="mt-5 flex flex-wrap items-center gap-2 text-[11px]">
         <Badge
           v-if="project.wip"
-          class="font-mono lowercase font-bold"
+          class="font-mono lowercase font-bold bg-amber-400"
           variant="primary"
+          size="lg"
         >
           wip
         </Badge>
         <template
-          v-for="tag in project.tags"
+          v-for="tag in project.tech"
           :key="tag"
         >
           <Badge
             class="font-light font-mono lowercase"
-            variant="secondary"
+            variant="outline"
+            size="lg"
           >
             {{ tag }}
           </badge>
@@ -69,7 +71,7 @@ const imageBgColor = computed(() => {
           v-for="image in images"
           :key="image"
         >
-          <div class="overflow-hidden ring ring-1 ring-foreground">
+          <div class="overflow-hidden ring ring-input">
             <NuxtLink
               :to="image"
               target="_blank"

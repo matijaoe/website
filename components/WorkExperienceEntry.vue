@@ -7,7 +7,8 @@ defineProps<{
   position: string
   startDate: string
   endDate: string
-  slug?: '4ot' | 'cura' | '3ot' | 'infokarta'
+  slug?: '4ofthem' | 'cura' | '3ofthem' | 'infokarta'
+  used: string[]
 }>()
 </script>
 
@@ -47,6 +48,17 @@ defineProps<{
 
       <div v-if="$slots.default" class="text-muted-foreground mt-1 text-base">
         <slot />
+      </div>
+
+      <div class="flex items-center flex-wrap gap-1 mt-3">
+        <Badge
+          v-for="item in used"
+          :key="item"
+          class="font-mono lowercase"
+          variant="outline"
+        >
+          {{ item }}
+        </Badge>
       </div>
     </template>
   </BaseRow>

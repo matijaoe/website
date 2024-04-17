@@ -17,7 +17,7 @@ const activeLinkClass = '!text-foreground hover:text-foreground'
 
 <template>
   <header class="flex items-center justify-between">
-    <NuxtLink to="/" class="font-mono text-[17px]">
+    <NuxtLink to="/" class="font-mono text-[17px] ">
       @matijao
     </NuxtLink>
 
