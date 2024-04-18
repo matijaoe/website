@@ -14,7 +14,7 @@ const nowFormatted = computed(() => {
   <div class="flex flex-col gap-16 max-w-3xl">
     <section>
       <h1 class="text-default-900 dark:text-default-50 text-balance text-4xl/[1.1] sm:text-5xl/[1.1] font-medium font-display lg:text-7xl/[1] mb-4 md:mb-6">
-        Hi, I'm Matija, <br> crafting sleek <br> <span class="">web</span> experiences
+        Hi, I'm Matija, <br> crafting sleek <br> <span class="underline">web</span> experiences
       </h1>
 
       <div class="text-default-foreground text-lg leading-7">
