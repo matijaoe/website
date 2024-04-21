@@ -13,10 +13,10 @@ defineProps<{
     </template>
 
     <template #default>
-      <NuxtLink :href="link" external class="decoration-0.1em decoration-offset-0.15em hover:underline" target="_blank">
+      <NuxtLink :href="link" class="decoration-0.1em decoration-offset-0.15em hover:underline" target="_blank">
         {{ linkText }}
       </NuxtLink>
-      <Icon name="lucide:arrow-up-right" class="ml-0.5 text-sm" />
+      <Icon name="lucide:arrow-up-right" class="ml-1 text-base" />
     </template>
   </BaseRow>
 </template>

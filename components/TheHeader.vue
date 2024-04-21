@@ -2,52 +2,62 @@
 import type { RouteLocationRaw } from '#vue-router'
 
 const links: { to: RouteLocationRaw, label: string }[] = [
-  { to: '/', label: 'Home' },
-  { to: '/about', label: 'About' },
-  { to: '/projects', label: 'Projects' },
-  { to: '/uses', label: 'Uses' },
-  { to: '/bookmarks', label: 'Bookmarks' },
+  { to: { name: 'index' }, label: 'Home' },
+  { to: { name: 'about' }, label: 'About' },
+  { to: { name: 'projects' }, label: 'Projects' },
+  { to: { name: 'uses' }, label: 'Uses' },
+  // { to: { name: 'bookmarks' }, label: 'Bookmarks' },
 ]
 
 const { toggleDark } = useTheme()
+const { toggle } = useCmd()
 
-const logoLinkEl = ref<HTMLElement>()
-const isLogoLinkElHovered = useElementHover(logoLinkEl)
+const activeLinkClass = '!text-foreground hover:text-foreground'
 </script>
 
 <template>
-  <header>
-    <menu class="row flex items-center justify-between py-6">
-      <NuxtLink ref="logoLinkEl" to="/">
-        <Icon v-show="!isLogoLinkElHovered" name="ph:cursor-click" class="text-2xl" />
-        <ClientOnly>
-          <Icon v-show="isLogoLinkElHovered" name="ph:cursor-click-fill" class="text-2xl" />
-        </ClientOnly>
+  <header class="flex items-center justify-between">
+    <NuxtLink to="/" class="font-mono text-[17px] ">
+      @matijao
+    </NuxtLink>
+
+    <menu class="flex items-end gap-6">
+      <NuxtLink
+        v-for="link in links"
+        :key="link.to.toString()"
+        :to="link.to"
+        class="text-lg text-muted-foreground hover:text-foreground/85 w-fit py-[0.2rem] align-middle font-medium lowercase transition-all"
+        :active-class="activeLinkClass"
+        :class="{ [activeLinkClass]: $route.name.startsWith(link.to.name) }"
+      >
+        <slot>
+          {{ link.label }}
+        </slot>
       </NuxtLink>
 
-      <div class="flex items-center gap-2">
-        <nav class="flex items-center gap-2">
-          <NavLink
-            v-for="link in links"
-            :key="link.to.toString()"
-            :to="link.to"
-            class="lowercase"
-          >
-            {{ link.label }}
-          </NavLink>
-        </nav>
+      <!-- <div class="mt-4 flex items-center gap-5">
+        <Button
+          variant="link"
+          size="icon"
+          @click="toggle()"
+        >
+          <Icon
+            name="lucide:search"
+            class="text-[24px]"
+          />
+        </Button>
 
         <button
-          type="button"
-          class="px-1 py-2 text-sm text-default-800 font-500 transition dark:text-default-50"
+          variant="link"
+          size="icon"
           @click="toggleDark"
         >
           <Icon
             name="ph:circle-half-fill"
-            class="rotate-45 text-2xl transition-transform duration-300 ease-in-out hover:rotate-135"
+            class="rotate-45 text-[24px] transition-transform duration-300 ease-in-out hover:rotate-135"
           />
         </button>
-      </div>
+      </div> -->
     </menu>
   </header>
 </template>

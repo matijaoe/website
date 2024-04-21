@@ -1,5 +1,7 @@
 const animate = require('tailwindcss-animate')
 
+const rem = (px) => `${(px / 16).toFixed(6)}rem`
+
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   darkMode: ['class'],
@@ -15,6 +17,30 @@ module.exports = {
       },
     },
     extend: {
+      typography: {
+        DEFAULT: {
+          css: {
+            'font-size': rem(18),
+            ':is(h1, h2, h3, h4, h5, h6) > a': {
+              'text-decoration': 'unset',
+            },
+            ':is(h1, h2, h3, h4, h5, h6)': {
+              'font-family': 'Clash Display',
+              'font-size': rem(30),
+              'margin-bottom': rem(20),
+            },
+            'li > a': {
+              'text-decoration-color': 'var(--tw-prose-bullets)',
+              // 'text-decoration-color': 'hsl(var(--muted-foreground))',
+              'text-underline-offset': rem(2),
+              'transition': 'text-decoration-color 150ms ease-in-out',
+            },
+            'li > a:hover': {
+              'text-decoration-color': 'hsl(var(--primary))',
+            },
+          },
+        },
+      },
       fontFamily: {
         sans: ['Satoshi', 'ui-sans-serif', 'system-ui', 'sans-serif'],
         display: ['Clash Display'],
@@ -93,5 +119,8 @@ module.exports = {
       },
     },
   },
-  plugins: [animate],
+  plugins: [
+    animate,
+    require('@tailwindcss/typography'),
+  ],
 }

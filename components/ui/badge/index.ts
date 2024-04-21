@@ -10,15 +10,16 @@ export const badgeVariants = cva(
         default:
           'border-transparent bg-primary text-primary-foreground shadow hover:bg-primary/80',
         secondary:
-          'border-transparent bg-secondary bg-white/10 backdrop-blur-2xl text-secondary-foreground hover:bg-secondary/80',
+          'border-transparent bg-secondary text-secondary-foreground hover:bg-secondary/80',
         destructive:
           'border-transparent bg-destructive text-destructive-foreground shadow hover:bg-destructive/80',
-        outline: 'text-foreground backdrop-blur-md',
+        outline: 'text-foreground',
         primary: 'border-transparent bg-primary text-primary-foreground shadow hover:bg-primary/90',
       },
       size: {
-        default: 'px-2.5 py-0.5 text-xs',
         sm: 'px-[6px] py-[1px] text-[11px]',
+        default: 'px-2.5 py-0.5 text-xs',
+        lg: 'px-3 py-1 text-sm',
       },
     },
     defaultVariants: {

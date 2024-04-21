@@ -1,16 +1,39 @@
+<!-- eslint-disable ts/naming-convention -->
 <script lang="ts" setup>
-const { isDark } = useTheme()
+import Toaster from './components/ui/toast/Toaster.vue'
+
+const { isDark, toggleDark } = useTheme()
+
+const { Meta_J, Ctrl_J } = useMagicKeys({
+  passive: false,
+  onEventFired(e) {
+    if (e.key === 'k' && (e.metaKey || e.ctrlKey)) {
+      e.preventDefault()
+    }
+  },
+})
+
+const { isApple } = useDevice()
+
+if (isApple) {
+  whenever(Meta_J, () => toggleDark())
+} else {
+  whenever(Ctrl_J, () => toggleDark())
+}
 </script>
 
 <template>
   <Html lang="en">
-    <Body>
-      <!-- <TheBackgroundBlobs v-if="isDark" /> -->
+    <Body class="font-sans">
+      <Toaster />
+
+      <!-- <TheBackgroundBlobs /> -->
+
       <ClientOnly>
-        <LazyTheCanvas />
+        <TheCanvas />
       </ClientOnly>
 
-      <NuxtLayout class="overflow-y-auto">
+      <NuxtLayout>
         <NuxtPage />
       </NuxtLayout>
 
@@ -25,7 +48,7 @@ const { isDark } = useTheme()
 
 <style>
 :root {
-  --sidebar: 18rem;
+  --sidebar: 14rem;
 }
 
 html.dark {

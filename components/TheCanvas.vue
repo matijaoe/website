@@ -1249,8 +1249,8 @@ onMounted(() => {
   })
 
   window.addEventListener('keydown', (e) => {
-    if (e.code === 'KeyP') { config.PAUSED = !config.PAUSED }
-    if (e.key === ' ') { splatStack.push(Number.parseInt(Math.random() * 20) + 5) }
+    // if (e.code === 'KeyP') { config.PAUSED = !config.PAUSED }
+    // if (e.key === ' ') { splatStack.push(Number.parseInt(Math.random() * 20) + 5) }
   })
 
   function updatePointerDownData(pointer, id, posX, posY) {

@@ -20,13 +20,13 @@ export const buttonVariants = cva(
         'frosted-outline':
           'border border-input bg-transparent backdrop-blur-lg shadow-sm hover:bg-white/5 hover:text-accent-foreground',
         'frosted':
-          'bg-white/10 backdrop-blur-lg text-secondary-foreground shadow-sm hover:bg-white/15',
+          'bg-secondary backdrop-blur-lg text-secondary-foreground shadow-sm hover:bg-white/15',
         'frosted-ghost': ' backdrop-blur-lg hover:bg-white/5 hover:text-accent-foreground',
       },
       size: {
-        'default': 'h-9 px-4 py-2',
-        'sm': 'h-8 px-3 text-xs',
-        'lg': 'h-10 px-8',
+        'default': 'h-9 px-4 py-2 gap-[6px]',
+        'sm': 'h-8 px-3 text-xs gap-1',
+        'lg': 'h-10 px-4 gap-2',
         'icon': 'h-9 w-9',
         'icon-lg': 'h-11 w-11',
       },

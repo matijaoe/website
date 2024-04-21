@@ -19,13 +19,14 @@ const imageBgColor = computed(() => {
 </script>
 
 <template>
-  <div v-if="project" class="max-w-3xl w-full">
+  <div v-if="project" class="w-full">
     <div>
-      <div class="flex items-center justify-between gap-2 pt-2 -mt-[calc(44px+20px)]">
-        <Button to="/projects" variant="frosted-ghost" class="flex items-center gap-2 -ml-4">
-          <Icon name="lucide:arrow-left" class="text-[1.2em]" /> Back
-        </Button>
-        <div class="flex ites-center gap-2">
+      <div class="mt-5 flex items-start justify-between">
+        <h1 class="text-7xl font-medium font-display">
+          {{ project.name }}
+        </h1>
+
+        <div class="flex items-center gap-3 mt-2">
           <Button v-if="project.repo" :to="project.repo" external target="_blank" variant="frosted-outline" class="flex items-center gap-2">
             Code <Icon name="lucide:code" class="text-[1.2em]" />
           </Button>
@@ -35,47 +36,40 @@ const imageBgColor = computed(() => {
         </div>
       </div>
 
-      <div class="mt-5">
-        <h1 class="text-6xl font-medium font-display">
-          {{ project.name }}
-        </h1>
-      </div>
-
-      <div class="mt-5 flex flex-wrap items-center gap-1 text-[11px]">
+      <div class="mt-5 flex flex-wrap items-center gap-2 text-[11px]">
         <Badge
           v-if="project.wip"
-          class="font-mono lowercase font-bold"
+          class="font-mono lowercase font-bold bg-amber-400"
           variant="primary"
         >
           wip
         </Badge>
         <template
-          v-for="tag in project.tags"
+          v-for="tag in project.tech"
           :key="tag"
         >
           <Badge
             class="font-light font-mono lowercase"
-            variant="secondary"
+            variant="outline"
           >
             {{ tag }}
           </badge>
         </template>
       </div>
 
-      <div class="mt-5 font-sans">
+      <div class="mt-5 font-sans text-lg max-w-3xl">
         <p>
           {{ project.description }}
         </p>
       </div>
 
-      <Card v-if="images?.length" class="mt-10 border-none">
+      <!-- TODO: implement image distortion effects -->
+      <Card v-if="images?.length" class="mt-10 border-none max-w-3xl">
         <div
           v-for="image in images"
           :key="image"
-          class="thumbnail-wrapper h-full w-full rounded-xl p-8"
         >
-          <!-- TODO: shift on image appear -->
-          <div class="overflow-hidden rounded-xl">
+          <div class="overflow-hidden ring ring-input">
             <NuxtLink
               :to="image"
               target="_blank"
@@ -94,10 +88,3 @@ const imageBgColor = computed(() => {
     </div>
   </div>
 </template>
-
-<style lang="postcss" scoped>
-.thumbnail-wrapper {
-  background-color: v-bind(imageBgColor);
-  aspect-ratio: 720 / 450;
-}
-</style>

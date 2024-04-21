@@ -28,7 +28,12 @@ const links: LinkItem = [
     link: 'mailto:hello@matijao.com',
   },
   {
-    label: 'BTC Lightning',
+    label: 'CV',
+    linkText: 'cv.pdf',
+    link: '/cv.pdf',
+  },
+  {
+    label: 'Bitcoin (lightning)',
     linkText: 'matijao@getalby.com',
     link: 'lightning:matijao@getalby.com',
   },
@@ -36,7 +41,7 @@ const links: LinkItem = [
 </script>
 
 <template>
-  <section class="mt--4">
+  <section>
     <h2 class="mb-4 text-3xl font-medium font-display">
       @
     </h2>

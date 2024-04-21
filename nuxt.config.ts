@@ -1,7 +1,6 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   modules: [
-    '@unocss/nuxt', // todo remove uno
     '@nuxtjs/tailwindcss',
     'shadcn-nuxt',
     '@vueuse/nuxt',
@@ -48,6 +47,13 @@ export default defineNuxtConfig({
       { name: 'Clash Display', provider: 'fontshare', weights: [300, 400, 500, 600, 700] },
       { name: 'JetBrains Mono', provider: 'fontsource', weights: [300, 400], subsets: ['latin'] },
     ],
+  },
+
+  runtimeConfig: {
+    resendApiKey: '',
+  },
+
+  content: {
   },
 
   app: {

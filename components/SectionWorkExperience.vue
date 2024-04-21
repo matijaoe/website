@@ -16,22 +16,15 @@
         position="Frontend Developer"
         start-date="Aug 2022"
         end-date="Present"
-        slug="4ot"
+        slug="4ofthem"
+        :used="['Nuxt', 'Vue', 'TypeScript', 'Pinia', 'Uno CSS', 'Quasar', 'Vite', 'Storybook', 'GraphQL']"
       >
         <template #logo>
           <img src="/4ot-logo.png" class="aspect-square h-4 w-4 rounded-sm" alt="company logo">
         </template>
 
         <template #default>
-          Rebuilding
-          <NuxtLink
-            to="https://ihreapotheken.de"
-            external
-            target="_blank"
-            class="decoration-dotted hyperlink"
-          >
-            IhreApotheken.de{{ }}
-          </NuxtLink>, the biggest e-commerce platform for pharmacies in Germany.
+          Developing innovative e-commerce solutions tailored to the German pharmaceutical sector, impacting millions of users.
         </template>
       </WorkExperienceEntry>
 
@@ -44,13 +37,14 @@
         start-date="Jun 2023"
         end-date="Oct 2023"
         slug="cura"
+        :used="['Vue', 'JavaScript', 'Tanstack Query', 'Vuetify', 'Cypress', 'Vitest']"
       >
         <template #logo>
           <img src="/cura-logo.jpeg" class="aspect-square h-4 w-4 rounded-sm" alt="company logo">
         </template>
 
         <template #default>
-          Contributed to the development of the Anna App, a web-based platform tailored for nurses and caregivers to effectively support patients with disabilities, ensuring seamless management of their complex medical needs.
+          Contributed to the development of a web platform for nurses and caregivers to effectively support patients with severe disabilities, ensuring seamless management of their complex medical needs.
         </template>
       </WorkExperienceEntry>
 
@@ -61,8 +55,9 @@
         location-icon="circle-flags:hr"
         position="Junior Frontend Developer"
         start-date="Aug 2021"
-        end-date="Sep 2022"
-        slug="3ot"
+        end-date="Jul 2022"
+        slug="3ofthem"
+        :used="['Vue', 'JavaScript', 'TypeScript', 'Nuxt', 'Pinia', 'Vuex', 'Tailwind', 'Uno CSS', 'Sass', 'PrimeVue', 'Storybook', 'Vite']"
       >
         <template #logo>
           <img src="/3ot-logo.jpeg" class="aspect-square h-4 w-4 rounded-sm" alt="company logo">
@@ -84,13 +79,14 @@
         start-date="May 2021"
         end-date="Jul 2021"
         slug="infokarta"
+        :used="['Nuxt 2', 'Vuex', 'JavaScript', 'Mapbox', 'Bootstrap', 'Sass', 'Node', 'Express', 'Postgres']"
       >
         <template #logo>
           <Icon name="lucide:map" class="aspect-square h-5 w-5 rounded-sm -ml-0.5" alt="company logo" />
         </template>
 
         <template #default>
-          Built web based GIS application for local governments in the Dalmatian Region.
+          Built a highly dynamic web-based GIS application tailored for local governments.
         </template>
       </WorkExperienceEntry>
     </div>

@@ -52,8 +52,6 @@ onMounted(() => {
 
 <style lang="postcss" scoped>
 .gradient-bg {
-  --color-bg1: rgb(108, 0, 162);
-  --color-bg2: rgb(0, 17, 82);
   --color1: 18, 113, 255;
   --color2: 221, 74, 255;
   --color3:25, 75, 100;

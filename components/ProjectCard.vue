@@ -7,38 +7,43 @@ defineProps<{
 </script>
 
 <template>
-  <Card class="group flex flex-col bg-transparent hover:bg-white/[2%] hover:backdrop-blur-2xl p-3 shadow-sm transition-all duration-300">
+  <Card
+    class="group flex flex-col hover:bg-white/[2%] hover:backdrop-blur-3xl shadow-sm transition-all duration-700"
+  >
     <NuxtLink
       :to="{ name: 'projects-slug', params: { slug: project.slug } }"
       class="flex grow flex-col"
     >
-      <CardHeader class="p-0">
-        <div class="w-full flex items-center justify-between gap-2">
-          <p class="line-clamp-1 font-medium font-sans transition">
-            {{ project.name }}
+      <CardHeader class="p-4 pb-3">
+        <div class="w-full flex items-start justify-between gap-8">
+          <p
+            class="font-medium text-3xl font-display transition"
+            :style="{ wordBreak: 'break-word' }"
+          >
+            {{ project.name }} <span v-if="project.wip" class="text-lg ml-1">🚧</span>
           </p>
-          <span class="text-muted-foreground text-xs font-mono translate-y-[1px]">{{ project.timeframe }}</span>
+          <span class="text-muted-foreground text-sm font-mono translate-y-[7px]">{{ project.timeframe }}</span>
         </div>
       </CardHeader>
 
-      <CardContent class="grow p-0">
-        <div class="mt-1.5">
-          <p class="text-muted-foreground text-sm line-clamp-3">
+      <CardContent class="grow p-4 pt-0">
+        <div>
+          <p class="text-muted-foreground text-base">
             {{ project.descriptionShort ?? project.description }}
           </p>
         </div>
       </CardContent>
 
-      <CardFooter v-if="project.tags.length" class="mt-auto p-0 pt-[2px]">
-        <div class="mt-auto flex flex-wrap gap-1 pt-2">
+      <CardFooter v-if="project.tech.length" class="mt-auto p-2">
+        <div class="mt-auto flex flex-wrap w-full gap-1">
           <template
-            v-for="tag in project.tags"
+            v-for="tag in project.techPreview || project.tech"
             :key="tag"
           >
             <Badge
-              class="font-light font-mono lowercase"
-              variant="secondary"
-              size="sm"
+              class="font-mono lowercase text-nowrap"
+              variant="outline"
+              size="lg"
             >
               {{ tag }}
             </badge>

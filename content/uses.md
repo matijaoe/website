@@ -1,32 +1,35 @@
 ## Workstation
 
-- [14" MacBook Pro, M1 Pro 16/512GB](https://support.apple.com/kb/SP854?locale=en_US) . work laptop
-- [14" MacBook Pro, M2 Pro 16/512GB](https://support.apple.com/kb/SP889) . personal laptop
-- [iPhone 15 Pro 256GB](https://www.apple.com/shop/buy-iphone/iphone-15-pro) . phone
+- [14" MacBook Pro, M2 Pro 16/512GB](https://support.apple.com/kb/SP889) . work mac
+- [14" MacBook Pro, M1 Pro 16/512GB](https://support.apple.com/kb/SP854) . personal mac
+- [iPhone 15 Pro 256GB](https://www.apple.com/shop/buy-iphone/iphone-15-pro) . smartphone
 - [Vortex Race 3 (MX Clear)](https://vortexgear.store/products/race-3-micro-usb) . mechanical keyboard
 - [Logitech MX Keys Mini for Mac](https://www.logitech.com/en-eu/products/keyboards/mx-keys-mini-for-mac.html) . regular keyboard
 - [Logitech MX Master 3](https://www.logitech.com/en-eu/products/mice/mx-master-3.html) . mouse
 - [AirPods Pro 2](https://www.apple.com/airpods-pro/) . earphones
-- [Sony WH-1000XM5](https://electronics.sony.com/audio/headphones/headband/p/wh1000xm5-b) . headphones
 - [Sony WF-1000XM4](https://www.sony.com/lr/headphones/products/wf-1000xm4) . earphones
+- [Sony WH-1000XM5](https://electronics.sony.com/audio/headphones/headband/p/wh1000xm5-b) . headphones
 - [Fully Jarvis](https://ukstore.hermanmiller.com/collections/jarvis-standing-desk/) . standing desk
 - [Rain Design mStand](https://www.raindesigninc.com/mstand.html) . laptop stand
 
 ## Dev Tools
 
-- [Visual Studio Code](https://code.visualstudio.com/) . code editor of choice
+- [Visual Studio Code](https://code.visualstudio.com/) . code editor
 - [iTerm 2](https://iterm2.com/) . terminal
 - [GitHub Copilot](https://github.com/features/copilot) . ai coding assistant
+- [ChatGPT](https://chat.openai.com/) . ai thing
 - [GitHub CLI](https://cli.github.com/) . github command-line
 - [Oh My Zsh](https://ohmyz.sh/) . zsh plugin framework
 - [httpie](https://httpie.io/) . http client
-- [Vercel](https://vercel.com) . site deploy
+- [Vercel](https://vercel.com) . deployment
 - [Figma](https://www.figma.com/) . designs
 
 ## Other Software
 
 - [Raycast](https://www.raycast.com/) . productivity launcher
 - [1Password](https://1password.com/) . password manager
+- [Proton Mail](https://proton.me/mail) . private email
+- [SimpleLogin](https://simplelogin.io/) . email aliases
 - [PocketCasts](https://pocketcasts.com/) . podcasts
 - [Libby](https://www.overdrive.com/apps/libby) . audiobooks
 - [Audible](https://www.audible.com/) . audiobooks
@@ -40,9 +43,8 @@
 - [Calibre](https://calibre-ebook.com/) . e-book management
 - [iA Writer](https://ia.net/writer) . journaling
 - [Obsidian](https://obsidian.md/) . notes
-- [Proton Mail](https://proton.me/mail) . private email
-- [SimpleLogin](https://simplelogin.io/) . email aliases
-- [dns0.eu](https://dns0.eu/) . dns
+- [Wipr](https://apps.apple.com/us/app/wipr/id1030595027) - Safari ad blocker
+- [dns0.eu](https://dns0.eu/) . secure dns
 - [Cryptomator](https://cryptomator.org/) . encryption
 - [KeePassXC](https://keepassxc.org/) . offline password manager
 
