@@ -6,7 +6,7 @@ const links: { to: RouteLocationRaw, label: string }[] = [
   { to: { name: 'about' }, label: 'About' },
   { to: { name: 'projects' }, label: 'Projects' },
   { to: { name: 'uses' }, label: 'Uses' },
-  { to: { name: 'bookmarks' }, label: 'Bookmarks' },
+  // { to: { name: 'bookmarks' }, label: 'Bookmarks' },
 ]
 
 const { toggleDark } = useTheme()

@@ -55,7 +55,7 @@
         location-icon="circle-flags:hr"
         position="Junior Frontend Developer"
         start-date="Aug 2021"
-        end-date="Sep 2022"
+        end-date="Jul 2022"
         slug="3ofthem"
         :used="['Vue', 'JavaScript', 'TypeScript', 'Nuxt', 'Pinia', 'Vuex', 'Tailwind', 'Uno CSS', 'Sass', 'PrimeVue', 'Storybook', 'Vite']"
       >

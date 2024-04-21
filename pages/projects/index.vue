@@ -25,7 +25,7 @@ definePageMeta({
             v-for="project in getProjectsByCategory(cat.value)"
             :key="project.slug"
           >
-            <ProjectCard :project class="min-h-64 md:aspect-[11/12] md:min-h-auto" />
+            <ProjectCard :project class="min-h-64 sm:aspect-square md:min-h-auto" />
           </template>
         </div>
       </div>

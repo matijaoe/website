@@ -28,6 +28,7 @@ if (isApple) {
       <Toaster />
 
       <!-- <TheBackgroundBlobs /> -->
+
       <ClientOnly>
         <TheCanvas />
       </ClientOnly>

@@ -61,8 +61,9 @@ const sendEmail = async () => {
         <div class="mr-12">
           <p>
             Want to work with me?
+            <br>
             Send a message to <NuxtLink class="underline" to="mailto:hello@matijao.com" external target="_blank">
-              hello@matijao.com
+              hello@matijao.com{{ }}
             </NuxtLink>
 
             or use the contact form.
