@@ -14,7 +14,7 @@
           <Icon name="lucide:hammer" class="h-4 w-4" />
           <AlertTitle>Work in progress</AlertTitle>
           <AlertDescription>
-            This page is still uncomplete. I'm working on it. Stay tuned!
+            This page is still uncompleted. I'm working on it. Stay tuned!
           </AlertDescription>
         </Alert>
 
