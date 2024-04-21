@@ -1,4 +1,7 @@
+<!-- eslint-disable ts/naming-convention -->
 <script lang="ts" setup>
+import Toaster from './components/ui/toast/Toaster.vue'
+
 const { isDark, toggleDark } = useTheme()
 
 const { Meta_J, Ctrl_J } = useMagicKeys({
@@ -22,6 +25,8 @@ if (isApple) {
 <template>
   <Html lang="en">
     <Body class="font-sans">
+      <Toaster />
+
       <!-- <TheBackgroundBlobs /> -->
       <ClientOnly>
         <TheCanvas />

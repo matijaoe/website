@@ -12,7 +12,7 @@ const year = computed(() => now.value.getFullYear())
 </script>
 
 <template>
-  <div class="p-4 md:px-24 md:pt-16 flex flex-col min-h-screen max-w-[2000px]">
+  <div class="p-4 md:px-8 md:pt-6 lg:px-24 lg:pt-16 flex flex-col min-h-screen max-w-[2000px]">
     <TheHeader />
 
     <div class="pb-8 grow pt-32">

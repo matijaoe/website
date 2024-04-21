@@ -14,14 +14,11 @@ defineProps<{
       :to="{ name: 'projects-slug', params: { slug: project.slug } }"
       class="flex grow flex-col"
     >
-      <CardHeader class="p-4">
+      <CardHeader class="p-4 pb-3">
         <div class="w-full flex items-start justify-between gap-8">
           <p
-            class="font-medium text-4xl font-display transition"
+            class="font-medium text-3xl font-display transition"
             :style="{ wordBreak: 'break-word' }"
-            :class="{
-              // 'status-dot after:bg-orange-400': project.wip,
-            }"
           >
             {{ project.name }} <span v-if="project.wip" class="text-lg ml-1">🚧</span>
           </p>
@@ -31,7 +28,7 @@ defineProps<{
 
       <CardContent class="grow p-4 pt-0">
         <div>
-          <p class="text-muted-foreground text-base  line-clamp-3">
+          <p class="text-muted-foreground text-base">
             {{ project.descriptionShort ?? project.description }}
           </p>
         </div>
@@ -56,17 +53,3 @@ defineProps<{
     </NuxtLink>
   </Card>
 </template>
-
-<style lang="postcss" scoped>
-.status-dot {
-  &:after {
-    content: '';
-    display: inline-block;
-    width: 7px;
-    aspect-ratio: 1;
-    vertical-align: middle;
-    margin-left: 0.75rem;
-    border-radius: 100rem;
-  }
-}
-</style>

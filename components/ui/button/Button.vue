@@ -10,6 +10,8 @@ interface Props extends PrimitiveProps {
   size?: ButtonVariants['size']
   class?: HTMLAttributes['class']
   to?: NuxtLinkProps['to']
+  loading?: boolean
+  icon?: string
 }
 
 // TODO: only extend NuxtLinkProps when to is defined
@@ -22,9 +24,12 @@ const props = withDefaults(defineProps<Props>(), {
   <NuxtLink
     v-if="to"
     :to="to"
-    :class="cn(buttonVariants({ variant, size }), props.class)"
+    :class="cn(buttonVariants({ variant, size }), 'flex items-center', props.class)"
   >
     <slot />
+    <slot v-if="$slots.icon || icon" name="icon">
+      <Icon v-if="icon" :name="icon" />
+    </slot>
   </NuxtLink>
 
   <Primitive
@@ -34,5 +39,11 @@ const props = withDefaults(defineProps<Props>(), {
     :class="cn(buttonVariants({ variant, size }), props.class)"
   >
     <slot />
+    <slot v-if="!loading && ($slots.icon || icon)" name="icon">
+      <Icon v-if="!loading && icon" :name="icon" />
+    </slot>
+    <slot v-if="loading" name="loading">
+      <Icon name="lucide:loader" class="animate-spin" />
+    </slot>
   </Primitive>
 </template>

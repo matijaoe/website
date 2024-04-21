@@ -1,8 +1,12 @@
 <script lang="ts" setup>
 import { z } from 'zod'
+import { useToast } from './ui/toast'
 
-const email = ref('')
-const content = ref('')
+const form = reactive({ email: '', content: '' })
+const clearForm = () => {
+  form.email = ''
+  form.content = ''
+}
 
 const schema = z.object({
   email: z.string().email(),
@@ -10,22 +14,36 @@ const schema = z.object({
 })
 
 const isValid = computed(() => {
-  const res = schema.safeParse({ email: email.value, content: content.value })
+  const res = schema.safeParse({ email: form.email, content: form.content })
   return !!res.success
 })
 
+const { toast } = useToast()
+const validate = ref(false)
+
 const loading = ref(false)
 const sendEmail = async () => {
+  validate.value = true
+  if (!isValid.value) {
+    return
+  }
+
   try {
     loading.value = true
-    const res = await $fetch('/api/contact', {
+    await $fetch('/api/contact', {
       method: 'POST',
-      body: { email: email.value, content: content.value },
+      body: { email: form.email, content: form.content },
     })
     loading.value = false
-    console.log(res)
+    toast({
+      title: 'Email sent!',
+      description: 'I will get back to you as soon as possible.',
+      duration: 5000,
+    })
+    clearForm()
+    validate.value = false
   } catch (err) {
-    console.log('Error sending email', err)
+    console.error('Error sending email', err)
   } finally {
     loading.value = false
   }
@@ -40,27 +58,49 @@ const sendEmail = async () => {
 
     <BaseRow>
       <template #label>
-        <p>Hit me up</p>
+        <div class="mr-12">
+          <p>
+            Want to work with me?
+            Send a message to <NuxtLink class="underline" to="mailto:hello@matijao.com" external target="_blank">
+              hello@matijao.com
+            </NuxtLink>
+
+            or use the contact form.
+          </p>
+        </div>
       </template>
 
       <div class="flex flex-col gap-4">
         <Input
-          v-model="email"
+          v-model="form.email"
           type="email"
-          class="hover:bg-white/5 focus:bg-white/5 active:bg-white/5 hover:backdrop-blur-md focus:hover:backdrop-blur-md active:hover:backdrop-blur-md"
-          placeholder="email"
+          class="hover:bg-white/5 focus:bg-white/5 active:bg-white/5 hover:backdrop-blur-2xl focus:hover:backdrop-blur-2xl active:hover:backdrop-blur-2xl"
+          :class="{
+            'border-destructive !bg-destructive/5 text-destructive dark:text-foreground': validate && !isValid,
+          }"
+          placeholder="you@something.com"
+          size="lg"
         />
         <Textarea
-          v-model="content"
+          v-model="form.content"
           type="text"
           rows="5"
-          class="whitespace-pre-wrap hover:bg-white/5 focus:bg-white/5 active:bg-white/5 hover:backdrop-blur-md focus:hover:backdrop-blur-md active:hover:backdrop-blur-md"
-          placeholder="Let me know how great I am..."
+          class="whitespace-pre-wrap hover:bg-white/5 focus:bg-white/5 active:bg-white/5 hover:backdrop-blur-2xl focus:hover:backdrop-blur-2xl active:hover:backdrop-blur-2xl"
+          :class="{
+            'border-destructive !bg-destructive/5 text-destructive dark:text-foreground': validate && !isValid,
+          }"
+          placeholder="Catch the game last night?"
+          size="lg"
         />
 
         <div class="flex justify-end">
-          <Button class="flex items-center gap-[6px]" @click="sendEmail">
-            Send <Icon name="lucide:send" />
+          <Button
+            :loading="loading"
+            icon="lucide:send"
+            size="lg"
+            @click="sendEmail"
+          >
+            Send
           </Button>
         </div>
       </div>

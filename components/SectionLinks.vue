@@ -41,7 +41,7 @@ const links: LinkItem = [
 </script>
 
 <template>
-  <section class="mt--4">
+  <section>
     <h2 class="mb-4 text-3xl font-medium font-display">
       @
     </h2>
