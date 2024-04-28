@@ -7,8 +7,6 @@ const scrollToTop = () => {
 
 const { breadcrumbs, isHome } = useBreadcrumbs()
 
-const now = useNow()
-const year = computed(() => now.value.getFullYear())
 </script>
 
 <template>
@@ -46,8 +44,6 @@ const year = computed(() => now.value.getFullYear())
       </Button>
     </div>
 
-    <footer class="py-10 flex items-center justify-start text-sm text-foreground/40 mt-auto">
-      <p>Matija Osrečki {{ year }} &copy; All Rights Reserved</p>
-    </footer>
+    <TheFooter />
   </div>
 </template>

@@ -34,8 +34,8 @@ const links: LinkItem = [
   },
   {
     label: 'Bitcoin (lightning)',
-    linkText: 'matijao@getalby.com',
-    link: 'lightning:matijao@getalby.com',
+    linkText: 'matijaoe@strike.me',
+    link: 'lightning:matijaoe@strike.me',
   },
 ]
 </script>
