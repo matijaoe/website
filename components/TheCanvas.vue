@@ -43,25 +43,21 @@ const config = {
   RUN_INITIALLY: false,
 }
 
-const canvasRef = ref<HTMLCanvasElement | null>(null)
-
-function PointerPrototype() {
-  this.id = -1
-  this.texcoordX = 0
-  this.texcoordY = 0
-  this.prevTexcoordX = 0
-  this.prevTexcoordY = 0
-  this.deltaX = 0
-  this.deltaY = 0
-  this.down = false
-  this.moved = false
-  this.color = [30, 0, 300]
-}
-
-whenever(canvasRef, (canvas) => {
-  // Simulation section
-
+const initCanvas = (canvas) => {
   resizeCanvas()
+
+  function PointerPrototype() {
+    this.id = -1
+    this.texcoordX = 0
+    this.texcoordY = 0
+    this.prevTexcoordX = 0
+    this.prevTexcoordY = 0
+    this.deltaX = 0
+    this.deltaY = 0
+    this.down = false
+    this.moved = false
+    this.color = [30, 0, 300]
+  }
 
   const pointers = []
   const splatStack = []
@@ -1367,9 +1363,20 @@ whenever(canvasRef, (canvas) => {
     }
     return hash
   }
+}
+
+onMounted(() => {
+  const canvas = document.getElementsByTagName('canvas')[0]
+
+  if (canvas) {
+    console.log('Init canvas')
+    initCanvas(canvas)
+  } else {
+    console.warn('Canvas not found')
+  }
 })
 </script>
 
 <template>
-  <canvas ref="canvasRef" class="fixed inset-0 h-screen w-full -z-10" />
+  <canvas class="fixed inset-0 h-screen w-full -z-10" />
 </template>
