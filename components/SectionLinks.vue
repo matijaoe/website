@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-type LinkItem = { label: string, linkText: string, link: string }[]
+type LinkItem = { label: string, linkText: string, link: string, clickToCopy?: boolean }[]
 
 const links: LinkItem = [
   {
@@ -26,6 +26,7 @@ const links: LinkItem = [
     label: 'Email',
     linkText: 'hello@matijao.com',
     link: 'mailto:hello@matijao.com',
+    clickToCopy: true,
   },
   {
     label: 'CV',
@@ -36,6 +37,7 @@ const links: LinkItem = [
     label: 'Bitcoin (lightning)',
     linkText: 'matijaoe@strike.me',
     link: 'lightning:matijaoe@strike.me',
+    clickToCopy: true,
   },
 ]
 </script>
