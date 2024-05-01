@@ -22,7 +22,7 @@ const imageBgColor = computed(() => {
   <div v-if="project" class="w-full">
     <div>
       <div class="mt-5 flex items-start justify-between">
-        <h1 class="text-7xl font-medium font-display">
+        <h1 class="text-7xl font-medium font-display text-center">
           {{ project.name }}
         </h1>
 

@@ -25,7 +25,7 @@ definePageMeta({
             v-for="project in getProjectsByCategory(cat.value)"
             :key="project.slug"
           >
-            <ProjectCard :project class="min-h-64 sm:aspect-square md:min-h-auto" />
+            <ProjectCard :project class="md:min-h-auto" />
           </template>
         </div>
       </div>
@@ -41,7 +41,7 @@ img.active {
 
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat( auto-fill, minmax(280px, 1fr) );
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr) );
   gap: 1rem;
 }
 </style>
