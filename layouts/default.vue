@@ -6,11 +6,10 @@ const scrollToTop = () => {
 }
 
 const { breadcrumbs, isHome } = useBreadcrumbs()
-
 </script>
 
 <template>
-  <div class="p-4 md:px-8 md:pt-6 lg:px-24 lg:pt-16 flex flex-col min-h-screen max-w-[2000px]">
+  <div class="p-4 md:px-8 md:pt-6 lg:px-24 lg:pt-16 flex flex-col min-h-screen max-w-[1440px] mx-auto">
     <TheHeader />
 
     <div class="pb-8 grow pt-32">

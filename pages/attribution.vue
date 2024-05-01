@@ -16,10 +16,11 @@ const techItems = [
     </PageHeading>
 
     <div>
-      <h3 class="font-sans font-medium text-xl mb-2">
+      <h3 class="font-sans text-xl mb-2">
         Tech stack:
       </h3>
-      <ul class="text-lg space-y-1">
+
+      <ul class="text-lg list-disc list-inside space-y-1 mt-4">
         <li v-for="item in techItems" :key="item.label">
           <NuxtLink :href="item.link" class="decoration-0.1em decoration-offset-0.15em hover:underline" target="_blank">
             {{ item.label }}

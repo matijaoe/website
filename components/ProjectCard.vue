@@ -8,7 +8,7 @@ defineProps<{
 
 <template>
   <Card
-    class="group flex flex-col hover:bg-white/[2%] hover:backdrop-blur-3xl shadow-sm transition-all duration-700"
+    class="group flex flex-col rounded-sm hover:bg-white/[2%] hover:backdrop-blur-3xl shadow-sm transition-all duration-700 overflow-hidden"
   >
     <NuxtLink
       :to="{ name: 'projects-slug', params: { slug: project.slug } }"
@@ -34,7 +34,7 @@ defineProps<{
       <CardHeader class="p-4 pb-3">
         <div class="w-full flex items-start justify-between gap-8">
           <p
-            class="font-medium text-2xl font-display transition"
+            class="font-medium text-xl font-display transition"
             :style="{ wordBreak: 'break-word' }"
           >
             {{ project.name }} <span v-if="project.wip" class="text-lg ml-1">🚧</span>

@@ -27,11 +27,14 @@ const imageBgColor = computed(() => {
         </h1>
 
         <div class="flex items-center gap-3 mt-2">
-          <Button v-if="project.repo" :to="project.repo" external target="_blank" variant="frosted-outline" class="flex items-center gap-2">
-            Code <Icon name="lucide:code" class="text-[1.2em]" />
+          <Button to="/projects" variant="frosted-ghost" class="flex items-center gap-2">
+            <Icon name="lucide:arrow-left" class="text-[1.2em]" /> Back
+          </Button>
+          <Button v-if="project.repo" :to="project.repo" external target="_blank" variant="secondary" class="flex items-center gap-2">
+            <Icon name="lucide:code" class="text-[1.2em]" /> Code
           </Button>
           <Button v-if="project.url" :to="project.url" external target="_blank" variant="default" class="flex items-center gap-2">
-            Live <Icon name="lucide:arrow-up-right" class="text-[1.2em]" />
+            <Icon name="lucide:arrow-up-right" class="text-[1.2em]" /> Live
           </Button>
         </div>
       </div>
