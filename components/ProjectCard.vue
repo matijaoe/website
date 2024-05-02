@@ -8,16 +8,33 @@ defineProps<{
 
 <template>
   <Card
-    class="group flex flex-col hover:bg-white/[2%] hover:backdrop-blur-3xl shadow-sm transition-all duration-700"
+    class="group flex flex-col rounded-sm hover:bg-white/[2%] hover:backdrop-blur-3xl shadow-sm transition-all duration-700 overflow-hidden"
   >
     <NuxtLink
       :to="{ name: 'projects-slug', params: { slug: project.slug } }"
       class="flex grow flex-col"
     >
+      <div class="border-b aspect-[16/10] overflow-hidden">
+        <div v-if="project.thumbnail" class="h-full grid place-content-center" :style="{ background: project.color }">
+          <NuxtImg
+            :width="720"
+            format="webp"
+            :src="project.thumbnail"
+            alt="Thumbnail"
+          />
+        </div>
+
+        <div v-else class="h-full bg-primary-foreground text-muted flex items-center justify-center text-justify">
+          <div class="text-3xl font-mono font-black leading-none uppercase">
+            pla<br>ceh<br>old<br>er<span class="inline text-violet-600">?</span>
+          </div>
+        </div>
+      </div>
+
       <CardHeader class="p-4 pb-3">
         <div class="w-full flex items-start justify-between gap-8">
           <p
-            class="font-medium text-3xl font-display transition"
+            class="font-medium text-xl font-display transition"
             :style="{ wordBreak: 'break-word' }"
           >
             {{ project.name }} <span v-if="project.wip" class="text-lg ml-1">🚧</span>
@@ -43,7 +60,6 @@ defineProps<{
             <Badge
               class="font-mono lowercase text-nowrap"
               variant="outline"
-              size="lg"
             >
               {{ tag }}
             </badge>

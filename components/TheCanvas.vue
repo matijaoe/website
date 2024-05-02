@@ -43,10 +43,7 @@ const config = {
   RUN_INITIALLY: false,
 }
 
-onMounted(() => {
-  // Simulation section
-
-  const canvas = document.getElementsByTagName('canvas')[0]
+const initCanvas = (canvas) => {
   resizeCanvas()
 
   function PointerPrototype() {
@@ -1365,6 +1362,17 @@ onMounted(() => {
       hash |= 0 // Convert to 32bit integer
     }
     return hash
+  }
+}
+
+onMounted(() => {
+  const canvas = document.getElementsByTagName('canvas')[0]
+
+  if (canvas) {
+    console.log('Init canvas')
+    initCanvas(canvas)
+  } else {
+    console.warn('Canvas not found')
   }
 })
 </script>

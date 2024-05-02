@@ -90,7 +90,7 @@ const sendEmail = async () => {
           :class="{
             'border-destructive !bg-destructive/5 text-destructive dark:text-foreground': validate && !isValid,
           }"
-          placeholder="Catch the game last night?"
+          placeholder="Howdy"
           size="lg"
         />
 
