@@ -20,7 +20,7 @@
         :used="['Nuxt', 'Vue', 'TypeScript', 'Pinia', 'Uno CSS', 'Quasar', 'Vite', 'Storybook', 'GraphQL']"
       >
         <template #logo>
-          <img src="/4ot-logo.png" class="aspect-square h-4 w-4 rounded-sm" alt="company logo">
+          <img src="/4ot-logo.png" class="aspect-square h-4 w-4" alt="4ofthem">
         </template>
 
         <template #default>
@@ -40,7 +40,7 @@
         :used="['Vue', 'JavaScript', 'Tanstack Query', 'Vuetify', 'Cypress', 'Vitest']"
       >
         <template #logo>
-          <img src="/cura-logo.jpeg" class="aspect-square h-4 w-4 rounded-sm" alt="company logo">
+          <img src="/cura-logo.jpeg" class="aspect-square h-4 w-4" alt="cura4you">
         </template>
 
         <template #default>
@@ -60,7 +60,7 @@
         :used="['Vue', 'JavaScript', 'TypeScript', 'Nuxt', 'Pinia', 'Vuex', 'Tailwind', 'Uno CSS', 'Sass', 'PrimeVue', 'Storybook', 'Vite']"
       >
         <template #logo>
-          <img src="/3ot-logo.jpeg" class="aspect-square h-4 w-4 rounded-sm" alt="company logo">
+          <img src="/3ot-logo.jpeg" class="aspect-square h-4 w-4" alt="3ofthem">
         </template>
 
         <template #default>
@@ -79,10 +79,10 @@
         start-date="May 2021"
         end-date="Jul 2021"
         slug="infokarta"
-        :used="['Nuxt 2', 'Vuex', 'JavaScript', 'Mapbox', 'Bootstrap', 'Sass', 'Node', 'Express', 'Postgres']"
+        :used="['Nuxt', 'Vuex', 'JavaScript', 'Mapbox', 'Bootstrap', 'Sass', 'Node', 'Express', 'Postgres']"
       >
         <template #logo>
-          <Icon name="lucide:map" class="aspect-square h-5 w-5 rounded-sm -ml-0.5" alt="company logo" />
+          <Icon name="lucide:map" class="aspect-square h-5 w-5 -ml-0.5" alt="infokarta" />
         </template>
 
         <template #default>

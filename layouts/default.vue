@@ -32,15 +32,17 @@ const { breadcrumbs, isHome } = useBreadcrumbs()
         </main>
       </div>
 
-      <Button
-        v-show="y > 120"
-        variant="frosted"
-        size="icon-lg"
-        class="fixed bottom-14 right-14 rounded-full active:scale-90"
-        @click="scrollToTop"
-      >
-        <Icon name="lucide:chevron-up" class="text-default-50 text-xl" />
-      </Button>
+      <TransitionFade>
+        <Button
+          v-show="y > 120"
+          variant="secondary"
+          size="icon-lg"
+          class="fixed bottom-14 right-14 rounded-full active:scale-90 transition shadow-xl"
+          @click="scrollToTop"
+        >
+          <Icon name="lucide:chevron-up" class="text-default-50 text-xl" />
+        </Button>
+      </TransitionFade>
     </div>
 
     <TheFooter />

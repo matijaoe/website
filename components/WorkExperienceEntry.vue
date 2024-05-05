@@ -54,8 +54,8 @@ defineProps<{
         <Badge
           v-for="item in used"
           :key="item"
-          class="font-mono lowercase"
-          variant="outline"
+          class="font-mono lowercase text-nowrap"
+          variant="secondary-border"
         >
           {{ item }}
         </Badge>

@@ -10,6 +10,7 @@ export default defineNuxtConfig({
     '@nuxt/content',
     '@nuxt/fonts',
     '@nuxtjs/device',
+    '@morev/vue-transitions/nuxt',
   ],
 
   devtools: { enabled: true },

@@ -21,7 +21,7 @@ export const buttonVariants = cva(
           'border border-input bg-transparent backdrop-blur-lg shadow-sm hover:bg-white/5 hover:text-accent-foreground',
         'frosted':
           'bg-secondary backdrop-blur-lg text-secondary-foreground shadow-sm hover:bg-white/15',
-        'frosted-ghost': ' backdrop-blur-lg hover:bg-white/5 hover:text-accent-foreground',
+        'frosted-ghost': 'backdrop-blur-lg hover:bg-white/5 hover:text-accent-foreground',
       },
       size: {
         'default': 'h-9 px-4 py-2 gap-[6px]',
