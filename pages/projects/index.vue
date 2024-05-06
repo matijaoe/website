@@ -4,6 +4,11 @@ const { uniqueCategories, getProjectsByCategory } = useProjects()
 definePageMeta({
   layout: 'default',
 })
+
+useSeoMeta({
+  title: 'Projects',
+  ogTitle: 'Projects'
+})
 </script>
 
 <template>

@@ -8,6 +8,11 @@ const nowFormatted = computed(() => {
     timeZone: 'Europe/Zagreb',
   }).format(now.value)
 })
+
+useSeoMeta({
+  title: 'Matija Osrečki',
+  ogTitle: 'Matija Osrečki',
+})
 </script>
 
 <template>

@@ -1,3 +1,10 @@
+<script lang="ts" setup>
+useSeoMeta({
+  title: 'Projects',
+  ogTitle: 'Projects',
+})
+</script>
+
 <template>
   <div>
     <PageHeading class="mb-4">

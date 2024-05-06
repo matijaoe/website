@@ -20,11 +20,24 @@ if (isApple) {
 } else {
   whenever(Ctrl_J, () => toggleDark())
 }
+
+const description = 'Frontend software engineer with a relentless focus on quality.'
+
+useSeoMeta({
+  titleTemplate: '%s • matijao',
+  description,
+  ogDescription: description,
+  ogUrl: 'matijao.com',
+  twitterTitle: 'Matija Osrečki',
+  twitterDescription: description,
+  twitterImage: '[twitter:image]',
+  twitterCard: 'summary',
+})
 </script>
 
 <template>
   <Html lang="en">
-    <Body class="font-sans">
+    <Body>
       <Toaster />
 
       <!-- <TheBackgroundBlobs /> -->
