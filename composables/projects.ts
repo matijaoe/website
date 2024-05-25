@@ -74,7 +74,7 @@ const projects: Project[] = [
     techPreview: ['ts', 'Nitro', 'Zod'],
     timeframe: '2024',
     repo: 'https://github.com/matijaoe/brutoneto-api',
-    categories: [Category.projects],
+    categories: [Category.hobby],
   },
   {
     wip: true,
@@ -85,7 +85,7 @@ const projects: Project[] = [
     techPreview: ['Nuxt', 'ts', 'Nuxt UI', 'bitcoinjs', 'Prisma'],
     timeframe: '2023',
     repo: 'https://github.com/matijaoe/polenta',
-    categories: [Category.projects],
+    categories: [Category.hobby],
     color: '#FB923C',
   },
   {

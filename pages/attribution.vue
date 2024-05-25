@@ -7,6 +7,11 @@ const techItems = [
   { label: 'Resend', link: 'https://resend.com' },
   { label: 'Zod', link: 'https://github.com/colinhacks/zod' },
 ]
+
+useSeoMeta({
+  title: 'Attribution',
+  ogTitle: 'Attribution',
+})
 </script>
 
 <template>

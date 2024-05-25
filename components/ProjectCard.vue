@@ -31,7 +31,7 @@ defineProps<{
         </div>
       </div>
 
-      <CardHeader class="p-4 pb-3">
+      <CardHeader class="p-4 pb-2">
         <div class="w-full flex items-start justify-between gap-8">
           <p
             class="font-medium text-xl font-display transition"
@@ -43,15 +43,15 @@ defineProps<{
         </div>
       </CardHeader>
 
-      <CardContent class="grow p-4 pt-0">
+      <CardContent class="grow p-4 py-0 pb-1">
         <div>
-          <p class="text-muted-foreground text-base">
+          <p class="text-muted-foreground text-sm">
             {{ project.descriptionShort ?? project.description }}
           </p>
         </div>
       </CardContent>
 
-      <CardFooter v-if="project.tech.length" class="mt-auto p-2">
+      <CardFooter v-if="project.tech.length" class="mt-auto p-4">
         <div class="mt-auto flex flex-wrap w-full gap-1">
           <template
             v-for="tag in project.techPreview || project.tech"
@@ -59,7 +59,7 @@ defineProps<{
           >
             <Badge
               class="font-mono lowercase text-nowrap"
-              variant="outline"
+              variant="secondary-border"
             >
               {{ tag }}
             </badge>

@@ -10,6 +10,7 @@ export default defineNuxtConfig({
     '@nuxt/content',
     '@nuxt/fonts',
     '@nuxtjs/device',
+    '@morev/vue-transitions/nuxt',
   ],
 
   devtools: { enabled: true },
@@ -58,15 +59,10 @@ export default defineNuxtConfig({
 
   app: {
     head: {
+      titleTemplate: '%s • matijao',
       title: 'Matija Osrečki',
       link: [
         { rel: 'icon', type: 'image/svg+xml', href: '/favicon.svg' },
-      ],
-      meta: [
-        {
-          name: 'description',
-          content: 'Matija Osrečki is a frontend software engineer from Croatia.',
-        },
       ],
     },
   },

@@ -39,21 +39,14 @@ const imageBgColor = computed(() => {
         </div>
       </div>
 
-      <div class="mt-5 flex flex-wrap items-center gap-2 text-[11px]">
-        <Badge
-          v-if="project.wip"
-          class="font-mono lowercase font-bold bg-amber-400"
-          variant="primary"
-        >
-          wip
-        </Badge>
+      <div class="mt-5 flex flex-wrap items-center gap-2 text-[11px] max-w-lg">
         <template
           v-for="tag in project.tech"
           :key="tag"
         >
           <Badge
-            class="font-light font-mono lowercase"
-            variant="outline"
+            class="font-mono lowercase text-nowrap"
+            variant="secondary-border"
           >
             {{ tag }}
           </badge>
@@ -67,12 +60,12 @@ const imageBgColor = computed(() => {
       </div>
 
       <!-- TODO: implement image distortion effects -->
-      <Card v-if="images?.length" class="mt-10 border-none max-w-3xl">
+      <Card v-if="images?.length" class="mt-10 max-w-3xl">
         <div
           v-for="image in images"
           :key="image"
         >
-          <div class="overflow-hidden ring ring-input">
+          <div class="overflow-hidden ring ring-input rounded-md">
             <NuxtLink
               :to="image"
               target="_blank"

@@ -7,9 +7,12 @@ const year = computed(() => now.value.getFullYear())
   <footer class="mt-auto pt-20 pb-10 flex items-center justify-start text-sm text-foreground/40">
     <div class="w-full flex items-center justify-between gap-8">
       <p>Matija Osrečki {{ year }} &copy; All Rights Reserved</p>
-      <div>
+      <div class="flex items-center gap-4 lowercase">
+        <NuxtLink to="https://github.com/matijaoe/website" target="_blank" class="hover:underline hover:text-foreground">
+          Code
+        </NuxtLink>
         <NuxtLink to="/attribution" class="hover:underline hover:text-foreground">
-          attribution
+          Attribution
         </NuxtLink>
       </div>
     </div>
