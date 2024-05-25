@@ -23,7 +23,13 @@ const copyToClipboard = () => {
     </template>
 
     <template #default>
-      <BaseTooltip :disabled="!clickToCopy" :content="copied ? ' Copied!' : 'Right click to copy'" disable-closing-trigger>
+      <BaseTooltip
+        side="right"
+        :side-offset="28"
+        :disabled="!clickToCopy"
+        :content="copied ? ' Copied!' : 'Right click to copy'"
+        disable-closing-trigger
+      >
         <NuxtLink
           :href="link"
           class="decoration-0.1em decoration-offset-0.15em hover:underline"
