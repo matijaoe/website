@@ -11,7 +11,6 @@
 - [Sony WH-1000XM5](https://electronics.sony.com/audio/headphones/headband/p/wh1000xm5-b) . headphones
 - [Fully Jarvis](https://ukstore.hermanmiller.com/collections/jarvis-standing-desk/) . standing desk
 - [Rain Design mStand](https://www.raindesigninc.com/mstand.html) . laptop stand
-- [Samsung T7 Shield SSD • 4TB](https://www.raindesigninc.com/mstand.html) . external storage
 
 ## Dev Tools
 
@@ -44,8 +43,10 @@
 - [Calibre](https://calibre-ebook.com/) . e-book management
 - [iA Writer](https://ia.net/writer) . journaling
 - [Obsidian](https://obsidian.md/) . notes
+- [Nota](https://nota.md/) . markdown
 - [Wipr](https://apps.apple.com/us/app/wipr/id1030595027) - Safari ad blocker
 - [dns0.eu](https://dns0.eu/) . secure dns
+- [Mullvad VPN](https://mullvad.net) . free the internet
 - [Cryptomator](https://cryptomator.org/) . encryption
 - [KeePassXC](https://keepassxc.org/) . offline password manager
 
@@ -54,5 +55,6 @@
 - [Kobo Libra H20](https://gl.kobobooks.com/products/kobo-libra-h2o) . e-book reader
 - [YubiKey](https://www.yubico.com/products/) . security keys
 - [Raspberry Pi 4](https://www.raspberrypi.com/products/raspberry-pi-4-model-b/) . light bitcoin node
+- [Samsung T7 / T7 Shield SSD](https://semiconductor.samsung.com/consumer-storage/portable-ssd/t7-shield/) . external storage
 - [COLDCARD](https://coldcard.com/) . bitcoin security
 - [Trek X-Caliber 8 2021](https://www.trekbikes.com/us/en_US/bikes/mountain-bikes/cross-country-mountain-bikes/x-caliber/x-caliber-8/p/33193/) . cool red bike

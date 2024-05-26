@@ -16,6 +16,11 @@ const imageBgColor = computed(() => {
   const { color } = project.value ?? {}
   return color ?? 'transparent'
 })
+
+useSeoMeta({
+  title: () => project.value?.name ?? 'Projects',
+  ogTitle: () => project.value?.name ?? 'Projects',
+})
 </script>
 
 <template>
