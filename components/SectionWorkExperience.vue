@@ -19,11 +19,7 @@
         slug="theydo"
         logo="/theydo-logo.jpg"
         :used="['Vue', 'TypeScript', 'GraphQL', 'Tailwind', 'Vite']"
-      >
-        <template #default>
-          Crafting a delightful, easy-to-use product and getting it ready for scale.
-        </template>
-      </WorkExperienceEntry>
+      />
 
       <WorkExperienceEntry
         company="Four of them LLC"

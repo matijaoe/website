@@ -26,7 +26,6 @@ defineProps<{
           <h3 :to="`${slug}`" class="text-xl font-medium">
             {{ position }}
           </h3>
-          <!-- <Icon name="lucide:arrow-right" class="text-base invisible transition -translate-x-8 opacity-0 group-hover:visible group-hover:opacity-100 group-hover:translate-x-0" /> -->
         </div>
 
         <div class="flex items-start gap-2 sm:items-center">
