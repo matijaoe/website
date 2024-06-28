@@ -1,6 +1,6 @@
 ## Workstation
 
-- [14" MacBook Pro, M2 Pro 16/512GB](https://support.apple.com/kb/SP889) . work mac
+- [16" MacBook Pro, M2 Pro 18/512GB](https://support.apple.com/en-us/117737) . work mac
 - [14" MacBook Pro, M1 Pro 16/512GB](https://support.apple.com/kb/SP854) . personal mac
 - [iPhone 15 Pro 256GB](https://www.apple.com/shop/buy-iphone/iphone-15-pro) . smartphone
 - [Vortex Race 3 (MX Clear)](https://vortexgear.store/products/race-3-micro-usb) . mechanical keyboard
