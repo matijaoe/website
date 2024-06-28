@@ -35,7 +35,7 @@ const activeLinkClass = '!text-foreground hover:text-foreground'
         </slot>
       </NuxtLink>
 
-      <!-- <div class="mt-4 flex items-center gap-5">
+      <div class="mt-4 flex items-center gap-5">
         <Button
           variant="link"
           size="icon"
@@ -57,7 +57,7 @@ const activeLinkClass = '!text-foreground hover:text-foreground'
             class="rotate-45 text-[24px] transition-transform duration-300 ease-in-out hover:rotate-135"
           />
         </button>
-      </div> -->
+      </div>
     </menu>
   </header>
 </template>

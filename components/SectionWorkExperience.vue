@@ -10,7 +10,7 @@
     <div class="flex flex-col gap-1">
       <WorkExperienceEntry
         company="TheyDo"
-        company-url="https://www.theydo.co,"
+        company-url="https://www.theydo.com"
         company-location="Amsterdam, Netherlands"
         location-icon="circle-flags:nl"
         position="Frontend Engineer"
