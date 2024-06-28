@@ -7,7 +7,8 @@ defineProps<{
   position: string
   startDate: string
   endDate: string
-  slug?: '4ofthem' | 'cura' | '3ofthem' | 'infokarta'
+  logo?: string
+  slug?: 'theydo' | '4ofthem' | 'cura' | '3ofthem' | 'infokarta'
   used: string[]
 }>()
 </script>
@@ -22,14 +23,15 @@ defineProps<{
     <template #default>
       <div>
         <div class="mb-1 flex items-center gap-2">
-          <NuxtLink :to="`${slug}`" class="text-xl font-medium hover:underline">
+          <h3 :to="`${slug}`" class="text-xl font-medium">
             {{ position }}
-          </NuxtLink>
-          <Icon name="lucide:arrow-right" class="text-base invisible transition -translate-x-8 opacity-0 group-hover:visible group-hover:opacity-100 group-hover:translate-x-0" />
+          </h3>
         </div>
 
         <div class="flex items-start gap-2 sm:items-center">
-          <slot name="logo" />
+          <slot name="logo">
+            <img :src="logo" class="aspect-square h-[18px] rounded-[2px]" alt="logo">
+          </slot>
 
           <div class="flex flex-row items-center gap-2 text-sm -mt-0.4">
             <NuxtLink :to="companyUrl" external target="_blank" class="group">
@@ -55,7 +57,7 @@ defineProps<{
           v-for="item in used"
           :key="item"
           class="font-mono lowercase text-nowrap"
-          variant="secondary-border"
+          variant="outline"
         >
           {{ item }}
         </Badge>

@@ -1,6 +1,6 @@
 ## Workstation
 
-- [14" MacBook Pro, M2 Pro 16/512GB](https://support.apple.com/kb/SP889) . work mac
+- [16" MacBook Pro, M2 Pro 18/512GB](https://support.apple.com/en-us/117737) . work mac
 - [14" MacBook Pro, M1 Pro 16/512GB](https://support.apple.com/kb/SP854) . personal mac
 - [iPhone 15 Pro 256GB](https://www.apple.com/shop/buy-iphone/iphone-15-pro) . smartphone
 - [Vortex Race 3 (MX Clear)](https://vortexgear.store/products/race-3-micro-usb) . mechanical keyboard
@@ -43,8 +43,10 @@
 - [Calibre](https://calibre-ebook.com/) . e-book management
 - [iA Writer](https://ia.net/writer) . journaling
 - [Obsidian](https://obsidian.md/) . notes
+- [Nota](https://nota.md/) . markdown
 - [Wipr](https://apps.apple.com/us/app/wipr/id1030595027) - Safari ad blocker
 - [dns0.eu](https://dns0.eu/) . secure dns
+- [Mullvad VPN](https://mullvad.net) . free the internet
 - [Cryptomator](https://cryptomator.org/) . encryption
 - [KeePassXC](https://keepassxc.org/) . offline password manager
 
@@ -52,6 +54,7 @@
 
 - [Kobo Libra H20](https://gl.kobobooks.com/products/kobo-libra-h2o) . e-book reader
 - [YubiKey](https://www.yubico.com/products/) . security keys
-- [Raspberry Pi 4](https://www.raspberrypi.com/products/raspberry-pi-4-model-b/) . home server and bitcoin node
+- [Raspberry Pi 4](https://www.raspberrypi.com/products/raspberry-pi-4-model-b/) . light bitcoin node
+- [Samsung T7 / T7 Shield SSD](https://semiconductor.samsung.com/consumer-storage/portable-ssd/t7-shield/) . external storage
 - [COLDCARD](https://coldcard.com/) . bitcoin security
 - [Trek X-Caliber 8 2021](https://www.trekbikes.com/us/en_US/bikes/mountain-bikes/cross-country-mountain-bikes/x-caliber/x-caliber-8/p/33193/) . cool red bike

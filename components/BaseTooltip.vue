@@ -3,6 +3,8 @@ withDefaults(defineProps<{
   content?: string
   delay?: number
   disableClosingTrigger?: boolean
+  side?: 'top' | 'right' | 'bottom' | 'left'
+  sideOffset?: number
 }>(), {
   delay: 0,
 })
@@ -14,7 +16,7 @@ withDefaults(defineProps<{
       <TooltipTrigger as-child>
         <slot />
       </TooltipTrigger>
-      <TooltipContent>
+      <TooltipContent :side :side-offset>
         <!-- TODO: not working -->
         <slot name="content">
           {{ content }}

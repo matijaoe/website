@@ -14,6 +14,12 @@ const copyToClipboard = () => {
   copy(props.linkText)
   copied.value = true
 }
+
+const onContextMenu = (e: Event) => {
+  if (props.clickToCopy) {
+    e.preventDefault()
+  }
+}
 </script>
 
 <template>
@@ -23,12 +29,19 @@ const copyToClipboard = () => {
     </template>
 
     <template #default>
-      <BaseTooltip :disabled="!clickToCopy" :content="copied ? ' Copied!' : 'Right click to copy'" disable-closing-trigger>
+      <!-- TODO: differentiate copy text vs copy link -->
+      <BaseTooltip
+        side="right"
+        :side-offset="28"
+        :disabled="!clickToCopy"
+        :content="copied ? ' Copied!' : 'Right click to copy'"
+        disable-closing-trigger
+      >
         <NuxtLink
           :href="link"
           class="decoration-0.1em decoration-offset-0.15em hover:underline"
           target="_blank"
-          @contextmenu.prevent=""
+          @contextmenu="onContextMenu"
           @click.right="copyToClipboard()"
         >
           {{ linkText }}

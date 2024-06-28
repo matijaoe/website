@@ -24,7 +24,7 @@ defineProps<{
           />
         </div>
 
-        <div v-else class="h-full bg-primary-foreground text-muted flex items-center justify-center text-justify">
+        <div v-else class="h-full bg-primary-foreground  text-muted-foreground/10 dark:text-muted flex items-center justify-center text-justify">
           <div class="text-3xl font-mono font-black leading-none uppercase">
             pla<br>ceh<br>old<br>er<span class="inline text-violet-600">?</span>
           </div>
