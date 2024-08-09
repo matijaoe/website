@@ -23,6 +23,9 @@ useSeoMeta({
           <span class="px-2.5 py-0.5">{{ nowFormatted }}</span>
           <span class="border-l px-2.5 py-0.5">Zagreb, Croatia</span>
         </Badge>
+        <Badge variant="secondary" class="font-mono">
+          WIP
+        </Badge>
       </div>
       <h1 class="text-default-900 dark:text-default-50 text-balance text-5xl/[1] sm:text-6xl/[1] font-medium font-display lg:text-7xl/[1] mb-4 md:mb-6">
         Hi, I'm Matija, <br> crafting sleek <br> <span class="underline">web</span> experiences
@@ -58,9 +61,9 @@ useSeoMeta({
 
     <SectionWorkExperience />
 
-    <section>
+    <!-- <section>
       <ContactForm />
-    </section>
+    </section> -->
 
     <!-- <div class="animate-marquee whitespace-nowrap py-12">
         <span class="mx-4 text-4xl">Vue</span>

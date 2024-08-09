@@ -1,7 +1,3 @@
-<script lang="ts" setup>
-
-</script>
-
 <template>
   <section>
     <h2 class="mb-4 text-3xl font-medium font-display">
@@ -18,7 +14,7 @@
         end-date="Present"
         slug="theydo"
         logo="/theydo-logo.jpg"
-        :used="['Vue', 'TypeScript', 'GraphQL', 'Tailwind', 'Vite']"
+        :used="['Vue', 'TypeScript', 'GraphQL', 'Apollo', 'Tailwind', 'Vite', 'Playwright']"
       />
 
       <WorkExperienceEntry

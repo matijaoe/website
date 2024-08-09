@@ -34,7 +34,7 @@ const links: LinkItem = [
     link: '/cv.pdf',
   },
   {
-    label: 'Bitcoin (lightning)',
+    label: 'Bitcoin ⚡',
     linkText: 'matijaoe@strike.me',
     link: 'lightning:matijaoe@strike.me',
     clickToCopy: true,

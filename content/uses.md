@@ -17,8 +17,9 @@
 
 - [Visual Studio Code](https://code.visualstudio.com/) . code editor
 - [iTerm 2](https://iterm2.com/) . terminal
+- [Warp](https://www.warp.dev/) . another terminal
+- [ChatGPT Plus](https://chat.openai.com/) . ai thing
 - [GitHub Copilot](https://github.com/features/copilot) . ai coding assistant
-- [ChatGPT](https://chat.openai.com/) . ai thing
 - [GitHub CLI](https://cli.github.com/) . github command-line
 - [Oh My Zsh](https://ohmyz.sh/) . zsh plugin framework
 - [httpie](https://httpie.io/) . http client
@@ -45,7 +46,7 @@
 - [NetNewsWire](https://netnewswire.com/) . RSS reader
 - [Calibre](https://calibre-ebook.com/) . e-book management
 - [iA Writer](https://ia.net/writer) . journaling
-- [Obsidian](https://obsidian.md/) . notes
+- [Obsidian](https://obsidian.md/) . notes & dev journaling
 - [Nota](https://nota.md/) . markdown
 - [Wipr](https://apps.apple.com/us/app/wipr/id1030595027) - Safari ad blocker
 - [dns0.eu](https://dns0.eu/) . secure dns
@@ -60,4 +61,4 @@
 - [Raspberry Pi 4](https://www.raspberrypi.com/products/raspberry-pi-4-model-b/) . light bitcoin node
 - [Samsung T7 / T7 Shield SSD](https://semiconductor.samsung.com/consumer-storage/portable-ssd/t7-shield/) . external storage
 - [COLDCARD](https://coldcard.com/) . bitcoin security
-- [Trek X-Caliber 8 2021](https://www.trekbikes.com/us/en_US/bikes/mountain-bikes/cross-country-mountain-bikes/x-caliber/x-caliber-8/p/33193/) . cool red bike
+- [Trek X-Caliber 8 2021](https://www.trekbikes.com/us/en_US/bikes/mountain-bikes/cross-country-mountain-bikes/x-caliber/x-caliber-8/p/33193/) . my cool red bike

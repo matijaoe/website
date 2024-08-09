@@ -9,19 +9,19 @@ const links: { to: RouteLocationRaw, label: string }[] = [
   // { to: { name: 'bookmarks' }, label: 'Bookmarks' },
 ]
 
-const { toggleDark } = useTheme()
-const { toggle } = useCmd()
+// const { toggleDark } = useTheme()
+// const { toggle } = useCmd()
 
 const activeLinkClass = '!text-foreground hover:text-foreground'
 </script>
 
 <template>
-  <header class="flex items-center justify-between">
+  <header class="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
     <NuxtLink to="/" class="font-mono text-[17px] ">
       @matijao
     </NuxtLink>
 
-    <menu class="flex items-end gap-6">
+    <menu class="flex items-end gap-4 md:gap-6">
       <NuxtLink
         v-for="link in links"
         :key="link.to.toString()"

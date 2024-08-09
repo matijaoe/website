@@ -7,12 +7,13 @@ definePageMeta({
 
 useSeoMeta({
   title: 'Projects',
-  ogTitle: 'Projects'
+  ogTitle: 'Projects',
 })
 </script>
 
 <template>
-  <div class="grid grid-cols-[1fr_14rem] gap-12">
+  <!-- <div class="grid grid-cols-[1fr_14rem] gap-12"> -->
+  <div class="grid grid-cols-1 gap-12">
     <div>
       <PageHeading class="mb-6">
         Projects
@@ -23,7 +24,8 @@ useSeoMeta({
           v-for="project in getProjectsByCategory('projects')"
           :key="project.slug"
         >
-          <ProjectCardBlock :project />
+          <ProjectCardBlock :project class="hidden md:block" />
+          <ProjectCard :project class="md:hidden" />
         </template>
       </div>
 
@@ -47,7 +49,7 @@ useSeoMeta({
       </div>
     </div>
 
-    <div class="relative">
+    <!-- <div class="relative">
       <div class="sticky top-24 right-0">
         <div class="flex flex-col gap-2 text-lg font-sans font-medium text-muted-foreground text-right lowercase">
           <NuxtLink v-for="cat in uniqueCategories.filter(cat => cat.value !== 'projects')" :key="cat.value" :to="`#${cat.value}`" class="transition hover:text-foreground">
@@ -55,7 +57,7 @@ useSeoMeta({
           </NuxtLink>
         </div>
       </div>
-    </div>
+    </div> -->
   </div>
 </template>
 
