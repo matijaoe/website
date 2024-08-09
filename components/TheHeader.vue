@@ -9,7 +9,7 @@ const links: { to: RouteLocationRaw, label: string }[] = [
   // { to: { name: 'bookmarks' }, label: 'Bookmarks' },
 ]
 
-// const { toggleDark } = useTheme()
+const { toggleDark } = useTheme()
 // const { toggle } = useCmd()
 
 const activeLinkClass = '!text-foreground hover:text-foreground'
@@ -17,9 +17,41 @@ const activeLinkClass = '!text-foreground hover:text-foreground'
 
 <template>
   <header class="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
-    <NuxtLink to="/" class="font-mono text-[17px] ">
-      @matijao
-    </NuxtLink>
+    <div class="flex items-center justify-between">
+      <NuxtLink to="/" class="font-mono text-[17px] ">
+        @matijao
+      </NuxtLink>
+
+      <div class="flex md:hidden items-center gap-5">
+        <!-- <Button
+          variant="link"
+          size="icon"
+          @click="toggle()"
+        >
+          <Icon
+            name="lucide:search"
+            class="text-[24px]"
+          />
+        </Button> -->
+
+        <BaseTooltip>
+          <!-- TODO: implement Kbd component -->
+          <template #content>
+            ⌘ J
+          </template>
+          <Button
+            variant="link"
+            size="icon"
+            @click="toggleDark"
+          >
+            <Icon
+              name="ph:circle-half-fill"
+              class="rotate-45 text-[24px] transition-transform duration-300 ease-in-out hover:rotate-135"
+            />
+          </Button>
+        </BaseTooltip>
+      </div>
+    </div>
 
     <menu class="flex items-end gap-4 md:gap-6">
       <NuxtLink
@@ -35,8 +67,8 @@ const activeLinkClass = '!text-foreground hover:text-foreground'
         </slot>
       </NuxtLink>
 
-      <!-- <div class="mt-4 flex items-center gap-5">
-        <Button
+      <div class="hidden md:flex items-center gap-5">
+        <!-- <Button
           variant="link"
           size="icon"
           @click="toggle()"
@@ -45,19 +77,25 @@ const activeLinkClass = '!text-foreground hover:text-foreground'
             name="lucide:search"
             class="text-[24px]"
           />
-        </Button>
+        </Button> -->
 
-        <button
-          variant="link"
-          size="icon"
-          @click="toggleDark"
-        >
-          <Icon
-            name="ph:circle-half-fill"
-            class="rotate-45 text-[24px] transition-transform duration-300 ease-in-out hover:rotate-135"
-          />
-        </button>
-      </div> -->
+        <BaseTooltip>
+          <!-- TODO: implement Kbd component -->
+          <template #content>
+            ⌘ J
+          </template>
+          <Button
+            variant="link"
+            size="icon"
+            @click="toggleDark"
+          >
+            <Icon
+              name="ph:circle-half-fill"
+              class="rotate-45 text-[24px] transition-transform duration-300 ease-in-out hover:rotate-135"
+            />
+          </Button>
+        </BaseTooltip>
+      </div>
     </menu>
   </header>
 </template>
