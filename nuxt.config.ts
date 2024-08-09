@@ -6,7 +6,7 @@ export default defineNuxtConfig({
     '@vueuse/nuxt',
     '@nuxt/image',
     '@nuxtjs/color-mode',
-    'nuxt-icon',
+    '@nuxt/icon',
     '@nuxt/content',
     '@nuxt/fonts',
     '@nuxtjs/device',
