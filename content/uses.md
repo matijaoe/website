@@ -1,9 +1,9 @@
 ## Workstation
 
-- [16" MacBook Pro, M3 Pro 18/512GB](https://support.apple.com/en-us/117737) . work mac
-- [14" MacBook Pro, M1 Pro 16/512GB](https://support.apple.com/kb/SP854) . personal mac
+- [16" MacBook Pro, M3 Pro](https://support.apple.com/en-us/117737) . work mac
+- [14" MacBook Pro, M1 Pro](https://support.apple.com/kb/SP854) . personal mac
 - [iPhone 15 Pro 256GB](https://www.apple.com/shop/buy-iphone/iphone-15-pro) . smartphone
-- [Dell 32" 4K U3223QE](https://www.dell.com/en-us/shop/dell-ultrasharp-32-4k-usb-c-hub-monitor-u3223qe/apd/210-bdph/monitors-monitor-accessories) - monitor
+- [Dell 32" 4K U3223QE](https://www.dell.com/en-us/shop/dell-ultrasharp-32-4k-usb-c-hub-monitor-u3223qe/apd/210-bdph/monitors-monitor-accessories) . monitor
 - [Vortex Race 3 (MX Clear)](https://vortexgear.store/products/race-3-micro-usb) . mechanical keyboard
 - [Logitech MX Keys Mini for Mac](https://www.logitech.com/en-eu/products/keyboards/mx-keys-mini-for-mac.html) . regular keyboard
 - [Logitech MX Master 3](https://www.logitech.com/en-eu/products/mice/mx-master-3.html) . mouse
