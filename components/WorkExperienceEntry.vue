@@ -10,6 +10,7 @@ defineProps<{
   logo?: string
   slug?: 'theydo' | '4ofthem' | 'cura' | '3ofthem' | 'infokarta'
   used: string[]
+  logoClass?: string
 }>()
 </script>
 
@@ -30,12 +31,12 @@ defineProps<{
 
         <div class="flex items-start gap-2 sm:items-center">
           <slot name="logo">
-            <img :src="logo" class="aspect-square h-[18px] rounded-[2px]" alt="logo">
+            <img :src="logo" class="aspect-square h-[20px] rounded-[2px]" :class="[logoClass]" alt="logo">
           </slot>
 
           <div class="flex flex-row items-center gap-2 text-sm -mt-0.4">
-            <NuxtLink :to="companyUrl" external target="_blank" class="group">
-              <p class="text-base">
+            <NuxtLink :to="companyUrl" external target="_blank" class="hover:underline">
+              <p class="text-base ">
                 {{ company }}
               </p>
             </NuxtLink>

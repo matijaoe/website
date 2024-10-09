@@ -3,8 +3,8 @@ import { Category, type CategorySlug, type Project } from '~/models'
 const categories: Record<CategorySlug, string> = {
   [Category.projects]: 'Projects',
   [Category.hobby]: 'Hobby',
-  [Category.modules]: 'Modules',
-  [Category.extensions]: 'Plugins & Extensions',
+  [Category.modules]: 'NPM Modules',
+  [Category.extensions]: 'Plugins, Scripts & Extensions',
   [Category.templates]: 'Templates',
 }
 
@@ -67,8 +67,8 @@ const projects: Project[] = [
   },
   {
     wip: true,
-    slug: 'brutoneto',
-    name: 'Brutoneto',
+    slug: 'brutoneto-api',
+    name: 'Brutoneto API',
     description: 'Advanced salary calculator API for Croatian employees',
     tech: ['TypeScript', 'Nitro', 'Zod'],
     techPreview: ['ts', 'Nitro', 'Zod'],
@@ -76,18 +76,18 @@ const projects: Project[] = [
     repo: 'https://github.com/matijaoe/brutoneto-api',
     categories: [Category.hobby],
   },
-  {
-    wip: true,
-    slug: 'polenta',
-    name: 'Polenta',
-    description: 'Advanced Bitcoin wallet management.',
-    tech: ['Nuxt', 'TypeScript', 'Tailwind', 'Nuxt UI', 'bitcoinjs', 'Drizzle', 'Prisma', 'Tauri', 'SQLite'],
-    techPreview: ['Nuxt', 'ts', 'Nuxt UI', 'bitcoinjs', 'Prisma'],
-    timeframe: '2023',
-    repo: 'https://github.com/matijaoe/polenta',
-    categories: [Category.hobby],
-    color: '#FB923C',
-  },
+  // {
+  //   wip: true,
+  //   slug: 'polenta',
+  //   name: 'Polenta',
+  //   description: 'Advanced Bitcoin wallet management.',
+  //   tech: ['Nuxt', 'TypeScript', 'Tailwind', 'Nuxt UI', 'bitcoinjs', 'Drizzle', 'Prisma', 'Tauri', 'SQLite'],
+  //   techPreview: ['Nuxt', 'ts', 'Nuxt UI', 'bitcoinjs', 'Prisma'],
+  //   timeframe: '2023',
+  //   repo: 'https://github.com/matijaoe/polenta',
+  //   categories: [Category.hobby],
+  //   color: '#FB923C',
+  // },
   {
     slug: 'bit-complete',
     name: 'Bit Complete',
@@ -225,6 +225,16 @@ const projects: Project[] = [
     categories: [Category.extensions],
   },
   {
+    slug: 'audible-hq-cover',
+    name: 'Audible HQ Cover',
+    description: 'Userscript for obtaining full-res Audible covers.',
+    timeframe: '2024',
+    repo: 'https://github.com/matijaoe/audible-hq-cover',
+    url: 'https://greasyfork.org/en/scripts/511910-audible-hq-cover',
+    tech: ['js'],
+    categories: [Category.extensions],
+  },
+  {
     slug: 'nuxt-starter',
     name: 'Nuxt Uno Starter',
     description: 'Nuxt 3 & UnoCSS starter template.',
@@ -269,7 +279,6 @@ const projects: Project[] = [
     tech: ['Vue', 'UnoCSS'],
     categories: [Category.templates],
   },
-
 ]
 
 export const useProjects = () => {

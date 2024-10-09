@@ -23,18 +23,18 @@ useSeoMeta({
           <span class="px-2.5 py-0.5">{{ nowFormatted }}</span>
           <span class="border-l px-2.5 py-0.5">Zagreb, Croatia</span>
         </Badge>
-        <Badge variant="secondary" class="font-mono">
+        <Badge variant="primary" class="font-mono">
           WIP
         </Badge>
       </div>
-      <h1 class="text-default-900 dark:text-default-50 text-balance text-5xl/[1] sm:text-6xl/[1] font-medium font-display lg:text-7xl/[1] mb-4 md:mb-6">
+      <h1 class="text-default-900 dark:text-default-50 text-balance text-4xl/[1.1] sm:text-6xl/[1] font-medium font-display lg:text-7xl/[1] mb-4 md:mb-6">
         Hi, I'm Matija, <br> crafting sleek <br> <span class="underline">web</span> experiences
       </h1>
 
-      <div class="text-default-foreground text-lg leading-7">
+      <div class="text-default-foreground text-base md:text-lg leading-7">
         <div>
           <p>
-            Frontend-oriented software engineer based in Croatia.
+            Frontend engineer from Croatia, currently at TheyDo.
             <br>
             I build well-crafted software, focusing on good UX and meticulous attention to detail.
             <br>
@@ -64,17 +64,6 @@ useSeoMeta({
     <!-- <section>
       <ContactForm />
     </section> -->
-
-    <!-- <div class="animate-marquee whitespace-nowrap py-12">
-        <span class="mx-4 text-4xl">Vue</span>
-        <span class="mx-4 text-4xl">Nuxt</span>
-        <span class="mx-4 text-4xl">TypeScript</span>
-        <span class="mx-4 text-4xl">Tailwind</span>
-        <span class="mx-4 text-4xl">Uno CSS</span>
-        <span class="mx-4 text-4xl">Node</span>
-        <span class="mx-4 text-4xl">Bun</span>
-        <span class="mx-4 text-4xl">Bitcoin</span>
-      </div> -->
   </div>
 </template>
 
