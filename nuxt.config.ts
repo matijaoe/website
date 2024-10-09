@@ -45,7 +45,7 @@ export default defineNuxtConfig({
   fonts: {
     families: [
       { name: 'Satoshi', provider: 'fontshare', weights: [400, 500, 600, 700] },
-      { name: 'Clash Display', provider: 'fontshare', weights: [300, 400, 500, 600, 700] },
+      { name: 'Clash Display', provider: 'fontshare', weights: [300, 400, 500, 600, 700], subsets: ['latin'] },
       { name: 'JetBrains Mono', provider: 'fontsource', weights: [300, 400], subsets: ['latin'] },
     ],
   },

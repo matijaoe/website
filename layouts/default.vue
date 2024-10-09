@@ -9,7 +9,7 @@ const { breadcrumbs, isHome } = useBreadcrumbs()
 </script>
 
 <template>
-  <div class="p-5 md:px-8 md:pt-6 lg:px-24 lg:pt-16 flex flex-col min-h-screen max-w-[1440px] mx-auto">
+  <div class="p-5 md:px-8 md:pt-6 lg:px-20 lg:pt-14 flex flex-col min-h-screen max-w-6xl mx-auto">
     <TheHeader />
 
     <div class="py-5 grow md:pt-32">
