@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 useSeoMeta({
-  title: 'Projects',
-  ogTitle: 'Projects',
+  title: 'Uses',
+  ogTitle: 'Uses',
 })
 </script>
 
