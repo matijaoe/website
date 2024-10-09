@@ -45,6 +45,7 @@
 - [NetNewsWire](https://netnewswire.com/) . RSS reader
 - [Calibre](https://calibre-ebook.com/) . e-book management
 - [audiobookshelf](https://www.audiobookshelf.org/) - audiobooks management
+- [Transmit](https://www.panic.com/transmit/) - sftp client
 - [iA Writer](https://ia.net/writer) . journaling
 - [Obsidian](https://obsidian.md/) . notes & dev journaling
 - [Nota](https://nota.md/) . markdown
@@ -58,7 +59,7 @@
 
 - [Kobo Libra H20](https://gl.kobobooks.com/products/kobo-libra-h2o) . e-book reader
 - [YubiKey](https://www.yubico.com/products/) . security keys
-- [Beelink EQ](https://www.bee-link.com/products/beelink-eq13-n100-1) . mini home server
-- [Raspberry Pi 4](https://www.raspberrypi.com/products/raspberry-pi-4-model-b/) . bitcoin node
-- [COLDCARD](https://coldcard.com/) . bitcoin security
+- [Beelink EQ13](https://www.bee-link.com/products/beelink-eq13-n100-1) . mini home server
+- [Raspberry Pi 4](https://www.raspberrypi.com/products/raspberry-pi-4-model-b/) with [Umbrel](https://umbrel.com/) . bitcoin node
+- [COLDCARD](https://coldcard.com/) . boating accident
 - [Trek X-Caliber 8 2021](https://www.trekbikes.com/us/en_US/bikes/mountain-bikes/cross-country-mountain-bikes/x-caliber/x-caliber-8/p/33193/) . my cool red bike
