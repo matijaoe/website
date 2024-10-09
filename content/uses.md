@@ -2,7 +2,7 @@
 
 - [16" MacBook Pro, M3 Pro](https://support.apple.com/en-us/117737) . work mac
 - [14" MacBook Pro, M1 Pro](https://support.apple.com/kb/SP854) . personal mac
-- [iPhone 15 Pro 256GB](https://www.apple.com/shop/buy-iphone/iphone-15-pro) . smartphone
+- [iPhone 15 Pro](https://www.apple.com/shop/buy-iphone/iphone-15-pro) . smartphone
 - [Dell 32" 4K U3223QE](https://www.dell.com/en-us/shop/dell-ultrasharp-32-4k-usb-c-hub-monitor-u3223qe/apd/210-bdph/monitors-monitor-accessories) . monitor
 - [Vortex Race 3 (MX Clear)](https://vortexgear.store/products/race-3-micro-usb) . mechanical keyboard
 - [Logitech MX Keys Mini for Mac](https://www.logitech.com/en-eu/products/keyboards/mx-keys-mini-for-mac.html) . regular keyboard
@@ -15,15 +15,14 @@
 
 ## Dev Tools
 
-- [Visual Studio Code](https://code.visualstudio.com/) . code editor
+- [Cursor](https://www.cursor.com/) . AI code editor
 - [iTerm 2](https://iterm2.com/) . terminal
-- [Warp](https://www.warp.dev/) . another terminal
+- [Warp](https://www.warp.dev/) . another terminal, using on work
 - [ChatGPT Plus](https://chat.openai.com/) . ai thing
 - [GitHub Copilot](https://github.com/features/copilot) . ai coding assistant
 - [GitHub CLI](https://cli.github.com/) . github command-line
 - [Oh My Zsh](https://ohmyz.sh/) . zsh plugin framework
 - [httpie](https://httpie.io/) . http client
-- [Vercel](https://vercel.com) . deployment
 - [Figma](https://www.figma.com/) . designs
 
 ## Other Software
@@ -33,8 +32,8 @@
 - [Proton Mail](https://proton.me/mail) . private email
 - [SimpleLogin](https://simplelogin.io/) . email aliases
 - [PocketCasts](https://pocketcasts.com/) . podcasts
-- [Libby](https://www.overdrive.com/apps/libby) . audiobooks
 - [Audible](https://www.audible.com/) . audiobooks
+- [Libby](https://www.overdrive.com/apps/libby) . audiobooks
 - [Spotify](https://open.spotify.com/) . music
 - [YouTube Premium](https://www.youtube.com/premium) . no ads
 - [Endel](https://endel.io/) . soundscapes
@@ -45,6 +44,7 @@
 - [CleanShotX](https://cleanshot.com/) . screenshots
 - [NetNewsWire](https://netnewswire.com/) . RSS reader
 - [Calibre](https://calibre-ebook.com/) . e-book management
+- [audiobookshelf](https://www.audiobookshelf.org/) - audiobooks management
 - [iA Writer](https://ia.net/writer) . journaling
 - [Obsidian](https://obsidian.md/) . notes & dev journaling
 - [Nota](https://nota.md/) . markdown
@@ -58,7 +58,7 @@
 
 - [Kobo Libra H20](https://gl.kobobooks.com/products/kobo-libra-h2o) . e-book reader
 - [YubiKey](https://www.yubico.com/products/) . security keys
-- [Raspberry Pi 4](https://www.raspberrypi.com/products/raspberry-pi-4-model-b/) . light bitcoin node
-- [Samsung T7 / T7 Shield SSD](https://semiconductor.samsung.com/consumer-storage/portable-ssd/t7-shield/) . external storage
+- [Beelink EQ](https://www.bee-link.com/products/beelink-eq13-n100-1) . mini home server
+- [Raspberry Pi 4](https://www.raspberrypi.com/products/raspberry-pi-4-model-b/) . bitcoin node
 - [COLDCARD](https://coldcard.com/) . bitcoin security
 - [Trek X-Caliber 8 2021](https://www.trekbikes.com/us/en_US/bikes/mountain-bikes/cross-country-mountain-bikes/x-caliber/x-caliber-8/p/33193/) . my cool red bike
