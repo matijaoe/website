@@ -14,7 +14,7 @@
         end-date="Present"
         slug="theydo"
         logo="/theydo-logo.jpg"
-        :used="['Vue', 'TypeScript', 'GraphQL', 'Apollo', 'Tailwind', 'Vite', 'Playwright']"
+        :used="['Vue', 'TypeScript', 'GraphQL', 'Apollo', 'Tailwind', 'Vite', 'Vitest', 'Playwright']"
       />
 
       <WorkExperienceEntry
@@ -27,7 +27,7 @@
         end-date="Jun 2024"
         slug="4ofthem"
         logo="/4ot-logo.png"
-        :used="['Nuxt', 'Vue', 'TypeScript', 'Pinia', 'UnoCSS', 'Quasar', 'Vite', 'Storybook', 'GraphQL']"
+        :used="['Nuxt 3', 'Vue', 'TypeScript', 'Pinia', 'UnoCSS', 'Quasar', 'Vite', 'Storybook', 'GraphQL']"
       >
         <template #default>
           Developing innovative e-commerce solutions tailored to the German pharmaceutical sector, impacting millions of users.
@@ -61,7 +61,7 @@
         end-date="Jul 2022"
         slug="3ofthem"
         logo="/3ot-logo.jpeg"
-        :used="['Vue', 'JavaScript', 'TypeScript', 'Nuxt', 'Pinia', 'Vuex', 'Tailwind', 'UnoCSS', 'Sass', 'PrimeVue', 'Storybook', 'Vite']"
+        :used="['Vue', 'JavaScript', 'TypeScript', 'Nuxt 3', 'Pinia', 'Vuex', 'Tailwind', 'UnoCSS', 'Sass', 'PrimeVue', 'Storybook', 'Vite']"
       >
         <template #default>
           <p>

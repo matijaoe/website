@@ -9,12 +9,12 @@ const { breadcrumbs, isHome } = useBreadcrumbs()
 </script>
 
 <template>
-  <div class="p-6 md:px-8 md:pt-6 lg:px-24 lg:pt-16 flex flex-col min-h-screen max-w-[1440px] mx-auto">
+  <div class="p-5 md:px-8 md:pt-6 lg:px-24 lg:pt-16 flex flex-col min-h-screen max-w-[1440px] mx-auto">
     <TheHeader />
 
-    <div class="pb-8 grow pt-12 md:pt-32">
+    <div class="py-5 grow md:pt-32">
       <div>
-        <Breadcrumb v-show="!isHome" class="mb-6">
+        <Breadcrumb v-show="!isHome" class="hidden lg:block mb-6">
           <BreadcrumbList>
             <template v-for="(part, idx) in breadcrumbs" :key="part.path">
               <BreadcrumbItem class="lowercase">
@@ -37,7 +37,7 @@ const { breadcrumbs, isHome } = useBreadcrumbs()
           v-show="y > 120"
           variant="secondary"
           size="icon-lg"
-          class="fixed bottom-14 right-14 rounded-full active:scale-90 transition shadow-xl"
+          class="fixed bottom-6 right-6 lg:bottom-14 lg:right-14 rounded-full active:scale-90 transition shadow-xl"
           @click="scrollToTop"
         >
           <Icon name="lucide:chevron-up" class="text-default-50 text-xl" />

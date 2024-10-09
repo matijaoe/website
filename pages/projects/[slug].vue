@@ -79,7 +79,7 @@ useSeoMeta({
         </div>
       </div>
 
-      <div class="mt-5 font-sans text-lg max-w-3xl">
+      <div class="mt-5 font-sans text-base md:text-lg max-w-3xl">
         <p>
           {{ project.description }}
         </p>

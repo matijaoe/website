@@ -1,7 +1,7 @@
 <script lang="ts" setup>
-type LinkItem = { label: string, linkText: string, link: string, clickToCopy?: boolean }[]
+type LinkItem = { label: string, linkText: string, link: string, clickToCopy?: boolean }
 
-const links: LinkItem = [
+const links = [
   {
     label: 'GitHub',
     linkText: 'matijaoe',
@@ -13,9 +13,9 @@ const links: LinkItem = [
     link: 'https://www.linkedin.com/in/matijao',
   },
   {
-    label: 'Twitter',
+    label: 'X',
     linkText: 'matijaoe',
-    link: 'https://twitter.com/matijaoe',
+    link: 'https://x.com/matijaoe',
   },
   {
     label: 'Goodreads',
@@ -33,13 +33,7 @@ const links: LinkItem = [
     linkText: 'cv.pdf',
     link: '/cv.pdf',
   },
-  {
-    label: 'Bitcoin ⚡',
-    linkText: 'matijaoe@strike.me',
-    link: 'lightning:matijaoe@strike.me',
-    clickToCopy: true,
-  },
-]
+] satisfies LinkItem[]
 </script>
 
 <template>

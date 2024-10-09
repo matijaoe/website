@@ -13,15 +13,7 @@ useSeoMeta({
 
     <div class="flex flex-col gap-12">
       <div class="max-w-xl">
-        <Alert class="mb-8">
-          <Icon name="lucide:hammer" class="h-4 w-4" />
-          <AlertTitle>Work in progress</AlertTitle>
-          <AlertDescription>
-            This page is still uncompleted. I'm working on it. Stay tuned!
-          </AlertDescription>
-        </Alert>
-
-        <div class="text-default-foreground max-w-xl leading-7 prose text-lg">
+        <div class="text-default-foreground max-w-xl leading-7 prose text-base md:text-lg">
           <p>
             I'm a determined software engineer from Croatia with a strong sense of good UX and design, meticulous attention to detail and a relentless focus on quality. Proficient in Vue, Nuxt, and full-stack TypeScript, I thrive on transforming ideas into polished products. My deep curiosity and strong passion for UX/UI design, awesome developer experience, clean code and open-source fuel my work.
           </p>
