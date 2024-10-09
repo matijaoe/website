@@ -6,14 +6,14 @@
     <div class="flex flex-col gap-1">
       <WorkExperienceEntry
         company="TheyDo"
-        company-url="https://www.theydo.co,"
+        company-url="https://www.theydo.com"
         company-location="Amsterdam, Netherlands"
         location-icon="circle-flags:nl"
         position="Frontend Engineer"
         start-date="Jul 2024"
         end-date="Present"
         slug="theydo"
-        logo="/theydo-logo.jpg"
+        logo="/theydo-logo.png"
         :used="['Vue', 'TypeScript', 'GraphQL', 'Apollo', 'Tailwind', 'Vite', 'Vitest', 'Playwright']"
       />
 
@@ -28,6 +28,7 @@
         slug="4ofthem"
         logo="/4ot-logo.png"
         :used="['Nuxt 3', 'Vue', 'TypeScript', 'Pinia', 'UnoCSS', 'Quasar', 'Vite', 'Storybook', 'GraphQL']"
+        logo-class="h-[16px]"
       >
         <template #default>
           Developing innovative e-commerce solutions tailored to the German pharmaceutical sector, impacting millions of users.
@@ -82,7 +83,7 @@
         :used="['Nuxt', 'Vuex', 'JavaScript', 'Mapbox', 'Bootstrap', 'Sass', 'Node', 'Express', 'Postgres']"
       >
         <template #logo>
-          <Icon name="lucide:map" class="aspect-square h-5 w-5 rounded-[2px] -ml-0.5" alt="company logo" />
+          <Icon name="twemoji:world-map" class="aspect-square size-4 rounded-[2px] -ml-0.5" alt="company logo" />
         </template>
 
         <template #default>
