@@ -15,9 +15,9 @@
 
 ## Dev Tools
 
-- [Cursor](https://www.cursor.com/) . AI code editor
+- [Cursor](https://www.cursor.com/) . ai code editor
 - [iTerm 2](https://iterm2.com/) . terminal
-- [Warp](https://www.warp.dev/) . another terminal, using on work
+- [Warp](https://www.warp.dev/) . another terminal
 - [ChatGPT Plus](https://chat.openai.com/) . ai thing
 - [GitHub Copilot](https://github.com/features/copilot) . ai coding assistant
 - [GitHub CLI](https://cli.github.com/) . github command-line

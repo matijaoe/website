@@ -46,7 +46,7 @@ useSeoMeta({
         <div>
           <p>
             Frontend engineer from Croatia, currently at <NuxtLink to="https://www.theydo.com" target="_blank" class="hover:underline">
-              TheyDo
+              TheyDo{{ }}
             </NuxtLink>.
             <br>
             I build well-crafted software, focusing on good UX and meticulous attention to detail.
