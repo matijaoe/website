@@ -6,11 +6,9 @@ const links: { to: RouteLocationRaw, label: string }[] = [
   { to: { name: 'about' }, label: 'About' },
   { to: { name: 'projects' }, label: 'Projects' },
   { to: { name: 'uses' }, label: 'Uses' },
-  // { to: { name: 'bookmarks' }, label: 'Bookmarks' },
 ]
 
 const { toggleDark } = useTheme()
-// const { toggle } = useCmd()
 
 const activeLinkClass = '!text-foreground hover:text-foreground'
 </script>
@@ -18,23 +16,11 @@ const activeLinkClass = '!text-foreground hover:text-foreground'
 <template>
   <header class="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
     <div class="flex items-center justify-between">
-      <NuxtLink to="/" class="font-mono text-[17px] flex items-center gap-2">
+      <NuxtLink to="/" class="font-mono text-[17px] flex items-center gap-1.5">
         @matijao
-        <Icon name="emojione:sparkles" class="text-[1.2em]" />
       </NuxtLink>
 
       <div class="flex md:hidden items-center gap-5 translate-y-1">
-        <!-- <Button
-          variant="link"
-          size="icon"
-          @click="toggle()"
-        >
-          <Icon
-            name="lucide:search"
-            class="text-[24px]"
-          />
-        </Button> -->
-
         <BaseTooltip>
           <!-- TODO: implement Kbd component -->
           <template #content>
@@ -70,17 +56,6 @@ const activeLinkClass = '!text-foreground hover:text-foreground'
       </NuxtLink>
 
       <div class="hidden md:flex items-center gap-5">
-        <!-- <Button
-          variant="link"
-          size="icon"
-          @click="toggle()"
-        >
-          <Icon
-            name="lucide:search"
-            class="text-[24px]"
-          />
-        </Button> -->
-
         <BaseTooltip>
           <!-- TODO: implement Kbd component -->
           <template #content>

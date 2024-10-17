@@ -27,11 +27,19 @@ useSeoMeta({
           </span>
         </Badge>
         <Badge variant="secondary" class="font-mono flex items-center gap-2">
-          wip <Icon name="twemoji:construction" />
+          wip
+          <Icon name="twemoji:construction" />
         </Badge>
       </div>
       <h1 class="drop-shadow-sm text-default-900 dark:text-default-50 text-balance text-4xl/[1.1] sm:text-6xl/[1] font-medium font-display lg:text-7xl/[1] mb-4 md:mb-6">
-        Hi, I'm Matija, <br> crafting sleek <br> <span class="underline">web</span> experiences
+        Hi, I'm Matija, <br> crafting
+        <span>
+          <span class="italic">sleek</span>
+          <Icon name="emojione:sparkles" class="text-[0.5em] align-top ml-3 rotate-3 -translate-y-2 hidden dark:inline-block" />
+          <Icon name="emojione-monotone:sparkles" class="text-[0.5em] align-top ml-3 rotate-3 -translate-y-2 inline-block dark:hidden" />
+        </span>
+
+        <br> <span class="underline">web</span> experiences
       </h1>
 
       <div class="text-default-foreground text-base md:text-lg leading-7">

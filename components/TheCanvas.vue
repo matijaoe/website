@@ -1246,7 +1246,7 @@ const initCanvas = (canvas) => {
         updatePointerDownData(pointers[i + 1], touches[i].identifier, posX, posY)
       }
     })
-  }, 200)
+  }, 150)
 
   window.addEventListener('keydown', (e) => {
     // if (e.code === 'KeyP') { config.PAUSED = !config.PAUSED }
