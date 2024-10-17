@@ -2,12 +2,12 @@
 <script lang="ts" setup>
 import Toaster from './components/ui/toast/Toaster.vue'
 
-const { isDark, toggleDark } = useTheme()
+const { toggleDark } = useTheme()
 
 const { Meta_J, Ctrl_J } = useMagicKeys({
   passive: false,
   onEventFired(e) {
-    if (e.key === 'k' && (e.metaKey || e.ctrlKey)) {
+    if (e.metaKey || e.ctrlKey) {
       e.preventDefault()
     }
   },
@@ -52,7 +52,7 @@ useSeoMeta({
 
       <Teleport to="body">
         <ClientOnly>
-          <CommandBar />
+          <!-- <CommandBar /> -->
         </ClientOnly>
       </Teleport>
     </Body>

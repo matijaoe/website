@@ -21,20 +21,25 @@ useSeoMeta({
       <div class="mb-5 flex items-center text-muted-foreground gap-2">
         <Badge variant="outline" class="font-mono flex items-center p-0 backdrop-blur-lg bg-white/5 dark:bg-transparent hover:bg-white/5">
           <span class="px-2.5 py-0.5">{{ nowFormatted }}</span>
-          <span class="border-l px-2.5 py-0.5">Zagreb, Croatia</span>
+          <span class="border-l px-2.5 py-0.5 flex items-center gap-2">
+            <Icon name="twemoji:round-pushpin" />
+            Zagreb, Croatia
+          </span>
         </Badge>
-        <Badge variant="primary" class="font-mono">
-          WIP
+        <Badge variant="secondary" class="font-mono flex items-center gap-2">
+          wip <Icon name="twemoji:construction" />
         </Badge>
       </div>
-      <h1 class="text-default-900 dark:text-default-50 text-balance text-4xl/[1.1] sm:text-6xl/[1] font-medium font-display lg:text-7xl/[1] mb-4 md:mb-6">
+      <h1 class="drop-shadow-sm text-default-900 dark:text-default-50 text-balance text-4xl/[1.1] sm:text-6xl/[1] font-medium font-display lg:text-7xl/[1] mb-4 md:mb-6">
         Hi, I'm Matija, <br> crafting sleek <br> <span class="underline">web</span> experiences
       </h1>
 
       <div class="text-default-foreground text-base md:text-lg leading-7">
         <div>
           <p>
-            Frontend engineer from Croatia, currently at TheyDo.
+            Frontend engineer from Croatia, currently at <NuxtLink to="https://www.theydo.com" target="_blank" class="hover:underline">
+              TheyDo
+            </NuxtLink>.
             <br>
             I build well-crafted software, focusing on good UX and meticulous attention to detail.
             <br>
@@ -46,11 +51,11 @@ useSeoMeta({
         </div>
 
         <div class="mt-6 flex items-center gap-3">
-          <Button to="/projects" variant="default" size="lg">
+          <Button to="/projects" variant="default" size="default">
             Explore projects
           </Button>
 
-          <Button to="/about" variant="frosted-ghost" size="lg">
+          <Button to="/about" variant="frosted-ghost" size="default">
             About me
           </Button>
         </div>
@@ -66,18 +71,3 @@ useSeoMeta({
     </section> -->
   </div>
 </template>
-
-<style lang="postcss" scoped>
-.animate-marquee {
-  animation: marquee 10s linear infinite;
-}
-
-@keyframes marquee {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-100%);
-  }
-}
-</style>

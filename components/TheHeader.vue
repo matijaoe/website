@@ -18,11 +18,12 @@ const activeLinkClass = '!text-foreground hover:text-foreground'
 <template>
   <header class="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
     <div class="flex items-center justify-between">
-      <NuxtLink to="/" class="font-mono text-[17px] ">
+      <NuxtLink to="/" class="font-mono text-[17px] flex items-center gap-2">
         @matijao
+        <Icon name="emojione:sparkles" class="text-[1.2em]" />
       </NuxtLink>
 
-      <div class="flex md:hidden items-center gap-5">
+      <div class="flex md:hidden items-center gap-5 translate-y-1">
         <!-- <Button
           variant="link"
           size="icon"
@@ -42,11 +43,12 @@ const activeLinkClass = '!text-foreground hover:text-foreground'
           <Button
             variant="link"
             size="icon"
+            class="translate-y-0.5"
             @click="toggleDark"
           >
             <Icon
-              name="ph:circle-half-fill"
-              class="rotate-45 text-[24px] transition-transform duration-300 ease-in-out hover:rotate-135"
+              name="ph:yin-yang-fill"
+              class="text-[24px] transition-transform duration-300 ease-in-out hover:rotate-90 dark:rotate-180 hover:dark:rotate-[270deg]"
             />
           </Button>
         </BaseTooltip>
@@ -87,11 +89,12 @@ const activeLinkClass = '!text-foreground hover:text-foreground'
           <Button
             variant="link"
             size="icon"
+            class="translate-y-0.5"
             @click="toggleDark"
           >
             <Icon
-              name="ph:circle-half-fill"
-              class="rotate-45 text-[24px] transition-transform duration-300 ease-in-out hover:rotate-135"
+              name="ph:yin-yang-fill"
+              class="text-[24px] transition-transform duration-300 ease-in-out hover:rotate-90 dark:rotate-180 hover:dark:rotate-[270deg]"
             />
           </Button>
         </BaseTooltip>

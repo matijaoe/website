@@ -28,7 +28,7 @@
         slug="4ofthem"
         logo="/4ot-logo.png"
         :used="['Nuxt 3', 'Vue', 'TypeScript', 'Pinia', 'UnoCSS', 'Quasar', 'Vite', 'Storybook', 'GraphQL']"
-        logo-class="h-[16px]"
+        logo-class="h-[14px]"
       >
         <template #default>
           Developing innovative e-commerce solutions tailored to the German pharmaceutical sector, impacting millions of users.
@@ -83,7 +83,7 @@
         :used="['Nuxt', 'Vuex', 'JavaScript', 'Mapbox', 'Bootstrap', 'Sass', 'Node', 'Express', 'Postgres']"
       >
         <template #logo>
-          <Icon name="twemoji:world-map" class="aspect-square size-4 rounded-[2px] -ml-0.5" alt="company logo" />
+          <Icon name="emojione:world-map" class="aspect-square size-4 rounded-[2px] -ml-0.5" alt="company logo" />
         </template>
 
         <template #default>

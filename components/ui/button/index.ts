@@ -1,4 +1,4 @@
-import { type VariantProps, cva } from 'class-variance-authority'
+import { cva, type VariantProps } from 'class-variance-authority'
 
 export { default as Button } from './Button.vue'
 
@@ -24,7 +24,7 @@ export const buttonVariants = cva(
         'frosted-ghost': 'backdrop-blur-lg hover:bg-white/5 hover:text-accent-foreground',
       },
       size: {
-        'default': 'h-9 px-4 py-2 gap-[6px]',
+        'default': 'h-9 px-3 py-2 gap-[6px]',
         'sm': 'h-8 px-3 text-xs gap-1',
         'lg': 'h-10 px-4 gap-2',
         'icon': 'h-9 w-9',

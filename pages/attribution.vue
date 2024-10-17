@@ -4,7 +4,6 @@ const techItems = [
   { label: 'Tailwind CSS', link: 'https://tailwindcss.com' },
   { label: 'Shadcn-vue', link: 'https://shadcn-vue.com' },
   { label: 'VueUse', link: 'https://vueuse.org/' },
-  { label: 'Resend', link: 'https://resend.com' },
   { label: 'Zod', link: 'https://github.com/colinhacks/zod' },
 ]
 
