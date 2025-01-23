@@ -13,11 +13,6 @@ const links = [
     link: 'https://www.linkedin.com/in/matijao',
   },
   {
-    label: 'X',
-    linkText: 'matijaoe',
-    link: 'https://x.com/matijaoe',
-  },
-  {
     label: 'Goodreads',
     linkText: 'matijao',
     link: 'https://www.goodreads.com/matijao',
