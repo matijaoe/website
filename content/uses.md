@@ -17,12 +17,13 @@
 
 - [Cursor](https://www.cursor.com/) . ai code editor
 - [Ghostty](https://ghostty.org/) . terminal
-- [ChatGPT Plus](https://chat.openai.com/) . ai stuff
+- [ChatGPT Plus](https://chat.openai.com/) . ai chat
 - [Perplexity Pro](https://www.perplexity.ai/) . ai search
+- [OrbStack](https://orbstack.dev/) . docker client
 - [GitHub CLI](https://cli.github.com/) . github in terminal
 - [Oh My Zsh](https://ohmyz.sh/) . zsh plugin framework
 - [httpie](https://httpie.io/) . http client
-- [Linear](https://linear.app/) . not jira
+- [Linear](https://linear.app/) . project management
 
 ## Other Software
 
@@ -33,20 +34,20 @@
 - [PocketCasts](https://pocketcasts.com/) . podcasts
 - [Audible](https://www.audible.com/) . audiobooks
 - [Libby](https://www.overdrive.com/apps/libby) . audiobooks
-- [Spotify](https://open.spotify.com/) . music
 - [YouTube Premium](https://www.youtube.com/premium) . no ads
+- [Spotify](https://open.spotify.com/) . music
 - [Endel](https://endel.io/) . soundscapes
 - [Anybox](https://anybox.app/) . bookmarks
 - [Things 3](https://culturedcode.com/things/) . todos
 - [Streaks](https://streaksapp.com/) . habit tracker
 - [CleanShotX](https://cleanshot.com/) . screenshots
-- [NetNewsWire](https://netnewswire.com/) . RSS reader
 - [Calibre](https://calibre-ebook.com/) . e-book management
-- [Audiobookshelf](https://www.audiobookshelf.org/) - audiobooks management
+- [Audiobookshelf](https://www.audiobookshelf.org/) . audiobook server
 - [Jellyfin](https://jellyfin.org/) . media server
 - [Transmit](https://www.panic.com/transmit/) - sftp client
-- [iA Writer](https://ia.net/writer) . journaling
+- [Notion](https://notion.so/) . notes
 - [Obsidian](https://obsidian.md/) . notes & dev journaling
+- [iA Writer](https://ia.net/writer) . journaling
 - [Nota](https://nota.md/) . markdown notes
 - [Wipr](https://apps.apple.com/us/app/wipr/id1030595027) - Safari ad blocker
 - [dns0.eu](https://dns0.eu/) . secure dns
