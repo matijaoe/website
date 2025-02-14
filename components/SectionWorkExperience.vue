@@ -15,7 +15,9 @@
         slug="theydo"
         logo="/theydo-logo.png"
         :used="['Vue', 'TypeScript', 'GraphQL', 'Apollo', 'Tailwind', 'Vite', 'Vitest', 'Playwright']"
-      />
+      >
+        Building out the industry-leading customer journey management tool.
+      </WorkExperienceEntry>
 
       <WorkExperienceEntry
         company="Four of them LLC"

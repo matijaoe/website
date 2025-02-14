@@ -1,4 +1,6 @@
 <script lang="ts" setup>
+const { data: uses } = await useAsyncData(() => queryCollection('content').path('/uses').first())
+
 useSeoMeta({
   title: 'Uses',
   ogTitle: 'Uses',
@@ -14,8 +16,8 @@ useSeoMeta({
     <div class="text-base md:text-lg">
       <p>Software I use, gadgets I love, and other things I recommend. </p>
 
-      <div class="prose dark:prose-invert prose-stone dark:prose-stone -mt-2">
-        <ContentDoc path="/uses" />
+      <div v-if="uses" class="prose dark:prose-invert prose-stone dark:prose-stone -mt-2">
+        <ContentRenderer :value="uses" />
       </div>
     </div>
   </div>

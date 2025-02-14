@@ -23,7 +23,7 @@ defineProps<{
             >
               <Badge
                 class="font-mono lowercase text-nowrap"
-                variant="secondary-border"
+                variant="outline"
               >
                 {{ tag }}
               </badge>

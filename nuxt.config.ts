@@ -55,6 +55,7 @@ export default defineNuxtConfig({
   },
 
   content: {
+
   },
 
   app: {

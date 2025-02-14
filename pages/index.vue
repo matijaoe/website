@@ -1,13 +1,6 @@
 <script lang="ts" setup>
 const { setMode } = useTheme()
-
-const now = useNow()
-const nowFormatted = computed(() => {
-  return new Intl.DateTimeFormat('hr-HR', {
-    timeStyle: 'medium',
-    timeZone: 'Europe/Zagreb',
-  }).format(now.value)
-})
+const { nowFormatted } = useCurrentTime()
 
 useSeoMeta({
   title: 'Matija Osrečki',
@@ -25,10 +18,6 @@ useSeoMeta({
             <Icon name="twemoji:round-pushpin" />
             Zagreb, Croatia
           </span>
-        </Badge>
-        <Badge variant="secondary" class="font-mono flex items-center gap-2">
-          wip
-          <Icon name="twemoji:construction" />
         </Badge>
       </div>
       <h1 class="drop-shadow-sm text-default-900 dark:text-default-50 text-balance text-4xl/[1.1] sm:text-6xl/[1] font-medium font-display lg:text-7xl/[1] mb-4 md:mb-6">
@@ -60,7 +49,7 @@ useSeoMeta({
 
         <div class="mt-6 flex items-center gap-3">
           <Button to="/projects" variant="default" size="default">
-            Explore projects
+            Projects
           </Button>
 
           <Button to="/about" variant="frosted-ghost" size="default">
@@ -73,9 +62,5 @@ useSeoMeta({
     <SectionLinks />
 
     <SectionWorkExperience />
-
-    <!-- <section>
-      <ContactForm />
-    </section> -->
   </div>
 </template>

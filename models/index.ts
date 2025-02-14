@@ -14,8 +14,6 @@ export type Project = {
   color?: string
   // states
   wip?: boolean
-  featured?: boolean
-  maintained?: boolean
 }
 
 export const Category = {
@@ -24,6 +22,7 @@ export const Category = {
   modules: 'modules',
   extensions: 'extensions',
   templates: 'starts',
+  collections: 'collections',
 } as const
 
 export type CategorySlug = typeof Category[keyof typeof Category]

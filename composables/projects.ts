@@ -2,10 +2,11 @@ import { Category, type CategorySlug, type Project } from '~/models'
 
 const categories: Record<CategorySlug, string> = {
   [Category.projects]: 'Projects',
-  [Category.hobby]: 'Hobby',
-  [Category.modules]: 'NPM Modules',
+  [Category.hobby]: 'Side projects',
+  [Category.modules]: 'Packages & Modules',
   [Category.extensions]: 'Plugins, Scripts & Extensions',
   [Category.templates]: 'Templates',
+  [Category.collections]: 'Collections',
 }
 
 const projects: Project[] = [
@@ -21,8 +22,6 @@ const projects: Project[] = [
     thumbnail: '/projects/wordware-dark.webp',
     categories: [Category.projects],
     color: '#CD56DA',
-    featured: true,
-    maintained: true,
   },
   {
     slug: 'fare',
@@ -35,7 +34,6 @@ const projects: Project[] = [
     thumbnail: '/projects/fare.webp',
     categories: [Category.projects],
     color: '#36D49A',
-    featured: true,
   },
   {
     slug: 'qwiz',
@@ -49,7 +47,6 @@ const projects: Project[] = [
     thumbnail: '/projects/qwiz.webp',
     categories: [Category.projects],
     color: '#F4BD94',
-    featured: true,
   },
   {
     slug: 'aimo',
@@ -63,31 +60,7 @@ const projects: Project[] = [
     thumbnail: '/projects/aimo.webp',
     categories: [Category.projects],
     color: '#F5D765',
-    featured: true,
   },
-  {
-    wip: true,
-    slug: 'brutoneto-api',
-    name: 'Brutoneto API',
-    description: 'Advanced salary calculator API for Croatian employees',
-    tech: ['TypeScript', 'Nitro', 'Zod'],
-    techPreview: ['ts', 'Nitro', 'Zod'],
-    timeframe: '2024',
-    repo: 'https://github.com/matijaoe/brutoneto-api',
-    categories: [Category.hobby],
-  },
-  // {
-  //   wip: true,
-  //   slug: 'polenta',
-  //   name: 'Polenta',
-  //   description: 'Advanced Bitcoin wallet management.',
-  //   tech: ['Nuxt', 'TypeScript', 'Tailwind', 'Nuxt UI', 'bitcoinjs', 'Drizzle', 'Prisma', 'Tauri', 'SQLite'],
-  //   techPreview: ['Nuxt', 'ts', 'Nuxt UI', 'bitcoinjs', 'Prisma'],
-  //   timeframe: '2023',
-  //   repo: 'https://github.com/matijaoe/polenta',
-  //   categories: [Category.hobby],
-  //   color: '#FB923C',
-  // },
   {
     slug: 'bit-complete',
     name: 'Bit Complete',
@@ -115,6 +88,29 @@ const projects: Project[] = [
     color: '#F97315',
   },
   {
+    slug: 'bitcoin-ticker',
+    name: 'Bitcoin Ticker',
+    description: 'Realtime bitcoin price ticker.',
+    tech: ['Vue', 'Tailwind'],
+    timeframe: '2024',
+    repo: 'https://github.com/matijaoe/bitcoin-ticker',
+    url: 'https://bitcoin-ticker-seven.vercel.app/',
+    thumbnail: '/projects/bitcoin-ticker.webp',
+    categories: [Category.hobby],
+    color: '#F97315',
+  },
+  {
+    wip: true,
+    slug: 'brutoneto-api',
+    name: 'Brutoneto API',
+    description: 'Advanced salary calculator API for Croatian employees.',
+    tech: ['TypeScript', 'Nitro', 'Zod', 'GraphQL'],
+    techPreview: ['ts', 'Nitro', 'Zod', 'gql'],
+    timeframe: '2024',
+    repo: 'https://github.com/matijaoe/brutoneto-api',
+    categories: [Category.hobby],
+  },
+  {
     slug: 'favicones',
     name: 'Favicônes',
     description: 'Quick and easy way to use any icon as favicon.',
@@ -129,7 +125,7 @@ const projects: Project[] = [
   {
     slug: 'meet-mia',
     name: 'MeetMia',
-    description: 'Cake shop concept project',
+    description: 'Cake shop concept project.',
     tech: ['Vue', 'Vite', 'TypeScript', 'SCSS'],
     timeframe: '2021',
     repo: 'https://github.com/matijaoe/meet-mia',
@@ -188,7 +184,6 @@ const projects: Project[] = [
     techPreview: ['Deno', 'ts', 'VSCode'],
     categories: [Category.extensions],
     color: '#1FBE4B',
-    maintained: true,
   },
   {
     slug: 'modern-javascript-snippets',
@@ -202,7 +197,6 @@ const projects: Project[] = [
     techPreview: ['Deno', 'ts', 'VSCode'],
     categories: [Category.extensions],
     color: '#E8D44D',
-    maintained: true,
   },
   {
     slug: 'url-query-editor',
@@ -233,6 +227,8 @@ const projects: Project[] = [
     url: 'https://greasyfork.org/en/scripts/511910-audible-hq-cover',
     tech: ['js'],
     categories: [Category.extensions],
+    color: '#0CBDF0',
+
   },
   {
     slug: 'nuxt-starter',
@@ -245,7 +241,6 @@ const projects: Project[] = [
     tech: ['Nuxt', 'UnoCSS'],
     categories: [Category.templates],
     color: '#01DC82',
-    maintained: true,
   },
   {
     slug: 'vue-starter',
@@ -278,6 +273,16 @@ const projects: Project[] = [
     url: 'https://vue-anu-starter.vercel.app/',
     tech: ['Vue', 'UnoCSS'],
     categories: [Category.templates],
+  },
+  {
+    slug: 'bip39-wordlist',
+    name: 'BIP39 Wordlists',
+    description: 'Collection of BIP39 wordlists.',
+    timeframe: '2024',
+    repo: 'https://github.com/matijaoe/bip39-wordlist',
+    url: 'https://github.com/matijaoe/bip39-wordlist',
+    tech: ['json'],
+    categories: [Category.collections],
   },
 ]
 

@@ -1,9 +1,9 @@
 <script setup lang="ts">
+import type { NuxtLinkProps } from '#app'
 import type { HTMLAttributes } from 'vue'
+import { cn } from '@/utils/lib'
 import { Primitive, type PrimitiveProps } from 'radix-vue'
 import { type ButtonVariants, buttonVariants } from '.'
-import { cn } from '@/utils/lib'
-import type { NuxtLinkProps } from '#app'
 
 interface Props extends PrimitiveProps {
   variant?: ButtonVariants['variant']

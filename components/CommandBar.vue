@@ -4,11 +4,6 @@ const { isOpen, toggle } = useCmd()
 // eslint-disable-next-line ts/naming-convention
 const { Meta_K, Ctrl_K } = useMagicKeys({
   passive: false,
-  onEventFired(e) {
-    if (e.key === 'k' && (e.metaKey || e.ctrlKey)) {
-      e.preventDefault()
-    }
-  },
 })
 
 const { isApple } = useDevice()

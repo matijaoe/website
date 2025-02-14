@@ -30,7 +30,6 @@
     "clsx": "^2.1.1",
     "nuxt": "^3.15.2",
     "radix-vue": "^1.9.12",
-    "resend": "^4.1.1",
     "tailwind-merge": "^2.6.0",
     "tailwindcss-animate": "^1.0.7",
     "vee-validate": "^4.15.0",

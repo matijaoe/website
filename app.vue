@@ -1,16 +1,11 @@
-<!-- eslint-disable ts/naming-convention -->
 <script lang="ts" setup>
 import Toaster from './components/ui/toast/Toaster.vue'
 
 const { toggleDark } = useTheme()
 
+// eslint-disable-next-line ts/naming-convention
 const { Meta_J, Ctrl_J } = useMagicKeys({
   passive: false,
-  onEventFired(e) {
-    if (e.metaKey || e.ctrlKey) {
-      e.preventDefault()
-    }
-  },
 })
 
 const { isApple } = useDevice()
@@ -39,8 +34,6 @@ useSeoMeta({
   <Html lang="en">
     <Body>
       <Toaster />
-
-      <!-- <TheBackgroundBlobs /> -->
 
       <ClientOnly>
         <TheCanvas />
