@@ -3,8 +3,8 @@ export type Project = {
   name: string
   description: string
   descriptionShort?: string
-  tech: string[]
-  techPreview?: string[]
+  tags: string[]
+  tagsPreview?: string[]
   timeframe: string
   repo?: string
   url?: string

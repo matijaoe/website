@@ -27,7 +27,7 @@ useSeoMeta({
   <div v-if="project" class="w-full">
     <div>
       <div class="mt-5 flex flex-col md:flex-row items-start justify-between gap-4">
-        <h1 class="text-5xl lg:text-7xl font-medium font-display text-center">
+        <h1 class="text-5xl lg:text-7xl font-medium font-display text-left">
           {{ project.name }}
         </h1>
 
@@ -47,7 +47,7 @@ useSeoMeta({
       <div class="mt-5 flex flex-col gap-2 text-[11px] max-w-lg">
         <div class="flex flex-wrap items-center gap-2">
           <template
-            v-for="tag in project.tech"
+            v-for="tag in project.tags"
             :key="tag"
           >
             <Badge

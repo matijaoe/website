@@ -18,7 +18,7 @@ defineProps<{
         <CardHeader class="p-9 pb-4">
           <div class="flex flex-wrap w-full gap-1 mb-3">
             <template
-              v-for="tag in project.techPreview || project.tech"
+              v-for="tag in project.tagsPreview || project.tags"
               :key="tag"
             >
               <Badge
@@ -49,7 +49,7 @@ defineProps<{
           </div>
         </CardContent>
 
-        <CardFooter v-if="project.tech.length" class="mt-auto p-8" />
+        <CardFooter v-if="project.tags.length" class="mt-auto p-8" />
       </div>
 
       <div class="grid-col-2 min-h-[320px] overflow-hidden">

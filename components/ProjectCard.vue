@@ -51,10 +51,10 @@ defineProps<{
         </div>
       </CardContent>
 
-      <CardFooter v-if="project.tech.length" class="mt-auto p-4">
+      <CardFooter v-if="project.tags.length" class="mt-auto p-4">
         <div class="mt-auto flex flex-wrap w-full gap-1">
           <template
-            v-for="tag in project.techPreview || project.tech"
+            v-for="tag in project.tagsPreview || project.tags"
             :key="tag"
           >
             <Badge
