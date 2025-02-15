@@ -8,7 +8,7 @@ const year = computed(() => now.value.getFullYear())
     <div class="w-full flex flex-col md:flex-row items-center justify-between gap-8">
       <p>Matija Osrečki {{ year }} &copy;</p>
 
-      <div class="flex items-center gap-4 lowercase">
+      <div class="flex items-center gap-7 lowercase">
         <NuxtLink to="https://github.com/matijaoe/website" target="_blank" class="hover:underline hover:text-foreground">
           Code
         </NuxtLink>

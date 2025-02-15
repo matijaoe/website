@@ -17,7 +17,6 @@ withDefaults(defineProps<{
         <slot />
       </TooltipTrigger>
       <TooltipContent :side :side-offset>
-        <!-- TODO: not working -->
         <slot name="content">
           {{ content }}
         </slot>

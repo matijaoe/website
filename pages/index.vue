@@ -48,11 +48,17 @@ useSeoMeta({
         </div>
 
         <div class="mt-6 flex items-center gap-3">
-          <Button to="/projects" variant="default" size="default">
+          <Button to="/projects" variant="default" size="default" class="lowercase">
+            <span class="text-muted-foreground font-mono font-normal lowercase">
+              [<span class="text-primary-foreground">p</span>]
+            </span>
             Projects
           </Button>
 
-          <Button to="/about" variant="frosted-ghost" size="default">
+          <Button to="/about" variant="frosted-ghost" size="default" class="lowercase">
+            <span class="text-muted-foreground font-mono font-normal lowercase">
+              [<span class="text-primary">a</span>]
+            </span>
             About me
           </Button>
         </div>

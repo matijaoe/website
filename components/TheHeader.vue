@@ -1,14 +1,24 @@
 <script lang="ts" setup>
 import type { RouteLocationRaw } from '#vue-router'
 
-const links: { to: RouteLocationRaw, label: string }[] = [
-  { to: { name: 'index' }, label: 'Home' },
-  { to: { name: 'about' }, label: 'About' },
-  { to: { name: 'projects' }, label: 'Projects' },
-  { to: { name: 'uses' }, label: 'Uses' },
+const { toggleDark } = useTheme()
+
+const route = useRoute()
+const links: { to: RouteLocationRaw, label: string, key: string }[] = [
+  { to: { name: 'index' }, label: 'Home', key: 'H' },
+  { to: { name: 'about' }, label: 'About', key: 'A' },
+  { to: { name: 'projects' }, label: 'Projects', key: 'P' },
+  { to: { name: 'uses' }, label: 'Uses', key: 'U' },
 ]
 
-const { toggleDark } = useTheme()
+const { H, A, P, U } = useMagicKeys({
+  passive: false,
+})
+
+watch(H, () => navigateTo('/'))
+watch(A, () => navigateTo('/about'))
+watch(P, () => navigateTo('/projects'))
+watch(U, () => navigateTo('/uses'))
 
 const activeLinkClass = '!text-foreground hover:text-foreground'
 </script>
@@ -42,18 +52,23 @@ const activeLinkClass = '!text-foreground hover:text-foreground'
     </div>
 
     <menu class="flex items-end gap-4 md:gap-6">
-      <NuxtLink
-        v-for="link in links"
-        :key="link.to.toString()"
-        :to="link.to"
-        class="text-lg text-muted-foreground hover:text-foreground/85 w-fit py-[0.2rem] align-middle font-medium lowercase transition-all"
-        :active-class="activeLinkClass"
-        :class="{ [activeLinkClass]: $route.name.startsWith(link.to.name) }"
-      >
-        <slot>
-          {{ link.label }}
-        </slot>
-      </NuxtLink>
+      <template v-for="link in links" :key="link.to.toString()">
+        <BaseTooltip>
+          <template #content>
+            <span class="text-muted-foreground font-mono font-normal lowercase">
+              [<span class="!text-primary-foreground">{{ link.key }}</span>]
+            </span>
+          </template>
+          <NuxtLink
+            :to="link.to"
+            class="text-lg text-muted-foreground hover:text-foreground/85 w-fit py-[0.2rem] align-middle font-medium lowercase transition-all"
+            :active-class="activeLinkClass"
+            :class="{ [activeLinkClass]: route.name.startsWith(link.to.name) }"
+          >
+            {{ link.label }}
+          </NuxtLink>
+        </BaseTooltip>
+      </template>
 
       <div class="hidden md:flex items-center gap-5">
         <BaseTooltip>

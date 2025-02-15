@@ -6,6 +6,7 @@ const scrollToTop = () => {
 }
 
 const { breadcrumbs, isHome } = useBreadcrumbs()
+const { isDark } = useTheme()
 </script>
 
 <template>
@@ -35,7 +36,7 @@ const { breadcrumbs, isHome } = useBreadcrumbs()
       <TransitionFade>
         <Button
           v-show="y > 120"
-          variant="secondary"
+          :variant="isDark ? 'secondary' : 'outline'"
           size="icon-lg"
           class="fixed bottom-6 right-6 lg:bottom-14 lg:right-14 rounded-full active:scale-90 transition shadow-xl"
           @click="scrollToTop"
