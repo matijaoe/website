@@ -33,17 +33,19 @@ const { isDark } = useTheme()
         </main>
       </div>
 
-      <TransitionFade>
-        <Button
-          v-show="y > 120"
-          :variant="isDark ? 'secondary' : 'outline'"
-          size="icon-lg"
-          class="fixed bottom-6 right-6 lg:bottom-14 lg:right-14 rounded-full active:scale-90 transition shadow-xl"
-          @click="scrollToTop"
-        >
-          <Icon name="lucide:chevron-up" class="text-default-50 text-xl" />
-        </Button>
-      </TransitionFade>
+      <ClientOnly>
+        <TransitionFade>
+          <Button
+            v-show="y > 120"
+            :variant="isDark ? 'secondary' : 'outline'"
+            size="icon-lg"
+            class="fixed bottom-6 right-6 lg:bottom-14 lg:right-14 rounded-full active:scale-90 transition shadow-xl"
+            @click="scrollToTop"
+          >
+            <Icon name="lucide:chevron-up" class="text-default-50 text-xl" />
+          </Button>
+        </TransitionFade>
+      </ClientOnly>
     </div>
 
     <TheFooter />
