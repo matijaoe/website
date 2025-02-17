@@ -11,16 +11,26 @@ useSeoMeta({
       About
     </PageHeading>
 
-    <div class="flex flex-col gap-12">
-      <div class="max-w-xl">
-        <div class="text-default-foreground max-w-xl leading-7 prose text-base md:text-lg">
-          <p>
-            I'm a determined software engineer with a strong sense of good UX and design, meticulous attention to detail and a relentless focus on quality. Skilled in <span class="underline decoration-wavy decoration-emerald-500">Vue</span>, <span class="underline decoration-wavy decoration-green-500">Nuxt</span>, and full-stack <span class="underline decoration-wavy decoration-sky-500">TypeScript</span>, I excel at turning ideas into refined, user-friendly products. My work is driven by a deep curiosity and a passion for UX/UI design, developer experience, clean code, and open-source.
-          </p>
+    <div class="flex flex-col gap-12 max-w-xl">
+      <section class="text-default-foreground max-w-xl leading-7 prose text-base md:text-lg">
+        <p>
+          I'm a software engineer with a sharp eye for UX and design, meticulous attention to detail, and a relentless focus on quality. <br> Skilled in
+          <IconWithText text="Vue" icon="logos:vue" />,
+          <IconWithText text="Nuxt" icon="logos:nuxt-icon" />,
+          <IconWithText text="Tailwind" icon="logos:tailwindcss-icon" /> and full-stack
+          <IconWithText text="TypeScript" icon="logos:typescript-icon" />, I turn ideas into refined, user-friendly experiences. I'm driven by a deep curiosity and a passion for UX/UI design, developer experience, and writing clean, maintainable code.
+        </p>
 
-          <p>Beyond code, I'm obsessed with <span class="underline decoration-wavy decoration-orange-500">Bitcoin</span>, freedom of speech, personal privacy and self-sovereignty. I also have a strong interest in economics, psychology and literature.</p>
-        </div>
-      </div>
+        <p>
+          Beyond code, I'm obsessed with
+          <IconWithText
+            text="Bitcoin"
+            icon="logos:bitcoin"
+            icon-size="0.9em"
+            icon-class="translate-y-0.5"
+          /> and a strong advocate for the right to privacy, freedom of speech, self-sovereignty, and open-source software. I'm also deeply interested in economics, cryptography, psychology, and literature.
+        </p>
+      </section>
     </div>
   </div>
 </template>

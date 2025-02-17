@@ -36,6 +36,7 @@
   },
   "devDependencies": {
     "@antfu/eslint-config": "^4.2.0",
+    "@iconify-json/logos": "^1.2.4",
     "@nuxt/icon": "^1.10.3",
     "@nuxt/image": "^1.9.0",
     "@nuxtjs/color-mode": "^3.5.2",
