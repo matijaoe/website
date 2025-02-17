@@ -55,7 +55,7 @@ const { isDark } = useTheme()
           <IconWithText text="Vitest" icon="logos:vitest" />,
           <IconWithText text="GraphQL" icon="logos:graphql" />,
           <IconWithText text="Apollo" icon="simple-icons:apollographql" /> and
-          <IconWithText text="pnpm" icon="logos:pnpm" />. 
+          <IconWithText text="pnpm" icon="logos:pnpm" />.
         </p>
 
         <p>
@@ -71,7 +71,7 @@ const { isDark } = useTheme()
         </p>
 
         <p>
-          I also have some experience building projects with <IconWithText text="React" icon="logos:react" />, <IconWithText text="Quasar" icon="devicon:quasar" />, or vanilla <IconWithText text="JavaScript" icon="logos:javascript" />, along with some smaller projects using <IconWithText text="Svelte" icon="logos:svelte-icon" />. I’ve also built backends and APIs using <IconWithText text="Nest.js" icon="logos:nestjs" /> and <IconWithText text="Express" icon="simple-icons:express" />. 
+          I also have some experience building projects with <IconWithText text="React" icon="logos:react" />, <IconWithText text="Quasar" icon="devicon:quasar" />, or vanilla <IconWithText text="JavaScript" icon="logos:javascript" />, along with some smaller projects using <IconWithText text="Svelte" icon="logos:svelte-icon" />. I’ve also built backends and APIs using <IconWithText text="Nest.js" icon="logos:nestjs" /> and <IconWithText text="Express" icon="simple-icons:express" />.
         </p>
 
         <p>
@@ -95,7 +95,7 @@ const { isDark } = useTheme()
         </p>
 
         <p>
-          I worked extensively with <IconWithText text="Java" icon="logos:java" /> during my college years but haven't touched it in a while. a few years ago, I experimented with <IconWithText text="Solidity" icon="simple-icons:solidity" /> , but later realized there was no future in <Icon name="simple-icons:ethereum" aria-label="Ethereum" title="Ethereum" />. More recently, I've been exploring <IconWithText text="ReScript" icon="logos:rescript-icon" />, a statically-typed language that compiles to efficient and human-readable JavaScript.
+          I worked extensively with <IconWithText text="Java" icon="logos:java" /> during my college years but haven't touched it in a while. I experimented with <IconWithText text="Solidity" icon="simple-icons:solidity" /> a few years ago, but later realized there was no future in <Icon name="simple-icons:ethereum" aria-label="Ethereum" title="Ethereum" />. More recently, I've been exploring <IconWithText text="ReScript" icon="logos:rescript-icon" />, a statically-typed language that compiles to efficient and human-readable JavaScript.
         </p>
 
         <p>
