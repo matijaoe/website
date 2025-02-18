@@ -99,7 +99,7 @@ const { isDark } = useTheme()
         </p>
 
         <p>
-          In the future, I'd love to explore functional programming, particularly <IconWithText text="Elixir" icon="devicon:elixir" /> or <IconWithText text="Ocaml" icon="devicon:ocaml" />.
+          In the future, I'd love to explore functional programming, particularly <IconWithText text="Elixir" icon="devicon:elixir" /> or <IconWithText text="OCaml" icon="devicon:ocaml" />.
         </p>
       </section>
     </div>

@@ -1,4 +1,5 @@
 <script lang="ts" setup>
+import { Analytics } from '@vercel/analytics/nuxt'
 import Toaster from './components/ui/toast/Toaster.vue'
 
 const { toggleDark } = useTheme()
@@ -48,6 +49,8 @@ useSeoMeta({
           <!-- <CommandBar /> -->
         </ClientOnly>
       </Teleport>
+
+      <Analytics />
     </Body>
   </Html>
 </template>
