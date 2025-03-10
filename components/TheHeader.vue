@@ -63,7 +63,7 @@ const activeLinkClass = '!text-foreground hover:text-foreground'
             :to="link.to"
             class="text-lg text-muted-foreground hover:text-foreground/85 w-fit py-[0.2rem] align-middle font-medium lowercase transition-all"
             :active-class="activeLinkClass"
-            :class="{ [activeLinkClass]: route.name.startsWith(link.to.name) }"
+            :class="{ [activeLinkClass]: route.name?.toString().startsWith(link.to.name) }"
           >
             {{ link.label }}
           </NuxtLink>

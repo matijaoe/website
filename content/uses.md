@@ -17,6 +17,7 @@
 
 - [Cursor](https://www.cursor.com/) . ai code editor
 - [Ghostty](https://ghostty.org/) . terminal
+- [Grok](https://grok.com/) . ai chat
 - [ChatGPT Plus](https://chat.openai.com/) . ai chat
 - [Perplexity Pro](https://www.perplexity.ai/) . ai search
 - [OrbStack](https://orbstack.dev/) . docker client
@@ -29,7 +30,7 @@
 
 - [Raycast](https://www.raycast.com/) . productivity launcher
 - [1Password](https://1password.com/) . password manager
-- [Proton Mail](https://proton.me/mail) . private email
+- [Proton Suite](https://proton.me) . private email, drive, vpn
 - [SimpleLogin](https://simplelogin.io/) . email aliases
 - [PocketCasts](https://pocketcasts.com/) . podcasts
 - [Audible](https://www.audible.com/) . audiobooks
@@ -51,7 +52,6 @@
 - [Nota](https://nota.md/) . markdown notes
 - [Wipr](https://apps.apple.com/us/app/wipr/id1030595027) - Safari ad blocker
 - [dns0.eu](https://dns0.eu/) . secure dns
-- [Mullvad VPN](https://mullvad.net) . vpn
 - [KeePassXC](https://keepassxc.org/) . offline password manager
 - [Cryptomator](https://cryptomator.org/) . encrypted vaults
 - [age](https://github.com/FiloSottile/age) . encryption
