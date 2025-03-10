@@ -36,7 +36,7 @@
     </p>
 
     <p>
-      Some notable libraries I enjoy working with are: <IconWithText text="Zod" icon="simple-icons:zod" />, <IconWithText text="VeeValidate" icon="devicon:veevalidate" />, date-fns, <IconWithText text="ESLint" icon="logos:eslint" />, <IconWithText text="ofetch" icon="unjs:ofetch" />, <IconWithText text="h3" icon="unjs:h3" />, <IconWithText text="bitcoinjs-lib" icon="simple-icons:bitcoin" />, <IconWithText text="Headless UI" icon="logos:headlessui-icon" />, <IconWithText text="Mantine" icon="logos:mantine-icon" />.
+      Some notable libraries I enjoy working with are: <IconWithText text="Zod" icon="simple-icons:zod" />, <IconWithText text="VeeValidate" icon="devicon:veevalidate" />, date-fns, <IconWithText text="ofetch" icon="unjs:ofetch" />, <IconWithText text="h3" icon="unjs:h3" />, <IconWithText text="bitcoinjs-lib" icon="simple-icons:bitcoin" />, <IconWithText text="Mantine" icon="logos:mantine-icon" />.
     </p>
 
     <h3 class="text-default-foreground font-medium text-xl">

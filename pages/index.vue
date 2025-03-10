@@ -34,7 +34,7 @@ useSeoMeta({
       <div class="text-default-foreground text-base md:text-lg leading-7">
         <div>
           <p>
-            Frontend engineer from Croatia, currently at <NuxtLink to="https://www.theydo.com" target="_blank" class="hover:underline">
+            Frontend engineer from Croatia, currently at <NuxtLink to="https://www.theydo.com" target="_blank" class="underline">
               TheyDo{{ }}
             </NuxtLink>.
             <br>

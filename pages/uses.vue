@@ -16,7 +16,10 @@ useSeoMeta({
     <div class="text-base md:text-lg">
       <p>Software I use, gadgets I love, and other things I recommend. </p>
 
-      <div v-if="uses" class="prose dark:prose-invert prose-stone dark:prose-stone -mt-2">
+      <div
+        v-if="uses"
+        class="prose dark:prose-invert prose-h2:mb-3 prose-li:text-muted-foreground prose-ul:ps-[1.25rem] prose-li:my-1.5 prose-a:font-normal -mt-2"
+      >
         <ContentRenderer :value="uses" />
       </div>
     </div>

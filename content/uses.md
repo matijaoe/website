@@ -2,7 +2,7 @@
 
 - [16" MacBook Pro, M3 Pro](https://support.apple.com/en-us/117737) . work mac
 - [14" MacBook Pro, M1 Pro](https://support.apple.com/kb/SP854) . personal mac
-- [iPhone 15 Pro](https://www.apple.com/shop/buy-iphone/iphone-15-pro) . smartphone
+- [iPhone 15 Pro](https://www.apple.com/shop/buy-iphone/iphone-15-pro) . phone
 - [Dell 32" 4K U3223QE](https://www.dell.com/en-us/shop/dell-ultrasharp-32-4k-usb-c-hub-monitor-u3223qe/apd/210-bdph/monitors-monitor-accessories) . monitor
 - [Logitech MX Keys Mini for Mac](https://www.logitech.com/en-eu/products/keyboards/mx-keys-mini-for-mac.html) . regular keyboard
 - [Vortex Race 3 (MX Clear)](https://vortexgear.store/products/race-3-micro-usb) . mechanical keyboard
@@ -17,7 +17,7 @@
 
 - [Cursor](https://www.cursor.com/) . ai code editor
 - [Ghostty](https://ghostty.org/) . terminal
-- [Grok](https://grok.com/) . ai chat
+- [Grok 3](https://grok.com/) . best ai chat
 - [ChatGPT Plus](https://chat.openai.com/) . ai chat
 - [Perplexity Pro](https://www.perplexity.ai/) . ai search
 - [OrbStack](https://orbstack.dev/) . docker client
@@ -34,27 +34,25 @@
 - [SimpleLogin](https://simplelogin.io/) . email aliases
 - [PocketCasts](https://pocketcasts.com/) . podcasts
 - [Audible](https://www.audible.com/) . audiobooks
-- [Libby](https://www.overdrive.com/apps/libby) . audiobooks
 - [YouTube Premium](https://www.youtube.com/premium) . no ads
 - [Spotify](https://open.spotify.com/) . music
 - [Endel](https://endel.io/) . soundscapes
 - [Anybox](https://anybox.app/) . bookmarks
 - [Things 3](https://culturedcode.com/things/) . todos
 - [Streaks](https://streaksapp.com/) . habit tracker
-- [CleanShotX](https://cleanshot.com/) . screenshots
+- [CleanShot X](https://cleanshot.com/) . screenshots
 - [Calibre](https://calibre-ebook.com/) . e-book management
 - [Audiobookshelf](https://www.audiobookshelf.org/) . audiobook server
 - [Jellyfin](https://jellyfin.org/) . media server
 - [Transmit](https://www.panic.com/transmit/) - sftp client
 - [Notion](https://notion.so/) . notes
-- [Obsidian](https://obsidian.md/) . notes & dev journaling
+- [Obsidian](https://obsidian.md/) . more notes
 - [iA Writer](https://ia.net/writer) . journaling
 - [Nota](https://nota.md/) . markdown notes
-- [Wipr](https://apps.apple.com/us/app/wipr/id1030595027) - Safari ad blocker
+- [Wipr](https://apps.apple.com/us/app/wipr/id1030595027) . Safari ad blocker
 - [dns0.eu](https://dns0.eu/) . secure dns
 - [KeePassXC](https://keepassxc.org/) . offline password manager
 - [Cryptomator](https://cryptomator.org/) . encrypted vaults
-- [age](https://github.com/FiloSottile/age) . encryption
 - [Tails OS](https://tails.net/) . amnesic os
 
 ## Misc

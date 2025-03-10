@@ -36,11 +36,15 @@ useSeoMeta({
         </p>
       </section>
 
+
       <AboutTechStack />
 
       <AboutBookshelf />
 
+      <AboutPodcasts />
+      
       <AboutMovies />
+
     </div>
   </div>
 </template>

@@ -12,19 +12,16 @@ const movies: Movie[] = [
   { title: '12 Angry Men', url: 'https://letterboxd.com/film/12-angry-men/', year: '1957' },
   { title: 'A Clockwork Orange', url: 'https://letterboxd.com/film/a-clockwork-orange/', year: '1971' },
   { title: 'The Machinist', url: 'https://letterboxd.com/film/the-machinist/', year: '2004' },
+  { title: 'Margin Call', url: 'https://letterboxd.com/film/margin-call/', year: '2011' },
+  { title: 'The Big Short', url: 'https://letterboxd.com/film/the-big-short/', year: '2015' },
 ]
 </script>
 
 <template>
-  <section class="prose-h1 prose-headings:mt-0 prose-a:font-normal prose-h3:text-default-foreground prose-h3:font-medium prose-h3:text-xl text-default-foreground max-w-xl leading-7 prose dark:prose-invert prose:font-normal text-base md:text-lg">
-    <div>
-      <h2 class="font-display font-medium mb-2">
-        Movie shelf
-      </h2>
-      <p class="text-muted-foreground text-base">
-        I'm not a huge movie buff, but these ones stuck with me.
-      </p>
-    </div>
+  <AboutProseWrapper title="Movie shelf">
+    <template #description>
+      I'm not a huge movie buff, but these ones stuck with me.
+    </template>
 
     <ul>
       <li v-for="movie in movies" :key="movie.title">
@@ -36,5 +33,5 @@ const movies: Movie[] = [
         </span>
       </li>
     </ul>
-  </section>
+  </AboutProseWrapper>
 </template>

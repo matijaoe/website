@@ -59,33 +59,28 @@ const nonfictionBooks: Book[] = [
 const categories: BookCategory[] = [
   {
     title: 'Fiction',
-    description: 'Mostly classics, a few modern works',
+    description: 'Mostly classics, a few modern works.',
     books: fictionBooks,
   },
   {
     title: 'Nonfiction',
-    description: 'Mix of philosophy, economics, memoirs, history, and anything else I found interesting',
+    description: 'Mix of philosophy, economics, memoirs, tech, history, and anything else I find interesting.',
     books: nonfictionBooks,
   },
 ]
 </script>
 
 <template>
-  <section class="prose-h1 prose-headings:mt-0 prose-a:font-normal prose-h3:text-default-foreground prose-h3:font-medium prose-h3:text-xl text-default-foreground max-w-xl leading-7 prose dark:prose-invert prose:font-normal text-base md:text-lg">
-    <div>
-      <h2 class="font-display font-medium mb-2">
-        Bookshelf
-      </h2>
-      <p class="text-muted-foreground text-base">
-        I only started reading in 2020, and I haven't stopped since. Over 280 books and a {{ readingStreakDays }}-day reading streak later, here are some of my top picks. Narrowing down my favorites was tough. Look me up on <NuxtLink to="https://www.goodreads.com/matijao" external class="text-muted-foreground">
-          Goodreads{{ }}
-        </NuxtLink> for more.
-      </p>
-    </div>
+  <AboutProseWrapper title="Bookshelf">
+    <template #description>
+      I only started reading in 2020, and I haven't stopped since. Over 280 books and a {{ readingStreakDays }}-day reading streak later, here are some of my top picks. Narrowing down my favorites was tough. Look me up on <NuxtLink to="https://www.goodreads.com/matijao" target="_blank" class="text-muted-foreground">
+        Goodreads{{ }}
+      </NuxtLink> for more.
+    </template>
 
     <div class="flex flex-col gap-8">
       <div v-for="category in categories" :key="category.title">
-        <h3 class="font-display font-medium mb-1 text-xl">
+        <h3 class="mb-1 text-xl">
           {{ category.title }}
         </h3>
         <p v-if="category.description" class="text-base text-muted-foreground mb-2">
@@ -104,5 +99,5 @@ const categories: BookCategory[] = [
         </ul>
       </div>
     </div>
-  </section>
+  </AboutProseWrapper>
 </template>

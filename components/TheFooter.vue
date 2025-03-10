@@ -4,7 +4,7 @@ const year = computed(() => now.value.getFullYear())
 </script>
 
 <template>
-  <footer class="mt-auto pt-20 pb-10 flex items-center justify-start text-sm text-foreground/40">
+  <footer class="mt-auto pt-24 pb-10 flex items-center justify-start text-sm text-foreground/40">
     <div class="w-full flex flex-col md:flex-row items-center justify-between gap-8">
       <p>Matija Osrečki {{ year }} &copy;</p>
 
