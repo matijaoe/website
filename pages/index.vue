@@ -14,9 +14,14 @@ useSeoMeta({
       <div class="mb-5 flex items-center text-muted-foreground gap-2">
         <Badge variant="outline" class="font-mono flex items-center p-0 backdrop-blur-lg bg-white/5 dark:bg-transparent hover:bg-white/5">
           <span class="px-2.5 py-0.5">{{ nowFormatted }}</span>
-          <span class="border-l px-2.5 py-0.5 flex items-center gap-2">
-            <Icon name="twemoji:round-pushpin" />
-            Zagreb, Croatia
+          <span class="border-l px-2.5 py-0.5 flex items-center">
+            <span class="inline-flex items-center gap-1">
+              <span class="relative flex size-2 mr-1.5">
+                <span class="absolute inline-flex h-full w-full animate-ping rounded-full bg-green-400 opacity-75" />
+                <span class="relative inline-flex size-2 rounded-full bg-green-500" />
+              </span>
+              Zagreb, Croatia
+            </span>
           </span>
         </Badge>
       </div>
@@ -34,7 +39,7 @@ useSeoMeta({
       <div class="text-default-foreground text-base md:text-lg leading-7">
         <div>
           <p>
-            Frontend engineer from Croatia, currently at <NuxtLink to="https://www.theydo.com" target="_blank" class="underline">
+            Frontend engineer from Croatia, currently at <NuxtLink to="https://www.theydo.com" target="_blank" class="underline hover:text-primary">
               TheyDo{{ }}
             </NuxtLink>.
             <br>

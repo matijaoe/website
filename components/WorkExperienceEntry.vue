@@ -41,7 +41,7 @@ defineProps<{
               </p>
             </NuxtLink>
           </div>
-          <span class="text-muted-foreground translate-y-[-0.08rem]">&bull;</span>
+          <span class="text-muted-foreground translate-y-[-0.08rem]">∗</span>
 
           <p class="text-muted-foreground flex items-center gap-1 text-base">
             <span>{{ companyLocation }}</span>
