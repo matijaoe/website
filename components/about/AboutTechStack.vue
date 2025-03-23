@@ -11,7 +11,6 @@
       <IconWithText text="Pinia" icon="logos:pinia" />,
       <IconWithText text="Tailwind" icon="logos:tailwindcss-icon" />,
       <IconWithText text="VueUse" icon="logos:vueuse" />,
-      <IconWithText text="Vue Router" icon="logos:vue" />,
       <IconWithText text="Vite" icon="logos:vitejs" />,
       <IconWithText text="Vitest" icon="logos:vitest" />,
       <IconWithText text="GraphQL" icon="logos:graphql" />,

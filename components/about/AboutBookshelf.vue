@@ -48,8 +48,8 @@ const nonfictionBooks: Book[] = [
   { title: 'Down and Out in Paris and London', author: 'George Orwell', url: 'https://www.goodreads.com/book/show/393199.Down_and_Out_in_Paris_and_London' },
   { title: 'The Boys in the Boat', author: 'Daniel James Brown', url: 'https://www.goodreads.com/book/show/16158542-the-boys-in-the-boat' },
   { title: 'Shoe Dog', author: 'Phil Knight', url: 'https://www.goodreads.com/book/show/30508222-shoe-dog' },
-  { title: 'I\'m Glad My Mom Died', author: 'Jennette McCurdy', url: 'https://www.goodreads.com/book/show/59366244-i-m-glad-my-mom-died' },
   { title: 'Steve Jobs', author: 'Walter Isaacson', url: 'https://www.goodreads.com/book/show/11084145-steve-jobs' },
+  { title: 'I\'m Glad My Mom Died', author: 'Jennette McCurdy', url: 'https://www.goodreads.com/book/show/59366244-i-m-glad-my-mom-died' },
 
   { title: 'The Code Book', author: 'Simon Singh', url: 'https://www.goodreads.com/book/show/17994.The_Code_Book' },
   { title: 'Stephen Fry\'s Great Mythology (series)', author: 'Stephen Fry', url: 'https://www.goodreads.com/series/243176-stephen-fry-s-great-mythology' },
@@ -93,7 +93,7 @@ const categories: BookCategory[] = [
               {{ book.title }}
             </NuxtLink>
             <span v-if="book.author" class="text-muted-foreground">
-              • {{ book.author }}
+             ∗ {{ book.author }}
             </span>
           </li>
         </ul>
