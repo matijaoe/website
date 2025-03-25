@@ -24,12 +24,6 @@ const links = [
     clickToCopy: true,
   },
   {
-    label: 'Bento',
-    linkText: 'matijao',
-    link: 'https://bento.me/matijao',
-    clickToCopy: true,
-  },
-  {
     label: 'CV',
     linkText: 'cv.pdf',
     link: '/cv.pdf',
