@@ -43,6 +43,7 @@ const nonfictionBooks: Book[] = [
 
   { title: 'Broken Money', author: 'Lyn Alden', url: 'https://www.goodreads.com/book/show/197566578-broken-money' },
   { title: 'Thank God for Bitcoin', author: 'Jimmy Song', url: 'https://www.goodreads.com/book/show/56428689-thank-god-for-bitcoin' },
+  { title: 'The Genesis Book', author: 'Aaron van Wirdum', url: 'https://www.goodreads.com/book/show/204250558-the-genesis-book' },
   { title: 'The Richest Man in Babylon', author: 'George S. Clason', url: 'https://www.goodreads.com/book/show/29937903-the-richest-man-in-babylon' },
 
   { title: 'Down and Out in Paris and London', author: 'George Orwell', url: 'https://www.goodreads.com/book/show/393199.Down_and_Out_in_Paris_and_London' },
@@ -53,6 +54,7 @@ const nonfictionBooks: Book[] = [
 
   { title: 'The Code Book', author: 'Simon Singh', url: 'https://www.goodreads.com/book/show/17994.The_Code_Book' },
   { title: 'Stephen Fry\'s Great Mythology (series)', author: 'Stephen Fry', url: 'https://www.goodreads.com/series/243176-stephen-fry-s-great-mythology' },
+  { title: 'Sapiens', author: 'Yuval Noah Harari', url: 'https://www.goodreads.com/book/show/23692271-sapiens' },
   { title: 'Maus', author: 'Art Spiegelman', url: 'https://www.goodreads.com/book/show/15195.The_Complete_Maus' },
 ]
 
@@ -93,7 +95,7 @@ const categories: BookCategory[] = [
               {{ book.title }}
             </NuxtLink>
             <span v-if="book.author" class="text-muted-foreground">
-             ∗ {{ book.author }}
+              ∗ {{ book.author }}
             </span>
           </li>
         </ul>

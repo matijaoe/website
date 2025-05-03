@@ -14,9 +14,9 @@
         end-date="Present"
         slug="theydo"
         logo="/theydo-logo.png"
-        :used="['Vue', 'TypeScript', 'GraphQL', 'Apollo', 'Tailwind', 'Vite', 'Vitest', 'Playwright']"
+        :used="['Vue', 'TypeScript', 'GraphQL', 'Apollo', 'Tailwind', 'Vite', 'Vitest', 'Playwright', 'Storybook']"
       >
-        Building out the industry-leading customer journey management tool.
+        Innovating in Customer Journey Management space.
       </WorkExperienceEntry>
 
       <WorkExperienceEntry
@@ -78,7 +78,7 @@
         company-url="https://gis.infokarta.hr/"
         company-location="Split, Croatia"
         location-icon="circle-flags:hr"
-        position="Full-Stack Developer"
+        position="Frontend Developer"
         start-date="May 2021"
         end-date="Jul 2021"
         slug="infokarta"
@@ -89,7 +89,7 @@
         </template>
 
         <template #default>
-          Built a highly dynamic web-based GIS application tailored for local governments.
+          Developed an interactive web-based GIS platform enabling local governments to visualize, analyze, and manage spatial data for urban planning, asset tracking, and public services.
         </template>
       </WorkExperienceEntry>
     </div>
