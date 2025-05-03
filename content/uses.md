@@ -42,7 +42,7 @@
 - [Calibre](https://calibre-ebook.com/) ∗ e-book management
 - [Audiobookshelf](https://www.audiobookshelf.org/) ∗ audiobook server
 - [Jellyfin](https://jellyfin.org/) ∗ media server
-- [Transmit](https://www.panic.com/transmit/) * sftp client
+- [Transmit](https://www.panic.com/transmit/) ∗ sftp client
 - [Obsidian](https://obsidian.md/) ∗ notes
 - [iA Writer](https://ia.net/writer) ∗ journaling
 - [Nota](https://nota.md/) ∗ markdown notes
