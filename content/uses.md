@@ -66,7 +66,7 @@
 
 ### Hardware wallets
 
-- _REDACTED_
+- _REDACTED_ 😉
 
 ### Software wallets
 
