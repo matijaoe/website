@@ -20,7 +20,7 @@
 - [Grok](https://grok.com/) ∗ best ai chat
 - [ChatGPT](https://chat.openai.com/) ∗ ai chat
 - [Perplexity](https://www.perplexity.ai/) ∗ ai search
-- [Wispr Flow](https://wisprflow.ai/) ∗ ai voice dictation
+- [Wispr Flow](https://wisprflow.ai/) ∗ ai dictation
 - [OrbStack](https://orbstack.dev/) ∗ docker client
 - [GitHub CLI](https://cli.github.com/) ∗ github in terminal
 - [Oh My Zsh](https://ohmyz.sh/) ∗ zsh plugin framework
@@ -39,13 +39,15 @@
 - [Things 3](https://culturedcode.com/things/) ∗ todos
 - [Streaks](https://streaksapp.com/) ∗ habit tracker
 - [CleanShot X](https://cleanshot.com/) ∗ screenshots
-- [Calibre](https://calibre-ebook.com/) ∗ e-book management
+- [Calibre](https://calibre-ebook.com/) ∗ ebook management
 - [Audiobookshelf](https://www.audiobookshelf.org/) ∗ audiobook server
 - [Jellyfin](https://jellyfin.org/) ∗ media server
+- [Tailscale](https://tailscale.com/) ∗ network access
 - [Transmit](https://www.panic.com/transmit/) ∗ sftp client
+- [Termius](https://termius.com/) ∗ mobile ssh client
 - [Obsidian](https://obsidian.md/) ∗ notes
+- [Nota](https://nota.md/) ∗ more notes
 - [iA Writer](https://ia.net/writer) ∗ journaling
-- [Nota](https://nota.md/) ∗ markdown notes
 - [Wipr](https://apps.apple.com/us/app/wipr/id1030595027) ∗ Safari ad blocker
 - [KeePassXC](https://keepassxc.org/) ∗ offline password manager
 - [Signal](https://signals.org/) ∗ encrypted chats
@@ -54,8 +56,50 @@
 
 ## Misc
 
-- [Kobo Libra H20](https://gl.kobobooks.com/products/kobo-libra-h2o) ∗ e-book reader
-- [YubiKey](https://www.yubico.com/products/) ∗ security keys
+- [Kobo Libra H20](https://gl.kobobooks.com/products/kobo-libra-h2o) ∗ ebook reader
+- [YubiKey](https://www.yubico.com/products/) ∗ hardware security keys
 - [Beelink EQ13](https://www.bee-link.com/products/beelink-eq13-n100-1) ∗ mini home server
-- [Raspberry Pi 4](https://www.raspberrypi.com/products/raspberry-pi-4-model-b/) with [Umbrel](https://umbrel.com/) ∗ bitcoin node
+- [Raspberry Pi 4](https://www.raspberrypi.com/products/raspberry-pi-4-model-b/) ∗ mini pc, bitcoin node
 - [Trek X-Caliber 8 2021](https://www.trekbikes.com/us/en_US/bikes/mountain-bikes/cross-country-mountain-bikes/x-caliber/x-caliber-8/p/33193/) ∗ my badass red bike
+
+## Nerdy Bitcoin recommendations
+
+### Hardware wallets
+
+- _REDACTED_
+
+### Software wallets
+
+- [Sparrow](https://sparrowwallet.com/) ∗ desktop, onchain
+- [Blue Wallet](https://bluewallet.io/) ∗ mobile, onchain
+- [Nunchuk](https://nunchuk.io/) ∗ mobile, onchain
+- [Bitkit](https://bitkit.to/) ∗ mobile, onchain, lightning
+- [Cove](https://covebitcoinwallet.com/) ∗ mobile, onchain (beta)
+- [Phoenix](https://phoenix.acinq.co/) ∗ mobile, lightning
+- [Zeus](https://zeusln.com/) ∗ mobile, lightning, ecash
+- [Coinos](https://coinos.io/) ∗ web, custodial lightning, ecash
+- [Wallet of Satoshi](https://www.walletofsatoshi.com/) ∗ mobile, custodial lightning
+- [Cashu.me](https://cashu.me/) ∗ web, reference cashu wallet
+- [Alby](https://getalby.com/) ∗ web extension, lightning
+
+### Buy
+
+- [Strike](https://strike.me/) ∗ bitcoin-only KYC exchange, lightning
+- [Pocket Bitcoin](https://pocketbitcoin.com/en?accept) ∗ bitcoin-only exchange, without registrations, _less_ KYC
+- [Hodl Hodl](https://hodlhodl.com/) ∗ P2P marketplace, no KYC
+- [RoboSats](https://learn.robosats.org/) ∗ P2P marketplace, no KYC, lightning
+- [Peach Bitcoin](https://peachbitcoin.com/) ∗ P2P marketplace, no KYC, mobile app
+
+### Services
+
+- [umbrelOS](https://umbrel.com/umbrelos) ∗ bitcoin-focused home server OS
+- [AlbyHub](https://albyhub.com/) ∗ self-hosted lightning node
+- [Bitcoin Knots](https://bitcoinknots.org/) ∗ alternative bitcoin client
+- [mempool.space](https://mempool.space/) ∗ mempool explorer
+- [Cashu](https://cashu.space/) ∗ bitcoin-based ecash protocol
+- [Nostr](https://nostr.com/) ∗ decentralized message transmission protocol
+- [Boltz](https://boltz.exchange/) ∗ non-custodial bitcoin bridge
+- [BTCPay Server](https://btcpayserver.org/) ∗ open-source payment processor
+- [Bitrefill](https://bitrefill.com/) ∗ buy gift cards and eSIMs with bitcoin
+- [Primal](https://primal.net/) ∗ nostr client, with lightning wallet
+- [Stacker News](https://stacker.news/) ∗ like hackernews, but for bitcoin
