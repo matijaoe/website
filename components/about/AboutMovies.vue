@@ -7,6 +7,7 @@ type Movie = {
 
 const movies: Movie[] = [
   { title: 'Parasite', url: 'https://letterboxd.com/film/parasite-2019/', year: '2019' },
+  { title: 'Perfect Days', url: 'https://letterboxd.com/matijao/film/perfect-days-2023/', year: '2023' },
   { title: 'American Psycho', url: 'https://letterboxd.com/film/american-psycho/', year: '2000' },
   { title: 'Nightcrawler', url: 'https://letterboxd.com/film/nightcrawler/', year: '2014' },
   { title: '12 Angry Men', url: 'https://letterboxd.com/film/12-angry-men/', year: '1957' },
