@@ -10,7 +10,7 @@ const podcasts: Podcast[] = [
   { title: 'Acquired', url: 'https://acquired.fm/' },
   { title: 'Syntax.fm', url: 'https://syntax.fm/' },
   { title: 'Lex Fridman Podcast', url: 'https://lexfridman.com/podcast/' },
-  { title: 'The Rest is History', url: 'https://therestishistory.com/' },
+  { title: 'The Rest is History', url: 'https://podcasts.apple.com/hr/podcast/the-rest-is-history/id1537788786' },
   { title: 'The History of Literature', url: 'https://historyofliterature.com/' },
   { title: 'What Bitcoin Did', url: 'https://www.whatbitcoindid.com/' },
   { title: 'Rabbit Hole Recap', url: 'https://rhr.tv/' },
