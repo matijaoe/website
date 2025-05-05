@@ -17,7 +17,7 @@ const podcasts: Podcast[] = [
   { title: 'Money Matters', author: 'Jack Mallers', url: 'https://podcasts.apple.com/us/podcast/money-matters-with-jack-mallers/id1695949365' },
   { title: 'TFTC', author: 'Marty Bent', url: 'https://www.tftc.io/tag/podcasts/' },
   { title: 'Citadel Dispatch', author: 'Odell', url: 'https://citadeldispatch.com/' },
-  { title: 'Coin Stories', author: 'Natalie Brunell', url: 'https://www.coinstories.org/' },
+  { title: 'Coin Stories', author: 'Natalie Brunell', url: 'https://podcasts.apple.com/us/podcast/coin-stories/id1569130932' },
   { title: 'Bitcoin Review', author: 'NVK', url: 'https://bitcoin.review/' },
   { title: 'Stephan Livera Podcast', url: 'https://stephanlivera.com/' },
   { title: 'All-In Podcast', url: 'https://podcasts.apple.com/us/podcast/all-in-with-chamath-jason-sacks-friedberg/id1502871393' },
