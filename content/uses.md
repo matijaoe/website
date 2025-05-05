@@ -12,6 +12,7 @@
 - [Sony WH-1000XM5](https://electronics.sony.com/audio/headphones/headband/p/wh1000xm5-b) ∗ headphones
 - [Fully Jarvis](https://ukstore.hermanmiller.com/collections/jarvis-standing-desk/) ∗ standing desk
 - [Rain Design mStand](https://www.raindesigninc.com/mstand.html) ∗ laptop stand
+- [Aranet4 Home](https://aranet.com/en/home/products/aranet4-home) ∗ air quality monitor
 
 ## Dev Tools
 
@@ -50,7 +51,7 @@
 - [iA Writer](https://ia.net/writer) ∗ journaling
 - [Wipr](https://apps.apple.com/us/app/wipr/id1030595027) ∗ Safari ad blocker
 - [KeePassXC](https://keepassxc.org/) ∗ offline password manager
-- [Signal](https://signals.org/) ∗ encrypted chats
+- [Signal](https://signal.org/) ∗ encrypted chats
 - [Cryptomator](https://cryptomator.org/) ∗ encrypted vaults
 - [Tails OS](https://tails.net/) ∗ amnesic os
 
