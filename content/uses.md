@@ -19,8 +19,9 @@
 
 - [Cursor](https://www.cursor.com/) ∗ ai code editor
 - [Ghostty](https://ghostty.org/) ∗ terminal
-- [Grok](https://grok.com/) ∗ best ai chat
 - [ChatGPT](https://chat.openai.com/) ∗ ai chat
+- [Claude](https://claude.ai/) ∗ ai chat
+- [Grok](https://grok.com/) ∗ ai chat
 - [Perplexity](https://www.perplexity.ai/) ∗ ai search
 - [Wispr Flow](https://wisprflow.ai/) ∗ ai dictation
 - [OrbStack](https://orbstack.dev/) ∗ docker client
