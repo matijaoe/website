@@ -1,32 +1,29 @@
 <script lang="ts" setup>
-type LinkItem = { label: string, linkText: string, link: string, clickToCopy?: boolean }
+type LinkItem = { label: string, links: { linkText: string, link: string, clickToCopy?: boolean }[] }
 
 const links = [
   {
     label: 'GitHub',
-    linkText: 'matijaoe',
-    link: 'https://github.com/matijaoe',
+    links: [{ linkText: 'matijaoe', link: 'https://github.com/matijaoe' }],
   },
   {
     label: 'LinkedIn',
-    linkText: 'matijao',
-    link: 'https://www.linkedin.com/in/matijao',
+    links: [{ linkText: 'matijao', link: 'https://www.linkedin.com/in/matijao' }],
   },
   {
     label: 'Goodreads',
-    linkText: 'matijao',
-    link: 'https://www.goodreads.com/matijao',
+    links: [{ linkText: 'matijao', link: 'https://www.goodreads.com/matijao' }],
   },
   {
     label: 'Email',
-    linkText: 'hello@matijao.com',
-    link: 'mailto:hello@matijao.com',
-    clickToCopy: true,
+    links: [{ linkText: 'hello@matijao.com', link: 'mailto:hello@matijao.com', clickToCopy: true }],
   },
   {
     label: 'CV',
-    linkText: 'cv.pdf',
-    link: '/cv.pdf',
+    links: [
+      { linkText: 'cv.pdf', link: '/cv.pdf' },
+      { linkText: 'cv.pdf ₿', link: '/cv-btc.pdf' },
+    ],
   },
 ] satisfies LinkItem[]
 </script>
@@ -39,7 +36,7 @@ const links = [
     <div>
       <LinkRow
         v-for="contact in links"
-        :key="contact.link"
+        :key="contact.label"
         v-bind="contact"
       />
     </div>

@@ -14,7 +14,7 @@ const projects: Project[] = [
   {
     slug: 'wordware',
     name: 'Wordware',
-    description: 'Sleek passphrase generator and wordlist manager.',
+    description: 'Sleek passphrase generator and wordlist manager',
     tags: ['Nuxt', 'TypeScript', 'Shadcn', 'Tailwind'],
     tagsPreview: ['Nuxt', 'ts', 'Shadcn', 'Tailwind'],
     timeframe: '2024',
@@ -27,7 +27,7 @@ const projects: Project[] = [
   {
     slug: 'fare',
     name: 'Fare',
-    description: 'Application for tracking personal finances and attaining financial independence.',
+    description: 'Application for tracking personal finances and attaining financial independence',
     tags: ['Nuxt', 'TypeScript', 'UnoCSS', 'Tanstack Query', 'Prisma', 'PlanetScale'],
     tagsPreview: ['Nuxt', 'ts', 'UnoCSS', 'Tanstack'],
     timeframe: '2022',
@@ -39,7 +39,7 @@ const projects: Project[] = [
   {
     slug: 'qwiz',
     name: 'Qwiz',
-    description: 'Platform for creation, organization & discovery of pub quizzes.',
+    description: 'Platform for creation, organization & discovery of pub quizzes',
     tags: ['Next', 'TypeScript', 'React Query', 'Mantine UI', 'Nest.js', 'Prisma', 'PlanetScale'],
     tagsPreview: ['Next', 'React Query', 'Nest', 'Prisma'],
     timeframe: '2022',
@@ -52,7 +52,7 @@ const projects: Project[] = [
   {
     slug: 'aimo',
     name: 'Aimo',
-    description: 'Social media platform connecting motivated individuals with accountability partners.',
+    description: 'Social media platform connecting motivated individuals with accountability partners',
     tags: ['Nuxt', 'JavaScript', 'Vuex', 'Tailwind', 'Firebase'],
     tagsPreview: ['Nuxt', 'Tailwind', 'Firebase'],
     timeframe: '2021',
@@ -65,7 +65,7 @@ const projects: Project[] = [
   {
     slug: 'bit-complete',
     name: 'Bit Complete',
-    description: 'Tool to generate a valid 24th word for a BIP39 seed phrase.',
+    description: 'Tool for generating a valid 24th word for a BIP39 seed phrase',
     tags: ['Vue', 'TypeScript', 'Pico CSS', 'bitcoin'],
     tagsPreview: ['Vue', 'ts', 'Pico CSS', 'bitcoin'],
     timeframe: '2024',
@@ -76,13 +76,13 @@ const projects: Project[] = [
     color: '#027FC0',
   },
   {
-    slug: 'bip39-words',
-    name: 'BIP39 words',
-    description: 'BIP39 word lookup tool.',
+    slug: 'bip39-lookup',
+    name: 'BIP39 lookup',
+    description: 'BIP39 word lookup tool',
     tags: ['SvelteKit', 'TypeScript', 'Tailwind', 'bitcoin'],
     tagsPreview: ['svelte', 'ts', 'Tailwind', 'bitcoin'],
     timeframe: '2022',
-    repo: 'https://github.com/matijaoe/bip39-words',
+    repo: 'https://github.com/matijaoe/bip39-lookup',
     url: 'https://bip39-rosy.vercel.app',
     thumbnail: '/projects/btc-tools.webp',
     categories: [Category.hobby],
@@ -91,7 +91,7 @@ const projects: Project[] = [
   {
     slug: 'bitcoin-ticker',
     name: 'Bitcoin Ticker',
-    description: 'Realtime bitcoin price ticker.',
+    description: 'Real-time Bitcoin price tracker pulling data from multiple exchanges via WebSockets',
     tags: ['Vue', 'Tailwind', 'bitcoin'],
     timeframe: '2024',
     repo: 'https://github.com/matijaoe/bitcoin-ticker',
@@ -104,7 +104,7 @@ const projects: Project[] = [
     wip: true,
     slug: 'brutoneto-api',
     name: 'Brutoneto API',
-    description: 'Advanced salary calculator API for Croatian employees.',
+    description: 'Advanced salary calculator API for Croatian employees',
     tags: ['TypeScript', 'Nitro', 'Zod', 'GraphQL'],
     tagsPreview: ['ts', 'Nitro', 'Zod', 'gql'],
     timeframe: '2024',
@@ -114,17 +114,17 @@ const projects: Project[] = [
   {
     slug: 'emojito',
     name: 'Emojito',
-    description: 'Encode text into emojis using Unicode steganography.',
+    description: 'Encode text into emojis using Unicode steganography',
     tags: ['Python'],
     timeframe: '2025',
     repo: 'https://github.com/matijaoe/emojito',
     url: 'https://pypi.org/project/emojito-py/',
     categories: [Category.hobby],
   },
-      {
+  {
     slug: 'xpub-derive',
     name: 'Xpub Derive',
-    description: 'CLI tool for deriving bitcoin addresses.',
+    description: 'CLI tool for deriving bitcoin addresses',
     tags: ['TypeScript', 'Bun', 'Bitcoin'],
     timeframe: '2025',
     repo: 'https://github.com/matijaoe/xpub-derive',
@@ -133,7 +133,7 @@ const projects: Project[] = [
   {
     slug: 'favicones',
     name: 'Favicônes',
-    description: 'Quick and easy way to use any icon as favicon.',
+    description: 'Quick and easy way to use any icon as favicon',
     tags: ['Nuxt', 'UnoCSS', 'iconify'],
     timeframe: '2022',
     repo: 'https://github.com/matijaoe/favicones',
@@ -145,7 +145,7 @@ const projects: Project[] = [
   {
     slug: 'meet-mia',
     name: 'MeetMia',
-    description: 'Cake shop concept project.',
+    description: 'Cake shop concept project',
     tags: ['Vue', 'Vite', 'TypeScript', 'SCSS'],
     timeframe: '2021',
     repo: 'https://github.com/matijaoe/meet-mia',
@@ -160,7 +160,7 @@ const projects: Project[] = [
   {
     slug: 'comet',
     name: 'Comet',
-    description: 'Video streaming platform mockup.',
+    description: 'Video streaming platform mockup',
     tags: ['HTML', 'SCSS', 'JavaScript'],
     timeframe: '2020',
     repo: 'https://github.com/matijaoe/comet',
@@ -173,7 +173,7 @@ const projects: Project[] = [
     wip: true,
     slug: 'brutoneto',
     name: 'Brutoneto',
-    description: 'Advanced salary calculator for Croatian employees.',
+    description: 'Advanced salary calculator for Croatian employees',
     tags: ['TypeScript', 'Bun', 'npm'],
     tagsPreview: ['ts', 'Bun', 'npm'],
     timeframe: '2024',
@@ -184,7 +184,7 @@ const projects: Project[] = [
     wip: true,
     slug: 'utilipea',
     name: 'Utilipea',
-    description: 'Yet another utility library.',
+    description: 'Yet another utility library',
     tags: ['TypeScript', 'Bun', 'Vitest', 'npm'],
     tagsPreview: ['ts', 'Bun', 'Vitest', 'npm'],
     timeframe: '2023/24',
@@ -195,7 +195,7 @@ const projects: Project[] = [
   {
     slug: 'vue-ecosystem-snippets',
     name: 'Vue Ecosystem Snippets',
-    description: 'Snippets for the modern Vue ecosystem.',
+    description: 'Snippets for the modern Vue ecosystem',
     timeframe: '2023',
     url: 'https://marketplace.visualstudio.com/items?itemName=matijao.vue-nuxt-snippets',
     repo: 'https://github.com/mat2ja/vue-ecosystem-snippets',
@@ -208,7 +208,7 @@ const projects: Project[] = [
   {
     slug: 'modern-javascript-snippets',
     name: 'Modern JavaScript Snippets',
-    description: 'Code snippets for modern JavaScript & TypeScript.',
+    description: 'Code snippets for modern JavaScript & TypeScript',
     timeframe: '2023',
     url: 'https://marketplace.visualstudio.com/items?itemName=matijao.modern-js-snippets',
     repo: 'https://github.com/mat2ja/modern-javascript-snippets',
@@ -221,7 +221,7 @@ const projects: Project[] = [
   {
     slug: 'url-query-editor',
     name: 'URL Query Editor',
-    description: 'Simple but powerful Chrome extension for editing URL query parameters.',
+    description: 'Simple but powerful Chrome extension for editing URL query parameters',
     timeframe: '2023',
     repo: 'https://github.com/matijaoe/url-query-editor',
     thumbnail: '/projects/url-query-editor.webp',
@@ -232,7 +232,7 @@ const projects: Project[] = [
   {
     slug: 'pnpm-plugin-zsh',
     name: 'pnpm.plugin.zsh',
-    description: 'Oh My Zsh aliases for common pnpm commands.',
+    description: 'Oh My Zsh aliases for common pnpm commands',
     timeframe: '2023',
     repo: 'https://github.com/matijaoe/pnpm.plugin.zsh',
     tags: ['Zsh', 'pnpm'],
@@ -241,7 +241,7 @@ const projects: Project[] = [
   {
     slug: 'audible-hq-cover',
     name: 'Audible HQ Cover',
-    description: 'Userscript for obtaining full-res Audible covers.',
+    description: 'Userscript for obtaining full-res Audible covers',
     timeframe: '2024',
     repo: 'https://github.com/matijaoe/audible-hq-cover',
     url: 'https://greasyfork.org/en/scripts/511910-audible-hq-cover',
@@ -253,7 +253,7 @@ const projects: Project[] = [
   {
     slug: 'nuxt-starter',
     name: 'Nuxt Uno Starter',
-    description: 'Nuxt 3 & UnoCSS starter template.',
+    description: 'Nuxt 3 & UnoCSS starter template',
     timeframe: '2023',
     repo: 'https://github.com/matijaoe/nuxt-starter',
     url: 'https://the-nuxt-starter.vercel.app/',
@@ -265,7 +265,7 @@ const projects: Project[] = [
   {
     slug: 'vue-starter',
     name: 'Vue Uno Starter',
-    description: 'Vue & UnoCSS starter template.',
+    description: 'Vue & UnoCSS starter template',
     timeframe: '2023',
     repo: 'https://github.com/matijaoe/vue-starter',
     url: 'https://vue-uno-starter.vercel.app/',
@@ -277,7 +277,7 @@ const projects: Project[] = [
   {
     slug: 'advent-of-code-template',
     name: 'AoC Template',
-    description: 'Automated Advent of Code Template.',
+    description: 'Automated Advent of Code Template',
     timeframe: '2023',
     repo: 'https://github.com/matijaoe/advent-of-code',
     tags: ['Bun', 'TypeScript'],
@@ -287,7 +287,7 @@ const projects: Project[] = [
   {
     slug: 'vue-anu-starter',
     name: 'Vue & Anu Starter',
-    description: 'Vue & Anu starter template.',
+    description: 'Vue & Anu starter template',
     timeframe: '2023',
     repo: 'https://github.com/matijaoe/vue-anu-starter',
     url: 'https://vue-anu-starter.vercel.app/',
@@ -297,7 +297,7 @@ const projects: Project[] = [
   {
     slug: 'bip39-wordlist',
     name: 'BIP39 Wordlists',
-    description: 'Collection of BIP39 wordlists.',
+    description: ' Collection of English BIP39 wordlists in various formats for practical use',
     timeframe: '2024',
     repo: 'https://github.com/matijaoe/bip39-wordlist',
     tags: ['json', 'bitcoin'],
@@ -306,7 +306,7 @@ const projects: Project[] = [
   {
     slug: 'bitcoin-books',
     name: 'Bitcoin Books',
-    description: 'Collection of Bitcoin books.',
+    description: 'Curated Notion database of Bitcoin books with rich metadata and reference links',
     timeframe: '2025',
     url: 'https://seasoned-trader-815.notion.site/16313affa9c780d9a6dede8dc01c61d0?v=7810fd9ff53f41908faf81cc36476562',
     tags: ['notion', 'bitcoin'],
