@@ -15,8 +15,12 @@ const links = [
     links: [{ linkText: 'matijao', link: 'https://www.goodreads.com/matijao' }],
   },
   {
+    label: 'Signal',
+    links: [{ linkText: 'let\'s chat', link: 'https://signal.me/#eu/lC_xtCm-HAQfuw6teYnoABnKphlSXt5Tw-4ZtMmpsobhYkWORv9Dj79r1oMYNoFG' }],
+  },
+  {
     label: 'Email',
-    links: [{ linkText: 'hello@matijao.com', link: 'mailto:hello@matijao.com', clickToCopy: true }],
+    links: [{ linkText: 'hi@matijao.com', link: 'mailto:hi@matijao.com', clickToCopy: true }],
   },
   {
     label: 'Resume',
