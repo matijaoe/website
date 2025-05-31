@@ -19,7 +19,7 @@ const links = [
     links: [{ linkText: 'hello@matijao.com', link: 'mailto:hello@matijao.com', clickToCopy: true }],
   },
   {
-    label: 'CV',
+    label: 'Resume',
     links: [
       { linkText: 'cv.pdf', link: '/cv.pdf' },
       { linkText: 'cv.pdf ₿', link: '/cv-btc.pdf' },

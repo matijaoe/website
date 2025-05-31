@@ -69,4 +69,20 @@ export default defineNuxtConfig({
   },
 
   compatibilityDate: '2025-01-24',
+
+  routeRules: {
+    // CV
+    '/cv': { redirect: '/cv.pdf' },
+    '/cv-btc': { redirect: '/cv-btc.pdf' },
+    '/cv-2024': { redirect: '/cv-2024.pdf' },
+    // CV aliases
+    '/resume': { redirect: '/cv.pdf' },
+    '/resume-btc': { redirect: '/cv-btc.pdf' },
+    '/resume-2024': { redirect: '/cv-2024.pdf' },
+    // Old site
+    '/2023': { redirect: 'https://2023.matijao.com/' },
+    // External links
+    '/github': { redirect: 'https://github.com/matijaoe' },
+    '/linkedin': { redirect: 'https://www.linkedin.com/in/matijao' },
+  },
 })
