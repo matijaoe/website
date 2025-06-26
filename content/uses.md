@@ -18,12 +18,12 @@
 ## Dev Tools
 
 - [Cursor](https://www.cursor.com/) ∗ ai code editor
-- [Ghostty](https://ghostty.org/) ∗ terminal
 - [ChatGPT](https://chat.openai.com/) ∗ ai chat
-- [Claude](https://claude.ai/) ∗ ai chat
-- [Grok](https://grok.com/) ∗ ai chat
+- [Claude Code](https://www.anthropic.com/claude-code) ∗ ai coding agent
 - [Perplexity](https://www.perplexity.ai/) ∗ ai search
+- [Grok](https://grok.com/) ∗ ai chat
 - [Wispr Flow](https://wisprflow.ai/) ∗ ai dictation
+- [Ghostty](https://ghostty.org/) ∗ terminal
 - [OrbStack](https://orbstack.dev/) ∗ docker client
 - [GitHub CLI](https://cli.github.com/) ∗ github in terminal
 - [Oh My Zsh](https://ohmyz.sh/) ∗ zsh plugin framework
