@@ -26,7 +26,6 @@ const links = [
     label: 'Resume',
     links: [
       { linkText: 'cv.pdf', link: '/cv.pdf' },
-      { linkText: 'cv.pdf ₿', link: '/cv-btc.pdf' },
     ],
   },
 ] satisfies LinkItem[]
