@@ -14,9 +14,9 @@
         end-date="Present"
         slug="theydo"
         logo="/theydo-logo.png"
-        :used="['Vue', 'TypeScript', 'GraphQL', 'Apollo', 'Tailwind', 'Vite', 'Vitest', 'Playwright', 'Storybook']"
+        :used="['Vue', 'TypeScript', 'Apollo', 'GraphQL', 'Tailwind', 'Vite', 'Vitest', 'Playwright', 'Radix', 'Storybook']"
       >
-        Innovating in Customer Journey Management space.
+        Helping enterprises map and improve customer journeys by building intuitive tools for collaboration and decision-making.
       </WorkExperienceEntry>
 
       <WorkExperienceEntry
@@ -38,8 +38,8 @@
       </WorkExperienceEntry>
 
       <WorkExperienceEntry
-        company="Cura4You GmbH"
-        company-url="https://cura4you.de/"
+        company="mannacare"
+        company-url="https://www.mannacare.de/"
         company-location="Cologne, Germany"
         location-icon="circle-flags:de"
         position="Frontend Developer"

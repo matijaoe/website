@@ -8,7 +8,7 @@ defineProps<{
   startDate: string
   endDate: string
   logo?: string
-  slug?: 'theydo' | '4ofthem' | 'cura' | '3ofthem' | 'infokarta'
+  slug?: 'theydo' | '4ofthem' | 'mannacare' | '3ofthem' | 'infokarta'
   used: string[]
   logoClass?: string
 }>()
@@ -24,7 +24,7 @@ defineProps<{
     <template #default>
       <div>
         <div class="mb-1 flex items-center gap-2">
-          <h3 :to="`${slug}`" class="text-xl font-medium">
+          <h3 class="text-xl font-medium">
             {{ position }}
           </h3>
         </div>
