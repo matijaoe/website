@@ -34,17 +34,24 @@ useSeoMeta({
             icon-class="translate-y-0.5"
           /> and a strong advocate for the right to privacy, freedom of speech, self-sovereignty, and open-source software. I'm also deeply interested in economics, cryptography, psychology, and literature.
         </p>
-      </section>
 
+        <p>
+          Lately, I've been incredibly excited by the potential of <IconWithText
+            text="AI"
+            icon="emojione:sparkles"
+            icon-size="0.9em"
+            icon-class="translate-y-0.5"
+          /> and the impact it can have (and already has) on the way we work and live.
+        </p>
+      </section>
 
       <AboutTechStack />
 
       <AboutBookshelf />
 
       <AboutPodcasts />
-      
-      <AboutMovies />
 
+      <AboutMovies />
     </div>
   </div>
 </template>

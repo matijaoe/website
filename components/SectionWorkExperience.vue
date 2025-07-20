@@ -13,8 +13,8 @@
         start-date="Jul 2024"
         end-date="Present"
         slug="theydo"
-        logo="/theydo-logo.png"
-        :used="['Vue', 'TypeScript', 'Apollo', 'GraphQL', 'Tailwind', 'Vite', 'Vitest', 'Playwright', 'Radix', 'Storybook']"
+        logo="/theydo-logo.webp"
+        :used="['Vue', 'TypeScript', 'Apollo', 'GraphQL', 'Tailwind', 'Vitest', 'Playwright', 'Radix', 'Storybook']"
       >
         Helping enterprises map and improve customer journeys by building intuitive tools for collaboration and decision-making.
       </WorkExperienceEntry>
@@ -29,7 +29,7 @@
         end-date="Jun 2024"
         slug="4ofthem"
         logo="/4ot-logo.png"
-        :used="['Nuxt 3', 'Vue', 'TypeScript', 'Pinia', 'UnoCSS', 'Quasar', 'Vite', 'Storybook', 'GraphQL']"
+        :used="['Nuxt 3', 'Vue', 'TypeScript', 'Pinia', 'UnoCSS', 'Quasar', 'Storybook', 'Vite', 'GraphQL']"
         logo-class="h-[14px]"
       >
         <template #default>
@@ -45,12 +45,12 @@
         position="Frontend Developer"
         start-date="Jun 2023"
         end-date="Oct 2023"
-        slug="cura"
-        logo="/cura-logo.jpeg"
+        slug="mannacare"
+        logo="/mannacare-logo.jpeg"
         :used="['Vue', 'JavaScript', 'Tanstack Query', 'Vuetify', 'Cypress', 'Vitest']"
       >
         <template #default>
-          Contributed to the development of a web platform for nurses and caregivers to effectively support patients with severe disabilities, ensuring seamless management of their complex medical needs.
+          Developed features for a platform that helps nurses and caregivers manage the complex needs of patients with disabilities.
         </template>
       </WorkExperienceEntry>
 

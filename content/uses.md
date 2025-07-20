@@ -5,7 +5,7 @@
 - [iPhone 15 Pro](https://www.apple.com/shop/buy-iphone/iphone-15-pro) ∗ phone
 - [iPad Pro M4 11"](https://www.apple.com/ipad-pro/) ∗ tablet
 - [Dell 32" 4K](https://www.dell.com/en-us/shop/dell-ultrasharp-32-4k-usb-c-hub-monitor-u3223qe/apd/210-bdph/monitors-monitor-accessories) ∗ monitor
-- [Logitech MX Keys Mini](https://www.logitech.com/en-eu/products/keyboards/mx-keys-mini-for-mac.html) ∗ regular keyboard
+- [Logitech MX Keys Mini](https://www.logitech.com/en-eu/products/keyboards/mx-keys-mini-for-mac.html) ∗ keyboard
 - [Vortex Race 3 (MX Clear)](https://vortexgear.store/products/race-3-micro-usb) ∗ mechanical keyboard
 - [Logitech MX Master 3](https://www.logitech.com/en-eu/products/mice/mx-master-3.html) ∗ mouse
 - [Apple Magic Trackpad](https://www.apple.com/shop/product/MXK93AM/A/magic-trackpad-usb%E2%80%91c-white-multi-touch-surface) ∗ trackpad
@@ -45,13 +45,14 @@ Or what's left when you take away the AI
 - [Notion Calendar](https://www.notion.so/calendar) ∗ calendar
 - [Granola](https://granola.ai/) ∗ ai meeting notes
 - [CodeRabbit](https://www.coderabbit.ai/) ∗ ai code reviews
+- [Gemini](https://deepmind.google/models/gemini/) ∗ ai chat
 - [Unblocked](https://getunblocked.com/) ∗ ai with all the context
 - [Remote.com](https://remote.com/) ∗ payroll, expenses
 
 ## Other Software
 
-- [Raycast](https://www.raycast.com/) ∗ productivity launcher
-- [SimpleLogin](https://simplelogin.io/) ∗ email aliases
+- [Rayc ast](https://www.raycast.com/) ∗ productivity launcher
+- [Brave Browser](https://brave.com/) ∗ browser
 - [PocketCasts](https://pocketcasts.com/) ∗ podcasts
 - [Audible](https://www.audible.com/) ∗ audiobooks
 - [Spotify](https://open.spotify.com/) ∗ music
@@ -69,20 +70,21 @@ Or what's left when you take away the AI
 
 - [1Password](https://1password.com/) ∗ password manager
 - [Proton Suite](https://proton.me) ∗ private email, drive, vpn
+- [SimpleLogin](https://simplelogin.io/) ∗ email aliases
 - [KeePassXC](https://keepassxc.org/) ∗ offline password manager
 - [Cryptomator](https://cryptomator.org/) ∗ encrypted vaults
 - [Signal](https://signal.org/) ∗ encrypted chats
 
-## Self-hosting & network stuff
+## Self-hosting
 
 - [Audiobookshelf](https://www.audiobookshelf.org/) ∗ audiobook server
 - [Jellyfin](https://jellyfin.org/) ∗ media server
 - [Tailscale](https://tailscale.com/) ∗ network access
-- [Transmit](https://www.panic.com/transmit/) ∗ sftp client
-- [Termius](https://termius.com/) ∗ mobile ssh client
-- [Umbrel](https://umbrel.com/) ∗ bitcoin node
+- [Transmit](https://www.panic.com/transmit/) ∗ sftp
+- [Termius](https://termius.com/) ∗ ssh
+- [Umbrel](https://umbrel.com/) ∗ bitcoin stuff
 
-## Misc
+## Misc hardware
 
 - [Kobo Libra H20](https://gl.kobobooks.com/products/kobo-libra-h2o) ∗ ebooks
 - [Casio F-91W](https://www.casio.com/europe/watches/casio/product.F-91W-1/) ∗ the OG

@@ -39,15 +39,15 @@ useSeoMeta({
       <div class="text-default-foreground text-base md:text-lg leading-7">
         <div>
           <p>
-            Frontend engineer from Croatia, currently at <NuxtLink to="https://www.theydo.com" target="_blank" class="underline hover:text-primary">
+            Frontend Engineer, currently at <NuxtLink to="https://www.theydo.com" target="_blank" class="underline hover:text-primary">
               TheyDo{{ }}
             </NuxtLink>.
             <br>
-            I build well-crafted software, focusing on good UX and meticulous attention to detail.
+            I build well-crafted software, focusing on great UX and meticulous attention to detail.
             <br>
-            I love clean code, open-source, side-projects, <button @click="setMode('dark')">
+            I love clean code, open source, side projects, <button @click="setMode('dark')">
               dark mode
-            </button>, minimalism and Bitcoin.
+            </button>, minimalism, ai and Bitcoin.
             <br>
           </p>
         </div>

@@ -15,6 +15,8 @@ const movies: Movie[] = [
   { title: 'The Machinist', url: 'https://letterboxd.com/film/the-machinist/', year: '2004' },
   { title: 'Margin Call', url: 'https://letterboxd.com/film/margin-call/', year: '2011' },
   { title: 'The Big Short', url: 'https://letterboxd.com/film/the-big-short/', year: '2015' },
+  { title: 'Conclave', url: 'https://letterboxd.com/film/conclave/', year: '2024' },
+  { title: 'Chernobyl (mini-series)', url: 'https://www.imdb.com/title/tt7366338/', year: '2019' },
 ]
 </script>
 

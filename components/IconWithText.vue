@@ -1,14 +1,12 @@
 <script setup lang="ts">
-interface Props {
+withDefaults(defineProps<{
   text: string
   icon: string
   iconSize?: string
   iconClass?: string
-}
-
-const props = withDefaults(defineProps<Props>(), {
+}>(), {
   iconSize: '0.75em',
-  iconClass: ''
+  iconClass: '',
 })
 </script>
 
@@ -16,4 +14,4 @@ const props = withDefaults(defineProps<Props>(), {
   <span class="inline-flex gap-1 items-baseline">
     {{ text }}<Icon :name="icon" :size="iconSize" :class="iconClass" />
   </span>
-</template> 
+</template>
