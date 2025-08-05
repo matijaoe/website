@@ -20,7 +20,7 @@
 
 Or what's left when you take away the AI
 
-- [Ghostty](https://ghostty.org/) ∗ terminal
+- [Warp](https://www.warp.dev/) ∗ terminal
 - [Oh My Zsh](https://ohmyz.sh/) ∗ zsh plugin framework
 - [gh cli](https://cli.github.com/) ∗ github in command line
 - [OrbStack](https://orbstack.dev/) ∗ docker client
@@ -28,17 +28,17 @@ Or what's left when you take away the AI
 ## AI
 
 - [Cursor](https://www.cursor.com/) ∗ code editor
-- [Claude Code](https://www.anthropic.com/claude-code) ∗ coding agent
+- [Claude Code](https://www.anthropic.com/claude-code) ∗ coding agent 🧡
 - [ChatGPT](https://chat.openai.com/) ∗ chat
 - [Perplexity](https://www.perplexity.ai/) ∗ search
 - [Grok](https://grok.com/) ∗ chat
-- [Wispr Flow](https://wisprflow.ai/) ∗ dictation
+- [Wispr Flow](https://wisprflow.ai/) ∗ dictation 🩶
 
 ## Work setup
 
 - [Figma](https://www.figma.com/) ∗ design
 - [GitHub](https://github.com/) ∗ code
-- [Linear](https://linear.app/) ∗ project management
+- [Linear](https://linear.app/) ∗ project management 💜
 - [Slack](https://slack.com/) ∗ work chat
 - [Gather](https://gather.town/) ∗ virtual office
 - [Notion](https://www.notion.so/) ∗ documentation
@@ -51,7 +51,7 @@ Or what's left when you take away the AI
 
 ## Other Software
 
-- [Rayc ast](https://www.raycast.com/) ∗ productivity launcher
+- [Raycast](https://www.raycast.com/) ∗ productivity launcher 🩷
 - [Brave Browser](https://brave.com/) ∗ browser
 - [PocketCasts](https://pocketcasts.com/) ∗ podcasts
 - [Audible](https://www.audible.com/) ∗ audiobooks
@@ -60,7 +60,7 @@ Or what's left when you take away the AI
 - [Anybox](https://anybox.app/) ∗ bookmarks
 - [Things 3](https://culturedcode.com/things/) ∗ todos
 - [Streaks](https://streaksapp.com/) ∗ habit tracker
-- [CleanShot X](https://cleanshot.com/) ∗ screenshots
+- [CleanShot X](https://cleanshot.com/) ∗ screenshots 🩵
 - [Calibre](https://calibre-ebook.com/) ∗ ebook management
 - [Apple Notes](https://www.apple.com/apple-notes/) ∗ notes
 - [Obsidian](https://obsidian.md/) ∗ notes
@@ -68,7 +68,7 @@ Or what's left when you take away the AI
 
 ## Security & privacy
 
-- [1Password](https://1password.com/) ∗ password manager
+- [1Password](https://1password.com/) ∗ password manager 
 - [Proton Suite](https://proton.me) ∗ private email, drive, vpn
 - [SimpleLogin](https://simplelogin.io/) ∗ email aliases
 - [KeePassXC](https://keepassxc.org/) ∗ offline password manager
