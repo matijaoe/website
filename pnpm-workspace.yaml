@@ -1,0 +1,4 @@
+onlyBuiltDependencies:
+  - '@morev/vue-transitions'
+  - esbuild
+  - vue-demi
