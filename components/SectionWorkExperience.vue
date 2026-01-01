@@ -9,7 +9,7 @@
         company-url="https://www.theydo.com"
         company-location="Amsterdam, Netherlands"
         location-icon="circle-flags:nl"
-        position="Frontend Engineer"
+        position="Senior Frontend Engineer"
         start-date="Jul 2024"
         end-date="Present"
         slug="theydo"

@@ -13,7 +13,7 @@ const podcasts: Podcast[] = [
   { title: 'Lenny\'s Podcast', url: 'https://lennysnewsletter.com/podcast' },
   { title: 'The Rest is History', url: 'https://podcasts.apple.com/hr/podcast/the-rest-is-history/id1537788786' },
   { title: 'The History of Literature', url: 'https://historyofliterature.com/' },
-  { title: 'Money Matters', author: 'Jack Mallers', url: 'https://podcasts.apple.com/us/podcast/money-matters-with-jack-mallers/id1695949365' },
+  { title: 'The Jack Mallers Show', url: 'https://podcasts.apple.com/us/podcast/the-jack-mallers-show/id1695949365' },
   { title: 'What Bitcoin Did', url: 'https://www.whatbitcoindid.com/' },
   { title: 'Rabbit Hole Recap', url: 'https://rhr.tv/' },
   { title: 'TFTC', author: 'Marty Bent', url: 'https://www.tftc.io/tag/podcasts/' },
@@ -21,6 +21,7 @@ const podcasts: Podcast[] = [
   { title: 'Bitcoin Review', author: 'NVK', url: 'https://bitcoin.review/' },
   { title: 'All-In Podcast', url: 'https://podcasts.apple.com/us/podcast/all-in-with-chamath-jason-sacks-friedberg/id1502871393' },
   { title: 'This Past Weekend', author: 'Theo Von', url: 'https://www.theovon.com/tpw/episodes' },
+  { title: 'Bad Friends', url: 'https://open.spotify.com/show/3gaGfrqgnVqUBNDdtv5p3S' },
   { title: 'Inside True Crime', author: 'Matthew Cox', url: 'https://podcasts.apple.com/us/podcast/matthew-cox-inside-true-crime-podcast/id1574561959' },
   { title: 'The Morgan Housel Podcast', url: 'https://podcasts.apple.com/us/podcast/the-morgan-housel-podcast/id1675310669' },
 ]
@@ -29,7 +30,7 @@ const podcasts: Podcast[] = [
 <template>
   <AboutProseWrapper title="Podcasts">
     <template #description>
-      I listen to podcasts pretty much every day. Bitcoin, ai, macroeconomics, business, tech, hacking, opsec, history, literature.
+      I listen to podcasts every single day. Bitcoin, ai, macroeconomics, business, tech, hacking, opsec, history, literature, comedy.
     </template>
 
     <ul>

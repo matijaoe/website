@@ -8,17 +8,15 @@ const links: { to: RouteLocationRaw, label: string, key: string }[] = [
   { to: { name: 'index' }, label: 'Home', key: 'H' },
   { to: { name: 'about' }, label: 'About', key: 'A' },
   { to: { name: 'projects' }, label: 'Projects', key: 'P' },
-  { to: { name: 'uses' }, label: 'Uses', key: 'U' },
 ]
 
-const { H, A, P, U } = useMagicKeys({
+const { H, A, P } = useMagicKeys({
   passive: false,
 })
 
 watch(H, () => navigateTo('/'))
 watch(A, () => navigateTo('/about'))
 watch(P, () => navigateTo('/projects'))
-watch(U, () => navigateTo('/uses'))
 
 const activeLinkClass = '!text-foreground hover:text-foreground'
 </script>

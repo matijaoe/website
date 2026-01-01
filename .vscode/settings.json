@@ -65,5 +65,6 @@
     "jsonc",
     "yaml",
     "toml"
-  ]
+  ],
+  "kiroAgent.configureMCP": "Disabled"
 }
