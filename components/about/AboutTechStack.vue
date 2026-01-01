@@ -10,7 +10,7 @@
       <IconWithText text="TypeScript" icon="logos:typescript-icon" />,
       <span class="text-nowrap">
         <IconWithText text="Tailwind" icon="logos:tailwindcss-icon" />,
-      </span>{{  }}
+      </span>{{ }}
       <IconWithText text="GraphQL" icon="logos:graphql" />,
       <IconWithText text="Apollo" icon="simple-icons:apollographql" />,
       <IconWithText text="Pinia" icon="logos:pinia" />,

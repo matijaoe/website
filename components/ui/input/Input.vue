@@ -1,7 +1,8 @@
 <script setup lang="ts">
 import type { HTMLAttributes } from 'vue'
+import type { InputVariants } from '.'
 import { useVModel } from '@vueuse/core'
-import { type InputVariants, inputVariants } from '.'
+import { inputVariants } from '.'
 
 const props = defineProps<{
   defaultValue?: string | number

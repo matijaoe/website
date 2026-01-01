@@ -1,9 +1,9 @@
 <script setup lang="ts">
 import type { HTMLAttributes } from 'vue'
-import { useVModel } from '@vueuse/core'
 import type { TextareaVariants } from '.'
-import { textareaVariants } from '.'
+import { useVModel } from '@vueuse/core'
 import { cn } from '@/utils/lib'
+import { textareaVariants } from '.'
 
 const props = defineProps<{
   class?: HTMLAttributes['class']
