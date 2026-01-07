@@ -22,7 +22,7 @@ useSeoMeta({
           <IconWithText text="Vue" icon="logos:vue" />,
           <IconWithText text="Nuxt" icon="logos:nuxt-icon" />,
           and full-stack
-          <IconWithText text="TypeScript" icon="logos:typescript-icon" />, I turn ideas into refined, user-friendly experiences. I'm driven by a deep curiosity and a passion for UX/UI design, developer experience, and writing clean, maintainable code.
+          <IconWithText text="TypeScript" icon="logos:typescript-icon" />, I turn ideas into refined, user-friendly experiences. I'm driven by a deep curiosity and a pure passion for UX/UI design, developer experience, and writing clean, maintainable code.
         </p>
 
         <p>
@@ -36,12 +36,12 @@ useSeoMeta({
         </p>
 
         <p>
-          Lately, I've been incredibly excited by the potential of <IconWithText
+          Over the last few years, I've been incredibly excited by the potential of <IconWithText
             text="AI"
             icon="emojione:sparkles"
             icon-size="0.9em"
             icon-class="translate-y-0.5"
-          /> and the impact it can have (and already has) on the way we work and live.
+          /> and the impact it has and will have on the way we work and live. I'm known as <em>the</em> AI guy. Claude Code is my best friend.
         </p>
       </section>
 

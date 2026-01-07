@@ -6,7 +6,7 @@ const year = computed(() => now.value.getFullYear())
 <template>
   <footer class="mt-auto pt-24 pb-10 flex items-center justify-start text-sm text-foreground/40">
     <div class="w-full flex flex-col md:flex-row items-center justify-between gap-8">
-      <p>Matija Osrečki {{ year }} &copy;</p>
+      <p>&copy; Matija Osrečki {{ year }}</p>
 
       <div class="flex items-center gap-7 lowercase">
         <NuxtLink to="https://github.com/matijaoe/website" target="_blank" class="hover:underline hover:text-foreground">

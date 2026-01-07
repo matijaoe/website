@@ -70,7 +70,7 @@ const categories: BookCategory[] = [
   },
   {
     title: 'Nonfiction',
-    description: 'Mix of philosophy, economics, memoirs, tech, business, history, and anything else I find interesting.',
+    description: 'Mix of philosophy, economics, memoirs, tech, business, history, and anything else I find interesting at the moment.',
     books: nonfictionBooks,
   },
 ]
@@ -79,7 +79,7 @@ const categories: BookCategory[] = [
 <template>
   <AboutProseWrapper title="Bookshelf">
     <template #description>
-      I only started reading in 2020 and haven't stopped since. 290+ books and a <span class="font-semibold">{{ readingStreakDays }}-day</span> reading streak later, here are some of my top picks. Narrowing down my favorites was tough. Look me up on <NuxtLink to="https://www.goodreads.com/matijao" target="_blank" class="text-muted-foreground">
+      I only started reading in 2020 and haven't stopped since. Over <strong class="font-semibold text-muted-foreground">300</strong> books and a <span class="font-semibold text-muted-foreground">{{ readingStreakDays }}-day</span> reading streak later, here are some of my top picks. Narrowing down my favorites was tough. Look me up on <NuxtLink to="https://www.goodreads.com/matijao" target="_blank" class="text-muted-foreground">
         Goodreads{{ }}
       </NuxtLink> for more.
     </template>

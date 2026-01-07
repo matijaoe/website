@@ -19,7 +19,7 @@
       <IconWithText text="Playwright" icon="logos:playwright" />,
       <IconWithText text="Radix" icon="simple-icons:radixui" />,
       <IconWithText text="shadcn" icon="simple-icons:shadcnui" />,
-      <IconWithText text="Storybook" icon="logos:storybook-icon" />
+      <IconWithText text="Storybook" icon="logos:storybook-icon" />,
       <IconWithText text="Vite" icon="logos:vitejs" /> and
       <IconWithText text="pnpm" icon="logos:pnpm" />.
     </p>
@@ -29,7 +29,7 @@
     </p>
 
     <p>
-      I also have some experience building projects with <IconWithText text="React" icon="logos:react" />, <IconWithText text="Quasar" icon="devicon:quasar" />, or vanilla <IconWithText text="JavaScript" icon="logos:javascript" />, along with some smaller projects using <IconWithText text="Svelte" icon="logos:svelte-icon" />. I especially like <IconWithText text="Tanstack Query" icon="logos:react-query-icon" />. I've also built backends and APIs using <IconWithText text="Nest.js" icon="logos:nestjs" /> and <IconWithText text="Express" icon="simple-icons:express" />.
+      I also have some experience building projects with <IconWithText text="React" icon="logos:react" />, <IconWithText text="Quasar" icon="devicon:quasar" />, or vanilla <IconWithText text="JavaScript" icon="logos:javascript" />, along with some smaller projects using <IconWithText text="Svelte" icon="logos:svelte-icon" />. I especially like <IconWithText text="Tanstack Query" icon="logos:react-query-icon" />. I've have experience building backends and APIs using <IconWithText text="Nest.js" icon="logos:nestjs" /> and <IconWithText text="Express" icon="simple-icons:express" />.
     </p>
   </section>
 </template>

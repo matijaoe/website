@@ -30,7 +30,7 @@ const podcasts: Podcast[] = [
 <template>
   <AboutProseWrapper title="Podcasts">
     <template #description>
-      I listen to podcasts every single day. Bitcoin, ai, macroeconomics, business, tech, hacking, opsec, history, literature, comedy.
+      I listen to podcasts every single day. Bitcoin, ai, macro, finance, politics, business, tech, hacking, opsec, history, literature, comedy.
     </template>
 
     <ul>
