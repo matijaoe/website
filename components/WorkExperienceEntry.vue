@@ -8,7 +8,7 @@ defineProps<{
   startDate: string
   endDate: string
   logo?: string
-  slug?: 'theydo' | '4ofthem' | 'mannacare' | '3ofthem' | 'infokarta'
+  slug?: 'theydo' | '4ofthem' | 'mendracare' | '3ofthem' | 'infokarta'
   used: string[]
   logoClass?: string
 }>()

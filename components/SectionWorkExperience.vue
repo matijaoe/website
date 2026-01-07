@@ -7,14 +7,14 @@
       <WorkExperienceEntry
         company="TheyDo"
         company-url="https://www.theydo.com"
-        company-location="Amsterdam, Netherlands"
+        company-location="Netherlands"
         location-icon="circle-flags:nl"
         position="Senior Frontend Engineer"
         start-date="Jul 2024"
         end-date="Present"
         slug="theydo"
         logo="/theydo-logo.webp"
-        :used="['Vue', 'TypeScript', 'Apollo', 'GraphQL', 'Tailwind', 'Vitest', 'Playwright', 'Radix', 'Storybook']"
+        :used="['Vue', 'TypeScript', 'Apollo', 'GraphQL', 'Tailwind', 'Vitest', 'Playwright', 'Radix', 'Storybook', 'Tiptap']"
       >
         Helping enterprises map and improve customer journeys by building intuitive tools for collaboration and decision-making.
       </WorkExperienceEntry>
@@ -22,7 +22,7 @@
       <WorkExperienceEntry
         company="Four of them LLC"
         company-url="https://www.4ofthem.eu/"
-        company-location="Zapresic, Croatia"
+        company-location="Croatia"
         location-icon="circle-flags:hr"
         position="Frontend Developer"
         start-date="Aug 2022"
@@ -38,15 +38,15 @@
       </WorkExperienceEntry>
 
       <WorkExperienceEntry
-        company="mannacare"
-        company-url="https://www.mannacare.de/"
-        company-location="Cologne, Germany"
+        company="mendracare"
+        company-url="https://www.mendracare.de/"
+        company-location="Germany"
         location-icon="circle-flags:de"
         position="Frontend Developer"
         start-date="Jun 2023"
         end-date="Oct 2023"
-        slug="mannacare"
-        logo="/mannacare-logo.jpeg"
+        slug="mendracare"
+        logo="/mendracare-logo.jpeg"
         :used="['Vue', 'JavaScript', 'Tanstack Query', 'Vuetify', 'Cypress', 'Vitest']"
       >
         <template #default>
@@ -57,7 +57,7 @@
       <WorkExperienceEntry
         company="Three of them Ltd."
         company-url="https://www.3ofthem.eu/"
-        company-location="Zapresic, Croatia"
+        company-location="Croatia"
         location-icon="circle-flags:hr"
         position="Junior Frontend Developer"
         start-date="Aug 2021"
@@ -76,7 +76,7 @@
       <WorkExperienceEntry
         company="Infokarta d.o.o"
         company-url="https://gis.infokarta.hr/"
-        company-location="Split, Croatia"
+        company-location="Croatia"
         location-icon="circle-flags:hr"
         position="Frontend Developer"
         start-date="May 2021"

@@ -26,7 +26,7 @@ useSeoMeta({
         </Badge>
       </div>
       <h1 class="drop-shadow-sm text-default-900 dark:text-default-50 text-balance text-4xl/[1.1] sm:text-6xl/[1] font-medium font-display lg:text-7xl/[1] mb-4 md:mb-6">
-        Hi, I'm Matija, <br> crafting
+        Hi, I'm <span title="Matija Osrečki">Matija</span>, <br> crafting
         <span>
           <span class="italic">sleek</span>
           <Icon name="emojione:sparkles" class="text-[0.5em] align-top ml-3 rotate-3 -translate-y-2 hidden dark:inline-block" />
@@ -39,7 +39,7 @@ useSeoMeta({
       <div class="text-default-foreground text-base md:text-lg leading-7">
         <div>
           <p>
-            Frontend Engineer, currently at <NuxtLink to="https://www.theydo.com" target="_blank" class="underline hover:text-primary">
+            Senior Frontend Engineer, currently at <NuxtLink to="https://www.theydo.com" target="_blank" class="underline decoration-2 hover:decoration-wavy decoration-pink-400">
               TheyDo{{ }}
             </NuxtLink>.
             <br>

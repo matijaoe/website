@@ -10,7 +10,7 @@ const copied = refAutoReset(false, 2000)
 const { copy } = useClipboard()
 
 const copyToClipboard = () => {
-  copy(props.links[0].linkText)
+  copy(props.links[0]?.linkText ?? '')
   copied.value = true
 }
 
