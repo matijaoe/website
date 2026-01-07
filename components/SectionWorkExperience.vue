@@ -20,7 +20,7 @@
       </WorkExperienceEntry>
 
       <WorkExperienceEntry
-        company="Four of them LLC"
+        company="Four of them"
         company-url="https://www.4ofthem.eu/"
         company-location="Croatia"
         location-icon="circle-flags:hr"
@@ -50,12 +50,12 @@
         :used="['Vue', 'JavaScript', 'Tanstack Query', 'Vuetify', 'Cypress', 'Vitest']"
       >
         <template #default>
-          Developed features for a platform that helps nurses and caregivers manage the complex needs of patients with disabilities.
+          Developed core features for a platform that helps nurses and caregivers manage the complex needs of patients with disabilities.
         </template>
       </WorkExperienceEntry>
 
       <WorkExperienceEntry
-        company="Three of them Ltd."
+        company="Three of them"
         company-url="https://www.3ofthem.eu/"
         company-location="Croatia"
         location-icon="circle-flags:hr"
