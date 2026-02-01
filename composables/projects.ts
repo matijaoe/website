@@ -107,10 +107,10 @@ const projects: Project[] = [
     tags: ['TypeScript', 'Bun', 'Nitro', 'npm'],
     tagsPreview: ['ts', 'Bun', 'Nitro', 'npm'],
     timeframe: '2024',
-    url: 'https://brutoneto.vercel.app/api/neto/95000?detailed=true&yearly=true&place=zg',
+    url: 'https://brutoneto.matijao.com',
     repo: 'https://github.com/matijaoe/brutoneto',
-    color: '#f58442',
-    categories: [Category.modules],
+    color: '#FCC800',
+    categories: [Category.hobby],
   },
   {
     slug: 'emojito',
