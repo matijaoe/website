@@ -12,9 +12,6 @@ const year = computed(() => now.value.getFullYear())
         <NuxtLink to="https://github.com/matijaoe/website" target="_blank" class="hover:underline hover:text-foreground">
           Code
         </NuxtLink>
-        <NuxtLink to="https://2023.matijao.com" target="_blank" class="hover:underline hover:text-foreground">
-          Old site
-        </NuxtLink>
       </div>
     </div>
   </footer>
