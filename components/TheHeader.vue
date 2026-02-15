@@ -10,6 +10,8 @@ const links: { to: RouteLocationRaw, label: string, key: string }[] = [
   { to: { name: 'projects' }, label: 'Projects', key: 'P' },
 ]
 
+const { display: handleDisplay } = useTextScramble('@matijao', { delay: 0, speed: 50 })
+
 const { H, A, P } = useMagicKeys({
   passive: false,
 })
@@ -25,14 +27,13 @@ const activeLinkClass = '!text-foreground hover:text-foreground'
   <header class="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
     <div class="flex items-center justify-between">
       <NuxtLink to="/" class="font-mono text-[17px] flex items-center gap-1.5">
-        @matijao
+        {{ handleDisplay }}
       </NuxtLink>
 
       <div class="flex md:hidden items-center gap-5 translate-y-1">
         <BaseTooltip>
-          <!-- TODO: implement Kbd component -->
           <template #content>
-            ⌘ J
+            <BaseKbd :keys="['⌘', 'J']" />
           </template>
           <Button
             variant="link"
@@ -53,9 +54,7 @@ const activeLinkClass = '!text-foreground hover:text-foreground'
       <template v-for="link in links" :key="link.to.toString()">
         <BaseTooltip>
           <template #content>
-            <span class="text-muted-foreground font-mono font-normal lowercase">
-              [<span class="!text-primary-foreground">{{ link.key }}</span>]
-            </span>
+            <BaseKbd :keys="[link.key]" />
           </template>
           <NuxtLink
             :to="link.to"
@@ -70,9 +69,11 @@ const activeLinkClass = '!text-foreground hover:text-foreground'
 
       <div class="hidden md:flex items-center gap-5">
         <BaseTooltip>
-          <!-- TODO: implement Kbd component -->
           <template #content>
-            ⌘ J
+            <div class="flex items-center gap-1">
+              Switch theme
+              <BaseKbd :keys="['⌘', 'J']" />
+            </div>
           </template>
           <Button
             variant="link"

@@ -53,7 +53,7 @@ defineProps<{
       </div>
 
       <div class="grid-col-2 min-h-[320px] overflow-hidden">
-        <div v-if="project.thumbnail" class="p-7 h-full grid place-content-center" :style="{ background: project.color }">
+        <div v-if="project.thumbnail" class="p-7 h-full grid place-content-center placeholder-pattern" :style="{ background: project.color }">
           <HoverPerspectiveContainer class="rounded-sm">
             <NuxtImg
               :width="720"
@@ -64,11 +64,7 @@ defineProps<{
           </HoverPerspectiveContainer>
         </div>
 
-        <div v-else class="h-full bg-card text-muted/75 flex items-center justify-center text-justify">
-          <div class="text-6xl font-mono font-black leading-none uppercase">
-            pla<br>ceh<br>old<br>er<span class="inline text-violet-600">?</span>
-          </div>
-        </div>
+        <div v-else class="h-full bg-[hsl(var(--background-alt))] placeholder-pattern" />
       </div>
     </NuxtLink>
   </Card>

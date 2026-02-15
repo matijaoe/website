@@ -1,6 +1,12 @@
 <script lang="ts" setup>
-const { setMode } = useTheme()
+const { setMode, isDark } = useTheme()
 const { nowFormatted } = useCurrentTime()
+
+const { revealed, trigger } = usePageReveal()
+const { display: timeDisplay, isComplete: timeReady } = useTextScramble(nowFormatted.value, { delay: 100, speed: 25 })
+const { display: locationDisplay } = useTextScramble('Zagreb, Croatia', { delay: 300, speed: 30 })
+
+onMounted(trigger)
 
 useSeoMeta({
   title: 'Matija Osrečki',
@@ -13,26 +19,29 @@ useSeoMeta({
     <section>
       <div class="mb-5 flex items-center text-muted-foreground gap-2">
         <Badge variant="outline" class="font-mono flex items-center p-0 backdrop-blur-lg bg-white/5 dark:bg-transparent hover:bg-white/5">
-          <span class="px-2.5 py-0.5">{{ nowFormatted }}</span>
+          <span class="px-2.5 py-0.5">{{ timeReady ? nowFormatted : timeDisplay }}</span>
           <span class="border-l px-2.5 py-0.5 flex items-center">
             <span class="inline-flex items-center gap-1">
               <span class="relative flex size-2 mr-1.5">
                 <span class="absolute inline-flex h-full w-full animate-ping rounded-full bg-green-400 opacity-75" />
                 <span class="relative inline-flex size-2 rounded-full bg-green-500" />
               </span>
-              Zagreb, Croatia
+              {{ locationDisplay }}
             </span>
           </span>
         </Badge>
       </div>
-      <h1 class="text-default-900 dark:text-default-50 text-balance text-4xl/[1.1] sm:text-6xl/[1] font-medium font-display lg:text-7xl/[1] mb-4 md:mb-6">
-        I'm <span title="Matija Osrečki">Matija</span>, <br> crafting
-        <span>
-          <span class="italic">sleek</span>
-          <Icon name="emojione-monotone:sparkles" class="text-[0.7em] lg:text-[0.5em] align-top ml-2 lg:ml-3 rotate-3 -translate-y-2 inline-block" />
-        </span>
-
-        <br> <span class="underline">web</span> experiences
+      <h1 class="text-balance text-4xl/[1.1] sm:text-6xl/[1] font-medium font-display lg:text-7xl/[1] mb-4 md:mb-6">
+        <span class="text-reveal" :class="{ revealed }" style="--reveal-delay: 0s">I'm <span title="Matija Osrečki">Matija</span>,</span>
+        <br>
+        <span class="text-reveal" :class="{ revealed }" style="--reveal-delay: 0.12s">crafting <span class="italic">sleek</span></span>
+        <Icon
+          name="emojione:sparkles"
+          class="text-[0.7em] lg:text-[0.5em] align-top ml-2 lg:ml-3 inline-block sparkle-icon"
+          :class="{ 'sparkle-pop': revealed }"
+        />
+        <br>
+        <span class="text-reveal" :class="{ revealed }" style="--reveal-delay: 0.24s"><span class="underline">web</span> experiences</span>
       </h1>
 
       <div class="text-default-foreground text-base md:text-lg leading-7">
@@ -53,16 +62,12 @@ useSeoMeta({
 
         <div class="mt-6 flex items-center gap-3">
           <Button to="/projects" variant="default" size="default" class="lowercase">
-            <span class="text-muted-foreground font-mono font-normal lowercase">
-              [<span class="text-primary-foreground">p</span>]
-            </span>
+            <BaseKbd :keys="['P']" :variant="isDark ? 'light' : 'dark'" class="translate-y-px mr-0.5" />
             Projects
           </Button>
 
           <Button to="/about" variant="frosted-ghost" size="default" class="lowercase">
-            <span class="text-muted-foreground font-mono font-normal lowercase">
-              [<span class="text-primary">a</span>]
-            </span>
+            <BaseKbd :keys="['A']" class="translate-y-px mr-0.5" />
             About me
           </Button>
         </div>
@@ -74,3 +79,34 @@ useSeoMeta({
     <SectionWorkExperience />
   </div>
 </template>
+
+<style scoped>
+.text-reveal {
+  background: linear-gradient(90deg, hsl(var(--foreground)) 50%, hsl(var(--foreground) / 0.15) 50%);
+  background-size: 200% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-position-x: 100%;
+  transition: background-position-x 1.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  transition-delay: var(--reveal-delay, 0s);
+}
+
+.text-reveal.revealed {
+  background-position-x: 0%;
+}
+
+.sparkle-icon {
+  opacity: 0;
+  scale: 0;
+  rotate: -45deg;
+  transition: opacity 0.4s ease, scale 0.5s cubic-bezier(0.34, 1.56, 0.64, 1), rotate 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+  transition-delay: 1.3s;
+}
+
+.sparkle-pop {
+  opacity: 1;
+  scale: 1;
+  rotate: 5deg;
+}
+</style>

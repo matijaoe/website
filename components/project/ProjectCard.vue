@@ -15,7 +15,7 @@ defineProps<{
       class="flex grow flex-col"
     >
       <div class="border-b aspect-[16/10] overflow-hidden">
-        <div v-if="project.thumbnail" class="h-full grid place-content-center" :style="{ background: project.color }">
+        <div v-if="project.thumbnail" class="h-full grid place-content-center placeholder-pattern" :style="{ background: project.color }">
           <NuxtImg
             :width="720"
             format="webp"
@@ -24,48 +24,46 @@ defineProps<{
           />
         </div>
 
-        <div v-else class="h-full bg-primary-foreground  text-muted-foreground/10 dark:text-muted flex items-center justify-center text-justify">
-          <div class="text-3xl font-mono font-black leading-none uppercase">
-            pla<br>ceh<br>old<br>er<span class="inline text-violet-600">?</span>
-          </div>
-        </div>
+        <div v-else class="h-full bg-[hsl(var(--background-alt))] placeholder-pattern" />
       </div>
 
-      <CardHeader class="p-4 pb-2">
-        <div class="w-full flex items-start justify-between gap-8">
-          <p
-            class="font-medium text-xl font-display transition"
-            :style="{ wordBreak: 'break-word' }"
-          >
-            {{ project.name }} <span v-if="project.wip" class="text-lg ml-1">🚧</span>
-          </p>
-          <span class="text-muted-foreground text-sm font-mono translate-y-[7px]">{{ project.timeframe }}</span>
-        </div>
-      </CardHeader>
-
-      <CardContent class="grow p-4 py-0 pb-1">
-        <div>
-          <p class="text-muted-foreground text-sm">
-            {{ project.descriptionShort ?? project.description }}
-          </p>
-        </div>
-      </CardContent>
-
-      <CardFooter v-if="project.tags.length" class="mt-auto p-4">
-        <div class="mt-auto flex flex-wrap w-full gap-1">
-          <template
-            v-for="tag in project.tagsPreview || project.tags"
-            :key="tag"
-          >
-            <Badge
-              class="font-mono lowercase text-nowrap"
-              variant="outline"
+      <div class="flex flex-col grow">
+        <CardHeader class="p-4 pb-2">
+          <div class="w-full flex items-start justify-between gap-8">
+            <p
+              class="font-medium text-xl font-display transition"
+              :style="{ wordBreak: 'break-word' }"
             >
-              {{ tag }}
-            </Badge>
-          </template>
-        </div>
-      </CardFooter>
+              {{ project.name }} <span v-if="project.wip" class="text-lg ml-1">🚧</span>
+            </p>
+            <span class="text-muted-foreground text-sm font-mono translate-y-[7px]">{{ project.timeframe }}</span>
+          </div>
+        </CardHeader>
+
+        <CardContent class="grow p-4 py-0 pb-1">
+          <div>
+            <p class="text-muted-foreground text-sm">
+              {{ project.descriptionShort ?? project.description }}
+            </p>
+          </div>
+        </CardContent>
+
+        <CardFooter v-if="project.tags.length" class="mt-auto p-4">
+          <div class="mt-auto flex flex-wrap w-full gap-1">
+            <template
+              v-for="tag in project.tagsPreview || project.tags"
+              :key="tag"
+            >
+              <Badge
+                class="font-mono lowercase text-nowrap"
+                variant="outline"
+              >
+                {{ tag }}
+              </Badge>
+            </template>
+          </div>
+        </CardFooter>
+      </div>
     </NuxtLink>
   </Card>
 </template>
