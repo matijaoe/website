@@ -39,7 +39,7 @@ useSeoMeta({
           </span>
         </Badge>
       </div>
-      <h1 ref="hero" class="text-balance text-[42px]/[1.1] sm:text-6xl/[1] font-medium font-display lg:text-7xl/[1] lg:leading-[0.93] mb-4 md:mb-6">
+      <h1 ref="hero" class="text-balance text-[42px]/[1.1] sm:text-6xl/none font-medium font-display lg:text-7xl/[0.95] mb-4 md:mb-6">
         <span class="text-reveal" :class="{ revealed }" style="--reveal-delay: 0s">I'm <span title="Matija Osrečki">Matija</span>,</span>
         <br>
         <span class="text-reveal" :class="{ revealed }" style="--reveal-delay: 0.12s">crafting <span class="italic">sleek</span></span>
