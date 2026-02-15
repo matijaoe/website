@@ -72,7 +72,7 @@ function getRotation(index: number): number {
         },
       }"
       initial="hidden"
-      whileInView="show"
+      while-in-view="show"
       :once="true"
       :viewport="{ amount: 0.2 }"
     >
@@ -95,7 +95,7 @@ function getRotation(index: number): number {
           <motion.div
             class="flex items-center justify-center size-10 rounded-lg border border-foreground/10 bg-background-alt hover:bg-muted transition-colors cursor-default"
             :style="{ rotate: `${getRotation(index)}deg` }"
-            :whileHover="{ y: -4, scale: 1.15, rotate: 0, transition: { duration: 0.2 } }"
+            :while-hover="{ y: -4, scale: 1.15, rotate: 0, transition: { duration: 0.2 } }"
           >
             <Icon :name="tool.icon" size="1em" />
           </motion.div>

@@ -8,7 +8,7 @@ defineProps<{
 
 <template>
   <Card
-    class="group shadow-sm overflow-hidden hover:[transition:background-color_700ms,backdrop-filter_700ms] hover:bg-white/[2%] hover:backdrop-blur-3xl"
+    class="group shadow-xs overflow-hidden hover:[transition:background-color_700ms,backdrop-filter_700ms] hover:bg-white/[2%] hover:backdrop-blur-3xl"
   >
     <NuxtLink
       :to="{ name: 'projects-slug', params: { slug: project.slug } }"
@@ -54,7 +54,7 @@ defineProps<{
 
       <div class="grid-col-2 overflow-hidden">
         <div v-if="project.thumbnail" class="p-7 h-full grid place-content-center placeholder-pattern" :style="{ background: project.color }">
-          <HoverPerspectiveContainer class="rounded-sm">
+          <HoverPerspectiveContainer class="rounded-xs">
             <NuxtImg
               :width="720"
               format="webp"

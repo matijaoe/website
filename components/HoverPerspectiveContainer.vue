@@ -32,7 +32,7 @@ const onMousemove = (event: MouseEvent) => {
 <template>
   <div
     ref="cardEl"
-    class="relative transform overflow-hidden transition-[transform_border_box-shadow] duration-300 ease-out shadow-sm"
+    class="relative transform overflow-hidden transition-[transform_border_box-shadow] duration-300 ease-out shadow-xs"
     @mousemove="onMousemove"
     @mouseleave="onMouseleave"
   >

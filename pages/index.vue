@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-const { setMode, isDark } = useTheme()
+const { setMode } = useTheme()
 const { nowFormatted } = useCurrentTime()
 
 const revealed = ref(false)

@@ -4,18 +4,18 @@ import { cva } from 'class-variance-authority'
 export { default as Badge } from './Badge.vue'
 
 export const badgeVariants = cva(
-  'inline-flex items-center rounded-md border focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2',
+  'inline-flex items-center rounded-md border focus:outline-hidden focus:ring-2 focus:ring-ring focus:ring-offset-2',
   {
     variants: {
       variant: {
         'default':
-          'border-transparent bg-primary text-primary-foreground shadow transition-colors hover:bg-primary/80',
+          'border-transparent bg-primary text-primary-foreground shadow-sm transition-colors hover:bg-primary/80',
         'secondary':
           'border-transparent bg-secondary text-secondary-foreground transition-colors hover:bg-secondary/80',
         'destructive':
-          'border-transparent bg-destructive text-destructive-foreground shadow transition-colors hover:bg-destructive/80',
+          'border-transparent bg-destructive text-destructive-foreground shadow-sm transition-colors hover:bg-destructive/80',
         'outline': 'text-foreground bg-background-alt',
-        'primary': 'border-transparent bg-primary text-primary-foreground shadow transition-colors hover:bg-primary/90',
+        'primary': 'border-transparent bg-primary text-primary-foreground shadow-sm transition-colors hover:bg-primary/90',
         'secondary-border': 'border-transparent bg-secondary text-secondary-foreground transition-colors hover:bg-secondary/80 border-border dark:border-muted-foreground/5',
       },
       size: {

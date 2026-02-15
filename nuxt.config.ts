@@ -1,7 +1,8 @@
+import tailwindcss from '@tailwindcss/vite'
+
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   modules: [
-    '@nuxtjs/tailwindcss',
     'shadcn-nuxt',
     '@vueuse/nuxt',
     '@nuxt/image',
@@ -14,7 +15,15 @@ export default defineNuxtConfig({
     'motion-v/nuxt',
   ],
 
+  css: [
+    '~/assets/css/tailwind.css',
+  ],
+
   devtools: { enabled: true },
+
+  vite: {
+    plugins: [tailwindcss()],
+  },
 
   experimental: {
     typedPages: true,

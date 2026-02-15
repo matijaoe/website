@@ -47,11 +47,12 @@
     "@nuxt/image": "^2.0.0",
     "@nuxtjs/color-mode": "^4.0.0",
     "@nuxtjs/device": "^4.0.0",
-    "@nuxtjs/tailwindcss": "^6.14.0",
     "@tailwindcss/typography": "^0.5.19",
+    "@tailwindcss/vite": "^4.1.18",
     "@vueuse/nuxt": "^14.1.0",
     "eslint-plugin-format": "^1.1.0",
     "shadcn-nuxt": "^2.4.3",
+    "tailwindcss": "^4.1.18",
     "typescript": "^5.9.3"
   }
 }

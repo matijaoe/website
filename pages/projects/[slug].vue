@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { motion, stagger } from 'motion-v'
+import { motion } from 'motion-v'
 
 const route = useRoute('projects-slug')
 
@@ -34,7 +34,7 @@ const itemAnimate = {
 <template>
   <div v-if="project" class="w-full">
     <div>
-      <motion.div :initial="itemInitial" :whileInView="itemAnimate" :once="true" :viewport="{ amount: 0.3 }" class="mt-5 flex flex-col md:flex-row items-start justify-between gap-4">
+      <motion.div :initial="itemInitial" :while-in-view="itemAnimate" :once="true" :viewport="{ amount: 0.3 }" class="mt-5 flex flex-col md:flex-row items-start justify-between gap-4">
         <h1 class="text-5xl lg:text-7xl font-medium font-display text-left">
           {{ project.name }}
         </h1>
@@ -52,7 +52,7 @@ const itemAnimate = {
         </div>
       </motion.div>
 
-      <motion.div :initial="itemInitial" :whileInView="itemAnimate" :once="true" :viewport="{ amount: 0.3 }" class="mt-5 flex flex-col gap-2 text-[11px] max-w-lg">
+      <motion.div :initial="itemInitial" :while-in-view="itemAnimate" :once="true" :viewport="{ amount: 0.3 }" class="mt-5 flex flex-col gap-2 text-[11px] max-w-lg">
         <div class="flex flex-wrap items-center gap-2">
           <template
             v-for="tag in project.tags"
@@ -87,7 +87,7 @@ const itemAnimate = {
         </div>
       </motion.div>
 
-      <motion.div :initial="itemInitial" :whileInView="itemAnimate" :once="true" :viewport="{ amount: 0.3 }" class="mt-5 font-sans text-base md:text-lg max-w-3xl">
+      <motion.div :initial="itemInitial" :while-in-view="itemAnimate" :once="true" :viewport="{ amount: 0.3 }" class="mt-5 font-sans text-base md:text-lg max-w-3xl">
         <p>
           {{ project.description }}
         </p>
@@ -102,11 +102,11 @@ const itemAnimate = {
           v-for="image in images"
           :key="image"
           :initial="itemInitial"
-          :whileInView="itemAnimate"
+          :while-in-view="itemAnimate"
           :once="true"
           :viewport="{ amount: 0.2 }"
         >
-          <div class="overflow-hidden ring ring-input rounded-md aspect-video bg-background-alt animate-pulse">
+          <div class="overflow-hidden ring-3 ring-input rounded-md aspect-video bg-background-alt animate-pulse">
             <NuxtLink
               :to="image"
               target="_blank"
