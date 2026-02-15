@@ -34,7 +34,7 @@ const itemAnimate = {
 <template>
   <div v-if="project" class="w-full">
     <div>
-      <motion.div :initial="itemInitial" :while-in-view="itemAnimate" :once="true" :viewport="{ amount: 0.3 }" class="mt-5 flex flex-col md:flex-row items-start justify-between gap-4">
+      <div class="mt-5 flex flex-col md:flex-row items-start justify-between gap-4">
         <h1 class="text-5xl lg:text-7xl font-medium font-display text-left">
           {{ project.name }}
         </h1>
@@ -50,9 +50,9 @@ const itemAnimate = {
             <Icon name="lucide:arrow-up-right" class="text-[1.2em]" /> Live
           </Button>
         </div>
-      </motion.div>
+      </div>
 
-      <motion.div :initial="itemInitial" :while-in-view="itemAnimate" :once="true" :viewport="{ amount: 0.3 }" class="mt-5 flex flex-col gap-2 text-[11px] max-w-lg">
+      <div class="mt-5 flex flex-col gap-2 text-[11px] max-w-lg">
         <div class="flex flex-wrap items-center gap-2">
           <template
             v-for="tag in project.tags"
@@ -85,13 +85,13 @@ const itemAnimate = {
             </Badge>
           </NuxtLink>
         </div>
-      </motion.div>
+      </div>
 
-      <motion.div :initial="itemInitial" :while-in-view="itemAnimate" :once="true" :viewport="{ amount: 0.3 }" class="mt-5 font-sans text-base md:text-lg max-w-3xl">
+      <div class="mt-5 font-sans text-base md:text-lg max-w-3xl">
         <p>
           {{ project.description }}
         </p>
-      </motion.div>
+      </div>
 
       <!-- TODO: implement image distortion effects -->
       <div
