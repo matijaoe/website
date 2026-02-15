@@ -17,17 +17,17 @@ const screenContent: ScreenContent[] = [
   { title: 'Margin Call', url: 'https://letterboxd.com/film/margin-call/', year: '2011' },
   { title: 'The Big Short', url: 'https://letterboxd.com/film/the-big-short/', year: '2015' },
   { title: 'Conclave', url: 'https://letterboxd.com/film/conclave/', year: '2024' },
-  { title: 'Chernobyl (mini-series)', url: 'https://www.imdb.com/title/tt7366338/', year: '2019' },
+  { title: 'Chernobyl', url: 'https://www.imdb.com/title/tt7366338/', year: '2019' },
   { title: 'Better Call Saul', url: 'https://www.imdb.com/title/tt3032476/', year: '2015' },
 ]
 </script>
 
 <template>
-  <AboutProseWrapper title="Screen favs">
+  <AboutProseWrapper title="Screen favorites">
     <template #description>
-      I don't watch much, but when I do, I'm very picky. These ones stuck with me. It's mostly <NuxtLink to="https://boxd.it/6OXxN" external target="_blank" class="text-muted-foreground">
-        movies{{ }}
-      </NuxtLink>.
+      I don't watch much, so I'm very picky when I do. <NuxtLink to="https://boxd.it/6OXxN" external target="_blank" class="text-muted-foreground">
+        These{{ }}
+      </NuxtLink> ones stuck with me.
     </template>
 
     <ul>

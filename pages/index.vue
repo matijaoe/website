@@ -2,11 +2,20 @@
 const { setMode, isDark } = useTheme()
 const { nowFormatted } = useCurrentTime()
 
-const { revealed, trigger } = usePageReveal()
-const { display: timeDisplay, isComplete: timeReady } = useTextScramble(nowFormatted.value, { delay: 100, speed: 25 })
-const { display: locationDisplay } = useTextScramble('Zagreb, Croatia', { delay: 300, speed: 30 })
+const revealed = ref(false)
+const heroEl = useTemplateRef<HTMLElement>('hero')
+const { display: timeDisplay, isComplete: timeReady, scramble: timeScramble } = useTextScramble(nowFormatted.value, { delay: 100, speed: 25 })
+const { display: locationDisplay, scramble: locationScramble } = useTextScramble('Zagreb, Croatia', { delay: 300, speed: 30 })
 
-onMounted(trigger)
+onMounted(() => {
+  revealed.value = false
+  nextTick(() => {
+    void heroEl.value?.offsetHeight
+    revealed.value = true
+    timeScramble()
+    locationScramble()
+  })
+})
 
 useSeoMeta({
   title: 'Matija Osrečki',
@@ -31,7 +40,7 @@ useSeoMeta({
           </span>
         </Badge>
       </div>
-      <h1 class="text-balance text-4xl/[1.1] sm:text-6xl/[1] font-medium font-display lg:text-7xl/[1] mb-4 md:mb-6">
+      <h1 ref="hero" class="text-balance text-[42px]/[1.1] sm:text-6xl/[1] font-medium font-display lg:text-7xl/[1] mb-4 md:mb-6">
         <span class="text-reveal" :class="{ revealed }" style="--reveal-delay: 0s">I'm <span title="Matija Osrečki">Matija</span>,</span>
         <br>
         <span class="text-reveal" :class="{ revealed }" style="--reveal-delay: 0.12s">crafting <span class="italic">sleek</span></span>
@@ -62,11 +71,11 @@ useSeoMeta({
 
         <div class="mt-6 flex items-center gap-3">
           <Button to="/projects" variant="default" size="default" class="lowercase">
-            <BaseKbd :keys="['P']" :variant="isDark ? 'light' : 'dark'" class="translate-y-px mr-0.5" />
+            <BaseKbd :keys="['P']" variant="auto-inverted" class="translate-y-px mr-0.5" />
             Projects
           </Button>
 
-          <Button to="/about" variant="frosted-ghost" size="default" class="lowercase">
+          <Button to="/about" variant="ghost" size="default" class="lowercase">
             <BaseKbd :keys="['A']" class="translate-y-px mr-0.5" />
             About me
           </Button>
@@ -100,8 +109,13 @@ useSeoMeta({
   opacity: 0;
   scale: 0;
   rotate: -45deg;
+  filter: brightness(0);
   transition: opacity 0.4s ease, scale 0.5s cubic-bezier(0.34, 1.56, 0.64, 1), rotate 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
   transition-delay: 1.3s;
+}
+
+:root.dark .sparkle-icon {
+  filter: none;
 }
 
 .sparkle-pop {

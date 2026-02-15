@@ -85,7 +85,7 @@
         :used="['Nuxt', 'Vuex', 'JavaScript', 'Mapbox', 'Bootstrap', 'Sass', 'Node', 'Express', 'Postgres']"
       >
         <template #logo>
-          <Icon name="emojione:world-map" class="aspect-square size-4 rounded-[2px] -ml-0.5" alt="company logo" />
+          <Icon name="lucide:map" class="aspect-square size-4 rounded-[2px] -ml-0.5" alt="company logo" />
         </template>
 
         <template #default>

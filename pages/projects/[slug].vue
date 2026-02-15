@@ -27,7 +27,7 @@ useSeoMeta({
         </h1>
 
         <div class="hidden md:flex items-center gap-3 mt-2">
-          <Button to="/projects" variant="frosted-ghost" class="flex items-center gap-2 lowercase">
+          <Button to="/projects" variant="ghost" class="flex items-center gap-2 lowercase">
             <Icon name="lucide:arrow-left" class="text-[1.2em]" /> Back
           </Button>
           <Button v-if="project.repo" :to="project.repo" external target="_blank" variant="secondary" class="flex items-center gap-2 lowercase">

@@ -1,46 +1,77 @@
+const CHARS = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%&*'
+const PRESERVE = /[\s,:@./]/
+
+function runScramble(
+  text: string,
+  display: Ref<string>,
+  speed: number,
+  onDone?: () => void,
+) {
+  const letterFrames = text.split('').map((char, i) => {
+    if (PRESERVE.test(char)) { return 0 }
+    return Math.round(8 + i * 3 + Math.random() * 4)
+  })
+  const totalFrames = Math.max(...letterFrames, 18)
+  let frame = 0
+
+  display.value = text.split('').map((char) =>
+    PRESERVE.test(char) ? char : CHARS[Math.floor(Math.random() * CHARS.length)],
+  ).join('')
+
+  const interval = setInterval(() => {
+    display.value = text.split('').map((char, i) => {
+      if (PRESERVE.test(char)) { return char }
+      if (frame >= letterFrames[i]) { return char }
+      return CHARS[Math.floor(Math.random() * CHARS.length)]
+    }).join('')
+
+    frame++
+    if (frame > totalFrames) {
+      clearInterval(interval)
+      display.value = text
+      onDone?.()
+    }
+  }, speed)
+
+  return interval
+}
+
 export function useTextScramble(text: string, options?: { delay?: number, speed?: number }) {
-  const { revealed } = usePageReveal()
-  const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%&*'
   const display = ref(text)
   const isComplete = ref(false)
   const delay = options?.delay ?? 0
-  const speed = options?.speed ?? 30
+  const speed = options?.speed ?? 60
+  let activeInterval: ReturnType<typeof setInterval> | null = null
 
-  if (revealed.value) {
-    isComplete.value = true
-    return { display, isComplete }
+  function scramble() {
+    if (!import.meta.client) { return }
+    if (activeInterval) { return }
+
+    setTimeout(() => {
+      activeInterval = runScramble(text, display, speed, () => {
+        activeInterval = null
+        isComplete.value = true
+      })
+    }, delay)
   }
+
+  return { display, isComplete, scramble }
+}
+
+export function useReactiveScramble(source: MaybeRefOrGetter<string>, options?: { speed?: number }) {
+  const speed = options?.speed ?? 65
+  const display = ref(toValue(source))
+  let interval: ReturnType<typeof setInterval> | null = null
 
   if (import.meta.client) {
-    const stop = watch(revealed, (val) => {
-      if (!val) return
-      stop()
-
-      display.value = text.replace(/[^\s,:@.]/g, () => chars[Math.floor(Math.random() * chars.length)])
-
-      setTimeout(() => {
-        let frame = 0
-        const totalFrames = text.length * 2
-
-        const interval = setInterval(() => {
-          const revealIndex = Math.floor((frame / totalFrames) * text.length)
-
-          display.value = text.split('').map((char, i) => {
-            if (/[\s,:@.]/.test(char)) return char
-            if (i < revealIndex) return char
-            return chars[Math.floor(Math.random() * chars.length)]
-          }).join('')
-
-          frame++
-          if (frame >= totalFrames) {
-            clearInterval(interval)
-            display.value = text
-            isComplete.value = true
-          }
-        }, speed)
-      }, delay)
-    })
+    watch(() => toValue(source), (text) => {
+      if (!text) { return }
+      if (interval) { clearInterval(interval) }
+      interval = runScramble(text, display, speed, () => {
+        interval = null
+      })
+    }, { immediate: true })
   }
 
-  return { display, isComplete }
+  return display
 }

@@ -4,32 +4,28 @@ import { cva } from 'class-variance-authority'
 export { default as Button } from './Button.vue'
 
 export const buttonVariants = cva(
-  'inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50',
+  'inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 transition-colors',
   {
     variants: {
       variant: {
-        'default': 'bg-primary text-primary-foreground shadow hover:bg-primary/90',
-        'destructive':
+        default:
+          'bg-[hsl(var(--btn-primary-bg))] text-[hsl(var(--btn-primary-text))] border border-[hsl(var(--btn-primary-border))] hover:bg-[hsl(var(--btn-primary-bg-hover))]',
+        secondary:
+          'bg-[hsl(var(--btn-secondary-bg))] text-[hsl(var(--btn-secondary-text))] border border-[hsl(var(--btn-secondary-border))] hover:bg-[hsl(var(--btn-secondary-bg-hover))] backdrop-blur-md hover:backdrop-blur-lg',
+        ghost:
+          'text-[hsl(var(--btn-ghost-text))] hover:bg-black/5 hover:backdrop-blur-lg dark:hover:bg-white/10',
+        destructive:
           'bg-destructive text-destructive-foreground shadow-sm hover:bg-destructive/90',
-        'outline':
+        outline:
           'border border-input bg-background shadow-sm hover:bg-accent hover:text-accent-foreground',
-        'secondary':
-          'bg-secondary text-secondary-foreground shadow-sm hover:bg-secondary/80',
-        'ghost': 'hover:bg-accent hover:text-accent-foreground',
-        'link': 'text-primary underline-offset-4 hover:underline',
-        // frosted
-        'frosted-outline':
-          'border border-input bg-transparent backdrop-blur-lg shadow-sm hover:bg-white/5 hover:text-accent-foreground',
-        'frosted':
-          'bg-secondary backdrop-blur-lg text-secondary-foreground shadow-sm hover:bg-white/15',
-        'frosted-ghost': 'backdrop-blur-lg hover:bg-white/5 hover:text-accent-foreground',
+        link: 'text-primary underline-offset-4 hover:underline',
       },
       size: {
-        'default': 'h-9 px-3 py-2 gap-[5px]',
-        'sm': 'h-8 px-3 text-xs gap-1',
-        'lg': 'h-10 px-4 gap-2',
-        'icon': 'h-9 w-9',
-        'icon-lg': 'h-11 w-11',
+        'default': 'h-9 px-2.5 py-2 gap-[5px]',
+        'sm': 'h-8 px-2 py-1.5 text-xs gap-1',
+        'lg': 'h-10 px-3.5 py-2.5 gap-2',
+        'icon': 'h-8 w-8',
+        'icon-lg': 'h-10 w-10',
       },
     },
     defaultVariants: {

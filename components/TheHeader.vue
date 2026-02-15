@@ -10,15 +10,17 @@ const links: { to: RouteLocationRaw, label: string, key: string }[] = [
   { to: { name: 'projects' }, label: 'Projects', key: 'P' },
 ]
 
-const { display: handleDisplay } = useTextScramble('@matijao', { delay: 0, speed: 50 })
+const { display: handleDisplay, scramble: handleScramble } = useTextScramble('@matijao', { delay: 0, speed: 50 })
+
+onMounted(handleScramble)
 
 const { H, A, P } = useMagicKeys({
   passive: false,
 })
 
-watch(H, () => navigateTo('/'))
-watch(A, () => navigateTo('/about'))
-watch(P, () => navigateTo('/projects'))
+watch(H!, () => navigateTo('/'))
+watch(A!, () => navigateTo('/about'))
+watch(P!, () => navigateTo('/projects'))
 
 const activeLinkClass = '!text-foreground hover:text-foreground'
 </script>
@@ -26,7 +28,7 @@ const activeLinkClass = '!text-foreground hover:text-foreground'
 <template>
   <header class="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
     <div class="flex items-center justify-between">
-      <NuxtLink to="/" class="font-mono text-[17px] flex items-center gap-1.5">
+      <NuxtLink to="/" class="font-mono text-[17px] flex items-center gap-1.5" @mouseenter="handleScramble">
         {{ handleDisplay }}
       </NuxtLink>
 
@@ -70,8 +72,9 @@ const activeLinkClass = '!text-foreground hover:text-foreground'
       <div class="hidden md:flex items-center gap-5">
         <BaseTooltip>
           <template #content>
-            <div class="flex items-center gap-1">
+            <div class="flex items-center gap-1.5">
               Switch theme
+              <span class="text-muted-foreground/50">&bull;</span>
               <BaseKbd :keys="['⌘', 'J']" />
             </div>
           </template>

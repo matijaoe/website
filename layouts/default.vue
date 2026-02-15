@@ -6,7 +6,6 @@ const scrollToTop = () => {
 }
 
 const { breadcrumbs, isHome } = useBreadcrumbs()
-const { isDark } = useTheme()
 </script>
 
 <template>
@@ -15,12 +14,12 @@ const { isDark } = useTheme()
 
     <div class="py-5 grow md:pt-32">
       <div>
-        <Breadcrumb v-show="!isHome" class="hidden lg:block mb-6">
+        <Breadcrumb v-if="!isHome" class="hidden lg:block mb-6">
           <BreadcrumbList>
             <template v-for="(part, idx) in breadcrumbs" :key="part.path">
               <BreadcrumbItem class="lowercase">
-                <BreadcrumbLink :href="part.path">
-                  {{ part.name }}
+                <BreadcrumbLink :href="part.path" :class="idx === breadcrumbs.length - 1 && 'text-primary'">
+                  <BaseScrambleText :text="part.name" />
                 </BreadcrumbLink>
               </BreadcrumbItem>
               <BreadcrumbSeparator v-if="idx < breadcrumbs.length - 1" />
@@ -37,9 +36,9 @@ const { isDark } = useTheme()
         <TransitionFade>
           <Button
             v-show="y > 120"
-            :variant="isDark ? 'secondary' : 'outline'"
+            variant="secondary"
             size="icon-lg"
-            class="fixed bottom-6 right-6 lg:bottom-14 lg:right-14 rounded-full active:scale-90 transition shadow-xl"
+            class="fixed bottom-6 right-6 lg:bottom-14 lg:right-14 rounded-full"
             @click="scrollToTop"
           >
             <Icon name="lucide:chevron-up" class="text-default-50 text-xl" />

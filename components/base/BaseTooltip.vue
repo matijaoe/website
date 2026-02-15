@@ -6,7 +6,7 @@ withDefaults(defineProps<{
   side?: 'top' | 'right' | 'bottom' | 'left'
   sideOffset?: number
 }>(), {
-  delay: 0,
+  delay: 500,
 })
 </script>
 

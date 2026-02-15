@@ -63,7 +63,7 @@ function getRotation(index: number): string {
     <div class="not-prose flex flex-wrap gap-3 mt-7">
       <BaseTooltip v-for="(tool, index) in tools" :key="tool.name" :content="tool.name">
         <div
-          class="flex items-center justify-center size-10 rounded-lg border bg-background hover:bg-accent transition-all hover:rotate-0!"
+          class="flex items-center justify-center size-10 rounded-lg border border-foreground/10 bg-foreground/[0.03] hover:bg-foreground/[0.06] transition-all hover:rotate-0!"
           :style="{ transform: getRotation(index) }"
         >
           <Icon :name="tool.icon" size="1em" />
