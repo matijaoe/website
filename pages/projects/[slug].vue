@@ -1,4 +1,6 @@
 <script lang="ts" setup>
+import { motion, stagger } from 'motion-v'
+
 const route = useRoute('projects-slug')
 
 const { getProduct } = useProjects()
@@ -16,12 +18,23 @@ useSeoMeta({
   title: () => project.value?.name ?? 'Projects',
   ogTitle: () => project.value?.name ?? 'Projects',
 })
+
+const itemInitial = { opacity: 0, y: 20, filter: 'blur(4px)' }
+const itemAnimate = {
+  opacity: 1,
+  y: 0,
+  filter: 'blur(0px)',
+  transition: {
+    duration: 0.5,
+    ease: [0.25, 0.1, 0.25, 1] as [number, number, number, number],
+  },
+}
 </script>
 
 <template>
   <div v-if="project" class="w-full">
     <div>
-      <div class="mt-5 flex flex-col md:flex-row items-start justify-between gap-4">
+      <motion.div :initial="itemInitial" :whileInView="itemAnimate" :once="true" :viewport="{ amount: 0.3 }" class="mt-5 flex flex-col md:flex-row items-start justify-between gap-4">
         <h1 class="text-5xl lg:text-7xl font-medium font-display text-left">
           {{ project.name }}
         </h1>
@@ -37,9 +50,9 @@ useSeoMeta({
             <Icon name="lucide:arrow-up-right" class="text-[1.2em]" /> Live
           </Button>
         </div>
-      </div>
+      </motion.div>
 
-      <div class="mt-5 flex flex-col gap-2 text-[11px] max-w-lg">
+      <motion.div :initial="itemInitial" :whileInView="itemAnimate" :once="true" :viewport="{ amount: 0.3 }" class="mt-5 flex flex-col gap-2 text-[11px] max-w-lg">
         <div class="flex flex-wrap items-center gap-2">
           <template
             v-for="tag in project.tags"
@@ -47,7 +60,7 @@ useSeoMeta({
           >
             <Badge
               class="font-mono lowercase text-nowrap"
-              variant="secondary-border"
+              variant="outline"
             >
               {{ tag }}
             </Badge>
@@ -58,7 +71,7 @@ useSeoMeta({
           <NuxtLink :to="project.repo" external target="_blank" class="block md:hidden">
             <Badge
               class="font-mono lowercase text-nowrap flex items-center gap-1"
-              variant="secondary-border"
+              variant="outline"
             >
               <Icon name="lucide:code" /> code
             </Badge>
@@ -72,21 +85,28 @@ useSeoMeta({
             </Badge>
           </NuxtLink>
         </div>
-      </div>
+      </motion.div>
 
-      <div class="mt-5 font-sans text-base md:text-lg max-w-3xl">
+      <motion.div :initial="itemInitial" :whileInView="itemAnimate" :once="true" :viewport="{ amount: 0.3 }" class="mt-5 font-sans text-base md:text-lg max-w-3xl">
         <p>
           {{ project.description }}
         </p>
-      </div>
+      </motion.div>
 
       <!-- TODO: implement image distortion effects -->
-      <Card v-if="images?.length" class="mt-10 max-w-3xl">
-        <div
+      <div
+        v-if="images?.length"
+        class="mt-10 max-w-3xl flex flex-col gap-4"
+      >
+        <motion.div
           v-for="image in images"
           :key="image"
+          :initial="itemInitial"
+          :whileInView="itemAnimate"
+          :once="true"
+          :viewport="{ amount: 0.2 }"
         >
-          <div class="overflow-hidden ring ring-input rounded-md">
+          <div class="overflow-hidden ring ring-input rounded-md aspect-video bg-background-alt animate-pulse">
             <NuxtLink
               :to="image"
               target="_blank"
@@ -97,11 +117,13 @@ useSeoMeta({
                 format="webp"
                 :src="image"
                 alt="Thumbnail"
+                class="relative z-10"
+                @load="($event.target as HTMLElement)?.closest('.animate-pulse')?.classList.remove('animate-pulse', 'bg-background-alt')"
               />
             </NuxtLink>
           </div>
-        </div>
-      </Card>
+        </motion.div>
+      </div>
     </div>
   </div>
 </template>

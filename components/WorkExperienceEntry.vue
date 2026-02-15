@@ -15,54 +15,62 @@ defineProps<{
 </script>
 
 <template>
-  <BaseRow label="Aug 2021 - Present" responsive class="-ml-4 group hover:bg-default-200/25 dark:hover:bg-default-800/20 mx--4 rounded-md !p-4">
-    <template #label>
+  <li class="relative flex gap-x-3 md:grid md:grid-cols-3 md:gap-5">
+    <!-- Date (desktop) -->
+    <div class="hidden md:block col-span-1">
       <p class="text-muted-foreground text-sm leading-[1.75rem]">
         {{ startDate }} &mdash; {{ endDate }}
       </p>
-    </template>
-    <template #default>
-      <div>
-        <div class="mb-1 flex items-center gap-2">
-          <h3 class="text-xl font-medium">
-            {{ position }}
-          </h3>
+    </div>
+
+
+    <!-- Content -->
+    <div class="flex-auto md:col-span-2 relative">
+      <!-- Desktop timeline (absolute, in grid gap) -->
+      <div class="hidden md:flex flex-col items-center absolute top-0 bottom-0 -left-10 w-6">
+        <div class="timeline-line absolute top-8 -bottom-5 left-1/2 -translate-x-1/2 w-px bg-border" />
+        <div class="relative mt-0.5 flex size-6 items-center justify-center z-10">
+          <div class="size-2.5 rounded-full bg-background-alt ring-1 ring-border" />
         </div>
+      </div>
 
-        <div class="flex items-start gap-2 sm:items-center">
+      <div class="pb-2">
+        <p class="text-muted-foreground text-sm mb-0.5 md:hidden">
+          {{ startDate }} &mdash; {{ endDate }}
+        </p>
+
+        <h3 class="text-lg font-medium">
+          {{ position }}
+        </h3>
+
+        <div class="flex items-center gap-2 mt-0.5">
           <slot name="logo">
-            <img :src="logo" class="aspect-square h-[20px] rounded-[2px]" :class="[logoClass]" alt="logo">
+            <img :src="logo" class="aspect-square h-[16px] rounded-[2px]" :class="[logoClass]" alt="logo">
           </slot>
-
-          <div class="flex flex-row items-center gap-2 text-sm -mt-0.4">
-            <NuxtLink :to="companyUrl" external target="_blank" class="hover:underline">
-              <p class="text-base ">
-                {{ company }}
-              </p>
-            </NuxtLink>
-          </div>
-          <span class="text-muted-foreground translate-y-[-0.08rem]">∗</span>
-
-          <p class="text-muted-foreground flex items-center gap-1 text-base">
-            <span>{{ companyLocation }}</span>
+          <NuxtLink :to="companyUrl" external target="_blank" class="text-base hover:underline">
+            {{ company }}
+          </NuxtLink>
+          <span class="text-muted-foreground">·</span>
+          <p class="text-muted-foreground text-base">
+            {{ companyLocation }}
           </p>
         </div>
-      </div>
 
-      <div v-if="$slots.default" class="text-muted-foreground mt-1 text-base">
-        <slot />
-      </div>
+        <div v-if="$slots.default" class="text-muted-foreground mt-2 text-base">
+          <slot />
+        </div>
 
-      <div class="flex items-center flex-wrap gap-1 mt-3">
-        <Badge
-          v-for="item in used"
-          :key="item"
-          class="font-mono lowercase text-nowrap"
-          variant="outline"
-        >
-          {{ item }}
-        </Badge>
+        <div class="flex items-center flex-wrap gap-1 mt-3">
+          <Badge
+            v-for="item in used"
+            :key="item"
+            class="font-mono lowercase text-nowrap"
+            variant="outline"
+          >
+            {{ item }}
+          </Badge>
+        </div>
       </div>
-    </template>
-  </BaseRow>
+    </div>
+  </li>
 </template>

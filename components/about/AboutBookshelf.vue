@@ -99,7 +99,7 @@ const categories: BookCategory[] = [
               {{ book.title }}
             </NuxtLink>
             <span v-if="book.author" class="text-muted-foreground">
-              ∗ {{ book.author }}
+              <span class="px-2">·</span>{{ book.author }}
             </span>
             <span v-if="book.description" class="text-muted-foreground" title="📖 = read, 🎧 = listened">
               &nbsp;{{ book.description }}

@@ -7,12 +7,12 @@ type Podcast = {
 
 const podcasts: Podcast[] = [
   { title: 'Lex Fridman Podcast', url: 'https://lexfridman.com/podcast/' },
-  { title: 'Dwarkesh Podcast', author: 'Dwarkesh Patel', url: 'https://www.dwarkesh.com/' },
-  { title: 'Cheeky Pint', author: 'John Collison', url: 'https://cheekypint.transistor.fm/' },
-  { title: 'Darknet Diaries', url: 'https://darknetdiaries.com/' },
-  { title: 'Acquired', url: 'https://acquired.fm/' },
   { title: 'Syntax.fm', url: 'https://syntax.fm/' },
+  { title: 'Cheeky Pint', author: 'John Collison', url: 'https://cheekypint.transistor.fm/' },
+  { title: 'Dwarkesh Podcast', author: 'Dwarkesh Patel', url: 'https://www.dwarkesh.com/' },
   { title: 'Lenny\'s Podcast', url: 'https://lennysnewsletter.com/podcast' },
+  { title: 'Acquired', url: 'https://acquired.fm/' },
+  { title: 'Darknet Diaries', url: 'https://darknetdiaries.com/' },
   { title: 'The Rest is History', url: 'https://podcasts.apple.com/hr/podcast/the-rest-is-history/id1537788786' },
   { title: 'The History of Literature', url: 'https://historyofliterature.com/' },
   { title: 'The Jack Mallers Show', url: 'https://podcasts.apple.com/us/podcast/the-jack-mallers-show/id1695949365' },
@@ -31,7 +31,7 @@ const podcasts: Podcast[] = [
 <template>
   <AboutProseWrapper title="Podcasts">
     <template #description>
-      I listen to podcasts every single day. Bitcoin, ai, macro, finance, politics, business, tech, hacking, opsec, history, literature, comedy.
+      I listen to podcasts every single day. Bitcoin, AI, macro, finance, politics, business, tech, hacking, opsec, history, literature, comedy.
     </template>
 
     <ul>

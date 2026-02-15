@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import { motion, stagger } from 'motion-v'
+
 const tools = [
   { name: 'Vue', icon: 'logos:vue' },
   { name: 'Nuxt', icon: 'logos:nuxt-icon' },
@@ -24,11 +26,10 @@ const tools = [
   { name: 'Svelte', icon: 'logos:svelte-icon' },
 ]
 
-function getRotation(index: number): string {
+function getRotation(index: number): number {
   // Deterministic pseudo-random rotation between -6 and 6 degrees
   const seed = Math.sin(index * 127.1 + 311.7) * 43758.5453
-  const rotation = ((seed - Math.floor(seed)) * 2 - 1) * 6
-  return `rotate(${rotation.toFixed(1)}deg)`
+  return ((seed - Math.floor(seed)) * 2 - 1) * 6
 }
 </script>
 
@@ -60,15 +61,46 @@ function getRotation(index: number): string {
       <IconWithText text="Wispr Flow" icon="custom:wispr-flow" />
     </p>
 
-    <div class="not-prose flex flex-wrap gap-3 mt-7">
-      <BaseTooltip v-for="(tool, index) in tools" :key="tool.name" :content="tool.name">
-        <div
-          class="flex items-center justify-center size-10 rounded-lg border border-foreground/10 bg-foreground/[0.03] hover:bg-foreground/[0.06] transition-all hover:rotate-0!"
-          :style="{ transform: getRotation(index) }"
-        >
-          <Icon :name="tool.icon" size="1em" />
-        </div>
-      </BaseTooltip>
-    </div>
+    <motion.div
+      class="not-prose flex flex-wrap gap-3 mt-7"
+      :variants="{
+        hidden: {},
+        show: {
+          transition: {
+            delayChildren: stagger(0.04),
+          },
+        },
+      }"
+      initial="hidden"
+      whileInView="show"
+      :once="true"
+      :viewport="{ amount: 0.2 }"
+    >
+      <motion.div
+        v-for="(tool, index) in tools"
+        :key="tool.name"
+        :variants="{
+          hidden: { opacity: 0, y: 12 },
+          show: {
+            opacity: 1,
+            y: 0,
+            transition: {
+              duration: 0.3,
+              ease: [0.25, 0.1, 0.25, 1] as [number, number, number, number],
+            },
+          },
+        }"
+      >
+        <BaseTooltip :content="tool.name">
+          <motion.div
+            class="flex items-center justify-center size-10 rounded-lg border border-foreground/10 bg-background-alt hover:bg-muted transition-colors cursor-default"
+            :style="{ rotate: `${getRotation(index)}deg` }"
+            :whileHover="{ y: -4, scale: 1.15, rotate: 0, transition: { duration: 0.2 } }"
+          >
+            <Icon :name="tool.icon" size="1em" />
+          </motion.div>
+        </BaseTooltip>
+      </motion.div>
+    </motion.div>
   </section>
 </template>

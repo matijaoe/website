@@ -13,8 +13,9 @@ const { display: sourceDisplay, scramble: sourceScramble } = useTextScramble('So
       </p>
 
       <div class="flex items-center gap-7 lowercase">
-        <NuxtLink to="https://github.com/matijaoe/website" target="_blank" class="hover:underline hover:text-foreground font-mono" @mouseenter="sourceScramble">
+        <NuxtLink to="https://github.com/matijaoe/website" target="_blank" class="hover:underline hover:text-foreground font-mono inline-flex items-center gap-0.5" @mouseenter="sourceScramble">
           {{ sourceDisplay }}
+          <Icon name="lucide:arrow-up-right" class="text-xs" />
         </NuxtLink>
       </div>
     </div>

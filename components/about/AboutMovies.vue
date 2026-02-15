@@ -35,7 +35,7 @@ const screenContent: ScreenContent[] = [
         <NuxtLink :to="item.url" external target="_blank">
           {{ item.title }}
         </NuxtLink>
-        <span v-if="item.year" class="text-muted-foreground font-mono text-base">
+        <span v-if="item.year" class="text-muted-foreground font-mono text-sm">
           ({{ item.year }})
         </span>
       </li>

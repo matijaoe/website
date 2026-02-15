@@ -7,15 +7,14 @@ const heroEl = useTemplateRef<HTMLElement>('hero')
 const { display: timeDisplay, isComplete: timeReady, scramble: timeScramble } = useTextScramble(nowFormatted.value, { delay: 100, speed: 25 })
 const { display: locationDisplay, scramble: locationScramble } = useTextScramble('Zagreb, Croatia', { delay: 300, speed: 30 })
 
-onMounted(() => {
-  revealed.value = false
-  nextTick(() => {
-    void heroEl.value?.offsetHeight
+const { stop } = useIntersectionObserver(heroEl, ([entry]) => {
+  if (entry?.isIntersecting) {
     revealed.value = true
     timeScramble()
     locationScramble()
-  })
-})
+    stop()
+  }
+}, { threshold: 0.1 })
 
 useSeoMeta({
   title: 'Matija Osrečki',
@@ -40,7 +39,7 @@ useSeoMeta({
           </span>
         </Badge>
       </div>
-      <h1 ref="hero" class="text-balance text-[42px]/[1.1] sm:text-6xl/[1] font-medium font-display lg:text-7xl/[1] mb-4 md:mb-6">
+      <h1 ref="hero" class="text-balance text-[42px]/[1.1] sm:text-6xl/[1] font-medium font-display lg:text-7xl/[0.95] mb-4 md:mb-6">
         <span class="text-reveal" :class="{ revealed }" style="--reveal-delay: 0s">I'm <span title="Matija Osrečki">Matija</span>,</span>
         <br>
         <span class="text-reveal" :class="{ revealed }" style="--reveal-delay: 0.12s">crafting <span class="italic">sleek</span></span>

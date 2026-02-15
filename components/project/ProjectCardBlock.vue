@@ -8,11 +8,11 @@ defineProps<{
 
 <template>
   <Card
-    class="group hover:bg-white/[2%] hover:backdrop-blur-3xl shadow-sm transition-all duration-700 overflow-hidden"
+    class="group shadow-sm overflow-hidden hover:[transition:background-color_700ms,backdrop-filter_700ms] hover:bg-white/[2%] hover:backdrop-blur-3xl"
   >
     <NuxtLink
       :to="{ name: 'projects-slug', params: { slug: project.slug } }"
-      class="grid grid-cols-2"
+      class="grid grid-cols-2 h-[320px]"
     >
       <div>
         <CardHeader class="p-9 pb-4">
@@ -32,7 +32,7 @@ defineProps<{
 
           <div class="w-full flex items-start justify-between gap-8">
             <p
-              class="font-medium text-4xl font-display transition"
+              class="font-medium text-4xl font-display"
               :style="{ wordBreak: 'break-word' }"
             >
               {{ project.name }} <span v-if="project.wip" class="text-lg ml-1">🚧</span>
@@ -52,7 +52,7 @@ defineProps<{
         <CardFooter v-if="project.tags.length" class="mt-auto p-8" />
       </div>
 
-      <div class="grid-col-2 min-h-[320px] overflow-hidden">
+      <div class="grid-col-2 overflow-hidden">
         <div v-if="project.thumbnail" class="p-7 h-full grid place-content-center placeholder-pattern" :style="{ background: project.color }">
           <HoverPerspectiveContainer class="rounded-sm">
             <NuxtImg

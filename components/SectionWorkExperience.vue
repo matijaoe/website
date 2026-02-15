@@ -3,7 +3,7 @@
     <h2 class="mb-4 text-3xl font-medium font-display">
       Experience
     </h2>
-    <div class="flex flex-col gap-1">
+    <ul role="list" class="space-y-6 [&>li:last-child_.timeline-line]:hidden">
       <WorkExperienceEntry
         company="TheyDo"
         company-url="https://www.theydo.com"
@@ -29,7 +29,7 @@
         end-date="Jun 2024"
         slug="4ofthem"
         logo="/4ot-logo.png"
-        :used="['Nuxt', 'Vue', 'TypeScript', 'Pinia', 'UnoCSS', 'Quasar', 'Storybook', 'Vite', 'GraphQL']"
+        :used="['Nuxt', 'Vue', 'TypeScript', 'Pinia', 'UnoCSS', 'Quasar', 'Storybook', 'Vite', 'web components']"
         logo-class="h-[14px]"
       >
         <template #default>
@@ -64,7 +64,7 @@
         end-date="Jul 2022"
         slug="3ofthem"
         logo="/3ot-logo.jpeg"
-        :used="['Vue', 'JavaScript', 'TypeScript', 'Nuxt 3', 'Pinia', 'Vuex', 'Tailwind', 'UnoCSS', 'Sass', 'PrimeVue', 'Storybook', 'Vite']"
+        :used="['Vue', 'JavaScript', 'TypeScript', 'Nuxt', 'Pinia', 'Vuex', 'Tailwind', 'UnoCSS', 'Sass', 'PrimeVue', 'Storybook', 'Vite']"
       >
         <template #default>
           <p>
@@ -92,6 +92,6 @@
           Built an interactive GIS platform for local governments to manage spatial data for urban planning and public services.
         </template>
       </WorkExperienceEntry>
-    </div>
+    </ul>
   </section>
 </template>
