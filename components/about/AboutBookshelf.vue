@@ -79,7 +79,7 @@ const categories: BookCategory[] = [
 <template>
   <AboutProseWrapper title="Bookshelf">
     <template #description>
-      I only started reading in 2020 and haven't stopped since. Over <strong class="font-semibold text-muted-foreground">300</strong> books and a <span class="font-semibold text-muted-foreground">{{ readingStreakDays }}-day</span> reading streak later, here are some of my top picks. Narrowing down my favorites was tough. Look me up on <NuxtLink to="https://www.goodreads.com/matijao" target="_blank" class="text-muted-foreground">
+      I picked up reading in 2020 and it stuck. Over <strong class="font-semibold text-muted-foreground">300</strong> books and a <span class="font-semibold text-muted-foreground">{{ readingStreakDays }}-day</span> streak later, here are some of my top picks. Find me on <NuxtLink to="https://www.goodreads.com/matijao" target="_blank" class="text-muted-foreground">
         Goodreads{{ }}
       </NuxtLink> for more.
     </template>

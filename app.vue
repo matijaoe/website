@@ -17,7 +17,7 @@ if (isApple) {
   whenever(Ctrl_J, () => toggleDark())
 }
 
-const description = 'Frontend software engineer with a relentless focus on quality.'
+const description = 'I\'m Matija, a software engineer who ships fast and obsesses over the details that matter.'
 
 useSeoMeta({
   titleTemplate: '%s • matijao',
@@ -43,12 +43,6 @@ useSeoMeta({
       <NuxtLayout>
         <NuxtPage />
       </NuxtLayout>
-
-      <Teleport to="body">
-        <ClientOnly>
-          <!-- <CommandBar /> -->
-        </ClientOnly>
-      </Teleport>
 
       <Analytics />
     </Body>

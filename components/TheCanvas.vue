@@ -1,9 +1,10 @@
 <!-- eslint-disable ts/prefer-destructuring -->
 <!-- eslint-disable no-sequences -->
-<!-- eslint-disable no-unused-expressions -->
+<!-- eslint-disable ts/no-unused-expressions -->
 <!-- eslint-disable prefer-const -->
 <!-- eslint-disable eqeqeq -->
 <!-- eslint-disable max-statements-per-line -->
+<!-- eslint-disable style/max-statements-per-line -->
 <!-- eslint-disable ts/prefer-for-of -->
 <script setup>
 // TODO
@@ -12,16 +13,13 @@
 
 const config = {
   SIM_RESOLUTION: 128,
-  // SIM_RESOLUTION: 128,
   DYE_RESOLUTION: 512,
-  // DYE_RESOLUTION: 1024,
   CAPTURE_RESOLUTION: 256,
-  // CAPTURE_RESOLUTION: 512,
   DENSITY_DISSIPATION: 3,
   VELOCITY_DISSIPATION: 4,
   PRESSURE: 1,
   PRESSURE_ITERATIONS: 20,
-  VORTICITY: 0, // default 30
+  VORTICITY: 0,
   SPLAT_RADIUS: 0.16,
   SPLAT_FORCE: 5000,
   SHADING: true,
@@ -1248,7 +1246,7 @@ const initCanvas = (canvas) => {
     })
   }, 150)
 
-  window.addEventListener('keydown', (e) => {
+  window.addEventListener('keydown', (_e) => {
     // if (e.code === 'KeyP') { config.PAUSED = !config.PAUSED }
     // if (e.key === ' ') { splatStack.push(Number.parseInt(Math.random() * 20) + 5) }
   })

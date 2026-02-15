@@ -14,34 +14,22 @@ useSeoMeta({
     <div class="flex flex-col gap-16 max-w-xl">
       <section class="text-default-foreground max-w-xl leading-7 prose text-base md:text-lg">
         <p>
-          I'm a software engineer with a sharp eye for UX and design, meticulous attention to detail, and a relentless focus on quality.
+          I'm a software engineer who ships fast without cutting corners. I love building products and sweating the details until they feel right. Right now, I'm all in on <IconWithText
+            text="AI"
+            icon="emojione:sparkles"
+            icon-size="0.9em"
+            icon-class="translate-y-0.5"
+          /> and how it's changing the way we build, think, and ship software. I'm known as <em>the</em> AI guy. Claude Code is my best friend.
         </p>
 
         <p>
-          Skilled in
-          <IconWithText text="Vue" icon="logos:vue" />,
-          <IconWithText text="Nuxt" icon="logos:nuxt-icon" />,
-          and full-stack
-          <IconWithText text="TypeScript" icon="logos:typescript-icon" />, I turn ideas into refined, user-friendly experiences. I'm driven by a deep curiosity and a pure passion for UX/UI design, developer experience, and writing clean, maintainable code.
-        </p>
-
-        <p>
-          Beyond code, I'm obsessed with
+          Beyond code, I'm deep into
           <IconWithText
             text="Bitcoin"
             icon="logos:bitcoin"
             icon-size="0.9em"
             icon-class="translate-y-0.5"
-          /> and a strong advocate for the right to privacy, freedom of speech, self-sovereignty, and open-source software. I'm also deeply interested in economics, cryptography, psychology, and literature.
-        </p>
-
-        <p>
-          Over the last few years, I've been incredibly excited by the potential of <IconWithText
-            text="AI"
-            icon="emojione:sparkles"
-            icon-size="0.9em"
-            icon-class="translate-y-0.5"
-          /> and the impact it has and will have on the way we work and live. I'm known as <em>the</em> AI guy. Claude Code is my best friend.
+          /> and care deeply about privacy, freedom of speech, self-sovereignty, and open-source software. I'm also into economics, cryptography, psychology, and literature.
         </p>
       </section>
 

@@ -1,14 +1,14 @@
-import { computed, ref } from 'vue'
 import type { Component, VNode } from 'vue'
 import type { ToastProps } from '.'
+import { computed, ref } from 'vue'
 
 const TOAST_LIMIT = 1
 const TOAST_REMOVE_DELAY = 1000000
 
-export type StringOrVNode =
-  | string
-  | VNode
-  | (() => VNode)
+export type StringOrVNode
+  = | string
+    | VNode
+    | (() => VNode)
 
 type ToasterToast = ToastProps & {
   id: string
@@ -33,8 +33,8 @@ function genId() {
 
 type ActionType = typeof actionTypes
 
-type Action =
-  | {
+type Action
+  = | {
     type: ActionType['ADD_TOAST']
     toast: ToasterToast
   }
@@ -58,8 +58,7 @@ interface State {
 const toastTimeouts = new Map<string, ReturnType<typeof setTimeout>>()
 
 function addToRemoveQueue(toastId: string) {
-  if (toastTimeouts.has(toastId))
-    return
+  if (toastTimeouts.has(toastId)) { return }
 
   const timeout = setTimeout(() => {
     toastTimeouts.delete(toastId)
@@ -83,7 +82,7 @@ function dispatch(action: Action) {
       break
 
     case actionTypes.UPDATE_TOAST:
-      state.value.toasts = state.value.toasts.map(t =>
+      state.value.toasts = state.value.toasts.map((t) =>
         t.id === action.toast.id ? { ...t, ...action.toast } : t,
       )
       break
@@ -91,16 +90,15 @@ function dispatch(action: Action) {
     case actionTypes.DISMISS_TOAST: {
       const { toastId } = action
 
-      if (toastId) {
+      if (toastId != null && toastId !== '') {
         addToRemoveQueue(toastId)
-      }
-      else {
+      } else {
         state.value.toasts.forEach((toast) => {
           addToRemoveQueue(toast.id)
         })
       }
 
-      state.value.toasts = state.value.toasts.map(t =>
+      state.value.toasts = state.value.toasts.map((t) =>
         t.id === toastId || toastId === undefined
           ? {
               ...t,
@@ -112,10 +110,11 @@ function dispatch(action: Action) {
     }
 
     case actionTypes.REMOVE_TOAST:
-      if (action.toastId === undefined)
+      if (action.toastId === undefined) {
         state.value.toasts = []
-      else
-        state.value.toasts = state.value.toasts.filter(t => t.id !== action.toastId)
+      } else {
+        state.value.toasts = state.value.toasts.filter((t) => t.id !== action.toastId)
+      }
 
       break
   }
@@ -149,8 +148,7 @@ function toast(props: Toast) {
       id,
       open: true,
       onOpenChange: (open: boolean) => {
-        if (!open)
-          dismiss()
+        if (!open) { dismiss() }
       },
     },
   })

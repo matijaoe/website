@@ -14,9 +14,9 @@
         end-date="Present"
         slug="theydo"
         logo="/theydo-logo.webp"
-        :used="['Vue', 'TypeScript', 'Apollo', 'GraphQL', 'Tailwind', 'Vitest', 'Playwright', 'Radix', 'Storybook', 'Tiptap']"
+        :used="['Vue', 'TypeScript', 'Apollo', 'GraphQL', 'Tailwind', 'Vitest', 'Playwright', 'Radix', 'Storybook', 'Tiptap', 'Vite']"
       >
-        Helping enterprises map and improve customer journeys by building intuitive tools for collaboration and decision-making.
+        Shaping the frontend of a journey management platform that helps enterprises connect customer insights and drive decisions across teams.
       </WorkExperienceEntry>
 
       <WorkExperienceEntry
@@ -29,11 +29,11 @@
         end-date="Jun 2024"
         slug="4ofthem"
         logo="/4ot-logo.png"
-        :used="['Nuxt 3', 'Vue', 'TypeScript', 'Pinia', 'UnoCSS', 'Quasar', 'Storybook', 'Vite', 'GraphQL']"
+        :used="['Nuxt', 'Vue', 'TypeScript', 'Pinia', 'UnoCSS', 'Quasar', 'Storybook', 'Vite', 'GraphQL']"
         logo-class="h-[14px]"
       >
         <template #default>
-          Developing innovative e-commerce solutions tailored to the German pharmaceutical sector, impacting millions of users.
+          Built innovative e-commerce solutions for the German pharmaceutical sector, serving millions of users.
         </template>
       </WorkExperienceEntry>
 
@@ -74,7 +74,7 @@
       </WorkExperienceEntry>
 
       <WorkExperienceEntry
-        company="Infokarta d.o.o"
+        company="Infokarta"
         company-url="https://gis.infokarta.hr/"
         company-location="Croatia"
         location-icon="circle-flags:hr"
@@ -89,7 +89,7 @@
         </template>
 
         <template #default>
-          Developed an interactive web-based GIS platform enabling local governments to visualize, analyze, and manage spatial data for urban planning, asset tracking, and public services.
+          Built an interactive GIS platform for local governments to manage spatial data for urban planning and public services.
         </template>
       </WorkExperienceEntry>
     </div>

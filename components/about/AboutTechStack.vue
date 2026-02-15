@@ -1,35 +1,74 @@
+<script setup lang="ts">
+const tools = [
+  { name: 'Vue', icon: 'logos:vue' },
+  { name: 'Nuxt', icon: 'logos:nuxt-icon' },
+  { name: 'TypeScript', icon: 'logos:typescript-icon' },
+  { name: 'Tailwind CSS', icon: 'logos:tailwindcss-icon' },
+  { name: 'Apollo', icon: 'simple-icons:apollographql' },
+  { name: 'GraphQL', icon: 'logos:graphql' },
+  { name: 'Pinia', icon: 'logos:pinia' },
+  { name: 'VueUse', icon: 'logos:vueuse' },
+  { name: 'Vitest', icon: 'logos:vitest' },
+  { name: 'Playwright', icon: 'logos:playwright' },
+  { name: 'Radix', icon: 'simple-icons:radixui' },
+  { name: 'shadcn', icon: 'simple-icons:shadcnui' },
+  { name: 'Storybook', icon: 'logos:storybook-icon' },
+  { name: 'Vite', icon: 'logos:vitejs' },
+  { name: 'Bun', icon: 'logos:bun' },
+  { name: 'Node.js', icon: 'logos:nodejs-icon' },
+  { name: 'Deno', icon: 'logos:deno' },
+  { name: 'Nitro', icon: 'unjs:nitro' },
+  { name: 'Hono', icon: 'logos:hono' },
+  { name: 'Tanstack Query', icon: 'logos:react-query-icon' },
+  { name: 'React', icon: 'logos:react' },
+  { name: 'Svelte', icon: 'logos:svelte-icon' },
+]
+
+function getRotation(index: number): string {
+  // Deterministic pseudo-random rotation between -6 and 6 degrees
+  const seed = Math.sin(index * 127.1 + 311.7) * 43758.5453
+  const rotation = ((seed - Math.floor(seed)) * 2 - 1) * 6
+  return `rotate(${rotation.toFixed(1)}deg)`
+}
+</script>
+
 <template>
   <section class="text-default-foreground max-w-xl leading-7 prose dark:prose-invert text-base md:text-lg">
     <h2 class="text-default-foreground font-display font-medium mb-4">
       Tech stack
     </h2>
+
     <p>
-      On a regular basis, I work with
+      I build with
       <IconWithText text="Vue" icon="logos:vue" />,
       <IconWithText text="Nuxt" icon="logos:nuxt-icon" />,
-      <IconWithText text="TypeScript" icon="logos:typescript-icon" />,
+      and full-stack
+      <IconWithText text="TypeScript" icon="logos:typescript-icon" />, with
       <span class="text-nowrap">
-        <IconWithText text="Tailwind" icon="logos:tailwindcss-icon" />,
-      </span>{{ }}
-      <IconWithText text="GraphQL" icon="logos:graphql" />,
-      <IconWithText text="Apollo" icon="simple-icons:apollographql" />,
-      <IconWithText text="Pinia" icon="logos:pinia" />,
-      <IconWithText text="VueUse" icon="logos:vueuse" />,
-      <IconWithText text="Vitest" icon="logos:vitest" />,
-      <IconWithText text="Playwright" icon="logos:playwright" />,
-      <IconWithText text="Radix" icon="simple-icons:radixui" />,
-      <IconWithText text="shadcn" icon="simple-icons:shadcnui" />,
-      <IconWithText text="Storybook" icon="logos:storybook-icon" />,
-      <IconWithText text="Vite" icon="logos:vitejs" /> and
-      <IconWithText text="pnpm" icon="logos:pnpm" />.
+        <IconWithText text="Tailwind" icon="logos:tailwindcss-icon" />
+      </span> for styling and
+      <IconWithText text="Vitest" icon="logos:vitest" /> for testing. On the backend, I usually reach for
+      <IconWithText text="Bun" icon="logos:bun" />.
     </p>
 
     <p>
-      On the backend, I primarily use <IconWithText text="Node" icon="logos:nodejs-icon" /> or <IconWithText text="Bun" icon="logos:bun" />, with <IconWithText text="Nitro" icon="unjs:nitro" /> or <IconWithText text="Hono" icon="logos:hono" /> as web frameworks, and an SQL db with <IconWithText text="Drizzle" icon="simple-icons:drizzle" /> or <IconWithText text="Prisma" icon="simple-icons:prisma" />. For scripting and CLI tools, it's usually just <IconWithText text="Bun" icon="logos:bun" />, less often <IconWithText text="Deno" icon="logos:deno" />.
+      These days, most of that happens in
+      <IconWithText text="Claude Code" icon="logos:claude-icon" />,
+      <IconWithText text="Cursor" icon="simple-icons:cursor" />,
+      <IconWithText text="OpenCode" icon="lucide:terminal" /> and
+      <span>Ghostty</span>, using
+      <IconWithText text="Wispr Flow" icon="lucide:audio-lines" />
     </p>
 
-    <p>
-      I also have some experience building projects with <IconWithText text="React" icon="logos:react" />, <IconWithText text="Quasar" icon="devicon:quasar" />, or vanilla <IconWithText text="JavaScript" icon="logos:javascript" />, along with some smaller projects using <IconWithText text="Svelte" icon="logos:svelte-icon" />. I especially like <IconWithText text="Tanstack Query" icon="logos:react-query-icon" />. I've have experience building backends and APIs using <IconWithText text="Nest.js" icon="logos:nestjs" /> and <IconWithText text="Express" icon="simple-icons:express" />.
-    </p>
+    <div class="not-prose flex flex-wrap gap-3 mt-7">
+      <BaseTooltip v-for="(tool, index) in tools" :key="tool.name" :content="tool.name">
+        <div
+          class="flex items-center justify-center size-10 rounded-lg border bg-background hover:bg-accent transition-all hover:rotate-0!"
+          :style="{ transform: getRotation(index) }"
+        >
+          <Icon :name="tool.icon" size="1em" />
+        </div>
+      </BaseTooltip>
+    </div>
   </section>
 </template>

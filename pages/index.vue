@@ -25,12 +25,11 @@ useSeoMeta({
           </span>
         </Badge>
       </div>
-      <h1 class="drop-shadow-sm text-default-900 dark:text-default-50 text-balance text-4xl/[1.1] sm:text-6xl/[1] font-medium font-display lg:text-7xl/[1] mb-4 md:mb-6">
-        Hi, I'm <span title="Matija Osrečki">Matija</span>, <br> crafting
+      <h1 class="text-default-900 dark:text-default-50 text-balance text-4xl/[1.1] sm:text-6xl/[1] font-medium font-display lg:text-7xl/[1] mb-4 md:mb-6">
+        I'm <span title="Matija Osrečki">Matija</span>, <br> crafting
         <span>
           <span class="italic">sleek</span>
-          <Icon name="emojione:sparkles" class="text-[0.5em] align-top ml-3 rotate-3 -translate-y-2 hidden dark:inline-block" />
-          <Icon name="emojione-monotone:sparkles" class="text-[0.5em] align-top ml-3 rotate-3 -translate-y-2 inline-block dark:hidden" />
+          <Icon name="emojione-monotone:sparkles" class="text-[0.5em] align-top ml-3 rotate-3 -translate-y-2 inline-block" />
         </span>
 
         <br> <span class="underline">web</span> experiences
@@ -39,15 +38,15 @@ useSeoMeta({
       <div class="text-default-foreground text-base md:text-lg leading-7">
         <div>
           <p>
-            Senior Frontend Engineer, currently at <NuxtLink to="https://www.theydo.com" target="_blank" class="underline decoration-2 hover:decoration-wavy decoration-pink-400">
+            Senior Frontend Engineer, currently at <NuxtLink to="https://www.theydo.com" target="_blank">
               TheyDo{{ }}
             </NuxtLink>.
             <br>
-            I build well-crafted software, focusing on great UX and meticulous attention to detail.
+            I build well-crafted software, obsessing over the details that matter.
             <br>
-            I love clean code, open source, side projects, <button @click="setMode('dark')">
+            Into AI agents, open source, side projects, <button @click="setMode('dark')">
               dark mode
-            </button>, minimalism, ai and Bitcoin.
+            </button>, minimalism, and Bitcoin.
             <br>
           </p>
         </div>

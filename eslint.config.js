@@ -1,10 +1,6 @@
 import antfu from '@antfu/eslint-config'
 
 export default antfu({
-  typescript: {
-    tsconfigPath: 'tsconfig.json',
-  },
-
   formatters: {
     css: false,
     html: true,
@@ -63,10 +59,6 @@ export default antfu({
   typescript: {
     tsconfigPath: './tsconfig.json',
 
-    parserOptions: {
-      project: ['./tsconfig.json'],
-    },
-
     overrides: {
       'ts/ban-ts-comment': 'off',
       'ts/consistent-type-definitions': ['off', 'type'],
@@ -96,11 +88,12 @@ export default antfu({
       'ts/no-explicit-any': 'warn',
       'ts/no-use-before-define': 'off',
       'ts/prefer-as-const': 'error',
-      'ts/prefer-destructuring': 'error',
       'ts/prefer-for-of': 'error',
       'ts/prefer-ts-expect-error': 'off',
+    },
 
-      // override
+    overridesTypeAware: {
+      'ts/prefer-destructuring': 'error',
       'ts/unbound-method': 'off',
     },
   },

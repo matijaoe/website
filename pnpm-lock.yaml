@@ -78,6 +78,9 @@ importers:
       '@iconify-json/simple-icons':
         specifier: ^1.2.64
         version: 1.2.64
+      '@iconify-json/unjs':
+        specifier: ^1.2.3
+        version: 1.2.3
       '@nuxt/icon':
         specifier: ^2.1.1
         version: 2.1.1(magicast@0.5.1)(vite@7.3.0(@types/node@24.2.0)(jiti@2.6.1)(lightningcss@1.30.2)(terser@5.44.1)(yaml@2.8.2))(vue@3.5.26(typescript@5.9.3))
@@ -815,6 +818,9 @@ packages:
 
   '@iconify-json/simple-icons@1.2.64':
     resolution: {integrity: sha512-SMmm//tjZBvHnT0EAzZLnBTL6bukSkncM0pwkOXjr0FsAeCqjQtqoxBR0Mp+PazIJjXJKHm1Ju0YgnCIPOodJg==}
+
+  '@iconify-json/unjs@1.2.3':
+    resolution: {integrity: sha512-hSeGbUcb9+wKWs8Mkwh0fwRLYErGLIuc1L0FEkEfbC++8RH3QjLGY4KNFnbH+jWiBLg3+rFuyEmHjub1dJPkZw==}
 
   '@iconify/collections@1.0.635':
     resolution: {integrity: sha512-18euI6B8gogwmg3c4JsbvSwOOBVHsOOejLsk02FU8pVNeZQaKMcO/n2a7+SYOLrg88Xgo96MBL5KM01KShAzKg==}
@@ -6665,6 +6671,10 @@ snapshots:
       '@iconify/types': 2.0.0
 
   '@iconify-json/simple-icons@1.2.64':
+    dependencies:
+      '@iconify/types': 2.0.0
+
+  '@iconify-json/unjs@1.2.3':
     dependencies:
       '@iconify/types': 2.0.0
 

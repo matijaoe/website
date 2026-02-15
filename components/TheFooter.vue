@@ -10,7 +10,7 @@ const year = computed(() => now.value.getFullYear())
 
       <div class="flex items-center gap-7 lowercase">
         <NuxtLink to="https://github.com/matijaoe/website" target="_blank" class="hover:underline hover:text-foreground">
-          Code
+          Source
         </NuxtLink>
       </div>
     </div>
