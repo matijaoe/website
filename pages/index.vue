@@ -29,7 +29,7 @@ useSeoMeta({
         I'm <span title="Matija Osrečki">Matija</span>, <br> crafting
         <span>
           <span class="italic">sleek</span>
-          <Icon name="emojione-monotone:sparkles" class="text-[0.5em] align-top ml-3 rotate-3 -translate-y-2 inline-block" />
+          <Icon name="emojione-monotone:sparkles" class="text-[0.7em] lg:text-[0.5em] align-top ml-2 lg:ml-3 rotate-3 -translate-y-2 inline-block" />
         </span>
 
         <br> <span class="underline">web</span> experiences

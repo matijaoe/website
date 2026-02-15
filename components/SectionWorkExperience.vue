@@ -16,7 +16,7 @@
         logo="/theydo-logo.webp"
         :used="['Vue', 'TypeScript', 'Apollo', 'GraphQL', 'Tailwind', 'Vitest', 'Playwright', 'Radix', 'Storybook', 'Tiptap', 'Vite']"
       >
-        Shaping the frontend of a journey management platform that helps enterprises connect customer insights and drive decisions across teams.
+        Shaping the journey management platform that helps enterprises connect customer insights and drive decisions across teams.
       </WorkExperienceEntry>
 
       <WorkExperienceEntry

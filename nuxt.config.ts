@@ -26,6 +26,15 @@ export default defineNuxtConfig({
     ],
   },
 
+  icon: {
+    customCollections: [
+      {
+        prefix: 'custom',
+        dir: './assets/icons',
+      },
+    ],
+  },
+
   colorMode: {
     classSuffix: '',
   },

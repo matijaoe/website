@@ -55,9 +55,9 @@ function getRotation(index: number): string {
       These days, most of that happens in
       <IconWithText text="Claude Code" icon="logos:claude-icon" />,
       <IconWithText text="Cursor" icon="simple-icons:cursor" />,
-      <IconWithText text="OpenCode" icon="lucide:terminal" /> and
+      <span>OpenCode</span> and
       <span>Ghostty</span>, using
-      <IconWithText text="Wispr Flow" icon="lucide:audio-lines" />
+      <IconWithText text="Wispr Flow" icon="custom:wispr-flow" />
     </p>
 
     <div class="not-prose flex flex-wrap gap-3 mt-7">
