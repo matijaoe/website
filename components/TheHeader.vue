@@ -41,8 +41,8 @@ const activeLinkClass = '!text-foreground hover:text-foreground'
             @click="toggleDark"
           >
             <Icon
-              name="ph:yin-yang-fill"
-              class="text-[24px] transition-transform duration-300 ease-in-out hover:rotate-90 dark:rotate-180 hover:dark:rotate-[270deg]"
+              name="custom:half-circle"
+              class="text-[24px] transition-transform duration-300 ease-in-out dark:rotate-180"
             />
           </Button>
         </BaseTooltip>
@@ -81,8 +81,8 @@ const activeLinkClass = '!text-foreground hover:text-foreground'
             @click="toggleDark"
           >
             <Icon
-              name="ph:yin-yang-fill"
-              class="text-[24px] transition-transform duration-300 ease-in-out hover:rotate-90 dark:rotate-180 hover:dark:rotate-[270deg]"
+              name="custom:half-circle"
+              class="text-[24px] transition-transform duration-300 ease-in-out dark:rotate-180"
             />
           </Button>
         </BaseTooltip>

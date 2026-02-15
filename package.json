@@ -36,12 +36,10 @@
   },
   "devDependencies": {
     "@antfu/eslint-config": "^6.7.3",
-    "@iconify-json/devicon": "^1.2.56",
     "@iconify-json/emojione": "^1.2.3",
     "@iconify-json/emojione-monotone": "^1.2.1",
     "@iconify-json/logos": "^1.2.10",
     "@iconify-json/lucide": "^1.2.82",
-    "@iconify-json/ph": "^1.2.2",
     "@iconify-json/simple-icons": "^1.2.64",
     "@iconify-json/unjs": "^1.2.3",
     "@nuxt/icon": "^2.1.1",
