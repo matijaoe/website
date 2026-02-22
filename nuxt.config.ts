@@ -19,10 +19,18 @@ export default defineNuxtConfig({
     '~/assets/css/tailwind.css',
   ],
 
-  devtools: { enabled: true },
+  devtools: { enabled: process.env.NODE_ENV === 'development' },
+
+  sourcemap: {
+    server: false,
+    client: false,
+  },
 
   vite: {
     plugins: [tailwindcss()],
+    build: {
+      sourcemap: false,
+    },
   },
 
   experimental: {
