@@ -36,8 +36,14 @@ function runScramble(
   return interval
 }
 
-export function useTextScramble(text: string, options?: { delay?: number, speed?: number }) {
-  const display = ref(text)
+function deterministicScramble(text: string): string {
+  return text.split('').map((char, i) =>
+    PRESERVE.test(char) ? char : CHARS[(i * 17 + 5) % CHARS.length],
+  ).join('')
+}
+
+export function useTextScramble(text: string, options?: { delay?: number, speed?: number, scrambleInitial?: boolean }) {
+  const display = ref(options?.scrambleInitial ? deterministicScramble(text) : text)
   const isComplete = ref(false)
   const delay = options?.delay ?? 0
   const speed = options?.speed ?? 60

@@ -4,7 +4,7 @@ const { nowFormatted } = useCurrentTime()
 
 const revealed = ref(false)
 const heroEl = useTemplateRef<HTMLElement>('hero')
-const { display: timeDisplay, isComplete: timeReady, scramble: timeScramble } = useTextScramble(nowFormatted.value, { delay: 100, speed: 25 })
+const { display: timeDisplay, isComplete: timeReady, scramble: timeScramble } = useTextScramble(nowFormatted.value, { delay: 100, speed: 25, scrambleInitial: true })
 const { display: locationDisplay, scramble: locationScramble } = useTextScramble('Zagreb, Croatia', { delay: 300, speed: 30 })
 
 const { stop } = useIntersectionObserver(heroEl, ([entry]) => {
