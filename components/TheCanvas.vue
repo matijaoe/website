@@ -8,6 +8,7 @@
 <!-- eslint-disable ts/prefer-for-of -->
 <script setup>
 const canvasRef = useTemplateRef('canvas')
+const { isDark } = useTheme()
 
 const config = {
   // Grid resolution for velocity/pressure simulation. Higher = sharper fluid detail, more GPU. (32-256)
@@ -19,7 +20,7 @@ const config = {
   // How fast color fades out. Higher = fades quicker. (0 = permanent, ~1-10)
   DENSITY_DISSIPATION: 4,
   // How fast fluid motion dies. Higher = stops quicker, less swirly. (0 = never stops, ~1-10)
-  VELOCITY_DISSIPATION: 5.5,
+  VELOCITY_DISSIPATION: 5,
   // Pressure field retention per step. Lower = more diffuse spread. (0-1)
   PRESSURE: 0.2,
   // Solver iterations for pressure. Higher = more accurate but heavier. (10-50)
@@ -42,6 +43,11 @@ const config = {
   BACK_COLOR: { r: 0, g: 0, b: 0 },
   // Renders dye with alpha instead of over BACK_COLOR
   TRANSPARENT: true,
+  // Hue (0=red, 0.08=amber, 0.17=yellow, 0.33=green, 0.5=cyan, 0.67=blue, 0.75=purple). Set to null for random colorful mix.
+  HUE_DARK: 0.08,
+  HUE_LIGHT: null,
+  // Color intensity multiplier (0.05=subtle, 0.15=normal, 0.3=vivid)
+  COLOR_INTENSITY: 0.12,
 }
 
 function getWebGLContext(canvas) {
@@ -942,10 +948,12 @@ function initCanvas(canvas) {
   }
 
   function generateColor() {
-    const c = HSVtoRGB(Math.random(), 1.0, 1.0)
-    c.r *= 0.15
-    c.g *= 0.15
-    c.b *= 0.15
+    const configHue = isDark.value ? config.HUE_DARK : config.HUE_LIGHT
+    const hue = configHue == null ? Math.random() : configHue
+    const c = HSVtoRGB(hue, 1.0, 1.0)
+    c.r *= config.COLOR_INTENSITY
+    c.g *= config.COLOR_INTENSITY
+    c.b *= config.COLOR_INTENSITY
     return c
   }
 
