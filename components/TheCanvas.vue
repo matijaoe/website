@@ -7,9 +7,7 @@
 <!-- eslint-disable style/max-statements-per-line -->
 <!-- eslint-disable ts/prefer-for-of -->
 <script setup>
-// TODO
-// go through most of it
-// make it so there a constant moving soft mixing foggy effect in the background
+const canvasRef = useTemplateRef('canvas')
 
 const config = {
   SIM_RESOLUTION: 128,
@@ -119,6 +117,11 @@ function supportRenderTextureFormat(gl, internalFormat, format, type) {
   gl.framebufferTexture2D(gl.FRAMEBUFFER, gl.COLOR_ATTACHMENT0, gl.TEXTURE_2D, texture, 0)
 
   const status = gl.checkFramebufferStatus(gl.FRAMEBUFFER)
+
+  gl.bindFramebuffer(gl.FRAMEBUFFER, null)
+  gl.deleteFramebuffer(fbo)
+  gl.deleteTexture(texture)
+
   return status == gl.FRAMEBUFFER_COMPLETE
 }
 
@@ -126,7 +129,11 @@ function isMobile() {
   return /Mobi|Android/i.test(navigator.userAgent)
 }
 
-const initCanvas = (canvas) => {
+function initCanvas(canvas) {
+  const cleanupFns = []
+  let animFrameId = null
+  let destroyed = false
+
   resizeCanvas()
 
   const pointers = []
@@ -718,7 +725,6 @@ const initCanvas = (canvas) => {
         gl.clearColor(0.0, 0.0, 0.0, 1.0)
         gl.clear(gl.COLOR_BUFFER_BIT)
       }
-      // CHECK_FRAMEBUFFER_STATUS();
       gl.drawElements(gl.TRIANGLES, 6, gl.UNSIGNED_SHORT, 0)
     }
   })()
@@ -770,8 +776,8 @@ const initCanvas = (canvas) => {
 
     if (velocity == null) { velocity = createDoubleFBO(simRes.width, simRes.height, rg.internalFormat, rg.format, texType, filtering) } else { velocity = resizeDoubleFBO(velocity, simRes.width, simRes.height, rg.internalFormat, rg.format, texType, filtering) }
 
-    divergence = createFBO (simRes.width, simRes.height, r.internalFormat, r.format, texType, gl.NEAREST)
-    curl = createFBO (simRes.width, simRes.height, r.internalFormat, r.format, texType, gl.NEAREST)
+    divergence = createFBO(simRes.width, simRes.height, r.internalFormat, r.format, texType, gl.NEAREST)
+    curl = createFBO(simRes.width, simRes.height, r.internalFormat, r.format, texType, gl.NEAREST)
     pressure = createDoubleFBO(simRes.width, simRes.height, r.internalFormat, r.format, texType, gl.NEAREST)
 
     initBloomFramebuffers()
@@ -914,6 +920,7 @@ const initCanvas = (canvas) => {
 
     const image = new Image()
     image.onload = () => {
+      if (destroyed) { return }
       obj.width = image.width
       obj.height = image.height
       gl.bindTexture(gl.TEXTURE_2D, texture)
@@ -944,13 +951,14 @@ const initCanvas = (canvas) => {
   update()
 
   function update() {
+    if (destroyed) { return }
     const dt = calcDeltaTime()
     if (resizeCanvas()) { initFramebuffers() }
     updateColors(dt)
     applyInputs()
     if (!config.PAUSED) { step(dt) }
     render(null)
-    requestAnimationFrame(update)
+    animFrameId = requestAnimationFrame(update)
   }
 
   function calcDeltaTime() {
@@ -1073,9 +1081,6 @@ const initCanvas = (canvas) => {
     }
 
     if (!config.TRANSPARENT) { drawColor(target, normalizeColor(config.BACK_COLOR)) }
-    if (target == null && config.TRANSPARENT) {
-      // drawCheckerboard(target)
-    }
     drawDisplay(target)
   }
 
@@ -1214,42 +1219,32 @@ const initCanvas = (canvas) => {
     return radius
   }
 
-  // TODO: dirty hack for now
-  setTimeout(() => {
-    document.addEventListener('mousemove', (e) => {
-      const [pointer] = pointers
+  const onMouseMove = (e) => {
+    const [pointer] = pointers
+    if (config.PAUSED) { return }
+    const rect = canvas.getBoundingClientRect()
+    const posX = scaleByPixelRatio(e.clientX - rect.left)
+    const posY = scaleByPixelRatio(e.clientY - rect.top)
+    updatePointerMoveData(pointer, posX, posY)
+  }
 
-      // TODO: separate this from main config
-      if (config.PAUSED) {
-        return
-      }
+  const onTouchStart = (e) => {
+    e.preventDefault()
+    const touches = e.targetTouches
+    while (touches.length >= pointers.length) { pointers.push(new PointerPrototype()) }
+    for (let i = 0; i < touches.length; i++) {
+      const posX = scaleByPixelRatio(touches[i].pageX)
+      const posY = scaleByPixelRatio(touches[i].pageY)
+      updatePointerDownData(pointers[i + 1], touches[i].identifier, posX, posY)
+    }
+  }
 
-      // Get the bounding rectangle of the canvas
-      const rect = canvas.getBoundingClientRect()
-
-      // Calculate the mouse position relative to the canvas
-      const posX = scaleByPixelRatio(e.clientX - rect.left)
-      const posY = scaleByPixelRatio(e.clientY - rect.top)
-
-      updatePointerMoveData(pointer, posX, posY)
-    })
-
-    canvas.addEventListener('touchstart', (e) => {
-      e.preventDefault()
-      const touches = e.targetTouches
-      while (touches.length >= pointers.length) { pointers.push(new PointerPrototype()) }
-      for (let i = 0; i < touches.length; i++) {
-        const posX = scaleByPixelRatio(touches[i].pageX)
-        const posY = scaleByPixelRatio(touches[i].pageY)
-        updatePointerDownData(pointers[i + 1], touches[i].identifier, posX, posY)
-      }
-    })
-  }, 150)
-
-  window.addEventListener('keydown', (_e) => {
-    // if (e.code === 'KeyP') { config.PAUSED = !config.PAUSED }
-    // if (e.key === ' ') { splatStack.push(Number.parseInt(Math.random() * 20) + 5) }
-  })
+  document.addEventListener('mousemove', onMouseMove)
+  canvas.addEventListener('touchstart', onTouchStart)
+  cleanupFns.push(
+    () => document.removeEventListener('mousemove', onMouseMove),
+    () => canvas.removeEventListener('touchstart', onTouchStart),
+  )
 
   function updatePointerDownData(pointer, id, posX, posY) {
     pointer.id = id
@@ -1360,33 +1355,40 @@ const initCanvas = (canvas) => {
     let hash = 0
     for (let i = 0; i < s.length; i++) {
       hash = (hash << 5) - hash + s.charCodeAt(i)
-      hash |= 0 // Convert to 32bit integer
+      hash |= 0
     }
     return hash
   }
+
+  return () => {
+    destroyed = true
+    if (animFrameId != null) {
+      cancelAnimationFrame(animFrameId)
+      animFrameId = null
+    }
+    cleanupFns.forEach((fn) => fn())
+
+    const loseExt = gl.getExtension('WEBGL_lose_context')
+    if (loseExt) { loseExt.loseContext() }
+  }
 }
 
+let cleanup = null
+
 onMounted(() => {
-  const canvas = document.getElementsByTagName('canvas')[0]
+  const canvas = canvasRef.value
+  if (!canvas) { return }
+  cleanup = initCanvas(canvas)
+})
 
-  if (canvas) {
-    console.log('Init canvas')
-    initCanvas(canvas)
-
-    canvas.addEventListener('mousemove', (e) => {
-      if (!initialized.value) { return } // Ensure the canvas is ready
-      const [pointer] = pointers
-      const rect = canvas.getBoundingClientRect()
-      const posX = scaleByPixelRatio(e.clientX - rect.left)
-      const posY = scaleByPixelRatio(e.clientY - rect.top)
-      updatePointerMoveData(pointer, posX, posY)
-    })
-  } else {
-    console.warn('Canvas not found')
+onBeforeUnmount(() => {
+  if (cleanup) {
+    cleanup()
+    cleanup = null
   }
 })
 </script>
 
 <template>
-  <canvas class="fixed inset-0 h-screen w-full -z-10" />
+  <canvas ref="canvas" class="fixed inset-0 h-screen w-full -z-10" />
 </template>
