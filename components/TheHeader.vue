@@ -1,10 +1,10 @@
 <script lang="ts" setup>
-import type { RouteLocationRaw } from '#vue-router'
+import type { RouteLocationNamedRaw } from '#vue-router'
 
-const { toggleDark } = useTheme()
+const { toggleDark, isDark } = useTheme()
 
 const route = useRoute()
-const links: { to: RouteLocationRaw, label: string, key: string }[] = [
+const links: { to: RouteLocationNamedRaw, label: string, key: string }[] = [
   { to: { name: 'index' }, label: 'Home', key: 'H' },
   { to: { name: 'about' }, label: 'About', key: 'A' },
   { to: { name: 'projects' }, label: 'Projects', key: 'P' },
@@ -40,6 +40,7 @@ const activeLinkClass = '!text-foreground hover:text-foreground'
           <Button
             variant="link"
             size="icon"
+            :aria-label="isDark ? 'Switch to light mode' : 'Switch to dark mode'"
             @click="toggleDark"
           >
             <Icon
@@ -59,10 +60,10 @@ const activeLinkClass = '!text-foreground hover:text-foreground'
               <BaseKbd :keys="[link.key]" />
             </template>
             <NuxtLink
-              :to="link.to"
+              :to="link.to.path"
               class="text-lg text-muted-foreground hover:text-foreground/85 w-fit py-[0.2rem] align-middle font-medium lowercase transition-all"
               :active-class="activeLinkClass"
-              :class="{ [activeLinkClass]: route.name?.toString().startsWith(link.to.name) }"
+              :class="{ [activeLinkClass]: route.name?.toString().startsWith(link.to.name as string) }"
             >
               {{ link.label }}
             </NuxtLink>

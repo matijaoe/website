@@ -30,25 +30,24 @@ const copyToClipboard = (text: string) => {
             :content="copied ? 'Copied!' : 'Click to copy'"
             disable-closing-trigger
           >
-            <div class="flex w-fit items-center gap-1">
+            <div class="flex w-fit items-center">
               <button
                 v-if="link.clickToCopy"
-                class="decoration-0.1em decoration-offset-0.15em hover:underline flex items-center"
+                class="decoration-0.1em decoration-offset-0.15em hover:underline flex items-center gap-1"
                 @click="copyToClipboard(link.linkText)"
               >
                 {{ link.linkText }}
+                <Icon name="lucide:copy" class="ml-1 text-sm text-muted-foreground" />
               </button>
               <NuxtLink
                 v-else
                 :href="link.link"
-                class="decoration-0.1em decoration-offset-0.15em hover:underline"
+                class="decoration-0.1em decoration-offset-0.15em hover:underline flex items-center gap-1"
                 target="_blank"
               >
                 {{ link.linkText }}
+                <Icon name="lucide:arrow-up-right" class="text-base" />
               </NuxtLink>
-
-              <Icon v-if="!link.clickToCopy" name="lucide:arrow-up-right" class="text-base" />
-              <Icon v-else name="lucide:copy" class="ml-1 text-sm text-muted-foreground" />
             </div>
           </BaseTooltip>
         </template>
