@@ -162,7 +162,7 @@ function initCanvas(canvas) {
     this.deltaY = 0
     this.down = false
     this.moved = false
-    this.color = [30, 0, 300]
+    this.color = { r: 0, g: 0, b: 0 }
   }
 
   class Material {
@@ -739,7 +739,7 @@ function initCanvas(canvas) {
   let sunrays
   let sunraysTemp
 
-  const ditheringTexture = createTextureAsync('LDR_LLL1_0.png')
+  const ditheringTexture = createTextureAsync('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mP8/5+hHgAHggJ/PchI7wAAAABJRU5ErkJggg==')
 
   const blurProgram = new Program(blurVertexShader, blurShader)
   const copyProgram = new Program(baseVertexShader, copyShader)
@@ -1218,6 +1218,8 @@ function initCanvas(canvas) {
     if (aspectRatio > 1) { radius *= aspectRatio }
     return radius
   }
+
+  pointers[0].color = generateColor()
 
   const onMouseMove = (e) => {
     const [pointer] = pointers
