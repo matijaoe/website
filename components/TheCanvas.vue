@@ -26,8 +26,6 @@ const config = {
   PAUSED: false,
   BACK_COLOR: { r: 0, g: 0, b: 0 },
   TRANSPARENT: true,
-  // CUSTOM
-  RUN_INITIALLY: false,
 }
 
 function getWebGLContext(canvas) {
@@ -672,10 +670,6 @@ function initCanvas(canvas) {
 
   updateKeywords()
   initFramebuffers()
-
-  if (config.RUN_INITIALLY) {
-    multipleSplats(Number.parseInt(Math.random() * 20) + 5)
-  }
 
   let lastUpdateTime = Date.now()
   let colorUpdateTimer = 0.0
