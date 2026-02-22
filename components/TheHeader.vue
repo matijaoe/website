@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import type { RouteLocationNamedRaw } from '#vue-router'
+import type { RouteLocationNamedRaw, RouteLocationRaw } from '#vue-router'
 
 const { toggleDark, isDark } = useTheme()
 
@@ -60,7 +60,7 @@ const activeLinkClass = '!text-foreground hover:text-foreground'
               <BaseKbd :keys="[link.key]" />
             </template>
             <NuxtLink
-              :to="link.to.path"
+              :to="link.to as RouteLocationRaw"
               class="text-lg text-muted-foreground hover:text-foreground/85 w-fit py-[0.2rem] align-middle font-medium lowercase transition-all"
               :active-class="activeLinkClass"
               :class="{ [activeLinkClass]: route.name?.toString().startsWith(link.to.name as string) }"
