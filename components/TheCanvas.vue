@@ -10,21 +10,37 @@
 const canvasRef = useTemplateRef('canvas')
 
 const config = {
+  // Grid resolution for velocity/pressure simulation. Higher = sharper fluid detail, more GPU. (32-256)
   SIM_RESOLUTION: 128,
-  DYE_RESOLUTION: 512,
+  // Grid resolution for color/dye. Higher = sharper color detail. (128-2048)
+  DYE_RESOLUTION: 1024,
+  // Resolution used when capturing a screenshot of the canvas. (128-1024)
   CAPTURE_RESOLUTION: 256,
-  DENSITY_DISSIPATION: 3,
-  VELOCITY_DISSIPATION: 4,
-  PRESSURE: 1,
-  PRESSURE_ITERATIONS: 20,
+  // How fast color fades out. Higher = fades quicker. (0 = permanent, ~1-10)
+  DENSITY_DISSIPATION: 4,
+  // How fast fluid motion dies. Higher = stops quicker, less swirly. (0 = never stops, ~1-10)
+  VELOCITY_DISSIPATION: 5.5,
+  // Pressure field retention per step. Lower = more diffuse spread. (0-1)
+  PRESSURE: 0.2,
+  // Solver iterations for pressure. Higher = more accurate but heavier. (10-50)
+  PRESSURE_ITERATIONS: 30,
+  // Curl force that adds swirl/turbulence. Higher = more chaotic. (0-50)
   VORTICITY: 0,
-  SPLAT_RADIUS: 0.16,
+  // Size of each color splat. Higher = bigger, softer blobs. (0.01-1.0)
+  SPLAT_RADIUS: 0.18,
+  // Velocity applied per splat. Higher = faster/stronger push. (100-10000)
   SPLAT_FORCE: 5000,
-  SHADING: true,
+  // Adds faux 3D lighting based on dye gradients
+  SHADING: false,
+  // Continuously rotates pointer colors over time
   COLORFUL: true,
-  COLOR_UPDATE_SPEED: 10,
+  // How fast colors cycle when COLORFUL is on. Higher = faster. (1-50)
+  COLOR_UPDATE_SPEED: 20,
+  // Freezes the simulation when true
   PAUSED: false,
+  // Background color (RGB 0-255)
   BACK_COLOR: { r: 0, g: 0, b: 0 },
+  // Renders dye with alpha instead of over BACK_COLOR
   TRANSPARENT: true,
 }
 
