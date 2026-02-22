@@ -26,15 +26,6 @@ const config = {
   PAUSED: false,
   BACK_COLOR: { r: 0, g: 0, b: 0 },
   TRANSPARENT: true,
-  BLOOM: false,
-  BLOOM_ITERATIONS: 8,
-  BLOOM_RESOLUTION: 256,
-  BLOOM_INTENSITY: 0.2,
-  BLOOM_THRESHOLD: 1,
-  BLOOM_SOFT_KNEE: 0.7,
-  SUNRAYS: false,
-  SUNRAYS_RESOLUTION: 196,
-  SUNRAYS_WEIGHT: 1.0,
   // CUSTOM
   RUN_INITIALLY: false,
 }
@@ -148,8 +139,6 @@ function initCanvas(canvas) {
   if (!ext.supportLinearFiltering) {
     config.DYE_RESOLUTION = 512
     config.SHADING = false
-    config.BLOOM = false
-    config.SUNRAYS = false
   }
 
   function PointerPrototype() {
@@ -271,41 +260,6 @@ function initCanvas(canvas) {
     }
 `)
 
-  const blurVertexShader = compileShader(gl.VERTEX_SHADER, `
-    precision highp float;
-
-    attribute vec2 aPosition;
-    varying vec2 vUv;
-    varying vec2 vL;
-    varying vec2 vR;
-    uniform vec2 texelSize;
-
-    void main () {
-        vUv = aPosition * 0.5 + 0.5;
-        float offset = 1.33333333;
-        vL = vUv - texelSize * offset;
-        vR = vUv + texelSize * offset;
-        gl_Position = vec4(aPosition, 0.0, 1.0);
-    }
-`)
-
-  const blurShader = compileShader(gl.FRAGMENT_SHADER, `
-    precision mediump float;
-    precision mediump sampler2D;
-
-    varying vec2 vUv;
-    varying vec2 vL;
-    varying vec2 vR;
-    uniform sampler2D uTexture;
-
-    void main () {
-        vec4 sum = texture2D(uTexture, vUv) * 0.29411764;
-        sum += texture2D(uTexture, vL) * 0.35294117;
-        sum += texture2D(uTexture, vR) * 0.35294117;
-        gl_FragColor = sum;
-    }
-`)
-
   const copyShader = compileShader(gl.FRAGMENT_SHADER, `
     precision mediump float;
     precision mediump sampler2D;
@@ -351,16 +305,7 @@ function initCanvas(canvas) {
     varying vec2 vT;
     varying vec2 vB;
     uniform sampler2D uTexture;
-    uniform sampler2D uBloom;
-    uniform sampler2D uSunrays;
-    uniform sampler2D uDithering;
-    uniform vec2 ditherScale;
     uniform vec2 texelSize;
-
-    vec3 linearToGamma (vec3 color) {
-        color = max(color, vec3(0));
-        return max(1.055 * pow(color, vec3(0.416666667)) - 0.055, vec3(0));
-    }
 
     void main () {
         vec3 c = texture2D(uTexture, vUv).rgb;
@@ -381,142 +326,10 @@ function initCanvas(canvas) {
         c *= diffuse;
     #endif
 
-    #ifdef BLOOM
-        vec3 bloom = texture2D(uBloom, vUv).rgb;
-    #endif
-
-    #ifdef SUNRAYS
-        float sunrays = texture2D(uSunrays, vUv).r;
-        c *= sunrays;
-    #ifdef BLOOM
-        bloom *= sunrays;
-    #endif
-    #endif
-
-    #ifdef BLOOM
-        float noise = texture2D(uDithering, vUv * ditherScale).r;
-        noise = noise * 2.0 - 1.0;
-        bloom += noise / 255.0;
-        bloom = linearToGamma(bloom);
-        c += bloom;
-    #endif
-
         float a = max(c.r, max(c.g, c.b));
         gl_FragColor = vec4(c, a);
     }
 `
-
-  const bloomPrefilterShader = compileShader(gl.FRAGMENT_SHADER, `
-    precision mediump float;
-    precision mediump sampler2D;
-
-    varying vec2 vUv;
-    uniform sampler2D uTexture;
-    uniform vec3 curve;
-    uniform float threshold;
-
-    void main () {
-        vec3 c = texture2D(uTexture, vUv).rgb;
-        float br = max(c.r, max(c.g, c.b));
-        float rq = clamp(br - curve.x, 0.0, curve.y);
-        rq = curve.z * rq * rq;
-        c *= max(rq, br - threshold) / max(br, 0.0001);
-        gl_FragColor = vec4(c, 0.0);
-    }
-`)
-
-  const bloomBlurShader = compileShader(gl.FRAGMENT_SHADER, `
-    precision mediump float;
-    precision mediump sampler2D;
-
-    varying vec2 vL;
-    varying vec2 vR;
-    varying vec2 vT;
-    varying vec2 vB;
-    uniform sampler2D uTexture;
-
-    void main () {
-        vec4 sum = vec4(0.0);
-        sum += texture2D(uTexture, vL);
-        sum += texture2D(uTexture, vR);
-        sum += texture2D(uTexture, vT);
-        sum += texture2D(uTexture, vB);
-        sum *= 0.25;
-        gl_FragColor = sum;
-    }
-`)
-
-  const bloomFinalShader = compileShader(gl.FRAGMENT_SHADER, `
-    precision mediump float;
-    precision mediump sampler2D;
-
-    varying vec2 vL;
-    varying vec2 vR;
-    varying vec2 vT;
-    varying vec2 vB;
-    uniform sampler2D uTexture;
-    uniform float intensity;
-
-    void main () {
-        vec4 sum = vec4(0.0);
-        sum += texture2D(uTexture, vL);
-        sum += texture2D(uTexture, vR);
-        sum += texture2D(uTexture, vT);
-        sum += texture2D(uTexture, vB);
-        sum *= 0.25;
-        gl_FragColor = sum * intensity;
-    }
-`)
-
-  const sunraysMaskShader = compileShader(gl.FRAGMENT_SHADER, `
-    precision highp float;
-    precision highp sampler2D;
-
-    varying vec2 vUv;
-    uniform sampler2D uTexture;
-
-    void main () {
-        vec4 c = texture2D(uTexture, vUv);
-        float br = max(c.r, max(c.g, c.b));
-        c.a = 1.0 - min(max(br * 20.0, 0.0), 0.8);
-        gl_FragColor = c;
-    }
-`)
-
-  const sunraysShader = compileShader(gl.FRAGMENT_SHADER, `
-    precision highp float;
-    precision highp sampler2D;
-
-    varying vec2 vUv;
-    uniform sampler2D uTexture;
-    uniform float weight;
-
-    #define ITERATIONS 16
-
-    void main () {
-        float Density = 0.3;
-        float Decay = 0.95;
-        float Exposure = 0.7;
-
-        vec2 coord = vUv;
-        vec2 dir = vUv - 0.5;
-
-        dir *= 1.0 / float(ITERATIONS) * Density;
-        float illuminationDecay = 1.0;
-
-        float color = texture2D(uTexture, vUv).a;
-
-        for (int i = 0; i < ITERATIONS; i++)
-        {
-            coord -= dir;
-            float col = texture2D(uTexture, coord).a;
-            color += col * illuminationDecay * weight;
-            illuminationDecay *= Decay;
-        }
-
-        gl_FragColor = vec4(color * Exposure, 0.0, 0.0, 1.0);
-    }
-`)
 
   const splatShader = compileShader(gl.FRAGMENT_SHADER, `
     precision highp float;
@@ -734,22 +547,10 @@ function initCanvas(canvas) {
   let divergence
   let curl
   let pressure
-  let bloom
-  const bloomFramebuffers = []
-  let sunrays
-  let sunraysTemp
 
-  const ditheringTexture = createTextureAsync('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mP8/5+hHgAHggJ/PchI7wAAAABJRU5ErkJggg==')
-
-  const blurProgram = new Program(blurVertexShader, blurShader)
   const copyProgram = new Program(baseVertexShader, copyShader)
   const clearProgram = new Program(baseVertexShader, clearShader)
   const colorProgram = new Program(baseVertexShader, colorShader)
-  const bloomPrefilterProgram = new Program(baseVertexShader, bloomPrefilterShader)
-  const bloomBlurProgram = new Program(baseVertexShader, bloomBlurShader)
-  const bloomFinalProgram = new Program(baseVertexShader, bloomFinalShader)
-  const sunraysMaskProgram = new Program(baseVertexShader, sunraysMaskShader)
-  const sunraysProgram = new Program(baseVertexShader, sunraysShader)
   const splatProgram = new Program(baseVertexShader, splatShader)
   const advectionProgram = new Program(baseVertexShader, advectionShader)
   const divergenceProgram = new Program(baseVertexShader, divergenceShader)
@@ -779,41 +580,6 @@ function initCanvas(canvas) {
     divergence = createFBO(simRes.width, simRes.height, r.internalFormat, r.format, texType, gl.NEAREST)
     curl = createFBO(simRes.width, simRes.height, r.internalFormat, r.format, texType, gl.NEAREST)
     pressure = createDoubleFBO(simRes.width, simRes.height, r.internalFormat, r.format, texType, gl.NEAREST)
-
-    initBloomFramebuffers()
-    initSunraysFramebuffers()
-  }
-
-  function initBloomFramebuffers() {
-    const res = getResolution(config.BLOOM_RESOLUTION)
-
-    const texType = ext.halfFloatTexType
-    const rgba = ext.formatRGBA
-    const filtering = ext.supportLinearFiltering ? gl.LINEAR : gl.NEAREST
-
-    bloom = createFBO(res.width, res.height, rgba.internalFormat, rgba.format, texType, filtering)
-
-    bloomFramebuffers.length = 0
-    for (let i = 0; i < config.BLOOM_ITERATIONS; i++) {
-      const width = res.width >> (i + 1)
-      const height = res.height >> (i + 1)
-
-      if (width < 2 || height < 2) { break }
-
-      const fbo = createFBO(width, height, rgba.internalFormat, rgba.format, texType, filtering)
-      bloomFramebuffers.push(fbo)
-    }
-  }
-
-  function initSunraysFramebuffers() {
-    const res = getResolution(config.SUNRAYS_RESOLUTION)
-
-    const texType = ext.halfFloatTexType
-    const r = ext.formatR
-    const filtering = ext.supportLinearFiltering ? gl.LINEAR : gl.NEAREST
-
-    sunrays = createFBO(res.width, res.height, r.internalFormat, r.format, texType, filtering)
-    sunraysTemp = createFBO(res.width, res.height, r.internalFormat, r.format, texType, filtering)
   }
 
   function createFBO(w, h, internalFormat, format, type, param) {
@@ -898,44 +664,9 @@ function initCanvas(canvas) {
     return target
   }
 
-  function createTextureAsync(url) {
-    const texture = gl.createTexture()
-    gl.bindTexture(gl.TEXTURE_2D, texture)
-    gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MIN_FILTER, gl.LINEAR)
-    gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MAG_FILTER, gl.LINEAR)
-    gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_S, gl.REPEAT)
-    gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_T, gl.REPEAT)
-    gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGB, 1, 1, 0, gl.RGB, gl.UNSIGNED_BYTE, new Uint8Array([255, 255, 255]))
-
-    const obj = {
-      texture,
-      width: 1,
-      height: 1,
-      attach(id) {
-        gl.activeTexture(gl.TEXTURE0 + id)
-        gl.bindTexture(gl.TEXTURE_2D, texture)
-        return id
-      },
-    }
-
-    const image = new Image()
-    image.onload = () => {
-      if (destroyed) { return }
-      obj.width = image.width
-      obj.height = image.height
-      gl.bindTexture(gl.TEXTURE_2D, texture)
-      gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGB, gl.RGB, gl.UNSIGNED_BYTE, image)
-    }
-    image.src = url
-
-    return obj
-  }
-
   function updateKeywords() {
     const displayKeywords = []
     if (config.SHADING) { displayKeywords.push('SHADING') }
-    if (config.BLOOM) { displayKeywords.push('BLOOM') }
-    if (config.SUNRAYS) { displayKeywords.push('SUNRAYS') }
     displayMaterial.setKeywords(displayKeywords)
   }
 
@@ -1067,12 +798,6 @@ function initCanvas(canvas) {
   }
 
   function render(target) {
-    if (config.BLOOM) { applyBloom(dye.read, bloom) }
-    if (config.SUNRAYS) {
-      applySunrays(dye.read, dye.write, sunrays)
-      blur(sunrays, sunraysTemp, 1)
-    }
-
     if (target == null || !config.TRANSPARENT) {
       gl.blendFunc(gl.ONE, gl.ONE_MINUS_SRC_ALPHA)
       gl.enable(gl.BLEND)
@@ -1097,84 +822,7 @@ function initCanvas(canvas) {
     displayMaterial.bind()
     if (config.SHADING) { gl.uniform2f(displayMaterial.uniforms.texelSize, 1.0 / width, 1.0 / height) }
     gl.uniform1i(displayMaterial.uniforms.uTexture, dye.read.attach(0))
-    if (config.BLOOM) {
-      gl.uniform1i(displayMaterial.uniforms.uBloom, bloom.attach(1))
-      gl.uniform1i(displayMaterial.uniforms.uDithering, ditheringTexture.attach(2))
-      const scale = getTextureScale(ditheringTexture, width, height)
-      gl.uniform2f(displayMaterial.uniforms.ditherScale, scale.x, scale.y)
-    }
-    if (config.SUNRAYS) { gl.uniform1i(displayMaterial.uniforms.uSunrays, sunrays.attach(3)) }
     blit(target)
-  }
-
-  function applyBloom(source, destination) {
-    if (bloomFramebuffers.length < 2) { return }
-
-    let last = destination
-
-    gl.disable(gl.BLEND)
-    bloomPrefilterProgram.bind()
-    const knee = config.BLOOM_THRESHOLD * config.BLOOM_SOFT_KNEE + 0.0001
-    const curve0 = config.BLOOM_THRESHOLD - knee
-    const curve1 = knee * 2
-    const curve2 = 0.25 / knee
-    gl.uniform3f(bloomPrefilterProgram.uniforms.curve, curve0, curve1, curve2)
-    gl.uniform1f(bloomPrefilterProgram.uniforms.threshold, config.BLOOM_THRESHOLD)
-    gl.uniform1i(bloomPrefilterProgram.uniforms.uTexture, source.attach(0))
-    blit(last)
-
-    bloomBlurProgram.bind()
-    for (let i = 0; i < bloomFramebuffers.length; i++) {
-      const dest = bloomFramebuffers[i]
-      gl.uniform2f(bloomBlurProgram.uniforms.texelSize, last.texelSizeX, last.texelSizeY)
-      gl.uniform1i(bloomBlurProgram.uniforms.uTexture, last.attach(0))
-      blit(dest)
-      last = dest
-    }
-
-    gl.blendFunc(gl.ONE, gl.ONE)
-    gl.enable(gl.BLEND)
-
-    for (let i = bloomFramebuffers.length - 2; i >= 0; i--) {
-      const baseTex = bloomFramebuffers[i]
-      gl.uniform2f(bloomBlurProgram.uniforms.texelSize, last.texelSizeX, last.texelSizeY)
-      gl.uniform1i(bloomBlurProgram.uniforms.uTexture, last.attach(0))
-      gl.viewport(0, 0, baseTex.width, baseTex.height)
-      blit(baseTex)
-      last = baseTex
-    }
-
-    gl.disable(gl.BLEND)
-    bloomFinalProgram.bind()
-    gl.uniform2f(bloomFinalProgram.uniforms.texelSize, last.texelSizeX, last.texelSizeY)
-    gl.uniform1i(bloomFinalProgram.uniforms.uTexture, last.attach(0))
-    gl.uniform1f(bloomFinalProgram.uniforms.intensity, config.BLOOM_INTENSITY)
-    blit(destination)
-  }
-
-  function applySunrays(source, mask, destination) {
-    gl.disable(gl.BLEND)
-    sunraysMaskProgram.bind()
-    gl.uniform1i(sunraysMaskProgram.uniforms.uTexture, source.attach(0))
-    blit(mask)
-
-    sunraysProgram.bind()
-    gl.uniform1f(sunraysProgram.uniforms.weight, config.SUNRAYS_WEIGHT)
-    gl.uniform1i(sunraysProgram.uniforms.uTexture, mask.attach(0))
-    blit(destination)
-  }
-
-  function blur(target, temp, iterations) {
-    blurProgram.bind()
-    for (let i = 0; i < iterations; i++) {
-      gl.uniform2f(blurProgram.uniforms.texelSize, target.texelSizeX, 0.0)
-      gl.uniform1i(blurProgram.uniforms.uTexture, target.attach(0))
-      blit(temp)
-
-      gl.uniform2f(blurProgram.uniforms.texelSize, 0.0, target.texelSizeY)
-      gl.uniform1i(blurProgram.uniforms.uTexture, temp.attach(0))
-      blit(target)
-    }
   }
 
   function splatPointer(pointer) {
@@ -1338,13 +986,6 @@ function initCanvas(canvas) {
     const max = Math.round(resolution * aspectRatio)
 
     if (gl.drawingBufferWidth > gl.drawingBufferHeight) { return { width: max, height: min } } else { return { width: min, height: max } }
-  }
-
-  function getTextureScale(texture, width, height) {
-    return {
-      x: width / texture.width,
-      y: height / texture.height,
-    }
   }
 
   function scaleByPixelRatio(input) {
