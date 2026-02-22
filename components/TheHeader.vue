@@ -84,6 +84,7 @@ const activeLinkClass = '!text-foreground hover:text-foreground'
             variant="link"
             size="icon"
             class="flex items-center justify-center"
+            :aria-label="isDark ? 'Switch to light mode' : 'Switch to dark mode'"
             @click="toggleDark"
           >
             <Icon
