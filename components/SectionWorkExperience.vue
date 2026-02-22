@@ -28,7 +28,7 @@
         start-date="Aug 2022"
         end-date="Jun 2024"
         slug="4ofthem"
-        logo="/4ot-logo.png"
+        logo="/4ot-logo.webp"
         :used="['Nuxt', 'Vue', 'TypeScript', 'Pinia', 'UnoCSS', 'Quasar', 'Storybook', 'Vite', 'web components']"
         logo-class="h-[14px]"
       >
@@ -46,7 +46,7 @@
         start-date="Jun 2023"
         end-date="Oct 2023"
         slug="mendracare"
-        logo="/mendracare-logo.jpeg"
+        logo="/mendracare-logo.webp"
         :used="['Vue', 'JavaScript', 'Tanstack Query', 'Vuetify', 'Cypress', 'Vitest']"
       >
         <template #default>

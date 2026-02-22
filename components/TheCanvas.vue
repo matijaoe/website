@@ -14,7 +14,7 @@ const config = {
   // Grid resolution for velocity/pressure simulation. Higher = sharper fluid detail, more GPU. (32-256)
   SIM_RESOLUTION: 128,
   // Grid resolution for color/dye. Higher = sharper color detail. (128-2048)
-  DYE_RESOLUTION: 1024,
+  DYE_RESOLUTION: 512,
   // Resolution used when capturing a screenshot of the canvas. (128-1024)
   CAPTURE_RESOLUTION: 256,
   // How fast color fades out. Higher = fades quicker. (0 = permanent, ~1-10)
@@ -24,13 +24,13 @@ const config = {
   // Pressure field retention per step. Lower = more diffuse spread. (0-1)
   PRESSURE: 0.2,
   // Solver iterations for pressure. Higher = more accurate but heavier. (10-50)
-  PRESSURE_ITERATIONS: 30,
+  PRESSURE_ITERATIONS: 20,
   // Curl force that adds swirl/turbulence. Higher = more chaotic. (0-50)
   VORTICITY: 0,
   // Size of each color splat. Higher = bigger, softer blobs. (0.01-1.0)
   SPLAT_RADIUS: 0.18,
   // Velocity applied per splat. Higher = faster/stronger push. (100-10000)
-  SPLAT_FORCE: 5000,
+  SPLAT_FORCE: 4000,
   // Adds faux 3D lighting based on dye gradients
   SHADING: false,
   // Continuously rotates pointer colors over time
@@ -44,7 +44,7 @@ const config = {
   // Renders dye with alpha instead of over BACK_COLOR
   TRANSPARENT: true,
   // Hue (0=red, 0.08=amber, 0.17=yellow, 0.33=green, 0.5=cyan, 0.67=blue, 0.75=purple). Set to null for random colorful mix.
-  HUE_DARK: 0.08,
+  HUE_DARK: 0.07,
   HUE_LIGHT: null,
   // Color intensity multiplier (0.05=subtle, 0.15=normal, 0.3=vivid)
   COLOR_INTENSITY: 0.12,
