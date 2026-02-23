@@ -23,7 +23,7 @@ useSeoMeta({
         </p>
 
         <p>
-          I bring strong product taste to everything I build. I obsess over DevEx just as much as UX. I do my best work with full ownership and thrive in remote, async environments. Give me a goal and I'll ship something I'm proud of.
+          I bring strong product taste to everything I build. I obsess over dev experience just as much as UX. I do my best work with full ownership and thrive in remote, async environments. Give me a goal and I'll ship something I'm proud of.
         </p>
 
         <p>

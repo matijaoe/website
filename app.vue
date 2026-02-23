@@ -2,7 +2,7 @@
 import { Analytics } from '@vercel/analytics/nuxt'
 import Toaster from './components/ui/toast/Toaster.vue'
 
-const { toggleDark } = useTheme()
+const { toggleDark, isDark } = useTheme()
 
 // eslint-disable-next-line ts/naming-convention
 const { Meta_J, Ctrl_J } = useMagicKeys({
@@ -37,7 +37,8 @@ useSeoMeta({
       <Toaster />
 
       <ClientOnly>
-        <TheCanvas />
+        <TheCanvas v-if="isDark" />
+        <TheGrain v-else />
       </ClientOnly>
 
       <NuxtLayout>
