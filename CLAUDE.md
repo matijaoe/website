@@ -16,7 +16,7 @@
 - **Styling**: TailwindCSS + shadcn/ui components in `components/ui/`
 - **Content**: Nuxt Content with Markdown files in `content/`
 - **Icons**: Nuxt Icon with Iconify collections
-- **Fonts**: Satoshi, Clash Display, JetBrains Mono via Nuxt Fonts
+- **Fonts**: Satoshi, Instrument Serif, JetBrains Mono via Nuxt Fonts
 - **No tests**: This is a personal portfolio site with no test setup
 
 ## Code Style

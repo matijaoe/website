@@ -57,8 +57,7 @@ function getRotation(index: number): number {
       <IconWithText text="Claude Code" icon="logos:claude-icon" />,
       <IconWithText text="Cursor" icon="simple-icons:cursor" />,
       <span>OpenCode</span> and
-      <span>Ghostty</span>, using
-      <IconWithText text="Wispr Flow" icon="custom:wispr-flow" />
+      <span>Ghostty</span>, using <span>Wispr Flow</span>.
     </p>
 
     <motion.div

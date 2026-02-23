@@ -25,7 +25,7 @@ module.exports = {
               'text-decoration': 'unset',
             },
             ':is(h1, h2, h3, h4, h5, h6)': {
-              'font-family': 'Clash Display',
+              'font-family': 'Instrument Serif',
               'font-size': rem(30),
               'margin-bottom': rem(20),
             },
@@ -43,7 +43,7 @@ module.exports = {
       },
       fontFamily: {
         sans: ['Satoshi', 'ui-sans-serif', 'system-ui', 'sans-serif'],
-        display: ['Clash Display'],
+        display: ['Instrument Serif'],
         mono: ['JetBrains Mono', 'ui-monospace', 'monospace'],
       },
       colors: {

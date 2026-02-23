@@ -19,11 +19,11 @@ useSeoMeta({
             icon="emojione:sparkles"
             icon-size="0.9em"
             icon-class="translate-y-0.5"
-          /> and how it's changing the way we think, build, and ship software. I'm known as <em>the</em> AI guy. Claude Code is my best friend.
+          /> and how it's changing the way we think, build, and ship software. I'm known as <em>the AI guy</em>. Claude Code is always by my side.
         </p>
 
         <p>
-          I bring strong product taste to everything I build. I obsess over developer experience just as much as user experience. I do my best work with full ownership and thrive in remote, async environments. Give me a goal and I'll ship something I'm proud of.
+          I bring strong product taste to everything I build. I obsess over DevEx just as much as UX. I do my best work with full ownership and thrive in remote, async environments. Give me a goal and I'll ship something I'm proud of.
         </p>
 
         <p>

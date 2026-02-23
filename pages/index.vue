@@ -1,5 +1,4 @@
 <script lang="ts" setup>
-const { setMode } = useTheme()
 const { nowFormatted } = useCurrentTime()
 
 const revealed = ref(false)
@@ -39,17 +38,10 @@ useSeoMeta({
           </span>
         </Badge>
       </div>
-      <h1 ref="hero" class="text-balance text-[42px]/[1.1] sm:text-6xl/none font-medium font-display lg:text-7xl/[0.95] mb-4 md:mb-6">
-        <span class="text-reveal" :class="{ revealed }" style="--reveal-delay: 0s">I'm <span title="Matija Osrečki">Matija</span>,</span>
+      <h1 ref="hero" class="text-balance text-[42px]/[1.1] sm:text-6xl/none font-medium font-display lg:text-8xl/[0.92] mb-4 md:mb-6">
+        <span class="text-reveal" :class="{ revealed }" style="--reveal-delay: 0.0s">Crafting <span class="italic">sleek</span></span>
         <br>
-        <span class="text-reveal" :class="{ revealed }" style="--reveal-delay: 0.12s">crafting <span class="italic">sleek</span></span>
-        <Icon
-          name="emojione:sparkles"
-          class="text-[0.7em] lg:text-[0.5em] align-top ml-2 lg:ml-3 inline-block sparkle-icon"
-          :class="{ 'sparkle-pop': revealed }"
-        />
-        <br>
-        <span class="text-reveal" :class="{ revealed }" style="--reveal-delay: 0.24s"><span class="underline">web</span> experiences</span>
+        <span class="text-reveal" :class="{ revealed }" style="--reveal-delay: 0.12s">web experiences</span>
       </h1>
 
       <div class="text-default-foreground text-base md:text-lg leading-7">
@@ -61,10 +53,7 @@ useSeoMeta({
             <br>
             I build well-crafted software, obsessing over the details that matter.
             <br>
-            Into AI agents, open source, side projects, <button @click="setMode('dark')">
-              dark mode
-            </button>, minimalism, and Bitcoin.
-            <br>
+            Into AI agents, side projects, and Bitcoin.
           </p>
         </div>
 
@@ -102,24 +91,5 @@ useSeoMeta({
 
 .text-reveal.revealed {
   background-position-x: 0%;
-}
-
-.sparkle-icon {
-  opacity: 0;
-  scale: 0;
-  rotate: -45deg;
-  filter: brightness(0);
-  transition: opacity 0.4s ease, scale 0.5s cubic-bezier(0.34, 1.56, 0.64, 1), rotate 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
-  transition-delay: 1.3s;
-}
-
-:root.dark .sparkle-icon {
-  filter: none;
-}
-
-.sparkle-pop {
-  opacity: 1;
-  scale: 1;
-  rotate: 5deg;
 }
 </style>
