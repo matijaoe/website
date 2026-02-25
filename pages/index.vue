@@ -53,7 +53,7 @@ useSeoMeta({
             <br>
             I build well-crafted software, obsessing over the details that matter.
             <br>
-            Into AI agents, side projects, and Bitcoin.
+            Into AI agents, side projects and Bitcoin.
           </p>
         </div>
 

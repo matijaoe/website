@@ -7,10 +7,10 @@ type Podcast = {
 
 const podcasts: Podcast[] = [
   { title: 'Lex Fridman Podcast', url: 'https://lexfridman.com/podcast/' },
-  { title: 'Syntax.fm', url: 'https://syntax.fm/' },
-  { title: 'Cheeky Pint', author: 'John Collison', url: 'https://cheekypint.transistor.fm/' },
-  { title: 'Dwarkesh Podcast', author: 'Dwarkesh Patel', url: 'https://www.dwarkesh.com/' },
   { title: 'Lenny\'s Podcast', url: 'https://lennysnewsletter.com/podcast' },
+  { title: 'Cheeky Pint', author: 'John Collison', url: 'https://cheekypint.transistor.fm/' },
+  { title: 'Dwarkesh Podcast', url: 'https://www.dwarkesh.com/' },
+  { title: 'Syntax.fm', url: 'https://syntax.fm/' },
   { title: 'Acquired', url: 'https://acquired.fm/' },
   { title: 'Darknet Diaries', url: 'https://darknetdiaries.com/' },
   { title: 'The Rest is History', url: 'https://podcasts.apple.com/hr/podcast/the-rest-is-history/id1537788786' },
@@ -23,7 +23,6 @@ const podcasts: Podcast[] = [
   { title: 'Bitcoin Review', author: 'NVK', url: 'https://bitcoin.review/' },
   { title: 'All-In Podcast', url: 'https://podcasts.apple.com/us/podcast/all-in-with-chamath-jason-sacks-friedberg/id1502871393' },
   { title: 'This Past Weekend', author: 'Theo Von', url: 'https://www.theovon.com/tpw/episodes' },
-  { title: 'Inside True Crime', author: 'Matthew Cox', url: 'https://podcasts.apple.com/us/podcast/matthew-cox-inside-true-crime-podcast/id1574561959' },
   { title: 'The Morgan Housel Podcast', url: 'https://podcasts.apple.com/us/podcast/the-morgan-housel-podcast/id1675310669' },
 ]
 </script>
@@ -31,7 +30,7 @@ const podcasts: Podcast[] = [
 <template>
   <AboutProseWrapper title="Podcasts">
     <template #description>
-      I listen to podcasts every single day. Bitcoin, AI, macro, finance, politics, business, tech, hacking, opsec, history, literature, comedy.
+      I listen to podcasts every single day. AI, Bitcoin, macro, finance, politics, business, tech, hacking, opsec, history, literature, comedy.
     </template>
 
     <ul>
