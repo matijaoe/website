@@ -14,7 +14,7 @@
         end-date="Present"
         slug="theydo"
         logo="/theydo-logo.webp"
-        :used="['Vue', 'TypeScript', 'Apollo', 'GraphQL', 'Tailwind', 'Vitest', 'Playwright', 'Radix', 'Storybook', 'Tiptap', 'Vite']"
+        :used="['Vue', 'TypeScript', 'Apollo', 'GraphQL', 'Tailwind', 'Vitest', 'Playwright', 'Radix', 'Tiptap']"
       >
         Shaping the journey management platform that helps enterprises connect customer insights and drive decisions across teams.
       </WorkExperienceEntry>
@@ -29,7 +29,7 @@
         end-date="Jun 2024"
         slug="4ofthem"
         logo="/4ot-logo.webp"
-        :used="['Nuxt', 'Vue', 'TypeScript', 'Pinia', 'UnoCSS', 'Quasar', 'Storybook', 'Vite', 'web components']"
+        :used="['Nuxt', 'Vue', 'TypeScript', 'Pinia', 'Tailwind', 'Quasar', 'web components']"
         logo-class="h-[14px]"
       >
         <template #default>
@@ -47,7 +47,7 @@
         end-date="Oct 2023"
         slug="mendracare"
         logo="/mendracare-logo.webp"
-        :used="['Vue', 'JavaScript', 'Tanstack Query', 'Vuetify', 'Cypress', 'Vitest']"
+        :used="['Vue', 'Tanstack Query', 'Vuetify', 'Cypress']"
       >
         <template #default>
           Developed core features for a platform that helps nurses and caregivers manage the complex needs of patients with disabilities.
@@ -64,7 +64,7 @@
         end-date="Jul 2022"
         slug="3ofthem"
         logo="/3ot-logo.jpeg"
-        :used="['Vue', 'JavaScript', 'TypeScript', 'Nuxt', 'Pinia', 'Vuex', 'Tailwind', 'UnoCSS', 'Sass', 'PrimeVue', 'Storybook', 'Vite']"
+        :used="['Vue', 'TypeScript', 'Nuxt', 'Pinia', 'Tailwind']"
       >
         <template #default>
           <p>
@@ -82,7 +82,7 @@
         start-date="May 2021"
         end-date="Jul 2021"
         slug="infokarta"
-        :used="['Nuxt', 'Vuex', 'JavaScript', 'Mapbox', 'Bootstrap', 'Sass', 'Node', 'Express', 'Postgres']"
+        :used="['Nuxt', 'JavaScript', 'Mapbox', 'Express', 'Postgres']"
       >
         <template #logo>
           <Icon name="lucide:map" class="aspect-square size-4 rounded-[2px] -ml-0.5" alt="company logo" />
