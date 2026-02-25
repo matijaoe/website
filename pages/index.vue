@@ -38,7 +38,7 @@ useSeoMeta({
           </span>
         </Badge>
       </div>
-      <h1 ref="hero" class="text-balance text-[42px]/[1.1] sm:text-6xl/none font-medium font-display lg:text-8xl/[0.92] mb-4 md:mb-6">
+      <h1 ref="hero" class="text-balance text-[56px]/none sm:text-6xl/none font-medium font-display lg:text-8xl/[0.92] mb-4 md:mb-6">
         <span class="text-reveal" :class="{ revealed }" style="--reveal-delay: 0.0s">Crafting <span class="italic">sleek</span></span>
         <br>
         <span class="text-reveal" :class="{ revealed }" style="--reveal-delay: 0.12s">web experiences</span>

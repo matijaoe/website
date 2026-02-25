@@ -23,17 +23,17 @@ const readingStreakDays = computed(() => {
 const fictionBooks: Book[] = [
   { title: 'Animal Farm', author: 'George Orwell', url: 'https://www.goodreads.com/book/show/8349198-animal-farm', description: '📖 🎧' },
   { title: 'Stoner', author: 'John Williams', url: 'https://www.goodreads.com/book/show/166997.Stoner', description: '📖' },
-  { title: 'The Metamorphosis', author: 'Franz Kafka', url: 'https://www.goodreads.com/book/show/17986414-the-metamorphosis', description: '📖' },
   { title: 'Grapes of Wrath', author: 'John Steinbeck', url: 'https://www.goodreads.com/book/show/22024055-the-grapes-of-wrath', description: '📖' },
+  { title: 'The Metamorphosis', author: 'Franz Kafka', url: 'https://www.goodreads.com/book/show/17986414-the-metamorphosis', description: '📖' },
+  { title: 'The Death of Ivan Ilyich', author: 'Leo Tolstoy', url: 'https://www.goodreads.com/book/show/18386.The_Death_of_Ivan_Ilych', description: '📖' },
+  { title: 'The Overcoat', author: 'Nikolai Gogol', url: 'https://www.goodreads.com/book/show/24381671-the-overcoat', description: '📖' },
   { title: 'The Mandibles', author: 'Lionel Shriver', url: 'https://www.goodreads.com/book/show/27064345-the-mandibles', description: '📖' },
   { title: 'Convenience Store Woman', author: 'Sayaka Murata', url: 'https://www.goodreads.com/book/show/38357895-convenience-store-woman', description: '📖' },
-  { title: 'The Overcoat', author: 'Nikolai Gogol', url: 'https://www.goodreads.com/book/show/24381671-the-overcoat', description: '📖' },
-  { title: 'The Death of Ivan Ilyich', author: 'Leo Tolstoy', url: 'https://www.goodreads.com/book/show/18386.The_Death_of_Ivan_Ilych', description: '📖' },
   { title: 'The Stranger', author: 'Albert Camus', url: 'https://www.goodreads.com/book/show/49552.The_Stranger', description: '📖' },
   { title: 'Chess', author: 'Stefan Zweig', url: 'https://www.goodreads.com/book/show/32599701-chess', description: '📖' },
   { title: 'Notes from Underground', author: 'Fyodor Dostoevsky', url: 'https://www.goodreads.com/book/show/49455.Notes_from_Underground', description: '📖' },
   { title: 'Project Hail Mary', author: 'Andy Weir', url: 'https://www.goodreads.com/book/show/54493401-project-hail-mary', description: '📖' },
-  { title: 'Earthseed (series)', author: 'Octavia E. Butler', url: 'https://www.goodreads.com/series/57804-earthseed', description: '📖' },
+  { title: 'Earthseed', author: 'Octavia E. Butler', url: 'https://www.goodreads.com/series/57804-earthseed', description: '📖' },
 ]
 
 const nonfictionBooks: Book[] = [
