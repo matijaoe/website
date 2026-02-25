@@ -3,7 +3,7 @@
     <h2 class="mb-4 text-3xl font-medium font-display">
       Experience
     </h2>
-    <ul role="list" class="space-y-6 [&>li:last-child_.timeline-line]:hidden">
+    <ul role="list" class="space-y-6">
       <WorkExperienceEntry
         company="TheyDo"
         company-url="https://www.theydo.com"
