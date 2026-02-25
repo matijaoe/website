@@ -14,7 +14,7 @@
         end-date="Present"
         slug="theydo"
         logo="/theydo-logo.webp"
-        :used="['Vue', 'TypeScript', 'Apollo', 'GraphQL', 'Tailwind', 'Vitest', 'Playwright', 'Radix', 'Tiptap']"
+        :used="['Vue', 'TypeScript', 'Apollo', 'GraphQL', 'Tailwind', 'Vitest', 'Playwright', 'Tiptap']"
       >
         Shaping the journey management platform that helps enterprises connect customer insights and drive decisions across teams.
       </WorkExperienceEntry>
@@ -29,7 +29,7 @@
         end-date="Jun 2024"
         slug="4ofthem"
         logo="/4ot-logo.webp"
-        :used="['Nuxt', 'Vue', 'TypeScript', 'Pinia', 'Tailwind', 'Quasar', 'web components']"
+        :used="['Nuxt', 'Vue', 'TypeScript', 'Tailwind', 'Quasar', 'web components']"
         logo-class="h-[14px]"
       >
         <template #default>
@@ -64,7 +64,7 @@
         end-date="Jul 2022"
         slug="3ofthem"
         logo="/3ot-logo.jpeg"
-        :used="['Vue', 'TypeScript', 'Nuxt', 'Pinia', 'Tailwind']"
+        :used="['Vue', 'TypeScript', 'Nuxt', 'Tailwind']"
       >
         <template #default>
           <p>
