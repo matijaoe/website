@@ -14,7 +14,7 @@
         end-date="Present"
         slug="theydo"
         logo="/theydo-logo.webp"
-        :used="['Vue', 'TypeScript', 'Apollo', 'GraphQL', 'Tailwind', 'Vitest', 'Playwright', 'Tiptap']"
+        :used="['Vue', 'TypeScript', 'Apollo GraphQL', 'Tailwind', 'Tiptap', 'Vitest', 'Playwright']"
       >
         Shaping the journey management platform that helps enterprises connect customer insights and drive decisions across teams.
       </WorkExperienceEntry>
