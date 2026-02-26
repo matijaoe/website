@@ -39,9 +39,9 @@ watch(y, (newY) => {
   <ClientOnly>
     <Teleport to="body">
       <motion.nav
-        class="fixed bottom-5 left-1/2 -translate-x-1/2 z-40 flex md:hidden items-center gap-5 rounded-full border border-border/50 bg-background/80 px-6 py-2.5 shadow-lg backdrop-blur-lg"
+        class="fixed bottom-5 left-1/2 -translate-x-1/2 z-40 flex md:hidden items-center gap-4 rounded-full border border-border/50 bg-background/80 px-6 py-2.5 shadow-sm backdrop-blur-lg"
         :animate="{ y: isHidden ? 'calc(100% + 2rem)' : 0 }"
-        :transition="{ type: 'spring', stiffness: 300, damping: 20 }"
+        :transition="{ type: 'spring', stiffness: 350, damping: 30 }"
       >
         <NuxtLink
           v-for="link in links"
@@ -59,7 +59,7 @@ watch(y, (newY) => {
         <Button
           variant="link"
           size="icon"
-          class="size-7"
+          class="-ml-1.5 size-7"
           :aria-label="isDark ? 'Switch to light mode' : 'Switch to dark mode'"
           @click="toggleDark"
         >
