@@ -18,7 +18,7 @@ const copied = refAutoReset(false, 2000)
 </script>
 
 <template>
-  <footer class="mt-auto pt-36 pb-10 text-sm md:text-xs text-foreground/40 lowercase font-mono">
+  <footer class="mt-auto pt-20 pb-6 md:pt-36 md:pb-10 text-sm md:text-xs text-foreground/40 lowercase font-mono">
     <!-- Mobile -->
     <div class="flex flex-col gap-4 md:hidden">
       <div class="flex flex-col gap-1">
