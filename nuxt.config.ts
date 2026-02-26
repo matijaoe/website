@@ -19,7 +19,7 @@ export default defineNuxtConfig({
     '~/assets/css/tailwind.css',
   ],
 
-  devtools: { enabled: import.meta.dev },
+  devtools: { enabled: false },
 
   sourcemap: {
     server: false,
