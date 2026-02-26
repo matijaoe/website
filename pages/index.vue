@@ -56,18 +56,6 @@ useSeoMeta({
             Into AI agents, side projects and Bitcoin.
           </p>
         </div>
-
-        <div class="mt-6 flex items-center gap-3">
-          <Button to="/projects" variant="default" size="default" class="lowercase">
-            <BaseKbd :keys="['P']" variant="auto-inverted" class="translate-y-px mr-0.5" />
-            Projects
-          </Button>
-
-          <Button to="/about" variant="ghost" size="default" class="lowercase">
-            <BaseKbd :keys="['A']" class="translate-y-px mr-0.5" />
-            About me
-          </Button>
-        </div>
       </div>
     </section>
 

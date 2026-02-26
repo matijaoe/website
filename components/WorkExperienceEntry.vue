@@ -15,16 +15,16 @@ defineProps<{
 </script>
 
 <template>
-  <li class="relative flex gap-x-3 md:grid md:grid-cols-3 md:gap-5">
+  <li class="relative flex gap-x-3 md:grid md:grid-cols-[180px_1fr] md:gap-5">
     <!-- Date (desktop) -->
-    <div class="hidden md:block col-span-1">
+    <div class="hidden md:block">
       <p class="text-muted-foreground text-sm leading-7">
         {{ startDate }} &mdash; {{ endDate }}
       </p>
     </div>
 
     <!-- Content -->
-    <div class="flex-auto md:col-span-2 relative">
+    <div class="flex-auto relative">
       <div class="pb-2">
         <p class="text-muted-foreground text-sm mb-0.5 md:hidden">
           {{ startDate }} &mdash; {{ endDate }}
