@@ -85,6 +85,9 @@ export default defineNuxtConfig({
     head: {
       titleTemplate: '%s • matijao',
       title: 'Matija Osrečki',
+      meta: [
+        { name: 'viewport', content: 'width=device-width, initial-scale=1, viewport-fit=cover' },
+      ],
       link: [
         { rel: 'icon', type: 'image/svg+xml', href: '/favicon.svg' },
       ],
