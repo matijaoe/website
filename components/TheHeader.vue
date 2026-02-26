@@ -32,27 +32,10 @@ const activeLinkClass = '!text-foreground hover:text-foreground'
         {{ handleDisplay }}
       </NuxtLink>
 
-      <div class="flex items-center gap-5 md:hidden">
-        <BaseTooltip>
-          <template #content>
-            <BaseKbd :keys="['⌘', 'J']" />
-          </template>
-          <Button
-            variant="link"
-            size="icon"
-            :aria-label="isDark ? 'Switch to light mode' : 'Switch to dark mode'"
-            @click="toggleDark"
-          >
-            <Icon
-              name="custom:half-circle"
-              class="text-[24px] transition-transform duration-300 ease-in-out dark:rotate-180"
-            />
-          </Button>
-        </BaseTooltip>
-      </div>
+      <!-- Mobile theme toggle moved to MobileNav -->
     </div>
 
-    <menu class="flex items-center gap-3 md:gap-5">
+    <menu class="hidden md:flex items-center gap-3 md:gap-5">
       <div class="flex items-center gap-4 md:gap-6">
         <template v-for="link in links" :key="link.to.toString()">
           <BaseTooltip>
