@@ -3,13 +3,8 @@ const { github, linkedin, x, email } = personalLinks
 
 const links = [github, linkedin, x]
 
-const copied = refAutoReset(false, 2000)
 const { copy } = useClipboard()
-
-function copyToClipboard(text: string) {
-  copy(text)
-  copied.value = true
-}
+const copied = refAutoReset(false, 2000)
 </script>
 
 <template>
@@ -28,12 +23,14 @@ function copyToClipboard(text: string) {
     <BaseTooltip
       side="right"
       :side-offset="8"
+      :delay="0"
       :content="copied ? 'Copied!' : 'Click to copy'"
       disable-closing-trigger
     >
       <button
         class="flex w-fit items-center gap-1.5 text-lg hover:underline decoration-0.1em underline-offset-[0.15em]"
-        @click="copyToClipboard(email.copyText)"
+        @mouseenter="copied = false"
+        @click="copy(email.copyText).then(() => copied = true)"
       >
         {{ email.label }}
         <Icon name="lucide:copy" class="text-sm text-muted-foreground" />

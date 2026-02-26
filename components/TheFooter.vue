@@ -13,13 +13,8 @@ const footerLinks = [
   { ...resume },
 ]
 
-const copied = refAutoReset(false, 2000)
 const { copy } = useClipboard()
-
-function copyEmail() {
-  copy(email.copyText)
-  copied.value = true
-}
+const copied = refAutoReset(false, 2000)
 </script>
 
 <template>
@@ -40,12 +35,14 @@ function copyEmail() {
         <BaseTooltip
           side="right"
           :side-offset="8"
+          :delay="0"
           :content="copied ? 'Copied!' : 'Click to copy'"
           disable-closing-trigger
         >
           <button
             class="hover:text-foreground hover:underline transition-colors w-fit"
-            @click="copyEmail"
+            @mouseenter="copied = false"
+            @click="copy(email.copyText).then(() => copied = true)"
           >
             {{ email.label }}
           </button>
@@ -86,12 +83,14 @@ function copyEmail() {
       <BaseTooltip
         side="top"
         :side-offset="4"
+        :delay="0"
         :content="copied ? 'Copied!' : 'Click to copy'"
         disable-closing-trigger
       >
         <button
           class="hover:text-foreground hover:underline transition-colors"
-          @click="copyEmail"
+          @mouseenter="copied = false"
+          @click="copy(email.copyText).then(() => copied = true)"
         >
           {{ email.label }}
         </button>
