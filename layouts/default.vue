@@ -36,9 +36,9 @@ const { breadcrumbs, isHome } = useBreadcrumbs()
         <TransitionFade>
           <Button
             v-show="y > 120"
-            variant="secondary"
+            variant="outline"
             size="icon-lg"
-            class="fixed hidden md:flex bottom-6 right-6 lg:bottom-14 lg:right-14 rounded-full"
+            class="fixed hidden sm:flex bottom-6 right-6 lg:bottom-14 lg:right-14 rounded-full"
             @click="scrollToTop"
           >
             <Icon name="lucide:chevron-up" class="text-default-50 text-xl" />

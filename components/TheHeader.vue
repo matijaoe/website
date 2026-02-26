@@ -26,7 +26,7 @@ const activeLinkClass = '!text-foreground hover:text-foreground'
 </script>
 
 <template>
-  <header class="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+  <header class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
     <div class="flex items-center justify-between">
       <NuxtLink to="/" class="font-mono text-[17px] leading-7 flex items-center gap-1.5" @mouseenter="handleScramble">
         {{ handleDisplay }}
@@ -35,7 +35,7 @@ const activeLinkClass = '!text-foreground hover:text-foreground'
       <!-- Mobile theme toggle moved to MobileNav -->
     </div>
 
-    <menu class="hidden md:flex items-center gap-3 md:gap-5">
+    <menu class="hidden sm:flex items-center gap-3 sm:gap-5">
       <div class="flex items-center gap-4 md:gap-6">
         <template v-for="link in links" :key="link.to.toString()">
           <BaseTooltip>
@@ -54,7 +54,7 @@ const activeLinkClass = '!text-foreground hover:text-foreground'
         </template>
       </div>
 
-      <div class="hidden md:block">
+      <div class="hidden sm:block">
         <BaseTooltip>
           <template #content>
             <div class="flex items-center gap-1.5">
@@ -72,7 +72,7 @@ const activeLinkClass = '!text-foreground hover:text-foreground'
           >
             <Icon
               name="custom:half-circle"
-              class="text-[22px] transition-transform duration-300 ease-in-out dark:rotate-180"
+              class="text-[22px]"
             />
           </Button>
         </BaseTooltip>

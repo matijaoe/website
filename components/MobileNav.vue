@@ -18,7 +18,7 @@ const activeLinkClass = '!text-foreground'
   <ClientOnly>
     <Teleport to="body">
       <nav
-        class="fixed bottom-3 left-1/2 -translate-x-1/2 z-40 flex md:hidden items-center gap-4 rounded-full border border-border/50 bg-background/80 px-6 py-2.5 shadow-sm backdrop-blur-lg"
+        class="fixed bottom-5 left-1/2 -translate-x-1/2 z-40 flex sm:hidden items-center gap-4 rounded-full border border-border bg-background/80 px-6 py-2.5 backdrop-blur-2xl backdrop-saturate-150"
       >
         <NuxtLink
           v-for="link in links"
@@ -42,7 +42,7 @@ const activeLinkClass = '!text-foreground'
         >
           <Icon
             name="custom:half-circle"
-            class="text-xl transition-transform duration-300 ease-in-out dark:rotate-180"
+            class="text-lg"
           />
         </Button>
       </nav>
