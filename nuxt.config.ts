@@ -28,6 +28,16 @@ export default defineNuxtConfig({
 
   vite: {
     plugins: [tailwindcss()],
+    optimizeDeps: {
+      include: [
+        '@vercel/analytics/nuxt',
+        'class-variance-authority',
+        'radix-vue',
+        '@radix-icons/vue',
+        'clsx',
+        'tailwind-merge',
+      ],
+    },
     build: {
       sourcemap: false,
     },
