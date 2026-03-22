@@ -2,7 +2,7 @@
   "name": "matijao.com",
   "type": "module",
   "private": true,
-  "packageManager": "pnpm@10.10.0+sha512.d615db246fe70f25dcfea6d8d73dee782ce23e2245e3c4f6f888249fb568149318637dca73c2c5c8ef2a4ca0d5657fb9567188bfab47f566d1ee6ce987815c39",
+  "packageManager": "pnpm@10.32.1+sha512.a706938f0e89ac1456b6563eab4edf1d1faf3368d1191fc5c59790e96dc918e4456ab2e67d613de1043d2e8c81f87303e6b40d4ffeca9df15ef1ad567348f2be",
   "license": "MIT",
   "engines": {
     "node": ">=24.0.0 <25.0.0"
@@ -25,6 +25,7 @@
     "@radix-icons/vue": "^1.0.0",
     "@vercel/analytics": "^1.6.1",
     "@vueuse/core": "^14.1.0",
+    "better-sqlite3": "^12.8.0",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "motion-v": "2.0.0-beta.3",

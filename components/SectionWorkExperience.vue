@@ -11,7 +11,7 @@
         location-icon="circle-flags:nl"
         position="Senior Frontend Engineer"
         start-date="Jul 2024"
-        end-date="Present"
+        end-date="Apr 2026"
         slug="theydo"
         logo="/theydo-logo.webp"
         :used="['Vue', 'TypeScript', 'Apollo GraphQL', 'Tailwind', 'Tiptap', 'Vitest', 'Playwright']"

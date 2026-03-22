@@ -18,10 +18,8 @@ const podcasts: Podcast[] = [
   { title: 'The Jack Mallers Show', url: 'https://podcasts.apple.com/us/podcast/the-jack-mallers-show/id1695949365' },
   { title: 'What Bitcoin Did', url: 'https://www.whatbitcoindid.com/' },
   { title: 'Rabbit Hole Recap', url: 'https://rhr.tv/' },
-  { title: 'TFTC', author: 'Marty Bent', url: 'https://www.tftc.io/tag/podcasts/' },
   { title: 'Citadel Dispatch', author: 'Odell', url: 'https://citadeldispatch.com/' },
   { title: 'Bitcoin Review', author: 'NVK', url: 'https://bitcoin.review/' },
-  { title: 'All-In Podcast', url: 'https://podcasts.apple.com/us/podcast/all-in-with-chamath-jason-sacks-friedberg/id1502871393' },
   { title: 'This Past Weekend', author: 'Theo Von', url: 'https://www.theovon.com/tpw/episodes' },
   { title: 'The Morgan Housel Podcast', url: 'https://podcasts.apple.com/us/podcast/the-morgan-housel-podcast/id1675310669' },
 ]
