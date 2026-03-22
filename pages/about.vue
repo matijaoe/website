@@ -1,4 +1,6 @@
 <script lang="ts" setup>
+const { resume } = personalLinks
+
 useSeoMeta({
   title: 'About',
   ogTitle: 'About',
@@ -19,7 +21,7 @@ useSeoMeta({
             icon="emojione:sparkles"
             icon-size="0.9em"
             icon-class="translate-y-0.5"
-          /> and how it's changing the way we think, build, and ship software. I got pretty good at it.
+          /> and the way it's transforming the way we think, build, and ship software. I got pretty good at it.
         </p>
 
         <p>
@@ -34,6 +36,18 @@ useSeoMeta({
             icon-size="0.9em"
             icon-class="translate-y-0.5"
           /> and a strong advocate for privacy, freedom of speech, self-sovereignty, and open-source software. I'm also into economics, cryptography, psychology, and literature.
+        </p>
+        
+        <p>
+          Here's my 
+          <NuxtLink
+          :href="resume.url"
+          class="inline-flex w-fit items-center gap-1.5 not-prose text-foreground no-underline hover:underline decoration-0.1em underline-offset-[0.15em]"
+          target="_blank"
+        >
+          {{ resume.label.toLowerCase() }}
+          <Icon name="lucide:arrow-up-right" class="text-base text-muted-foreground" />
+        </NuxtLink>
         </p>
       </section>
 
