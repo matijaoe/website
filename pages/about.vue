@@ -14,12 +14,12 @@ useSeoMeta({
     <div class="flex flex-col gap-16 max-w-xl">
       <section class="text-default-foreground max-w-xl leading-7 prose text-base md:text-lg">
         <p>
-          I'm a software engineer who ships fast without cutting corners. I&nbsp;genuinely love building products and sweating the details until they feel right. For the past few years, I've been all in on <IconWithText
+          I'm a software engineer who ships fast without cutting corners. I&nbsp;genuinely love building products and sweating the details until they feel right. Over the past few years, I've been all in on <IconWithText
             text="AI"
             icon="emojione:sparkles"
             icon-size="0.9em"
             icon-class="translate-y-0.5"
-          /> and how it's changing the way we think, build, and ship software. I'm known as <em>the AI guy</em>.
+          /> and how it's changing the way we think, build, and ship software. I got pretty good at it.
         </p>
 
         <p>
