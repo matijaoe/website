@@ -108,11 +108,11 @@ export default defineNuxtConfig({
 
   routeRules: {
     // CV
-    '/cv': { redirect: '/Matija_Osrecki_CV.pdf' },
-    '/cv/2024': { redirect: '/Matija_Osrecki_CV_2024.pdf' },
+    '/cv': { redirect: '/cv.pdf' },
+    '/cv/2024': { redirect: '/cv-2024.pdf' },
     // CV aliases for US audience
-    '/resume': { redirect: '/Matija_Osrecki_CV.pdf' },
-    '/resume/2024': { redirect: '/Matija_Osrecki_CV_2024.pdf' },
+    '/resume': { redirect: '/cv.pdf' },
+    '/resume/2024': { redirect: '/cv-2024.pdf' },
     // Old site
     '/2023': { redirect: 'https://2023.matijao.com/' },
     // External links

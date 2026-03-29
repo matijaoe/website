@@ -1,7 +1,7 @@
 {
   "installCommand": "corepack enable && corepack prepare pnpm@10.10.0 --activate && pnpm install",
   "redirects": [
-{
+    {
       "source": "/:path(.*)",
       "has": [
         {
@@ -9,8 +9,28 @@
           "value": "cv.matijao.com"
         }
       ],
-      "destination": "https://matijao.com/Matija_Osrecki_CV.pdf",
+      "destination": "https://matijao.com/cv.pdf",
       "permanent": true
+    }
+  ],
+  "headers": [
+    {
+      "source": "/cv.pdf",
+      "headers": [
+        {
+          "key": "Content-Disposition",
+          "value": "inline; filename=\"Matija_Osrecki_CV.pdf\""
+        }
+      ]
+    },
+    {
+      "source": "/cv-2024.pdf",
+      "headers": [
+        {
+          "key": "Content-Disposition",
+          "value": "inline; filename=\"Matija_Osrecki_CV_2024.pdf\""
+        }
+      ]
     }
   ]
 }
