@@ -17,7 +17,7 @@ if (isApple) {
   whenever(Ctrl_J, () => toggleDark())
 }
 
-const description = 'I\'m Matija, a software engineer who ships fast and obsesses over the details that matter.'
+const description = 'Senior software engineer from Croatia. Crafting sleek software, obsessing over the details.'
 
 useSeoMeta({
   titleTemplate: '%s • matijao',
