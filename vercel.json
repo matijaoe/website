@@ -1,3 +1,16 @@
 {
-  "installCommand": "corepack enable && corepack prepare pnpm@10.10.0 --activate && pnpm install"
+  "installCommand": "corepack enable && corepack prepare pnpm@10.10.0 --activate && pnpm install",
+  "redirects": [
+{
+      "source": "/:path(.*)",
+      "has": [
+        {
+          "type": "host",
+          "value": "cv.matijao.com"
+        }
+      ],
+      "destination": "https://matijao.com/cv.pdf",
+      "permanent": true
+    }
+  ]
 }

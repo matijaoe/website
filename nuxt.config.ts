@@ -109,10 +109,10 @@ export default defineNuxtConfig({
   routeRules: {
     // CV
     '/cv': { redirect: '/cv.pdf' },
-    '/cv-2024': { redirect: '/cv-2024.pdf' },
-    // CV aliases
+    '/cv/2024': { redirect: '/cv-2024.pdf' },
+    // CV aliases for US audience
     '/resume': { redirect: '/cv.pdf' },
-    '/resume-2024': { redirect: '/cv-2024.pdf' },
+    '/resume/2024': { redirect: '/cv-2024.pdf' },
     // Old site
     '/2023': { redirect: 'https://2023.matijao.com/' },
     // External links
