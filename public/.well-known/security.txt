@@ -1,0 +1,4 @@
+Contact: mailto:security@matijao.com
+Preferred-Languages: en, hr
+Canonical: https://matijao.com/.well-known/security.txt
+Expires: 2027-03-30T00:00:00.000Z
