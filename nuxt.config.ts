@@ -118,5 +118,6 @@ export default defineNuxtConfig({
     // External links
     '/github': { redirect: 'https://github.com/matijaoe' },
     '/linkedin': { redirect: 'https://www.linkedin.com/in/matijao' },
+    '/x': { redirect: 'https://x.com/matijaoe' },
   },
 })
