@@ -44,6 +44,7 @@ useSeoMeta({
             :href="resume.url"
             class="inline-flex w-fit items-center gap-1.5 not-prose text-foreground no-underline hover:underline decoration-0.1em underline-offset-[0.15em]"
             target="_blank"
+            rel="noopener noreferrer"
           >
             early 2026 resume
             <Icon name="lucide:arrow-up-right" class="text-base text-muted-foreground" />

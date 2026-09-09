@@ -71,7 +71,7 @@ const categories: BookCategory[] = [
 <template>
   <AboutProseWrapper title="Bookshelf">
     <template #description>
-      I picked up reading in 2020 and it stuck. Over <strong class="font-semibold text-muted-foreground">300</strong> books later, here are some of my top picks. Find me on <NuxtLink :to="personalLinks.goodreads.url" target="_blank" class="text-muted-foreground">
+      I picked up reading in 2020 and it stuck. Over <strong class="font-semibold text-muted-foreground">300</strong> books later, here are some of my top picks. Find me on <NuxtLink :to="personalLinks.goodreads.url" target="_blank" rel="noopener noreferrer" class="text-muted-foreground">
         Goodreads{{ }}
       </NuxtLink> for more.
     </template>
@@ -88,7 +88,7 @@ const categories: BookCategory[] = [
         <BaseRevealMore>
           <ul class="mb-0">
             <li v-for="book in category.books" :key="book.title">
-              <NuxtLink :to="book.url" external target="_blank">
+              <NuxtLink :to="book.url" external target="_blank" rel="noopener noreferrer">
                 {{ book.title }}
               </NuxtLink>
               <span v-if="book.author" class="text-muted-foreground">

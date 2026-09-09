@@ -33,7 +33,7 @@ const podcasts: Podcast[] = [
     <BaseRevealMore>
       <ul class="mb-0">
         <li v-for="podcast in podcasts" :key="podcast.title">
-          <NuxtLink :to="podcast.url" external target="_blank">
+          <NuxtLink :to="podcast.url" external target="_blank" rel="noopener noreferrer">
             {{ podcast.title }}
           </NuxtLink>
           <span v-if="podcast.author" class="text-muted-foreground">

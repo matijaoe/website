@@ -32,7 +32,7 @@ defineProps<{
         <Icon v-if="icon" :name="icon" class="aspect-square size-4 rounded-[2px] -ml-0.5" />
         <img v-else :src="logo" class="aspect-square h-[16px] rounded-[2px]" :class="logoClass" :alt="`${company} logo`">
 
-        <NuxtLink :to="companyUrl" external target="_blank" class="text-base hover:underline">
+        <NuxtLink :to="companyUrl" external target="_blank" rel="noopener noreferrer" class="text-base hover:underline">
           {{ company }}
         </NuxtLink>
 

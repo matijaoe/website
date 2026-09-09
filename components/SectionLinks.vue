@@ -1,7 +1,8 @@
 <script lang="ts" setup>
 const { github, linkedin, x, email, work } = personalLinks
 
-const links = [github, linkedin, x]
+// the mark reads better than the domain here; the footer keeps x.com
+const links = [github, linkedin, { ...x, label: '𝕏' }]
 const emails = [
   { ...email, hint: 'Click to copy' },
   // The address stays in the tooltip so "Hire me" still says what it copies
@@ -20,6 +21,7 @@ const copied = refAutoReset<string | null>(null, 2000)
       :href="item.url"
       class="flex w-fit items-center gap-1.5 text-lg hover:underline decoration-0.1em underline-offset-[0.15em]"
       target="_blank"
+      rel="noopener noreferrer"
     >
       {{ item.label }}
       <Icon name="lucide:arrow-up-right" class="text-base text-muted-foreground" />

@@ -85,10 +85,6 @@ export default defineNuxtConfig({
     ],
   },
 
-  content: {
-
-  },
-
   app: {
     head: {
       titleTemplate: '%s • matijao',

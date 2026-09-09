@@ -24,7 +24,7 @@ const screenContent: ScreenContent[] = [
 <template>
   <AboutProseWrapper title="Screen favorites">
     <template #description>
-      I don't watch much, so I'm very picky when I do. <NuxtLink to="https://boxd.it/6OXxN" external target="_blank" class="text-muted-foreground">
+      I don't watch much, so I'm very picky when I do. <NuxtLink to="https://boxd.it/6OXxN" external target="_blank" rel="noopener noreferrer" class="text-muted-foreground">
         These{{ }}
       </NuxtLink> ones stuck with me.
     </template>
@@ -32,7 +32,7 @@ const screenContent: ScreenContent[] = [
     <BaseRevealMore>
       <ul class="mb-0">
         <li v-for="item in screenContent" :key="item.title">
-          <NuxtLink :to="item.url" external target="_blank">
+          <NuxtLink :to="item.url" external target="_blank" rel="noopener noreferrer">
             {{ item.title }}
           </NuxtLink>
           <span v-if="item.year" class="text-muted-foreground font-mono text-sm">
