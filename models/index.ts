@@ -13,7 +13,10 @@ export type Project = {
   timeframe: string
   repo?: string
   url?: string
-  /** Which link the card opens. Defaults to the repo when there is one. */
+  /**
+   * Which link the card opens. Defaults to the repo; set to 'url' when the
+   *  project is distributed through a store and the listing is the front door.
+   */
   primary?: 'repo' | 'url'
   thumbnail?: string
   categories: CategorySlug[]
