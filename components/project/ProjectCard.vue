@@ -38,8 +38,10 @@ const secondary = computed(() => {
 
       <div v-else class="h-full bg-[hsl(var(--background-alt))] placeholder-pattern" />
 
-      <!-- "instead" names it as an alternative to the card's own destination;
-           focus-visible keeps it reachable when it is not being hovered -->
+      <!-- "instead" names it as an alternative to the card's own destination.
+           Fixed colours in both themes: it sits on screenshots, which do not
+           follow the theme, so a theme-tinted chip loses contrast on half of
+           them. focus-visible keeps it reachable without a pointer. -->
       <NuxtLink
         v-if="secondary"
         :to="secondary.url"
@@ -48,7 +50,7 @@ const secondary = computed(() => {
         rel="noopener noreferrer"
         :aria-label="`${project.name} — ${secondary.label === 'github' ? 'source code' : 'live site'}`"
         data-pill
-        class="absolute bottom-2 right-2 z-20 inline-flex items-center gap-0.5 rounded-full border bg-background px-2 py-0.5 font-mono lowercase text-[11px] text-foreground shadow-sm translate-y-1 opacity-0 transition duration-150 ease-out hover:bg-muted group-hover/card:translate-y-0 group-hover/card:opacity-100 focus-visible:translate-y-0 focus-visible:opacity-100 motion-reduce:translate-y-0 motion-reduce:transition-none"
+        class="absolute bottom-2 right-2 z-20 inline-flex items-center gap-0.5 rounded-full border border-black/10 bg-white/90 px-2 py-0.5 font-mono lowercase text-[11px] text-black shadow-sm backdrop-blur-sm translate-y-1 opacity-0 transition duration-150 ease-out hover:bg-white group-hover/card:translate-y-0 group-hover/card:opacity-100 focus-visible:translate-y-0 focus-visible:opacity-100 motion-reduce:translate-y-0 motion-reduce:transition-none"
       >
         {{ secondary.label }} instead
         <Icon name="lucide:arrow-up-right" />
