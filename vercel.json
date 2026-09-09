@@ -1,5 +1,5 @@
 {
-  "installCommand": "corepack enable && corepack prepare pnpm@10.10.0 --activate && pnpm install",
+  "installCommand": "corepack enable && corepack prepare pnpm@10.32.1 --activate && pnpm install",
   "redirects": [
     {
       "source": "/:path(.*)",

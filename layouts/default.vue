@@ -33,17 +33,18 @@ const { breadcrumbs, isHome } = useBreadcrumbs()
       </div>
 
       <ClientOnly>
-        <TransitionFade>
+        <Transition name="fade">
           <Button
             v-show="y > 120"
             variant="outline"
             size="icon-lg"
+            aria-label="Scroll to top"
             class="fixed hidden sm:flex bottom-6 right-6 lg:bottom-14 lg:right-14 rounded-full"
             @click="scrollToTop"
           >
             <Icon name="lucide:chevron-up" class="text-default-50 text-xl" />
           </Button>
-        </TransitionFade>
+        </Transition>
       </ClientOnly>
     </div>
 
@@ -52,3 +53,15 @@ const { breadcrumbs, isHome } = useBreadcrumbs()
     <MobileNav />
   </div>
 </template>
+
+<style scoped>
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 250ms ease;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+}
+</style>

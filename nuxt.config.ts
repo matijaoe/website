@@ -8,11 +8,10 @@ export default defineNuxtConfig({
     '@nuxt/image',
     '@nuxtjs/color-mode',
     '@nuxt/icon',
-    '@nuxt/content',
     '@nuxt/fonts',
     '@nuxtjs/device',
-    '@morev/vue-transitions/nuxt',
     'motion-v/nuxt',
+    '@vercel/analytics/nuxt',
   ],
 
   css: [
@@ -30,7 +29,6 @@ export default defineNuxtConfig({
     plugins: [tailwindcss()],
     optimizeDeps: {
       include: [
-        '@vercel/analytics/nuxt',
         'class-variance-authority',
         'radix-vue',
         '@radix-icons/vue',
@@ -85,10 +83,6 @@ export default defineNuxtConfig({
       { name: 'Instrument Serif', provider: 'google', weights: [400], styles: ['normal', 'italic'], subsets: ['latin'] },
       { name: 'JetBrains Mono', provider: 'fontsource', weights: [300, 400], subsets: ['latin', 'latin-ext'] },
     ],
-  },
-
-  content: {
-
   },
 
   app: {

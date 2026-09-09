@@ -2,14 +2,22 @@ export type Project = {
   slug: string
   name: string
   description: string
-  descriptionShort?: string
   tags: string[]
-  tagsPreview?: string[]
+  /**
+   * Single year (`'2024'`) or a range (`'2023/24'`).
+   * A trailing em dash (`'2024—'`) marks a project that's still being updated.
+   * Only worth it for ones that started in an earlier year — a current-year
+   * project already reads as ongoing.
+   */
   timeframe: string
   repo?: string
   url?: string
+  /**
+   * Which link the card opens. Defaults to the repo; set to 'url' when the
+   *  project is distributed through a store and the listing is the front door.
+   */
+  primary?: 'repo' | 'url'
   thumbnail?: string
-  images?: string[]
   categories: CategorySlug[]
   color?: string
   // states
@@ -19,6 +27,7 @@ export type Project = {
 export const Category = {
   projects: 'projects',
   hobby: 'hobby',
+  bigger: 'bigger',
   modules: 'modules',
   extensions: 'extensions',
   templates: 'starts',

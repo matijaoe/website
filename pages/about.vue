@@ -37,17 +37,18 @@ useSeoMeta({
             icon-class="translate-y-0.5"
           /> and a strong advocate for privacy, freedom of speech, self-sovereignty, and open-source software. I'm also into economics, cryptography, psychology, and literature.
         </p>
-        
+
         <p>
-          Here's my 
+          Here's my
           <NuxtLink
-          :href="resume.url"
-          class="inline-flex w-fit items-center gap-1.5 not-prose text-foreground no-underline hover:underline decoration-0.1em underline-offset-[0.15em]"
-          target="_blank"
-        >
-          {{ resume.label.toLowerCase() }}
-          <Icon name="lucide:arrow-up-right" class="text-base text-muted-foreground" />
-        </NuxtLink>
+            :href="resume.url"
+            class="inline-flex w-fit items-center gap-1.5 not-prose text-foreground no-underline hover:underline decoration-0.1em underline-offset-[0.15em]"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            early 2026 resume
+            <Icon name="lucide:arrow-up-right" class="text-base text-muted-foreground" />
+          </NuxtLink>
         </p>
       </section>
 

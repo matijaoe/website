@@ -1,5 +1,4 @@
 <script lang="ts" setup>
-import { Analytics } from '@vercel/analytics/nuxt'
 import Toaster from './components/ui/toast/Toaster.vue'
 
 const { toggleDark, isDark } = useTheme()
@@ -19,15 +18,26 @@ if (isApple) {
 
 const description = 'Senior software engineer from Croatia. Crafting sleek software, obsessing over the details.'
 
+// Absolute URLs — crawlers resolve these off-site, so a relative path yields no preview.
+const siteUrl = 'https://matijao.com'
+const ogImage = `${siteUrl}/og.png`
+
+// titleTemplate lives in nuxt.config's app.head; setting it here too just gives
+// two places to edit.
 useSeoMeta({
-  titleTemplate: '%s • matijao',
   description,
+  ogType: 'website',
+  ogSiteName: 'Matija Osrečki',
+  ogUrl: siteUrl,
   ogDescription: description,
-  ogUrl: 'matijao.com',
+  ogImage,
+  ogImageWidth: 1200,
+  ogImageHeight: 630,
+  ogImageAlt: 'Matija Osrečki — crafting sleek web experiences',
+  twitterCard: 'summary_large_image',
   twitterTitle: 'Matija Osrečki',
   twitterDescription: description,
-  twitterImage: '[twitter:image]',
-  twitterCard: 'summary',
+  twitterImage: ogImage,
 })
 </script>
 
@@ -44,8 +54,6 @@ useSeoMeta({
       <NuxtLayout>
         <NuxtPage />
       </NuxtLayout>
-
-      <Analytics />
     </Body>
   </Html>
 </template>

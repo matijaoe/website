@@ -3,6 +3,10 @@ import { motion, stagger } from 'motion-v'
 
 const { uniqueCategories, getProjectsByCategory } = useProjects()
 
+// Nothing is worth a block card right now, so the section renders empty.
+// Give a project `Category.projects` again and it comes straight back.
+const highlighted = computed(() => getProjectsByCategory('projects'))
+
 definePageMeta({
   layout: 'default',
 })
@@ -44,13 +48,14 @@ const itemVariants = {
       </PageHeading>
 
       <motion.div
+        v-if="highlighted.length"
         class="content-stretch flex flex-col items-stretch justify-stretch gap-8"
         :variants="containerVariants"
         initial="hidden"
         animate="show"
       >
         <motion.div
-          v-for="project in getProjectsByCategory('projects')"
+          v-for="project in highlighted"
           :key="project.slug"
           :variants="itemVariants"
           style="will-change: transform, filter, opacity"
@@ -91,11 +96,6 @@ const itemVariants = {
 </template>
 
 <style>
-img.active {
-  view-transition-name: selected-film;
-  contain: layout;
-}
-
 .projects-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr) );
