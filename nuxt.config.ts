@@ -103,10 +103,8 @@ export default defineNuxtConfig({
       title: 'Matija Osrečki',
       meta: [
         { name: 'viewport', content: 'width=device-width, initial-scale=1, viewport-fit=cover' },
-        // Read before any CSS, so the very first frame the compositor paints is
-        // already the right surface instead of the default white one. Hoisted
-        // next to charset because it only helps ahead of the stylesheet.
-        { name: 'color-scheme', content: 'dark light', tagPriority: -1 },
+        // Lets the browser pick the right base colour before any CSS parses
+        { name: 'color-scheme', content: 'dark light' },
       ],
       link: [
         { rel: 'icon', type: 'image/svg+xml', href: '/favicon.svg' },

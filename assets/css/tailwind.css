@@ -113,10 +113,10 @@
     @apply border-border;
   }
   body {
-    @apply text-foreground;
-    /* The surface is painted on <html> (see app.vue). An opaque body would
-       stop background propagation and cover the fixed -z-10 fluid canvas. */
-    background-color: transparent;
+    /* The surface belongs here, not on <html>: <html> has no background, so
+       this one propagates to the canvas and body paints no box of its own,
+       leaving the fixed -z-10 fluid canvas visible through it. */
+    @apply bg-background text-foreground;
   }
 
   button:not([disabled]),

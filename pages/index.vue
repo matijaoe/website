@@ -25,7 +25,11 @@ useSeoMeta({
   <div class="flex flex-col gap-16 max-w-3xl">
     <section>
       <div class="mb-5 flex items-center text-muted-foreground gap-2">
-        <Badge variant="outline" class="font-mono flex items-center p-0 backdrop-blur-lg bg-white/5 dark:bg-transparent hover:bg-white/5">
+        <!-- Opaque, like the tech badges. No backdrop-blur: this is the only
+             backdrop-filter element that renders at load, and over the fixed
+             WebGL canvas Chromium resolves its backdrop to white across the
+             whole viewport on a reload. -->
+        <Badge variant="outline" class="font-mono flex items-center p-0">
           <span class="px-2.5 py-0.5">{{ timeReady ? nowFormatted : timeDisplay }}</span>
           <span class="border-l px-2.5 py-0.5 flex items-center">
             <span class="inline-flex items-center gap-1">

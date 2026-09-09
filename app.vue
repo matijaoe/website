@@ -64,35 +64,16 @@ useSeoMeta({
 }
 
 /*
-  The surface lives on <html>, not <body>: body stays transparent (see
-  tailwind.css) so the fixed -z-10 fluid canvas is not painted over.
-
-  Vercel serves one cached HTML to everyone, so <html> arrives with no theme
-  class — color-mode's inline script adds it. Without an unconditional
-  background there is a frame with no background at all, which the browser
-  paints pure white. Default to the dark surface, and to the light one when
-  the system asks for it, so that frame is already correct either way.
+  Only color-scheme here — never background-color. The surface belongs on
+  <body> (see tailwind.css); a background on <html> stops propagation, which
+  both hides the fluid canvas and lets the page paint with no surface at all.
 */
-html {
-  color-scheme: dark;
-  background-color: #0b0a09;
-}
-
-@media (prefers-color-scheme: light) {
-  html:not(.dark) {
-    color-scheme: light;
-    background-color: #faf8f4;
-  }
-}
-
 html.light {
   color-scheme: light;
-  background-color: #faf8f4;
 }
 
 html.dark {
   color-scheme: dark;
-  background-color: #0b0a09;
 }
 
 .hide-scrollbar::-webkit-scrollbar {
