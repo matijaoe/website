@@ -21,7 +21,7 @@ const experience: Experience[] = [
     period: 'Apr 2026 — Present',
     logo: '/preview-logo.svg',
     description: 'The production platform for AI video. One platform to storyboard, generate, and direct, from chaotic ideation to final cut.',
-    used: ['Next', 'React', 'TypeScript', 'Tailwind', 'Tiptap', 'tldraw'],
+    used: ['Next', 'React', 'Tiptap', 'tldraw'],
   },
   {
     company: 'TheyDo',
@@ -31,7 +31,7 @@ const experience: Experience[] = [
     period: 'Jul 2024 — Apr 2026',
     logo: '/theydo-logo.webp',
     description: 'Shaping the journey management platform that helps enterprises connect customer insights and drive decisions across teams.',
-    used: ['Vue', 'TypeScript', 'GraphQL', 'Tailwind', 'Tiptap'],
+    used: ['Vue', 'GraphQL', 'Tiptap'],
   },
   {
     company: 'Four of them',
@@ -42,7 +42,7 @@ const experience: Experience[] = [
     logo: '/4ot-logo.webp',
     logoClass: 'h-[14px]',
     description: 'Built innovative e-commerce solutions for the German pharmaceutical sector, serving millions of users.',
-    used: ['Nuxt', 'Vue', 'TypeScript', 'Tanstack', 'Tailwind'],
+    used: ['Nuxt', 'Vue', 'Tanstack'],
   },
   {
     company: 'Infokarta',
