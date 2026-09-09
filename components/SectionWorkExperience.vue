@@ -16,7 +16,7 @@ const experience: Experience[] = [
   {
     company: 'Preview',
     companyUrl: 'https://preview.io/',
-    companyLocation: 'United States',
+    companyLocation: 'San Francisco',
     position: 'Member of Technical Staff',
     period: 'Apr 2026 — Present',
     logo: '/preview-logo.svg',
@@ -26,7 +26,7 @@ const experience: Experience[] = [
   {
     company: 'TheyDo',
     companyUrl: 'https://www.theydo.com',
-    companyLocation: 'Netherlands',
+    companyLocation: 'Amsterdam',
     position: 'Senior Frontend Engineer',
     period: 'Jul 2024 — Apr 2026',
     logo: '/theydo-logo.webp',
