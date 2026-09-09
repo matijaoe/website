@@ -5,49 +5,33 @@ const props = defineProps<{
   project: Project
 }>()
 
-// The card body goes to the source. bitcoin-books has no repo, so it falls back
-// to the live site rather than being the one card on the page that goes nowhere.
-const primaryUrl = computed(() => props.project.repo ?? props.project.url)
-
-// The thumbnail only becomes a second zone when it leads somewhere the body
-// doesn't already go.
-const liveUrl = computed(() => (props.project.repo ? props.project.url : undefined))
+// One destination per card. Each project declares its front door: the running
+// tool for browser things, the store listing for anything distributed, the repo
+// for everything else.
+const primaryUrl = computed(() => {
+  const { primary, repo, url } = props.project
+  return primary === 'url' ? url ?? repo : repo ?? url
+})
 </script>
 
 <template>
   <Card
     class="group/card relative flex flex-col rounded-xs shadow-xs overflow-hidden hover:[transition:background-color_700ms,backdrop-filter_700ms] hover:bg-white/[2%] hover:backdrop-blur-3xl"
   >
-    <div class="group/media relative border-b aspect-[16/10] overflow-hidden">
+    <div class="border-b aspect-[16/10] overflow-hidden">
       <div v-if="project.thumbnail" class="h-full grid place-content-center placeholder-pattern" :style="{ background: project.color }">
         <NuxtImg
           :width="720"
           format="webp"
           :src="project.thumbnail"
           alt=""
-          class="transition duration-500 group-hover/media:brightness-75"
         />
       </div>
 
       <div v-else class="h-full bg-[hsl(var(--background-alt))] placeholder-pattern" />
-
-      <!-- z-20 clears the card-wide overlay below, so this zone wins the click -->
-      <NuxtLink
-        v-if="liveUrl"
-        :to="liveUrl"
-        external
-        target="_blank"
-        :aria-label="`${project.name} — live site`"
-        class="absolute inset-0 z-20 flex items-start justify-end p-2"
-      >
-        <span class="inline-flex items-center gap-0.5 rounded-full bg-background/80 px-2 py-0.5 font-mono lowercase text-[11px] text-foreground/70 opacity-0 backdrop-blur transition-opacity duration-300 group-hover/media:opacity-100">
-          live
-          <Icon name="lucide:arrow-up-right" />
-        </span>
-      </NuxtLink>
     </div>
 
-    <div class="group/body flex flex-col grow">
+    <div class="flex flex-col grow">
       <CardHeader class="p-4 pb-2">
         <div class="w-full flex items-start justify-between gap-8">
           <p
@@ -55,12 +39,13 @@ const liveUrl = computed(() => (props.project.repo ? props.project.url : undefin
             :style="{ wordBreak: 'break-word' }"
           >
             <!-- after:inset-0 stretches this one anchor over the whole card, so
-                 the body is clickable without nesting a second <a> inside it -->
+                 the card is clickable without nesting a second <a> inside it -->
             <NuxtLink
               :to="primaryUrl"
               external
               target="_blank"
-              class="after:absolute after:inset-0 after:z-10 group-hover/body:underline decoration-0.1em underline-offset-[0.15em]"
+              rel="noopener noreferrer"
+              class="after:absolute after:inset-0 after:z-10 group-hover/card:underline decoration-0.1em underline-offset-[0.15em]"
             >
               {{ project.name }}
             </NuxtLink>
