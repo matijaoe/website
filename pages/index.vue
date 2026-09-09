@@ -45,15 +45,11 @@ useSeoMeta({
       </h1>
 
       <div class="text-default-foreground text-base md:text-lg leading-7">
-        <div>
-          <p>
-            Senior Frontend Engineer
-            <br>
-            I build well-crafted software, obsessing over the details that matter.
-            <br>
-            Into AI agents, side projects and Bitcoin.
-          </p>
-        </div>
+        <p>
+          I build well-crafted software, obsessing over the details that matter.
+          <br>
+          Into AI agents, side projects and Bitcoin.
+        </p>
       </div>
     </section>
 

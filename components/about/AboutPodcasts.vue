@@ -18,10 +18,9 @@ const podcasts: Podcast[] = [
   { title: 'The Jack Mallers Show', url: 'https://podcasts.apple.com/us/podcast/the-jack-mallers-show/id1695949365' },
   { title: 'What Bitcoin Did', url: 'https://www.whatbitcoindid.com/' },
   { title: 'Rabbit Hole Recap', url: 'https://rhr.tv/' },
-  { title: 'Citadel Dispatch', author: 'Odell', url: 'https://citadeldispatch.com/' },
-  { title: 'Bitcoin Review', author: 'NVK', url: 'https://bitcoin.review/' },
+  { title: 'Coin Stories', author: 'Natalie Brunell', url: 'https://podcasts.apple.com/us/podcast/coin-stories-with-natalie-brunell/id1569130932' },
+  { title: 'Soft White Underbelly', url: 'https://www.softwhiteunderbelly.com/' },
   { title: 'This Past Weekend', author: 'Theo Von', url: 'https://www.theovon.com/tpw/episodes' },
-  { title: 'The Morgan Housel Podcast', url: 'https://podcasts.apple.com/us/podcast/the-morgan-housel-podcast/id1675310669' },
 ]
 </script>
 
@@ -31,15 +30,17 @@ const podcasts: Podcast[] = [
       I listen to podcasts every single day. AI, Bitcoin, macro, finance, politics, business, tech, hacking, opsec, history, literature, comedy.
     </template>
 
-    <ul>
-      <li v-for="podcast in podcasts" :key="podcast.title">
-        <NuxtLink :to="podcast.url" external target="_blank">
-          {{ podcast.title }}
-        </NuxtLink>
-        <span v-if="podcast.author" class="text-muted-foreground">
-          with {{ podcast.author }}
-        </span>
-      </li>
-    </ul>
+    <BaseRevealMore>
+      <ul class="mb-0">
+        <li v-for="podcast in podcasts" :key="podcast.title">
+          <NuxtLink :to="podcast.url" external target="_blank">
+            {{ podcast.title }}
+          </NuxtLink>
+          <span v-if="podcast.author" class="text-muted-foreground">
+            with {{ podcast.author }}
+          </span>
+        </li>
+      </ul>
+    </BaseRevealMore>
   </AboutProseWrapper>
 </template>

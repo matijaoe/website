@@ -1,17 +1,11 @@
 <script lang="ts" setup>
-const { github, linkedin, x, goodreads, resume, email, source } = personalLinks
+const { github, linkedin, x, email, source } = personalLinks
 
 const year = new Date().getFullYear()
 
 const { display: sourceDisplay, scramble: sourceScramble } = useTextScramble(source.label, { speed: 50 })
 
-const footerLinks = [
-  { ...github },
-  { ...linkedin },
-  { label: 'x.com', url: x.url },
-  { ...goodreads },
-  { ...resume },
-]
+const footerLinks = [github, linkedin, x]
 
 const { copy } = useClipboard()
 const copied = refAutoReset(false, 2000)
@@ -50,7 +44,7 @@ const copied = refAutoReset(false, 2000)
       </div>
 
       <div class="flex items-center justify-between">
-        <span class="text-foreground/60"><span class="text-sm leading-none align-middle">&copy;</span> Matija Osrečki {{ year }}</span>
+        <span class="text-foreground/60"><span class="text-sm leading-none align-middle">&copy;</span> Matija Osrečki {{ year }} <span class="text-foreground/25">·</span> Byproduct Studio d.o.o.</span>
 
         <NuxtLink
           :to="source.url"
@@ -66,7 +60,7 @@ const copied = refAutoReset(false, 2000)
 
     <!-- Desktop -->
     <div class="hidden md:flex md:flex-wrap md:items-center md:gap-x-5 md:gap-y-2">
-      <span class="text-foreground/60"><span class="text-sm leading-none align-middle">&copy;</span> Matija Osrečki {{ year }}</span>
+      <span class="text-foreground/60"><span class="text-sm leading-none align-middle">&copy;</span> Matija Osrečki {{ year }} <span class="text-foreground/25">·</span> Byproduct Studio d.o.o.</span>
 
       <span class="text-foreground/15 select-none">/</span>
 

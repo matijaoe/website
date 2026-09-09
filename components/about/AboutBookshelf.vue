@@ -12,14 +12,6 @@ type BookCategory = {
   books: Book[]
 }
 
-const readingStreakStart = new Date('2020-04-27')
-const readingStreakDays = computed(() => {
-  const today = new Date()
-  const diffTime = Math.abs(today.getTime() - readingStreakStart.getTime())
-  const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24))
-  return diffDays.toLocaleString()
-})
-
 const fictionBooks: Book[] = [
   { title: 'Animal Farm', author: 'George Orwell', url: 'https://www.goodreads.com/book/show/8349198-animal-farm', description: '📖 🎧' },
   { title: 'Stoner', author: 'John Williams', url: 'https://www.goodreads.com/book/show/166997.Stoner', description: '📖' },
@@ -79,7 +71,7 @@ const categories: BookCategory[] = [
 <template>
   <AboutProseWrapper title="Bookshelf">
     <template #description>
-      I picked up reading in 2020 and it stuck. Over <strong class="font-semibold text-muted-foreground">300</strong> books and a <span class="font-semibold text-muted-foreground">{{ readingStreakDays }}-day</span> streak later, here are some of my top picks. Find me on <NuxtLink :to="personalLinks.goodreads.url" target="_blank" class="text-muted-foreground">
+      I picked up reading in 2020 and it stuck. Over <strong class="font-semibold text-muted-foreground">300</strong> books later, here are some of my top picks. Find me on <NuxtLink :to="personalLinks.goodreads.url" target="_blank" class="text-muted-foreground">
         Goodreads{{ }}
       </NuxtLink> for more.
     </template>
@@ -93,19 +85,21 @@ const categories: BookCategory[] = [
           {{ category.description }}
         </p>
 
-        <ul v-if="category.books" class="mb-0">
-          <li v-for="book in category.books" :key="book.title">
-            <NuxtLink :to="book.url" external target="_blank">
-              {{ book.title }}
-            </NuxtLink>
-            <span v-if="book.author" class="text-muted-foreground">
-              <span class="px-2">·</span>{{ book.author }}
-            </span>
-            <span v-if="book.description" class="text-muted-foreground" title="📖 = read, 🎧 = listened">
-              &nbsp;{{ book.description }}
-            </span>
-          </li>
-        </ul>
+        <BaseRevealMore>
+          <ul class="mb-0">
+            <li v-for="book in category.books" :key="book.title">
+              <NuxtLink :to="book.url" external target="_blank">
+                {{ book.title }}
+              </NuxtLink>
+              <span v-if="book.author" class="text-muted-foreground">
+                <span class="px-2">·</span>{{ book.author }}
+              </span>
+              <span v-if="book.description" class="text-muted-foreground" title="📖 = read, 🎧 = listened">
+                &nbsp;{{ book.description }}
+              </span>
+            </li>
+          </ul>
+        </BaseRevealMore>
       </div>
     </div>
   </AboutProseWrapper>

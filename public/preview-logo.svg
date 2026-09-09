@@ -1,0 +1,14 @@
+<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="64" height="64" rx="14" fill="url(#preview-tile)" />
+  <path
+    d="M40 13.3333C27.0728 8.4232 12.9272 8.4232 0 13.3333V0C12.9272 4.91064 27.0728 4.91064 40 0V13.3333Z"
+    fill="white"
+    transform="translate(10 24.667) scale(1.1)"
+  />
+  <defs>
+    <linearGradient id="preview-tile" x1="0" y1="0" x2="64" y2="64" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#15191A" />
+      <stop offset="1" stop-color="#3B4A4F" />
+    </linearGradient>
+  </defs>
+</svg>
