@@ -82,8 +82,17 @@ export default defineNuxtConfig({
     provider: 'local',
     families: [
       { name: 'Satoshi', weights: [400, 500, 700], styles: ['normal'] },
-      { name: 'Instrument Serif', weights: [400], styles: ['normal', 'italic'], subsets: ['latin', 'latin-ext'] },
-      { name: 'JetBrains Mono', weights: [300, 400], styles: ['normal'], subsets: ['latin', 'latin-ext'] },
+      {
+        name: 'Instrument Serif',
+        weights: [400],
+        styles: ['normal', 'italic'],
+        subsets: ['latin'],
+        // Serif metrics; without this the local provider falls back to Arial/system-ui
+        fallbacks: ['Times New Roman'],
+        // Hero italic "sleek" is a second face; default preload is only the first
+        preload: true,
+      },
+      { name: 'JetBrains Mono', weights: [400], styles: ['normal'], subsets: ['latin'] },
     ],
   },
 
@@ -96,6 +105,8 @@ export default defineNuxtConfig({
       ],
       link: [
         { rel: 'icon', type: 'image/svg+xml', href: '/favicon.svg' },
+        // Hero italic is a second @font-face; nuxt/fonts only preloads one face per family
+        { rel: 'preload', as: 'font', type: 'font/woff2', href: '/fonts/instrument-serif-italic.woff2', crossorigin: 'anonymous' },
       ],
     },
   },

@@ -25,7 +25,7 @@ module.exports = {
               'text-decoration': 'unset',
             },
             ':is(h1, h2, h3, h4, h5, h6)': {
-              'font-family': 'Instrument Serif',
+              'font-family': 'Instrument Serif, ui-serif, serif',
               'font-size': rem(30),
               'margin-bottom': rem(20),
             },
@@ -43,7 +43,7 @@ module.exports = {
       },
       fontFamily: {
         sans: ['Satoshi', 'ui-sans-serif', 'system-ui', 'sans-serif'],
-        display: ['Instrument Serif'],
+        display: ['Instrument Serif', 'ui-serif', 'serif'],
         mono: ['JetBrains Mono', 'ui-monospace', 'monospace'],
       },
       colors: {
