@@ -5,17 +5,25 @@ const props = defineProps<{
   project: Project
 }>()
 
-// One destination per card. Each project declares its front door: the running
-// tool for browser things, the store listing for anything distributed, the repo
-// for everything else.
+// One destination per card. Each project declares its front door: the store
+// listing for anything distributed, the repo for everything else.
 const primaryUrl = computed(() => {
   const { primary, repo, url } = props.project
   return primary === 'url' ? url ?? repo : repo ?? url
+})
+
+// The pill offers whatever the card itself does not open, so a repo-led card
+// points at the live site and a store-led one points back at the source.
+const secondary = computed(() => {
+  const { repo, url } = props.project
+  const other = primaryUrl.value === repo ? url : repo
+  return other ? { url: other, label: other === repo ? 'github' : 'live' } : undefined
 })
 </script>
 
 <template>
   <Card
+    data-card
     class="group/card relative shadow-xs overflow-hidden hover:[transition:background-color_700ms,backdrop-filter_700ms] hover:bg-white/[2%] hover:backdrop-blur-3xl"
   >
     <div class="grid grid-cols-2 h-[320px]">
@@ -41,6 +49,7 @@ const primaryUrl = computed(() => {
                    the card is clickable without nesting a second <a> inside it -->
               <NuxtLink
                 :to="primaryUrl"
+                data-title
                 external
                 target="_blank"
                 rel="noopener noreferrer"
@@ -63,7 +72,7 @@ const primaryUrl = computed(() => {
         <CardFooter class="mt-auto p-9 pt-4" />
       </div>
 
-      <div class="overflow-hidden">
+      <div class="relative overflow-hidden">
         <div v-if="project.thumbnail" class="p-7 h-full grid place-content-center placeholder-pattern" :style="{ background: project.color }">
           <HoverPerspectiveContainer class="rounded-xs">
             <NuxtImg
@@ -76,7 +85,31 @@ const primaryUrl = computed(() => {
         </div>
 
         <div v-else class="h-full bg-[hsl(var(--background-alt))] placeholder-pattern" />
+
+        <!-- "instead" names it as an alternative to the card's own destination;
+             focus-visible keeps it reachable when it is not being hovered -->
+        <NuxtLink
+          v-if="secondary"
+          :to="secondary.url"
+          external
+          target="_blank"
+          rel="noopener noreferrer"
+          :aria-label="`${project.name} — ${secondary.label === 'github' ? 'source code' : 'live site'}`"
+          data-pill
+          class="absolute bottom-2 right-2 z-20 inline-flex items-center gap-0.5 rounded-full border bg-background px-2 py-0.5 font-mono lowercase text-[11px] text-foreground shadow-sm translate-y-1 opacity-0 transition duration-150 ease-out hover:bg-muted group-hover/card:translate-y-0 group-hover/card:opacity-100 focus-visible:translate-y-0 focus-visible:opacity-100 motion-reduce:translate-y-0 motion-reduce:transition-none"
+        >
+          {{ secondary.label }} instead
+          <Icon name="lucide:arrow-up-right" />
+        </NuxtLink>
       </div>
     </div>
   </Card>
 </template>
+
+<style scoped>
+/* Hovering the pill means the click no longer goes where the title points, so
+   the title must stop advertising itself as the destination. */
+[data-card]:has([data-pill]:hover) [data-title] {
+  text-decoration-line: none;
+}
+</style>
