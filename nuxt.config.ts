@@ -11,6 +11,7 @@ export default defineNuxtConfig({
     '@nuxt/fonts',
     '@nuxtjs/device',
     'motion-v/nuxt',
+    '@vercel/analytics/nuxt',
   ],
 
   css: [
@@ -28,7 +29,6 @@ export default defineNuxtConfig({
     plugins: [tailwindcss()],
     optimizeDeps: {
       include: [
-        '@vercel/analytics/nuxt',
         'class-variance-authority',
         'radix-vue',
         '@radix-icons/vue',
