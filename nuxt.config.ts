@@ -77,11 +77,13 @@ export default defineNuxtConfig({
     componentDir: './components/ui',
   },
 
+  // Self-hosted in public/fonts so production builds do not fetch Google/Fontshare
   fonts: {
+    provider: 'local',
     families: [
-      { name: 'Satoshi', provider: 'fontshare', weights: [400, 500, 600, 700] },
-      { name: 'Instrument Serif', provider: 'google', weights: [400], styles: ['normal', 'italic'], subsets: ['latin'] },
-      { name: 'JetBrains Mono', provider: 'fontsource', weights: [300, 400], subsets: ['latin', 'latin-ext'] },
+      { name: 'Satoshi', weights: [400, 500, 700], styles: ['normal'] },
+      { name: 'Instrument Serif', weights: [400], styles: ['normal', 'italic'], subsets: ['latin', 'latin-ext'] },
+      { name: 'JetBrains Mono', weights: [300, 400], styles: ['normal'], subsets: ['latin', 'latin-ext'] },
     ],
   },
 
