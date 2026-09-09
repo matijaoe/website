@@ -63,11 +63,7 @@ useSeoMeta({
   --sidebar: 14rem;
 }
 
-/*
-  Only color-scheme here — never background-color. The surface belongs on
-  <body> (see tailwind.css); a background on <html> stops propagation, which
-  both hides the fluid canvas and lets the page paint with no surface at all.
-*/
+/* color-scheme only — the surface lives on <body>, see tailwind.css for why. */
 html.light {
   color-scheme: light;
 }

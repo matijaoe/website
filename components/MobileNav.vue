@@ -17,8 +17,11 @@ const activeLinkClass = '!text-foreground'
 <template>
   <ClientOnly>
     <Teleport to="body">
+      <!-- Opaque rather than blurred, for the same reason as the homepage badge:
+           a backdrop-filter over the fixed WebGL canvas makes Chromium resolve
+           its backdrop to white across the viewport on reload. -->
       <nav
-        class="fixed bottom-5 left-1/2 -translate-x-1/2 z-40 flex sm:hidden items-center gap-4 rounded-full border border-border bg-background/80 px-6 py-2.5 backdrop-blur-2xl backdrop-saturate-150"
+        class="fixed bottom-5 left-1/2 -translate-x-1/2 z-40 flex sm:hidden items-center gap-4 rounded-full border border-border bg-background px-6 py-2.5"
       >
         <NuxtLink
           v-for="link in links"

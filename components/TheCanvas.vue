@@ -1,10 +1,10 @@
-<script setup>
+<script setup lang="ts">
 import { createFluidCanvas } from '~/utils/fluid-canvas'
 
 const canvasRef = useTemplateRef('canvas')
 const { isDark } = useTheme()
 
-let cleanup = null
+let cleanup: (() => void) | null = null
 
 onMounted(() => {
   const canvas = canvasRef.value

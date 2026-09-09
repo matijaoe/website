@@ -93,6 +93,8 @@ export default defineNuxtConfig({
         // Hero italic "sleek" is a second face; default preload is only the first
         preload: true,
       },
+      // Declared by hand in assets/css/tailwind.css instead: Croatian glyphs
+      // need a second unicode-range @font-face that nuxt/fonts cannot generate
       { name: 'JetBrains Mono', provider: 'none' },
     ],
   },

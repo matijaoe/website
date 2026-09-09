@@ -51,7 +51,7 @@ export function useTextScramble(text: string, options?: { delay?: number, speed?
 
   function scramble() {
     if (!import.meta.client) { return }
-    if (activeInterval) { return }
+    if (activeInterval !== null) { return }
 
     setTimeout(() => {
       activeInterval = runScramble(text, display, speed, () => {
@@ -72,7 +72,7 @@ export function useReactiveScramble(source: MaybeRefOrGetter<string>, options?: 
   if (import.meta.client) {
     watch(() => toValue(source), (text) => {
       if (!text) { return }
-      if (interval) { clearInterval(interval) }
+      if (interval !== null) { clearInterval(interval) }
       interval = runScramble(text, display, speed, () => {
         interval = null
       })
