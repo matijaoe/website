@@ -5,7 +5,7 @@
 <style scoped>
 .grain {
   animation: grain 11s steps(10) infinite;
-  background-image: url('/grainy.png');
+  background-image: url('/grainy.webp');
   background-repeat: repeat;
   height: 600%;
   left: -200%;
