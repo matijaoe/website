@@ -31,7 +31,7 @@ const secondary = computed(() => {
         <CardHeader class="p-9 pb-4">
           <div class="flex flex-wrap w-full gap-1 mb-3">
             <Badge
-              v-for="tag in project.tagsPreview || project.tags"
+              v-for="tag in project.tags"
               :key="tag"
               class="font-mono lowercase text-nowrap"
               variant="outline"

@@ -3,7 +3,6 @@ export type Project = {
   name: string
   description: string
   tags: string[]
-  tagsPreview?: string[]
   /**
    * Single year (`'2024'`) or a range (`'2023/24'`).
    * A trailing em dash (`'2024—'`) marks a project that's still being updated.
