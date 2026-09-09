@@ -65,10 +65,12 @@ useSeoMeta({
 
 html.light {
   color-scheme: light;
+  background-color: #faf8f4;
 }
 
 html.dark {
   color-scheme: dark;
+  background-color: #0b0a09;
 }
 
 .hide-scrollbar::-webkit-scrollbar {

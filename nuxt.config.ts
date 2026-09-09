@@ -64,6 +64,7 @@ export default defineNuxtConfig({
   colorMode: {
     classSuffix: '',
     fallback: 'dark',
+    storage: 'cookie',
   },
 
   shadcn: {
