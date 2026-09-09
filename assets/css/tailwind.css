@@ -114,6 +114,8 @@
   }
   body {
     @apply text-foreground;
+    /* The surface is painted on <html> (see app.vue). An opaque body would
+       stop background propagation and cover the fixed -z-10 fluid canvas. */
     background-color: transparent;
   }
 
