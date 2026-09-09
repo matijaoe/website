@@ -19,13 +19,10 @@
   },
   "dependencies": {
     "@fontsource-variable/jetbrains-mono": "^5.2.8",
-    "@morev/vue-transitions": "^3.0.5",
-    "@nuxt/content": "^3.10.0",
     "@nuxt/fonts": "^0.12.1",
-    "@radix-icons/vue": "^1.0.0",
+    "@radix-icons/vue": "1.0.0",
     "@vercel/analytics": "^1.6.1",
     "@vueuse/core": "^14.1.0",
-    "better-sqlite3": "^12.8.0",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "motion-v": "2.0.0-beta.3",
@@ -39,7 +36,6 @@
   "devDependencies": {
     "@antfu/eslint-config": "^6.7.3",
     "@iconify-json/emojione": "^1.2.3",
-    "@iconify-json/emojione-monotone": "^1.2.1",
     "@iconify-json/logos": "^1.2.10",
     "@iconify-json/lucide": "^1.2.82",
     "@iconify-json/simple-icons": "^1.2.64",

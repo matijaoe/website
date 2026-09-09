@@ -178,7 +178,6 @@ const projects: Project[] = [
     timeframe: '2023/24',
     repo: 'https://github.com/matijaoe/utilipea',
     categories: [Category.modules],
-    color: '#A8B1FF',
   },
   {
     slug: 'vue-ecosystem-snippets',
@@ -244,7 +243,6 @@ const projects: Project[] = [
     url: 'https://greasyfork.org/en/scripts/511910-audible-hq-cover',
     tags: ['js'],
     categories: [Category.extensions],
-    color: '#0CBDF0',
 
   },
   {

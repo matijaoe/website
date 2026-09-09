@@ -8,10 +8,8 @@ export default defineNuxtConfig({
     '@nuxt/image',
     '@nuxtjs/color-mode',
     '@nuxt/icon',
-    '@nuxt/content',
     '@nuxt/fonts',
     '@nuxtjs/device',
-    '@morev/vue-transitions/nuxt',
     'motion-v/nuxt',
   ],
 

@@ -14,7 +14,7 @@
 
 - **Framework**: Nuxt 4 with Vue 3, TypeScript
 - **Styling**: TailwindCSS + shadcn/ui components in `components/ui/`
-- **Content**: Nuxt Content with Markdown files in `content/`
+- **Content**: Hardcoded TypeScript data — `composables/projects.ts`, `composables/links.ts`, and arrays inside the section components. No CMS.
 - **Icons**: Nuxt Icon with Iconify collections
 - **Fonts**: Satoshi, Instrument Serif, JetBrains Mono via Nuxt Fonts
 - **No tests**: This is a personal portfolio site with no test setup

@@ -2,7 +2,6 @@ export type Project = {
   slug: string
   name: string
   description: string
-  descriptionShort?: string
   tags: string[]
   tagsPreview?: string[]
   /**

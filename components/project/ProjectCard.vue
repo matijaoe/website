@@ -55,7 +55,7 @@ const liveUrl = computed(() => (props.project.repo ? props.project.url : undefin
 
       <CardContent class="grow p-4 py-0 pb-1">
         <p class="text-muted-foreground text-sm">
-          {{ project.descriptionShort ?? project.description }}
+          {{ project.description }}
         </p>
       </CardContent>
 
