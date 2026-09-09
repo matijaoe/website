@@ -93,7 +93,7 @@ export default defineNuxtConfig({
         // Hero italic "sleek" is a second face; default preload is only the first
         preload: true,
       },
-      { name: 'JetBrains Mono', weights: [400], styles: ['normal'], subsets: ['latin'] },
+      { name: 'JetBrains Mono', provider: 'none' },
     ],
   },
 
@@ -108,6 +108,7 @@ export default defineNuxtConfig({
         { rel: 'icon', type: 'image/svg+xml', href: '/favicon.svg' },
         // Hero italic is a second @font-face; nuxt/fonts only preloads one face per family
         { rel: 'preload', as: 'font', type: 'font/woff2', href: '/fonts/instrument-serif-italic.woff2', crossorigin: 'anonymous' },
+        { rel: 'preload', as: 'font', type: 'font/woff2', href: '/fonts/jetbrains-mono.woff2', crossorigin: 'anonymous' },
       ],
     },
   },

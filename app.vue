@@ -16,7 +16,7 @@ if (isApple) {
   whenever(Ctrl_J, () => toggleDark())
 }
 
-const description = 'Senior software engineer from Croatia. Crafting sleek software, obsessing over the details.'
+const description = 'Senior Frontend Engineer from Croatia. Crafting sleek software, obsessing over the details.'
 
 // Absolute URLs — crawlers resolve these off-site, so a relative path yields no preview.
 const siteUrl = 'https://matijao.com'
@@ -63,18 +63,12 @@ useSeoMeta({
   --sidebar: 14rem;
 }
 
-html {
-  background-color: hsl(30 8% 4%);
-}
-
 html.light {
   color-scheme: light;
-  background-color: hsl(40 40% 97%);
 }
 
 html.dark {
   color-scheme: dark;
-  background-color: hsl(30 8% 4%);
 }
 
 .hide-scrollbar::-webkit-scrollbar {
