@@ -15,7 +15,6 @@ export type Project = {
   repo?: string
   url?: string
   thumbnail?: string
-  images?: string[]
   categories: CategorySlug[]
   color?: string
   // states
@@ -25,7 +24,7 @@ export type Project = {
 export const Category = {
   projects: 'projects',
   hobby: 'hobby',
-  competition: 'competition',
+  bigger: 'bigger',
   modules: 'modules',
   extensions: 'extensions',
   templates: 'starts',

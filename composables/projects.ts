@@ -4,7 +4,7 @@ import { Category } from '~/models'
 const categories: Record<CategorySlug, string> = {
   [Category.projects]: 'Projects',
   [Category.hobby]: 'Side projects',
-  [Category.competition]: 'Competition & thesis',
+  [Category.bigger]: 'Bigger projects',
   [Category.modules]: 'Packages & Modules',
   [Category.extensions]: 'Plugins, Scripts & Extensions',
   [Category.templates]: 'Templates',
@@ -34,7 +34,7 @@ const projects: Project[] = [
     timeframe: '2022',
     repo: 'https://github.com/matijaoe/fare',
     thumbnail: '/projects/fare.webp',
-    categories: [Category.competition],
+    categories: [Category.bigger],
     color: '#36D49A',
   },
   {
@@ -47,7 +47,7 @@ const projects: Project[] = [
     repo: 'https://github.com/qwiz-app/qwiz',
     url: 'https://app.qwiz.party',
     thumbnail: '/projects/qwiz.webp',
-    categories: [Category.competition],
+    categories: [Category.bigger],
     color: '#F4BD94',
   },
   {
@@ -60,7 +60,7 @@ const projects: Project[] = [
     repo: 'https://github.com/matijaoe/aimo',
     url: 'https://aimo.vercel.app',
     thumbnail: '/projects/aimo.webp',
-    categories: [Category.competition],
+    categories: [Category.bigger],
     color: '#F5D765',
   },
 
@@ -328,17 +328,12 @@ export const useProjects = () => {
     })
   })
 
-  const getProduct = (slug: string): Project | undefined => {
-    return projects.find((project) => project.slug === slug)
-  }
-
   const getProjectsByCategory = (category: CategorySlug): Project[] => {
     return projects.filter((project) => project.categories.includes(category))
   }
 
   return {
     projects,
-    getProduct,
     getProjectsByCategory,
     uniqueCategories,
   }

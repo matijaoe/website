@@ -96,11 +96,6 @@ const itemVariants = {
 </template>
 
 <style>
-img.active {
-  view-transition-name: selected-film;
-  contain: layout;
-}
-
 .projects-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr) );
