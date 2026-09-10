@@ -84,7 +84,7 @@ const secondary = computed(() => {
           </HoverPerspectiveContainer>
         </div>
 
-        <div v-else class="h-full bg-[hsl(var(--background-alt))] placeholder-pattern" />
+        <ProjectCover v-else :project />
 
         <!-- "instead" names it as an alternative to the card's own destination.
              Fixed colours in both themes: it sits on screenshots, which do not

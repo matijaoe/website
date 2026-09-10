@@ -1,14 +1,12 @@
 <script lang="ts" setup>
 const { nowFormatted } = useCurrentTime()
 
-const revealed = ref(false)
 const heroEl = useTemplateRef<HTMLElement>('hero')
 const { display: timeDisplay, isComplete: timeReady, scramble: timeScramble } = useTextScramble(nowFormatted.value, { delay: 100, speed: 25, scrambleInitial: true })
 const { display: locationDisplay, scramble: locationScramble } = useTextScramble('Zagreb, Croatia', { delay: 300, speed: 30 })
 
 const { stop } = useIntersectionObserver(heroEl, ([entry]) => {
   if (entry?.isIntersecting) {
-    revealed.value = true
     timeScramble()
     locationScramble()
     stop()
@@ -42,9 +40,9 @@ useSeoMeta({
         </Badge>
       </div>
       <h1 ref="hero" class="text-balance text-[56px]/none sm:text-7xl/none font-medium font-display lg:text-8xl/[0.92] mb-4 md:mb-6">
-        <span class="text-reveal" :class="{ revealed }" style="--reveal-delay: 0.0s">Crafting <span class="italic">sleek</span></span>
+        <span class="text-reveal" style="--reveal-delay: 0s">Crafting <span class="italic">sleek</span></span>
         <br>
-        <span class="text-reveal" :class="{ revealed }" style="--reveal-delay: 0.12s">web experiences</span>
+        <span class="text-reveal" style="--reveal-delay: 0.12s">web experiences</span>
       </h1>
 
       <div class="text-default-foreground text-base md:text-lg leading-7">
@@ -69,12 +67,22 @@ useSeoMeta({
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
-  background-position-x: 100%;
-  transition: background-position-x 1.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  transition-delay: var(--reveal-delay, 0s);
+  background-position-x: 0%;
+  /* A keyframe animation rather than a transition on a class added after
+     hydration, so the prerendered headline starts filling on first paint
+     instead of sitting at 15% until the JavaScript arrives. */
+  animation: text-reveal 1.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) var(--reveal-delay, 0s) both;
 }
 
-.text-reveal.revealed {
-  background-position-x: 0%;
+@keyframes text-reveal {
+  from {
+    background-position-x: 100%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .text-reveal {
+    animation: none;
+  }
 }
 </style>

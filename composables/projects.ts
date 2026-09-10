@@ -308,6 +308,9 @@ const projects: Project[] = [
   },
 ]
 
+/** The link a project opens: the live site when `primary` is 'url', otherwise the repo. */
+export const getPrimaryUrl = ({ primary, repo, url }: Project) => primary === 'url' ? url ?? repo : repo ?? url
+
 export const useProjects = () => {
   const uniqueCategories = computed(() => {
     const categorySet = new Set<CategorySlug>()

@@ -42,6 +42,7 @@ useSeoMeta({
           Here's my
           <NuxtLink
             :href="resume.url"
+            external
             class="inline-flex w-fit items-center gap-1.5 not-prose text-foreground no-underline hover:underline decoration-0.1em underline-offset-[0.15em]"
             target="_blank"
             rel="noopener noreferrer"
