@@ -5,8 +5,8 @@ const props = defineProps<{
   project: Project
 }>()
 
-// One destination per card. Each project declares its front door: the store
-// listing for anything distributed, the repo for everything else.
+// One destination per card. Each project declares its front door: the live app
+// or store listing when there is one worth opening, the repo for everything else.
 const primaryUrl = computed(() => {
   const { primary, repo, url } = props.project
   return primary === 'url' ? url ?? repo : repo ?? url
@@ -27,12 +27,16 @@ const secondary = computed(() => {
     class="group/card relative flex flex-col rounded-xs shadow-xs overflow-hidden hover:[transition:background-color_700ms,backdrop-filter_700ms] hover:bg-white/[2%] hover:backdrop-blur-3xl"
   >
     <div class="relative border-b aspect-[16/10] overflow-hidden">
-      <div v-if="project.thumbnail" class="h-full grid place-content-center placeholder-pattern" :style="{ background: project.color }">
+      <!-- object-cover so screenshots that are not exactly 16:10 still fill the
+           frame; the colour only shows while the image loads. Anchored top-left
+           because that is where editor and app screenshots keep their content. -->
+      <div v-if="project.thumbnail" class="h-full placeholder-pattern" :style="{ background: project.color }">
         <NuxtImg
           :width="720"
           format="webp"
           :src="project.thumbnail"
           alt=""
+          class="size-full object-cover object-left-top"
         />
       </div>
 

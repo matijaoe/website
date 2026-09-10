@@ -14,7 +14,8 @@ export type Project = {
   url?: string
   /**
    * Which link the card opens. Defaults to the repo; set to 'url' when the
-   *  project is distributed through a store and the listing is the front door.
+   * live app or store listing is the front door (usable side projects,
+   * anything distributed through a store). The other link becomes the pill.
    */
   primary?: 'repo' | 'url'
   thumbnail?: string

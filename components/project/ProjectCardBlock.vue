@@ -5,8 +5,8 @@ const props = defineProps<{
   project: Project
 }>()
 
-// One destination per card. Each project declares its front door: the store
-// listing for anything distributed, the repo for everything else.
+// One destination per card. Each project declares its front door: the live app
+// or store listing when there is one worth opening, the repo for everything else.
 const primaryUrl = computed(() => {
   const { primary, repo, url } = props.project
   return primary === 'url' ? url ?? repo : repo ?? url
