@@ -70,13 +70,22 @@ export function useReactiveScramble(source: MaybeRefOrGetter<string>, options?: 
   let interval: ReturnType<typeof setInterval> | null = null
 
   if (import.meta.client) {
-    watch(() => toValue(source), (text) => {
-      if (!text) { return }
-      if (interval !== null) { clearInterval(interval) }
+    const run = (text: string) => {
+      if (!text) {
+        return
+      }
+      if (interval !== null) {
+        clearInterval(interval)
+      }
       interval = runScramble(text, display, speed, () => {
         interval = null
       })
-    }, { immediate: true })
+    }
+
+    watch(() => toValue(source), run)
+    // Not `immediate`: scrambling during setup makes the first client render
+    // differ from the server HTML, which Vue reports as a hydration mismatch.
+    onMounted(() => run(toValue(source)))
   }
 
   return display
