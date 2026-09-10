@@ -12,10 +12,13 @@ const copied = refAutoReset(false, 2000)
 </script>
 
 <template>
-  <footer class="mt-auto pt-20 pb-6 md:pt-36 md:pb-10 text-sm md:text-xs text-foreground/40 lowercase font-mono">
-    <!-- One DOM for both layouts. Mobile stacks two groups; on desktop the
-         groups collapse with `md:contents` so every child becomes a flex item
-         of this row, reordered with `md:order-first` and `md:ml-auto`. -->
+  <!-- Below `sm` the extra bottom padding lets the last line scroll clear of
+       the fixed MobileNav instead of ending up underneath it. -->
+  <footer class="mt-auto pt-20 pb-20 sm:pb-6 md:pt-48 md:pb-10 text-sm md:text-xs text-foreground/40 lowercase font-mono">
+    <!-- One DOM for both layouts. Mobile stacks two groups, with the company
+         on its own line so it never wraps mid-name; on desktop the groups
+         collapse with `md:contents` so every child becomes a flex item of this
+         row, reordered with `md:order-first` and `md:ml-auto`. -->
     <div class="flex flex-col gap-4 md:flex-row md:flex-wrap md:items-center md:gap-x-5 md:gap-y-2">
       <div class="flex flex-col gap-1 md:contents">
         <NuxtLink
@@ -46,8 +49,8 @@ const copied = refAutoReset(false, 2000)
         </BaseTooltip>
       </div>
 
-      <div class="flex items-center justify-between md:contents">
-        <span class="text-foreground/60 md:order-first"><span class="text-sm leading-none align-middle">&copy;</span> Matija Osrečki {{ year }} <span class="text-foreground/25">·</span> Byproduct Studio d.o.o.</span>
+      <div class="flex items-end justify-between gap-4 md:contents">
+        <span class="flex flex-col md:block text-foreground/60 md:order-first"><span><span class="text-sm leading-none align-middle">&copy;</span> Matija Osrečki {{ year }}</span> <span class="hidden md:inline text-foreground/25">·</span> <span>Byproduct Studio d.o.o.</span></span>
 
         <span class="hidden md:inline md:order-first text-foreground/15 select-none">/</span>
         <span class="hidden md:inline md:ml-auto text-foreground/15 select-none">/</span>
