@@ -76,31 +76,6 @@ const categories: BookCategory[] = [
       </NuxtLink> for more.
     </template>
 
-    <div class="flex flex-col gap-8">
-      <div v-for="category in categories" :key="category.title">
-        <h3 class="mb-1 text-xl">
-          {{ category.title }}
-        </h3>
-        <p v-if="category.description" class="text-base text-muted-foreground mb-2">
-          {{ category.description }}
-        </p>
-
-        <BaseRevealMore>
-          <ul class="mb-0">
-            <li v-for="book in category.books" :key="book.title">
-              <NuxtLink :to="book.url" external target="_blank" rel="noopener noreferrer">
-                {{ book.title }}
-              </NuxtLink>
-              <span v-if="book.author" class="text-muted-foreground">
-                <span class="px-2">·</span>{{ book.author }}
-              </span>
-              <span v-if="book.description" class="text-muted-foreground" title="📖 = read, 🎧 = listened">
-                &nbsp;{{ book.description }}
-              </span>
-            </li>
-          </ul>
-        </BaseRevealMore>
-      </div>
-    </div>
+    <AboutShelf :categories />
   </AboutProseWrapper>
 </template>
