@@ -26,7 +26,7 @@ const screenContent: ScreenContent[] = [
     <template #description>
       I don't watch much, so I'm very picky when I do. <NuxtLink to="https://boxd.it/6OXxN" external target="_blank" rel="noopener noreferrer" class="text-muted-foreground">
         These{{ }}
-      </NuxtLink> ones stuck with me.
+      </NuxtLink> stuck with me.
     </template>
 
     <BaseRevealMore>

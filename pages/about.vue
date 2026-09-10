@@ -21,7 +21,7 @@ useSeoMeta({
             icon="emojione:sparkles"
             icon-size="0.9em"
             icon-class="translate-y-0.5"
-          /> and the way it's transforming the way we think, build, and ship software. I got pretty good at it.
+          /> and how it's changing the way we think, design, and build software. I got pretty good at it.
         </p>
 
         <p>

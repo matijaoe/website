@@ -35,26 +35,27 @@ function getRotation(index: number): number {
       Tech stack
     </h2>
 
+    <!-- IconWithText is inline-flex, and browsers allow a line break right
+         after it even before punctuation, so each one that is followed by a
+         comma or period shares a nowrap span with it. Vue drops whitespace
+         between two elements when it contains a newline, so spans that follow
+         one another share a line, separated by a plain space. -->
     <p>
       These days I mostly build with
-      <IconWithText text="React" icon="logos:react" />, full-stack
-      <IconWithText text="TypeScript" icon="logos:typescript-icon" /> and
-      <span class="text-nowrap">
-        <IconWithText text="Tailwind" icon="logos:tailwindcss-icon" />
-      </span>, though my favorite stack is still
+      <span class="text-nowrap"><IconWithText text="React" icon="logos:react" />,</span> full-stack
+      <span class="text-nowrap"><IconWithText text="TypeScript" icon="logos:typescript-icon" />,</span> and
+      <span class="text-nowrap"><IconWithText text="Tailwind" icon="logos:tailwindcss-icon" />,</span> though my favorite stack is still
       <IconWithText text="Vue" icon="logos:vue" /> and
-      <IconWithText text="Nuxt" icon="logos:nuxt-icon" />. On the backend, I usually reach for
-      <IconWithText text="Bun" icon="logos:bun" />.
+      <span class="text-nowrap"><IconWithText text="Nuxt" icon="logos:nuxt-icon" />.</span> On the backend, I usually reach for
+      <span class="text-nowrap"><IconWithText text="Bun" icon="logos:bun" />.</span>
     </p>
 
     <p>
       Most of that happens in
-      <IconWithText text="Cursor" icon="simple-icons:cursor" />,
-      <IconWithText text="Codex" icon="custom:codex" />,
-      <IconWithText text="Claude Code" icon="logos:claude-icon" /> and
-      <IconWithText text="Grok" icon="custom:grok" />, alongside
+      <span class="text-nowrap"><IconWithText text="Codex" icon="custom:codex" />,</span> <span class="text-nowrap"><IconWithText text="Cursor" icon="simple-icons:cursor" />,</span> <span class="text-nowrap"><IconWithText text="Claude Code" icon="logos:claude-icon" />,</span> and
+      <span class="text-nowrap"><IconWithText text="Grok" icon="custom:grok" />,</span> alongside
       <IconWithText text="Ghostty" icon="custom:ghostty" /> and
-      <IconWithText text="Wispr Flow" icon="custom:wispr-flow" />.
+      <span class="text-nowrap"><IconWithText text="Wispr Flow" icon="custom:wispr-flow" />.</span>
     </p>
 
     <motion.div
