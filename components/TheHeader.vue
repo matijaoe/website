@@ -14,13 +14,20 @@ const { display: handleDisplay, scramble: handleScramble } = useTextScramble('@m
 
 onMounted(handleScramble)
 
-const { H, A, P } = useMagicKeys({
-  passive: false,
+// Bare letters only. With a modifier held the key belongs to the browser
+// (⌘A selects all, ⌘P prints), and inside a text field it is typing.
+useEventListener('keydown', (event: KeyboardEvent) => {
+  if (event.metaKey || event.ctrlKey || event.altKey || event.repeat) {
+    return
+  }
+  if ((event.target as HTMLElement | null)?.closest?.('input, textarea, select, [contenteditable="true"]')) {
+    return
+  }
+  const link = links.find((l) => l.key.toLowerCase() === event.key.toLowerCase())
+  if (link) {
+    navigateTo(link.to as RouteLocationRaw)
+  }
 })
-
-watch(H!, () => navigateTo('/'))
-watch(A!, () => navigateTo('/about'))
-watch(P!, () => navigateTo('/projects'))
 
 const activeLinkClass = '!text-foreground hover:text-foreground'
 </script>
