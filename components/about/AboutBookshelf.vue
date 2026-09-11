@@ -24,7 +24,6 @@ const fictionBooks: Book[] = [
   { title: 'The Stranger', author: 'Albert Camus', url: 'https://www.goodreads.com/book/show/49552.The_Stranger', description: '📖' },
   { title: 'Chess', author: 'Stefan Zweig', url: 'https://www.goodreads.com/book/show/32599701-chess', description: '📖' },
   { title: 'Notes from Underground', author: 'Fyodor Dostoevsky', url: 'https://www.goodreads.com/book/show/49455.Notes_from_Underground', description: '📖' },
-  { title: 'Project Hail Mary', author: 'Andy Weir', url: 'https://www.goodreads.com/book/show/54493401-project-hail-mary', description: '📖' },
   { title: 'Earthseed', author: 'Octavia E. Butler', url: 'https://www.goodreads.com/series/57804-earthseed', description: '📖' },
 ]
 
@@ -49,7 +48,7 @@ const nonfictionBooks: Book[] = [
   { title: 'I\'m Glad My Mom Died', author: 'Jennette McCurdy', url: 'https://www.goodreads.com/book/show/59366244-i-m-glad-my-mom-died', description: '🎧' },
 
   { title: 'The Code Book', author: 'Simon Singh', url: 'https://www.goodreads.com/book/show/17994.The_Code_Book', description: '📖' },
-  { title: 'Stephen Fry\'s Great Mythology (series)', author: 'Stephen Fry', url: 'https://www.goodreads.com/series/243176-stephen-fry-s-great-mythology', description: '🎧' },
+  { title: 'Stephen Fry\'s Great Mythology', author: 'Stephen Fry', url: 'https://www.goodreads.com/series/243176-stephen-fry-s-great-mythology', description: '🎧' },
   { title: 'Sapiens', author: 'Yuval Noah Harari', url: 'https://www.goodreads.com/book/show/23692271-sapiens', description: '📖' },
   { title: 'Maus', author: 'Art Spiegelman', url: 'https://www.goodreads.com/book/show/15195.The_Complete_Maus', description: '📖' },
 ]
