@@ -57,8 +57,6 @@ useSeoMeta({
 
       <AboutBookshelf />
 
-      <AboutPodcasts />
-
       <AboutMovies />
     </div>
   </div>
