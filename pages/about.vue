@@ -30,6 +30,7 @@ useSeoMeta({
             icon="logos:bitcoin"
             icon-size="0.9em"
             icon-class="translate-y-0.5"
+            icon-first
           /> rabbit hole and a strong advocate for privacy, freedom of speech, self-sovereignty, and open-source software. I'm also into (macro)economics, cryptography, and literature.
         </p>
 
