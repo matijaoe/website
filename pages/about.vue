@@ -16,16 +16,11 @@ useSeoMeta({
     <div class="flex flex-col gap-16 max-w-xl">
       <section class="text-default-foreground max-w-xl leading-7 prose text-base md:text-lg">
         <p>
-          I'm a software engineer who ships fast without cutting corners. I&nbsp;genuinely love building products and sweating the details until they feel right. Over the past few years, I've been all in on <IconWithText
-            text="AI"
-            icon="emojione:sparkles"
-            icon-size="0.9em"
-            icon-class="translate-y-0.5"
-          /> and how it's changing the way we think, design, and build software. I got pretty good at it.
+          I'm a product engineer who ships fast without cutting corners. I&nbsp;love sweating the details until they feel <em>just</em> right. I obsess over dev experience almost as much as UX. I care as much about what doesn't get built as what does. I try to delete more than I add. I build the way I wish everything else worked.
         </p>
 
         <p>
-          I bring strong product taste to everything I build. I obsess over dev experience just as much as UX. I do my best work with full ownership and thrive in remote, async environments. Give me a goal and I'll ship something I'm proud of.
+          Over the past few years, I've been all in on AI and how it's changing the way we design and build software. I got pretty good at it.
         </p>
 
         <p>
@@ -35,7 +30,7 @@ useSeoMeta({
             icon="logos:bitcoin"
             icon-size="0.9em"
             icon-class="translate-y-0.5"
-          /> and a strong advocate for privacy, freedom of speech, self-sovereignty, and open-source software. I'm also into economics, cryptography, psychology, and literature.
+          /> and a strong advocate for privacy, freedom of speech, self-sovereignty, and open-source software. I'm also into economics, cryptography, and literature.
         </p>
 
         <p>
