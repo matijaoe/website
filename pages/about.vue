@@ -20,7 +20,7 @@ useSeoMeta({
         </p>
 
         <p>
-          Over the past few years, I've been all in on AI and how it's changing the way we design and build software. I got pretty good at it.
+          I've been all in on AI and how it's changing the way we design and build software, from the early GitHub Copilot autocomplete days to managing a large fleet of mainly cloud agents. I got pretty good at it.
         </p>
 
         <p>
