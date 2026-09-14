@@ -14,7 +14,6 @@ const screenContent: ScreenContent[] = [
   { title: 'Eternal Sunshine of the Spotless Mind', url: 'https://letterboxd.com/film/eternal-sunshine-of-the-spotless-mind/', year: '2004' },
   { title: '12 Angry Men', url: 'https://letterboxd.com/film/12-angry-men/', year: '1957' },
   { title: 'The Machinist', url: 'https://letterboxd.com/film/the-machinist/', year: '2004' },
-  { title: 'Good Will Hunting', url: 'https://letterboxd.com/film/good-will-hunting/', year: '1997' },
   { title: 'Margin Call', url: 'https://letterboxd.com/film/margin-call/', year: '2011' },
   { title: 'The Big Short', url: 'https://letterboxd.com/film/the-big-short/', year: '2015' },
   { title: 'Better Call Saul', url: 'https://www.imdb.com/title/tt3032476/', year: '2015' },
