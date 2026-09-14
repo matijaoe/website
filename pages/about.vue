@@ -24,13 +24,13 @@ useSeoMeta({
         </p>
 
         <p>
-          Beyond code, I'm deep into
+          Beyond code, I'm deep into the
           <IconWithText
             text="Bitcoin"
             icon="logos:bitcoin"
             icon-size="0.9em"
             icon-class="translate-y-0.5"
-          /> and a strong advocate for privacy, freedom of speech, self-sovereignty, and open-source software. I'm also into economics, cryptography, and literature.
+          /> rabbit hole and a strong advocate for privacy, freedom of speech, self-sovereignty, and open-source software. I'm also into economics, cryptography, and literature.
         </p>
 
         <p>
