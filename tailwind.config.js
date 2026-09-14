@@ -35,6 +35,13 @@ module.exports = {
             // list-link underlines below pick up the theme in both modes.
             '--tw-prose-bullets': 'hsl(var(--muted-foreground) / 0.4)',
             '--tw-prose-invert-bullets': 'hsl(var(--muted-foreground) / 0.4)',
+            // Headings and links default to a blue-tinted gray-900 in light and
+            // pure white in dark, neither of which is in the theme. Point them at
+            // the same token the rest of the page's text uses.
+            '--tw-prose-headings': 'hsl(var(--default-foreground))',
+            '--tw-prose-invert-headings': 'hsl(var(--default-foreground))',
+            '--tw-prose-links': 'hsl(var(--default-foreground))',
+            '--tw-prose-invert-links': 'hsl(var(--default-foreground))',
             'li > a': {
               'text-decoration-color': 'var(--tw-prose-bullets)',
               'text-underline-offset': rem(2),
