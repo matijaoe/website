@@ -29,7 +29,7 @@ const screenContent: ScreenContent[] = [
     </template>
 
     <BaseRevealMore>
-      <ul class="mb-0">
+      <ul class="mb-0 mt-0">
         <li v-for="item in screenContent" :key="item.title">
           <NuxtLink :to="item.url" external target="_blank" rel="noopener noreferrer">
             {{ item.title }}

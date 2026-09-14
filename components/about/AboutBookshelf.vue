@@ -80,12 +80,12 @@ const categories: BookCategory[] = [
         <h3 class="mb-1 text-xl">
           {{ category.title }}
         </h3>
-        <p v-if="category.description" class="text-base text-muted-foreground mb-2">
+        <p v-if="category.description" class="text-base text-muted-foreground mb-3">
           {{ category.description }}
         </p>
 
         <BaseRevealMore>
-          <ul class="mb-0">
+          <ul class="mb-0 mt-0">
             <li v-for="book in category.books" :key="book.title">
               <NuxtLink :to="book.url" external target="_blank" rel="noopener noreferrer">
                 {{ book.title }}
