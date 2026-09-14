@@ -29,9 +29,21 @@ module.exports = {
               'font-size': rem(30),
               'margin-bottom': rem(20),
             },
+            // Typography's default bullet gray is blue-tinted, which reads cold
+            // against the warm surfaces. Deriving it from the muted text color
+            // at low alpha lets the warm background through, so bullets and the
+            // list-link underlines below pick up the theme in both modes.
+            '--tw-prose-bullets': 'hsl(var(--muted-foreground) / 0.4)',
+            '--tw-prose-invert-bullets': 'hsl(var(--muted-foreground) / 0.4)',
+            // Headings and links default to a blue-tinted gray-900 in light and
+            // pure white in dark, neither of which is in the theme. Point them at
+            // the same token the rest of the page's text uses.
+            '--tw-prose-headings': 'hsl(var(--default-foreground))',
+            '--tw-prose-invert-headings': 'hsl(var(--default-foreground))',
+            '--tw-prose-links': 'hsl(var(--default-foreground))',
+            '--tw-prose-invert-links': 'hsl(var(--default-foreground))',
             'li > a': {
               'text-decoration-color': 'var(--tw-prose-bullets)',
-              // 'text-decoration-color': 'hsl(var(--muted-foreground))',
               'text-underline-offset': rem(2),
               'transition': 'text-decoration-color 150ms ease-in-out',
             },

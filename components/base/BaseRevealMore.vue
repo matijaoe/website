@@ -2,12 +2,10 @@
 const props = withDefaults(defineProps<{
   /** Roughly how many list rows stay visible while collapsed. */
   rows?: number
-  moreLabel?: string
-  lessLabel?: string
+  label?: string
 }>(), {
   rows: 4,
-  moreLabel: 'Show more',
-  lessLabel: 'Show less',
+  label: 'Show all',
 })
 
 const expanded = ref(false)
@@ -32,17 +30,15 @@ const collapsedHeight = computed(() => `${props.rows * 2.25}em`)
       </div>
     </div>
 
+    <!-- Expanding is one-way: once the whole list is out there is nothing
+         worth collapsing back, and the button disappearing says so. -->
     <button
+      v-if="!expanded"
       class="not-prose mt-2 inline-flex items-center gap-1 font-mono lowercase text-sm text-foreground/40 hover:text-foreground transition-colors"
-      :aria-expanded="expanded"
-      @click="expanded = !expanded"
+      @click="expanded = true"
     >
-      {{ expanded ? lessLabel : moreLabel }}
-      <Icon
-        name="lucide:chevron-down"
-        class="transition-transform duration-300 motion-reduce:transition-none"
-        :class="{ 'rotate-180': expanded }"
-      />
+      {{ label }}
+      <Icon name="lucide:chevron-down" />
     </button>
   </div>
 </template>
