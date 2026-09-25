@@ -1,5 +1,7 @@
 # AGENT.md
 
+@AGENTS.md
+
 ## Commands
 
 - **Build**: `pnpm build` - Production build
