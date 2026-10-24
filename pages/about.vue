@@ -16,7 +16,7 @@ useSeoMeta({
     <div class="flex flex-col gap-16 max-w-xl">
       <section class="text-default-foreground max-w-xl leading-7 prose dark:prose-invert text-base md:text-lg">
         <p>
-          I'm a product engineer who ships fast without cutting corners. I&nbsp;sweat the details until they feel <em>just</em> right. I obsess over dev experience almost as much as UX. I care as much about what doesn't get built as what does. I try to delete more than I add. I build the way I wish everything else worked.
+          I'm a product engineer who ships fast without cutting corners. I&nbsp;sweat the details until they feel <em>just</em> right. I obsess over dev experience <em>almost</em> as much as user experience. I care as much about what doesn't get built as what does. I try to delete more than I add. I build the way I wish everything else worked.
         </p>
 
         <p>
