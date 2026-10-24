@@ -49,7 +49,7 @@ useSeoMeta({
         </p>
       </section>
 
-      <AboutTechStack />
+      <AboutStack />
 
       <AboutBookshelf />
 
