@@ -49,7 +49,7 @@ useSeoMeta({
         <p>
           I build well-crafted software, obsessing over the details that matter.
           <br>
-          Into AI agents, privacy, and Bitcoin.
+          Into AI agents, privacy tech, and Bitcoin.
         </p>
       </div>
     </section>
